@@ -14,7 +14,6 @@ const DrawerContent = (props) => {
             </Drawer.Section>
             <Drawer.Section >
                 <Drawer.Item
-                    style={styles.second}
                     label="Menu Principal"
                     onPress={()=> navigation.navigate("home")}
                     icon="home"
@@ -28,7 +27,6 @@ const DrawerContent = (props) => {
                     label="Eventos"
                     onPress={()=> navigation.navigate("events")}
                     icon="gift"
-                    
                 />
                 <Drawer.Item
                     label="Recomendaciones Covid-19"
@@ -61,10 +59,11 @@ const styles = StyleSheet.create({
         backgroundColor: "#4E73DF"
     },
     second:{
-        color: "#fff",
+        color: "#860472",
     },
     drawer:{
-        backgroundColor: Colors.primaryColor
+        backgroundColor: Colors.primaryColor,
+        color: "#860472"
     }
 })
 

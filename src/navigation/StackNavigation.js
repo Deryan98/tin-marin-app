@@ -21,9 +21,9 @@ export default function StackNavigation (props){
             <IconButton
                 icon="menu"
                 onPress={()=>navigation.openDrawer()}
+                color="#4E73DF"
             />
         )
-       
     }
 
     return (
