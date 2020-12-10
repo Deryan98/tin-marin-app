@@ -1,16 +1,13 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import 'react-native-gesture-handler';
+import MainNavigator from './navigation/MainNavigator';
+
+import {StyleSheet, Text, View} from 'react-native';
 
 const App = () => {
-  return (
-    <View>
-      <Text>solo he creado el proyecto.</Text>
-    </View>
-  )
-}
+  return <MainNavigator />;
+};
 
-export default App
+export default App;
 
-const styles = StyleSheet.create({})
-
-
+const styles = StyleSheet.create({});
