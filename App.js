@@ -1,6 +1,6 @@
 import React from 'react';
 import 'react-native-gesture-handler';
-import MainNavigator from './navigation/MainNavigator';
+import MainNavigator from './src/navigation/MainNavigator';
 import {NavigationContainer} from "@react-navigation/native";
 import {StyleSheet} from 'react-native';
 import {

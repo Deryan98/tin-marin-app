@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet } from 'react-native'
 import {DrawerContentScrollView} from "@react-navigation/drawer"
 import {Drawer, Avatar} from "react-native-paper"
-
+import Colors from '../constants/Colors';
 
 const DrawerContent = (props) => {
     const {navigation} = props
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         color: "#fff",
     },
     drawer:{
-        backgroundColor: "#4E73DF"
+        backgroundColor: Colors.primaryColor
     }
 })
 
