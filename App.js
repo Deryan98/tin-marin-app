@@ -1,11 +1,22 @@
 import React from 'react';
 import 'react-native-gesture-handler';
 import MainNavigator from './navigation/MainNavigator';
+import {NavigationContainer} from "@react-navigation/native";
+import {StyleSheet} from 'react-native';
+import {
+  Provider as PaperProvider,
+  DarkTheme as DarkThemePaper
+} from "react-native-paper";
 
-import {StyleSheet, Text, View} from 'react-native';
 
 const App = () => {
-  return <MainNavigator />;
+  return (
+  <PaperProvider>
+    <NavigationContainer>
+      <MainNavigator />
+    </NavigationContainer>
+  </PaperProvider>
+  );
 };
 
 export default App;

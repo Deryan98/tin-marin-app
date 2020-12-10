@@ -1,10 +1,14 @@
-import React from 'react';
-import {StyleSheet, Text, View, Button} from 'react-native';
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 
-export default ExhibitsScreen = ({navigation}) => {
+const ExhibitsScreen = () => {
   return (
     <View>
-      <Text>Soy la Pantalla Exhiciones</Text>
+      <Text>Soy la pantalla de Exhibiciones</Text>
     </View>
-  );
-};
+  )
+}
+
+export default ExhibitsScreen
+
+const styles = StyleSheet.create({})
