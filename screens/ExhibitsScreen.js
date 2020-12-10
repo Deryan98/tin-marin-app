@@ -79,9 +79,12 @@ const ExhibitsScreen = () => {
   );
 };
 
+
 const styles = StyleSheet.create({
   view: {
     flexDirection: 'column',
     alignItems: 'center',
   },
 });
+
+export default ExhibitsScreen
