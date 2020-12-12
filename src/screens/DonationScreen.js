@@ -9,6 +9,7 @@ import {
   CheckBox,
   Button,
 } from 'react-native-elements';
+import Colors from '../constants/Colors';
 
 const DonationScreen = () => {
   const [indexQuantity, setIndexQuantity] = React.useState(0);
@@ -39,72 +40,84 @@ const DonationScreen = () => {
         </Text>
       </View>
       <Divider style={{backgroundColor: 'blue'}} />
-      <View style={styles.rawContainer}>
+      <View style={styles.rowContainer}>
         <View style={styles.logoContainer}>
           <Image style={styles.logo} source={require('../assets/logo.gif')} />
         </View>
       </View>
-      <View style={styles.rawContainer}>
+      <View style={styles.rowContainer}>
         <ButtonGroup
           onPress={updateIndexPeriod}
           selectedIndex={indexPeriod}
           buttons={periodButtons}
           containerStyle={{height: 50, borderRadius: 10}}
+          textStyle={{color: Colors.primaryColor}}
         />
       </View>
-      <View style={styles.rawContainer}>
+      <View style={styles.rowContainer}>
         <ButtonGroup
           onPress={updateIndexQuantity}
           selectedIndex={indexQuantity}
           buttons={quantityButtons}
           containerStyle={{height: 50, borderRadius: 10}}
+          textStyle={{color: Colors.primaryColor}}
         />
       </View>
-      <View style={styles.rawContainer}>
+      <View style={styles.rowContainer}>
         <Input
           placeholder="Otra Cantidad"
           leftIcon={{type: 'font-awesome', name: 'usd'}}
+          containerStyle={styles.inputParentContainerStyle}
           inputContainerStyle={styles.inputContainerStyle}
           leftIconContainerStyle={styles.leftIconContainerStyle}
           keyboardType="numeric"
         />
       </View>
-      <View style={styles.rawContainer}>
+      <View style={styles.rowContainer}>
         <Input
           label="Nombre Completo"
           labelStyle={styles.labelStyle}
+          containerStyle={styles.inputParentContainerStyle}
           inputContainerStyle={styles.inputContainerStyle}
         />
       </View>
-      <View style={styles.rawContainer}>
+      <View style={styles.rowContainer}>
         <Input
           label="Correo Electrónico"
           labelStyle={styles.labelStyle}
+          containerStyle={styles.inputParentContainerStyle}
           inputContainerStyle={styles.inputContainerStyle}
+          keyboardType="email-address"
         />
       </View>
-      <View style={styles.rawContainer}>
+      <View style={styles.rowContainer}>
         <Input
           label="Documento de Identidad"
           labelStyle={styles.labelStyle}
+          containerStyle={styles.inputParentContainerStyle}
           inputContainerStyle={styles.inputContainerStyle}
+          keyboardType="number-pad"
         />
       </View>
-      <View style={styles.rawContainer}>
+      <View style={styles.rowContainer}>
         <Input
           label="NIT"
           labelStyle={styles.labelStyle}
+          containerStyle={styles.inputParentContainerStyle}
           inputContainerStyle={styles.inputContainerStyle}
+          keyboardType="number-pad"
         />
       </View>
-      <View style={styles.rawContainer}>
+      <View style={styles.rowContainer}>
         <CheckBox
           title="Deseo recibo de donación"
           checked={checked}
           onPress={() => updateChecked(!checked)}
+          textStyle={styles.textStyle}
+          containerStyle={styles.checkBoxContainerStyle}
         />
       </View>
-      <View style={styles.rawContainer}>
+      <View style={styles.rowContainer}>
         <Button
           title="Donar!"
           titleStyle={styles.buttonTitleStyle}
@@ -124,7 +137,7 @@ const styles = StyleSheet.create({
     height: '100%',
     padding: 10,
   },
-  rawContainer: {
+  rowContainer: {
     marginVertical: 5,
   },
   h3Style: {
@@ -145,10 +158,21 @@ const styles = StyleSheet.create({
   logo: {width: 150, height: 150},
   labelStyle: {
     marginBottom: 15,
+    fontWeight: 'normal',
+  },
+  textStyle: {
+    fontWeight: 'normal',
+  },
+  checkBoxContainerStyle: {
+    backgroundColor: 'transparent',
+    borderColor: 'transparent',
+  },
+  inputParentContainerStyle: {
+    borderColor: 'green',
   },
   inputContainerStyle: {
     backgroundColor: 'white',
-    borderColor: 'white',
+    borderBottomColor: 'transparent',
     borderRadius: 10,
     marginBottom: -15,
   },
