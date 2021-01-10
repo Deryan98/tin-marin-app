@@ -8,19 +8,21 @@ import {
   Image,
 } from 'react-native';
 
-const Card = ({titulo, color, srcImg, textBtn}) => {
-  global = color;
+const Card = ({ exhibition, color, textBtn, navigation}) => {
+  const {images, name, _id } = exhibition;
+  const [imageURL] = images;
+  
   return (
     <SafeAreaView style={styles.card}>
       <View style={[styles.tituloView, {backgroundColor: color}]}>
-        <Text style={styles.titulo}>{titulo}</Text>
+        <Text style={styles.titulo}>{name}</Text>
       </View>
-      <Image source={{uri: srcImg}} style={styles.img} />
+      <Image source={{uri: imageURL}} style={styles.img} />
       <View style={styles.viewCard}>
         <View style={[styles.button, {backgroundColor: color}]}>
           <TouchableOpacity
             style={styles.opacity}
-            onPress={() => console.log('Click')}>
+            onPress={() => navigation.navigate('information', {_id})}>
             <Text style={styles.buttonText}>{textBtn}</Text>
           </TouchableOpacity>
         </View>

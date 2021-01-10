@@ -1,84 +1,43 @@
-import React from 'react';
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import { map } from 'lodash';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { getAllExhibitions } from '../api/exhibitions';
 import Card from '../components/Card';
 import Colors from '../constants/Colors';
 import URL from '../constants/URL';
 
-const ExhibitsScreen = () => {
+const ExhibitsScreen = ({ navigation }) => {
+  const [exhibitions, setExhibitions] = useState(null);
+  let swapColor = true;
+
+  useEffect(() => {
+    getAllExhibitions().then((response) => {
+      setExhibitions(response);
+    });
+  }, []);
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.view}>
-        <Card
-          titulo="Banco de niños"
-          textBtn="Conócela"
-          color={Colors.magenta}
-          srcImg={URL.banco}
-        />
-        <Card
-          titulo="El avión"
-          textBtn="Conócela"
-          color={Colors.magenta}
-          srcImg={URL.avion}
-        />
-        <Card
-          titulo="El hospital"
-          textBtn="Conócela"
-          color={Colors.green}
-          srcImg={URL.hospital}
-        />
-        <Card
-          titulo="La estación de bomberos"
-          textBtn="Conócela"
-          color={Colors.green}
-          srcImg={URL.hospital}
-        />
-        <Card
-          titulo="La cama de los clavos"
-          textBtn="Conócela"
-          color={Colors.magenta}
-          srcImg={URL.clavos}
-        />
-        <Card
-          titulo="El volcán"
-          textBtn="Conócela"
-          color={Colors.magenta}
-          srcImg={URL.volcan}
-        />
-        <Card
-          titulo="Dulce Hogar de Zucarón"
-          textBtn="Conócela"
-          color={Colors.green}
-          srcImg={URL.zucaron}
-        />
-        <Card
-          titulo="El Mercado de Don Emprendedor"
-          textBtn="Conócela"
-          color={Colors.green}
-          srcImg={URL.mercado}
-        />
-        <Card
-          titulo="Aguacero"
-          textBtn="Conócela"
-          color={Colors.magenta}
-          srcImg={URL.agua}
-        />
-        <Card
-          titulo="Burbujulandia"
-          textBtn="Conócela"
-          color={Colors.magenta}
-          srcImg={URL.burbuja}
-        />
-        <Card
-          titulo="Jugando y Construyendo"
-          textBtn="Conócela"
-          color={Colors.green}
-          srcImg={URL.construyendo}
-        />
+        {map(exhibitions, (exhibition, index) => {
+          if (index % 2 === 0) {
+            swapColor = !swapColor;
+          }
+          return (
+            <Card
+              key={exhibition._id}
+              index={index}
+              textBtn="Conócela"
+              color={swapColor ? Colors.green : Colors.magenta}
+              exhibition={exhibition}
+              navigation={navigation}
+            />
+          );
+        })}
       </View>
     </ScrollView>
   );
 };
-
 
 const styles = StyleSheet.create({
   view: {
@@ -87,4 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ExhibitsScreen
+export default ExhibitsScreen;

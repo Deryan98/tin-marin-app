@@ -2,17 +2,17 @@ import React from 'react'
 import { StyleSheet } from 'react-native'
 import {DrawerContentScrollView} from "@react-navigation/drawer"
 import {Drawer, Avatar} from "react-native-paper"
-import Colors from '../constants/Colors';
 
+
+import Colors from '../constants/Colors';
 const DrawerContent = (props) => {
     const {navigation} = props
-    
     return (
         <DrawerContentScrollView style={styles.drawer}>
             <Drawer.Section style={styles.image}>
                 <Avatar.Image backgroundColor={"#4E73DF"} size={100}  source={require('../assets/logo.gif')}/>
             </Drawer.Section>
-            <Drawer.Section >
+            <Drawer.Section>
                 <Drawer.Item
                     label="Menu Principal"
                     onPress={()=> navigation.navigate("home")}
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     },
     drawer:{
         backgroundColor: Colors.primaryColor,
-        color: "#860472"
+        color: "#FFF"
     }
 })
 

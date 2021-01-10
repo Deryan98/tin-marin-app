@@ -1,21 +1,20 @@
 import React from 'react';
-import 'react-native-gesture-handler';
 import MainNavigator from './src/navigation/MainNavigator';
-import {NavigationContainer} from "@react-navigation/native";
-import {StyleSheet} from 'react-native';
-import {
-  Provider as PaperProvider,
-  DarkTheme as DarkThemePaper
-} from "react-native-paper";
+import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet } from 'react-native';
+import { ModalPortal } from 'react-native-modals';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 
+DefaultTheme.colors.text = '#FFF';
 
 const App = () => {
   return (
-  <PaperProvider>
-    <NavigationContainer>
-      <MainNavigator />
-    </NavigationContainer>
-  </PaperProvider>
+    <PaperProvider theme={DefaultTheme}>
+      <NavigationContainer>
+        <MainNavigator />
+        <ModalPortal />
+      </NavigationContainer>
+    </PaperProvider>
   );
 };
 
