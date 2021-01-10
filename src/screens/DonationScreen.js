@@ -42,7 +42,13 @@ const DonationScreen = () => {
       <Divider style={{backgroundColor: 'blue'}} />
       <View style={styles.rowContainer}>
         <View style={styles.logoContainer}>
-          <Image style={styles.logo} source={require('../assets/logo.gif')} />
+          <Image
+            style={styles.logo}
+            source={{
+              uri:
+                'https://tinmarin.org/wp-content/uploads/2020/04/logo-tm-con-marco-blanco.png',
+            }}
+          />
         </View>
       </View>
       <View style={styles.rowContainer}>
@@ -141,8 +147,8 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   h3Style: {
-    fontWeight: 'normal',
-    //fontFamily: 'nunito',
+    // fontWeight: 'normal',
+    fontFamily: 'NunitoSans-Bold',
   },
   header: {
     flexDirection: 'row',
@@ -167,19 +173,25 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     borderColor: 'transparent',
   },
-  inputParentContainerStyle: {
-    borderColor: 'green',
-  },
+  inputParentContainerStyle: {},
   inputContainerStyle: {
+    height: 50,
+    borderWidth: 1,
     backgroundColor: 'white',
-    borderBottomColor: 'transparent',
+    // borderBottomColor: 'transparent',
     borderRadius: 10,
     marginBottom: -15,
+    paddingLeft: 10,
   },
   leftIconContainerStyle: {
-    backgroundColor: 'silver',
-    width: '10%',
-    borderRadius: 10,
+    backgroundColor: 'lightgray',
+    width: '15%',
+    height: '100%',
+    borderRadius: 9,
+    borderBottomRightRadius: 1,
+    borderTopRightRadius: 1,
+    marginRight: 10,
+    marginLeft: -10,
   },
   buttonStyle: {
     backgroundColor: 'crimson',
