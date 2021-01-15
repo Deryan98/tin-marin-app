@@ -6,15 +6,21 @@ import Banco from '../assets/Banco.jpg';
 import Pinatas from '../assets/Pinatas.jpg';
 import Sugerencias from '../assets/Sugerencias.png'
 import Exhibicion from '../assets/Exhibicion.jpg'
+import { playButtonPress } from '../helpers/audio'
+
+
 const HomeScreen = ({navigation}) => {
-  console.log(navigation);
   return (
     <ScrollView>
       <View style={styles.view}>
-      <Text style={styles.title}>Menu Principal</Text>
+        <TouchableOpacity onPress={ playButtonPress }>
+        <Text style={styles.title}>Menu Principal</Text>
+        </TouchableOpacity>
+     
       <View style={styles.line}></View>
       
       <TouchableOpacity 
+        onPressIn={ playButtonPress }
         onPress={()=>{navigation.navigate('donations')}}
         style={styles.cardContainer}>
         <ImageBackground 
