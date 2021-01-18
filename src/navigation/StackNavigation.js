@@ -12,6 +12,7 @@ import ContactScreen from '../screens/ContactScreen';
 import SugerenceScreen from '../screens/SugerenceScreen';
 import DonationScreen from '../screens/DonationScreen';
 import InfoCard from '../screens/InfoCard';
+import KnowMore from '../screens/KnowMoreScreen';
 
 const Stack = createStackNavigator();
 export default function StackNavigation(props) {
@@ -100,6 +101,15 @@ export default function StackNavigation(props) {
           title: '',
           headerTransparent: true,
           headerLeft: () => buttonLeft('information'),
+        }}
+      />
+      <Stack.Screen
+        name="knowMore"
+        component={KnowMore}
+        options={{
+          title: '',
+          headerTransparent: true,
+          headerLeft: () => buttonLeft('knowMore'),
         }}
       />
     </Stack.Navigator>

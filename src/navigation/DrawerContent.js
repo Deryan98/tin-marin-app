@@ -35,7 +35,7 @@ const DrawerContent = (props) => {
                 />
                 <Drawer.Item
                     label="Informacion de contacto"
-                    onPress={()=> navigation.navigate("contact")}
+                    onPress={()=> navigation.navigate("knowMore")}
                     icon="phone"
                 />
                 <Drawer.Item

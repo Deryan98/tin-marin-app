@@ -7,7 +7,7 @@ import Pinatas from '../assets/Pinatas.jpg';
 import Sugerencias from '../assets/Sugerencias.png'
 import Exhibicion from '../assets/Exhibicion.jpg'
 import { playButtonPress } from '../helpers/audio'
-
+import ConocenosMas from '../assets/ConocenosMas.jpg'
 
 const HomeScreen = ({navigation}) => {
   return (
@@ -83,13 +83,13 @@ const HomeScreen = ({navigation}) => {
           </View>
         </ImageBackground>
       </TouchableOpacity>
-      
+
       <TouchableOpacity 
-        onPress={()=>{navigation.navigate('contact')}}
+        onPress={()=>{navigation.navigate('knowMore')}}
         style={styles.cardContainer}>
         <ImageBackground 
           imageStyle={{opacity: 0.5}}
-          source={Banco}
+          source={ConocenosMas}
           style={styles.card}
           borderRadius={10}
         >
