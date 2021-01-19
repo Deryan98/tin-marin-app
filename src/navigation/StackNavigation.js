@@ -12,13 +12,15 @@ import ContactScreen from '../screens/ContactScreen';
 import SugerenceScreen from '../screens/SugerenceScreen';
 import DonationScreen from '../screens/DonationScreen';
 import InfoCard from '../screens/InfoCard';
+import Search from '../screens/Search';
+
 
 const Stack = createStackNavigator();
 export default function StackNavigation(props) {
   const { navigation } = props;
 
   const buttonLeft = (screen = 'not') => {
-    if (screen == 'information')
+    if (screen == 'information' || screen == 'search')
       return (
         <IconButton
           icon="arrow-left"
@@ -33,6 +35,10 @@ export default function StackNavigation(props) {
         color="#4E73DF"
       />
     );
+  };
+
+  const buttonRight = () => {
+    return <IconButton icon="magnify" onPress={() => navigation.navigate('search')} color="#4E73DF" />;
   };
 
   return (
@@ -51,6 +57,7 @@ export default function StackNavigation(props) {
         options={{
           title: '',
           headerLeft: () => buttonLeft(),
+          headerRight: () => buttonRight(),
         }}
       />
       <Stack.Screen
@@ -100,6 +107,13 @@ export default function StackNavigation(props) {
           title: '',
           headerTransparent: true,
           headerLeft: () => buttonLeft('information'),
+        }}
+      />
+      <Stack.Screen 
+        name="search"
+        component={Search}
+        options={{
+          title: '', headerTransparent: true, headerLeft: () => buttonLeft('search')
         }}
       />
     </Stack.Navigator>

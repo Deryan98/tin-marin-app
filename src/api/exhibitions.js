@@ -23,3 +23,17 @@ export function getExhibitionById(idExhibition){
         return result;
     });
 }
+
+export function getExhibitionByName(name){
+    const url = `${API_HOST}/exhibitions/?name=${name}`;
+
+    return fetch(url)
+    .then((response) => {
+        console.log(response)
+        return response.json();
+    })
+    .then((result) => {
+        console.log(result)
+        return result;
+    });
+}
