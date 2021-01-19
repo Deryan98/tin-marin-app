@@ -3,7 +3,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StyleSheet, Text, View } from 'react-native';
 import { IconButton } from 'react-native-paper';
 
-//Screens
 import HomeScreen from '../screens/HomeScreen';
 import ExhibitsScrn from '../screens/ExhibitsScreen';
 import EventsScreen from '../screens/EventsScreen';
@@ -12,7 +11,7 @@ import ContactScreen from '../screens/ContactScreen';
 import SugerenceScreen from '../screens/SugerenceScreen';
 import DonationScreen from '../screens/DonationScreen';
 import InfoCard from '../screens/InfoCard';
-import KnowMore from '../screens/KnowMoreScreen';
+import KnowMoreScreen from '../screens/KnowMoreScreen';
 
 const Stack = createStackNavigator();
 export default function StackNavigation(props) {
@@ -105,10 +104,10 @@ export default function StackNavigation(props) {
       />
       <Stack.Screen
         name="knowMore"
-        component={KnowMore}
+        component={KnowMoreScreen}
         options={{
           title: '',
-          headerTransparent: true,
+          headerTransparent: false,
           headerLeft: () => buttonLeft('knowMore'),
         }}
       />
