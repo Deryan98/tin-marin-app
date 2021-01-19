@@ -4,4 +4,5 @@ export default {
   primaryColor: '#4E73DF',
   magenta: "#860472",
   green: "#ABBF39",
+  blueColor:  "#4E73DF"
 };
