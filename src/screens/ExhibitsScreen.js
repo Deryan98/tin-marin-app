@@ -27,6 +27,8 @@ const ExhibitsScreen = ({ navigation }) => {
         }} size="large" color="#0000ff"/>
         :
         <View style={styles.view}>
+        <Text style={styles.title}>Exhibiciones</Text>
+        <View style={styles.line}></View>
         {map(exhibitions, (exhibition, index) => {
           if (index % 2 === 0) {
             swapColor = !swapColor;
@@ -55,6 +57,18 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
   },
+  title:{
+    marginTop: 20,
+    fontSize: 30,
+    color: '#566573',
+    fontWeight: 'bold'
+
+  },
+  line:{
+    height: 1,
+    width: '90%',
+    backgroundColor: '#D5D8DC'
+  }
 });
 
 export default ExhibitsScreen;
