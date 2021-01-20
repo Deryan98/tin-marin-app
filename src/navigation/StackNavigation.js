@@ -12,6 +12,7 @@ import SugerenceScreen from '../screens/SugerenceScreen';
 import DonationScreen from '../screens/DonationScreen';
 import InfoCard from '../screens/InfoCard';
 import KnowMoreScreen from '../screens/KnowMoreScreen';
+import MissionAndVisionScreen from '../screens/MissionAndVisionScreen'
 
 const Stack = createStackNavigator();
 export default function StackNavigation(props) {
@@ -109,6 +110,15 @@ export default function StackNavigation(props) {
           title: '',
           headerTransparent: false,
           headerLeft: () => buttonLeft('knowMore'),
+        }}
+      />
+      <Stack.Screen
+        name="missionAndVision"
+        component={MissionAndVisionScreen}
+        options={{
+          title: '',
+          headerTransparent: false,
+          headerLeft: () => buttonLeft('missionAndVision'),
         }}
       />
     </Stack.Navigator>

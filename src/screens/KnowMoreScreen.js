@@ -19,13 +19,15 @@ const KnowMoreScreen = ({ navigation }) => {
             navigation={navigation}
             screenName="contact"
           />
-            {/* <GenericCard
-            title="PRUEBA"
+
+          <GenericCard
+            title="Misión, Visión, Valores"
             imageURL="https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg"
             color={Colors.magenta}
             textBtn="Saber Mas"
             navigation={navigation}
-          /> */}
+            screenName="missionAndVision"
+          />          
       </View>
     </ScrollView>
   );
