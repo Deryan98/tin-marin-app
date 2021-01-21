@@ -14,6 +14,7 @@ import DonationScreen from '../screens/DonationScreen';
 import InfoCard from '../screens/InfoCard';
 import Search from '../screens/Search';
 import FAQScreen from '../screens/FAQScreen';
+import WebLinksScreen from '../screens/WebLinksScreen';
 
 const Stack = createStackNavigator();
 export default function StackNavigation(props) {
@@ -129,8 +130,13 @@ export default function StackNavigation(props) {
         component={FAQScreen}
         options={{
           title: '',
-          // headerTransparent: true,
-          // headerLeft: () => buttonLeft('FAQs'),
+        }}
+      />
+      <Stack.Screen
+        name="WebLinks"
+        component={WebLinksScreen}
+        options={{
+          title: '',
         }}
       />
     </Stack.Navigator>

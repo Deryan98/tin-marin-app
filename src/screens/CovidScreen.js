@@ -120,7 +120,7 @@ const Footer = ({ navigation }) => {
         color="green"
         size={75}
         navigation={navigation}
-        screenRouteName="FAQs"
+        screenRouteName="WebLinks"
       />
     </View>
   );
