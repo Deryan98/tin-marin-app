@@ -23,17 +23,19 @@ const ContactScreen = ({ navigation }) => {
                 }}  
             >
               {
-                CONTACTS.map((contact) => (
-                  <Picker.Item label={contact.charge} value={contact.email} /> 
+                CONTACTS.map((contact,key) => (
+                  <Picker.Item key={key} label={contact.charge} value={contact.email} /> 
                 ))
               }
             </Picker>
-            {CONTACTS.map((contact) => (contact.email === contactEmail && 
+            {CONTACTS.map((contact, key) => (contact.email === contactEmail && 
             <ContactCard 
+            key = {key}
             charge={contact.charge}
             color={Colors.blueColor}
             name={contact.name}
             email= {contact.email}
+            
           />
             ))}
       </View>
