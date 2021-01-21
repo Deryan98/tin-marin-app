@@ -13,7 +13,7 @@ const KnowMoreScreen = ({ navigation }) => {
           <View style={styles.line}></View>
             <GenericCard
             title="Contactos"
-            imageURL="https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg"
+            imageURL="https://idesaa.edu.mx/blog/wp-content/uploads/2017/08/blog1-2.jpg"
             color={Colors.magenta}
             textBtn="Saber Mas"
             navigation={navigation}
@@ -22,7 +22,7 @@ const KnowMoreScreen = ({ navigation }) => {
 
           <GenericCard
             title="Misión, Visión, Valores"
-            imageURL="https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg"
+            imageURL="http://blogs.encamina.com/en-las-nubes/wp-content/uploads/sites/9/2013/02/Misin-vision-valores.jpg"
             color={Colors.magenta}
             textBtn="Saber Mas"
             navigation={navigation}
