@@ -12,14 +12,17 @@ import SugerenceScreen from '../screens/SugerenceScreen';
 import DonationScreen from '../screens/DonationScreen';
 import InfoCard from '../screens/InfoCard';
 import KnowMoreScreen from '../screens/KnowMoreScreen';
-import MissionAndVisionScreen from '../screens/MissionAndVisionScreen'
+import MissionAndVisionScreen from '../screens/MissionAndVisionScreen';
+import Search from '../screens/Search';
+import FAQScreen from '../screens/FAQScreen';
+import WebLinksScreen from '../screens/WebLinksScreen';
 
 const Stack = createStackNavigator();
 export default function StackNavigation(props) {
   const { navigation } = props;
 
   const buttonLeft = (screen = 'not') => {
-    if (screen == 'information')
+    if (screen == 'information' || screen == 'search' || screen == 'FAQs')
       return (
         <IconButton
           icon="arrow-left"
@@ -31,6 +34,16 @@ export default function StackNavigation(props) {
       <IconButton
         icon="menu"
         onPress={() => navigation.openDrawer()}
+        color="#4E73DF"
+      />
+    );
+  };
+
+  const buttonRight = () => {
+    return (
+      <IconButton
+        icon="magnify"
+        onPress={() => navigation.navigate('search')}
         color="#4E73DF"
       />
     );
@@ -52,6 +65,7 @@ export default function StackNavigation(props) {
         options={{
           title: '',
           headerLeft: () => buttonLeft(),
+          headerRight: () => buttonRight(),
         }}
       />
       <Stack.Screen
@@ -119,6 +133,29 @@ export default function StackNavigation(props) {
           title: '',
           headerTransparent: false,
           headerLeft: () => buttonLeft('missionAndVision'),
+        }}
+      />
+      <Stack.Screen
+        name="search"
+        component={Search}
+        options={{
+          title: '',
+          headerTransparent: true,
+          headerLeft: () => buttonLeft('search'),
+        }}
+      />
+      <Stack.Screen
+        name="FAQs"
+        component={FAQScreen}
+        options={{
+          title: '',
+        }}
+      />
+      <Stack.Screen
+        name="WebLinks"
+        component={WebLinksScreen}
+        options={{
+          title: '',
         }}
       />
     </Stack.Navigator>
