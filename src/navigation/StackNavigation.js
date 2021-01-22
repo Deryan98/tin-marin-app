@@ -16,6 +16,7 @@ import MissionAndVisionScreen from '../screens/MissionAndVisionScreen';
 import Search from '../screens/Search';
 import FAQScreen from '../screens/FAQScreen';
 import WebLinksScreen from '../screens/WebLinksScreen';
+import CovidInfo from '../screens/CovidInfo';
 
 const Stack = createStackNavigator();
 export default function StackNavigation(props) {
@@ -156,6 +157,14 @@ export default function StackNavigation(props) {
         component={WebLinksScreen}
         options={{
           title: '',
+        }}
+      />
+      <Stack.Screen
+        name="InfoCovid"
+        component={CovidInfo}
+        options={{
+          title: '',
+          headerLeft: () => buttonLeft(),
         }}
       />
     </Stack.Navigator>
