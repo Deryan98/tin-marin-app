@@ -52,21 +52,7 @@ const HomeScreen = ({navigation}) => {
         </ImageBackground>
       </TouchableOpacity>
       
-      <TouchableOpacity 
-        onPress={()=>{navigation.navigate('events')}}
-        style={styles.cardContainer}>
-        <ImageBackground 
-          imageStyle={{opacity: 0.5}}
-          source={Pinatas}
-          style={styles.card}
-          borderRadius={10}
-        >
-          <View style={styles.textContainer}>
-            <Text style={styles.text}>Piñatas y Eventos</Text>
-            <Text style={styles.text2}>Celebra con nosotros tu piñata o evento!</Text>
-          </View>
-        </ImageBackground>
-      </TouchableOpacity>
+
       
       <TouchableOpacity 
         onPress={()=>{navigation.navigate('comments')}}
