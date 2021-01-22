@@ -21,6 +21,26 @@ export const COVIDS = [
     updatedAt: '2020-12-19T03:16:00.138Z',
     __v: 0,
   },
+  {
+    description: [
+      'Las mascarillas deben utilizarse como parte de una estrategia integral de medidas para suprimir la transmisión y salvar vidas; eel uso de una mascarilla por sí sola no basta para proporcionar una proteección adecuada contra la COVID-19.',
+      'Indicaciones básicas sobre la manera de ponerse la mascarilla',
+    ],
+
+    steps: [
+      'Lávese las manos antes de ponerse la mascarilla, y también antes y ddespués de quitársela, y cada vez que la toque.',
+      'Compruebe que le cubre la nariz, la boca y el mentón.',
+      'Cuando se quite la mascarilla, guárdesela en una bolsa de plástico limpia; si es de tela lávela cada día y si es una mascarilla médica, tírela a un cubo de basura.',
+      'No utilice mascarillas con válvulas.',
+    ],
+    source: 'OMS',
+    image: URL.hospital,
+    _id: '5fdd70700855130e44eaa282',
+    title: 'Usa Mascarilla X2',
+    createdAt: '2020-12-19T03:16:00.138Z',
+    updatedAt: '2020-12-19T03:16:00.138Z',
+    __v: 0,
+  },
 ];
 
 export const FAQs = [
