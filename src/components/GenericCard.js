@@ -6,25 +6,30 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Image,
+  Dimensions,
 } from 'react-native';
 
-const GenericCard = ({title, imageURL,  color, textBtn, navigation,screenName}) => {
-
+const GenericCard = ({
+  title,
+  imageURL,
+  color,
+  textBtn,
+  navigation,
+  screenName,
+}) => {
   const navigating = () => {
-    navigation.navigate(screenName)
-  }
-  
+    navigation.navigate(screenName);
+  };
+
   return (
     <SafeAreaView style={styles.card}>
-      <View style={[styles.tituloView, {backgroundColor: color}]}>
+      <View style={[styles.tituloView, { backgroundColor: color }]}>
         <Text style={styles.titulo}>{title}</Text>
       </View>
-      <Image source={{uri: imageURL}} style={styles.img} />
+      <Image source={{ uri: imageURL }} style={styles.img} />
       <View style={styles.viewCard}>
-        <View style={[styles.button, {backgroundColor: color}]}>
-          <TouchableOpacity
-            style={styles.opacity}
-            onPress={()=> navigating()}>
+        <View style={[styles.button, { backgroundColor: color }]}>
+          <TouchableOpacity style={styles.opacity} onPress={() => navigating()}>
             <Text style={styles.buttonText}>{textBtn}</Text>
           </TouchableOpacity>
         </View>
@@ -40,8 +45,8 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginBottom: 40,
     marginTop: 20,
-    width: 330,
-    height: 200,
+    width: '85%',
+    height: Dimensions.get('window').height / 3.4,
   },
   viewCard: {
     flexDirection: 'column',
@@ -56,7 +61,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 15,
     borderTopLeftRadius: 15,
   },
-  titulo: {fontSize: 19, color: '#fff', fontWeight: 'bold'},
+  titulo: { fontSize: 19, color: '#fff', fontWeight: 'bold' },
   button: {
     paddingVertical: 7,
     borderRadius: 10,
