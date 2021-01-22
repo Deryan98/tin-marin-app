@@ -5,3 +5,4 @@ export default {
 }
 
 export const API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';
+export const API_DEV = 'https://tinmarin.herokuapp.com/api/v1';
