@@ -56,6 +56,11 @@ const DrawerContent = (props) => {
           onPress={() => navigation.navigate('FAQs')}
           icon="frequently-asked-questions"
         />
+        <Drawer.Item
+          label="Sitios de Interés"
+          onPress={() => navigation.navigate('WebLinks')}
+          icon="web"
+        />
       </Drawer.Section>
     </DrawerContentScrollView>
   );
