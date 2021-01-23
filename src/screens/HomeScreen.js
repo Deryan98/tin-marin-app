@@ -12,7 +12,7 @@ import Bomberos from '../assets/Bomberos.jpg';
 // import Banco from '../assets/Banco.jpg';
 import Covid from '../assets/Covid.jpeg';
 import FAQs from '../assets/FAQs.jpeg';
-import Pinatas from '../assets/Pinatas.jpg';
+import WebLinks from '../assets/WebLinks.jpg';
 import Sugerencias from '../assets/Sugerencias.png';
 import Exhibicion from '../assets/Exhibicion.jpg';
 import { playButtonPress } from '../helpers/audio';
@@ -123,6 +123,25 @@ const HomeScreen = ({ navigation }) => {
               <Text style={styles.text}>Preguntas Frecuentes</Text>
               <Text style={styles.text2}>
                 Por si tienes alguna consulta para resolver de forma rápida!
+              </Text>
+            </View>
+          </ImageBackground>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('WebLinks');
+          }}
+          style={{ ...styles.cardContainer, marginBottom: 30 }}>
+          <ImageBackground
+            imageStyle={{ opacity: 0.5 }}
+            source={WebLinks}
+            style={styles.card}
+            borderRadius={10}>
+            <View style={styles.textContainer}>
+              <Text style={styles.text}>Sitios de Interés</Text>
+              <Text style={styles.text2}>
+                Si deseas profundizar un poco más en otros temas relevantes!
               </Text>
             </View>
           </ImageBackground>
