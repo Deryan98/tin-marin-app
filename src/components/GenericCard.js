@@ -10,15 +10,24 @@ import {
 } from 'react-native';
 
 const GenericCard = ({
+  id,
   title,
+  description,
   imageURL,
+  steps,
   color,
   textBtn,
   navigation,
   screenName,
 }) => {
   const navigating = () => {
-    navigation.navigate(screenName);
+    navigation.navigate(screenName, {
+      id: id,
+      title: title,
+      description: description,
+      image: imageURL,
+      steps: steps,
+    });
   };
 
   return (

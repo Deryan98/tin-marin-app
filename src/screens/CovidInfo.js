@@ -13,11 +13,12 @@ import Colors from '../constants/Colors';
 import { ScrollView } from 'react-native-gesture-handler';
 import { COVIDS } from '../data/dummy-data';
 
-const CovidInfo = ({ navigation }) => {
+const CovidInfo = ({ navigation, route }) => {
   const [covidInfo, setCovidInfo] = useState(null);
   const [covid, setCovid] = useState(null);
   const [loading, setLoading] = useState(true);
-  const id = '5fdd70700855130e44eaa281';
+  const { id, title, description, image, steps } = route.params;
+  console.log(`id de recomendacion: ${id}`);
   //let covidInfo;
   useEffect(() => {
     getAllCovidRecommendations().then((response) => {
@@ -26,9 +27,9 @@ const CovidInfo = ({ navigation }) => {
       setLoading(false);
     });
 
-    COVIDS.map((covid) => {
-      if (id === covid._id) setCovidInfo(covid);
-    });
+    // COVIDS.map((covid) => {
+    //   if (id === covid._id) setCovidInfo(covid);
+    // });
   }, []);
 
   return (
@@ -44,13 +45,13 @@ const CovidInfo = ({ navigation }) => {
           />
         ) : (
           <View style={styles.view}>
-            <Text style={styles.title}>{covidInfo.title}</Text>
+            <Text style={styles.title}>{title}</Text>
             <View style={styles.line}></View>
-            <MainParagraph description={covidInfo.description} />
-            <RenderImage url={covidInfo.image} />
+            <MainParagraph description={description} />
+            <RenderImage url={image} />
 
             <Text style={styles.subtitle}>Recomendaciones a Seguir</Text>
-            <FollowSteps steps={covidInfo.steps} />
+            <FollowSteps steps={steps} />
             <Footer navigation={navigation} />
           </View>
         )}
