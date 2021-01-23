@@ -14,47 +14,20 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { COVIDS } from '../data/dummy-data';
 
 const CovidInfo = ({ navigation, route }) => {
-  const [covidInfo, setCovidInfo] = useState(null);
-  const [covid, setCovid] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const { id, title, description, image, steps } = route.params;
-  console.log(`id de recomendacion: ${id}`);
-  //let covidInfo;
-  useEffect(() => {
-    getAllCovidRecommendations().then((response) => {
-      console.log(response);
-      setCovid(response);
-      setLoading(false);
-    });
-
-    // COVIDS.map((covid) => {
-    //   if (id === covid._id) setCovidInfo(covid);
-    // });
-  }, []);
+  const { title, description, image, steps } = route.params;
 
   return (
     <SafeAreaView>
       <ScrollView showsVerticalScrollIndicator={false}>
-        {loading ? (
-          <ActivityIndicator
-            style={{
-              marginTop: 200,
-            }}
-            size="large"
-            color="#0000ff"
-          />
-        ) : (
-          <View style={styles.view}>
-            <Text style={styles.title}>{title}</Text>
-            <View style={styles.line}></View>
-            <MainParagraph description={description} />
-            <RenderImage url={image} />
-
-            <Text style={styles.subtitle}>Recomendaciones a Seguir</Text>
-            <FollowSteps steps={steps} />
-            <Footer navigation={navigation} />
-          </View>
-        )}
+        <View style={styles.view}>
+          <Text style={styles.title}>{title}</Text>
+          <View style={styles.line}></View>
+          <MainParagraph description={description} />
+          <RenderImage url={image} />
+          <Text style={styles.subtitle}>Recomendaciones a Seguir</Text>
+          <FollowSteps steps={steps} />
+          <Footer navigation={navigation} />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

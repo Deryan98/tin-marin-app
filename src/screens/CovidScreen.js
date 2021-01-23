@@ -20,19 +20,12 @@ const CovidScreen = ({ navigation }) => {
   const [loading, setLoading] = useState(true);
   let swapColor = true;
 
-  // const id = '5fdd70700855130e44eaa281';
-  //let covidInfo;
   useEffect(() => {
     getAllCovidRecommendations().then((response) => {
-      console.log(response);
+      // console.log(response);
       setCovid(response);
       setLoading(false);
     });
-
-    // COVIDS.map((covid) => {
-    //   if (id === covid._id) setCovidInfo(covid);
-    //   console.log(covid);
-    // });
   }, []);
 
   return (

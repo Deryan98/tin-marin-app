@@ -113,7 +113,7 @@ const HomeScreen = ({ navigation }) => {
           onPress={() => {
             navigation.navigate('FAQs');
           }}
-          style={{ ...styles.cardContainer, marginBottom: 30 }}>
+          style={styles.cardContainer}>
           <ImageBackground
             imageStyle={{ opacity: 0.5 }}
             source={FAQs}

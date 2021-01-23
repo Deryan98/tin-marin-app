@@ -21,9 +21,6 @@ const FAQScreen = ({ navigation }) => {
           <Text style={styles.title}>Preguntas Frecuentes</Text>
           <View style={styles.line}></View>
           {FAQs.map((faq, index) => {
-            {
-              console.log(faq);
-            }
             return (
               <Card key={index} containerStyle={{ borderRadius: 15 }}>
                 <Card.Title style={styles.card_title}>
