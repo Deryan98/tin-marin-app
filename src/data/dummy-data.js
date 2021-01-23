@@ -48,13 +48,13 @@ export const FAQs = [
     _id: '5fe56125d7836c44507c9674',
     question: '¿Por qué debemos usar mascarillas?',
     answer:
-      'Las mascarillas son esenciales para eliminar la transmisión y salvar vidas. Reducen el posible riesgo de exposición a los virus de una persona infectada, sea o no asintomática. Las personas que están protegudas contra la iinfección. Además, si las utilizan personas infectadas, las mascarillas impiden que el virus siga transmitiéndose. \n Las mascarillas deben utilizarse como parte de un enfoque integral que incluya la adopción de todas las medidas posibles(!Háganlo todo!): mantener el distanciamiento físico, evitar entornos cerrados y concurridos en los que haya contacto estrecho entre personas, mejorar la ventilación, lavarse las manos, cubrirse al estornudar y toser, y muchas otras.',
+      'Las mascarillas son esenciales para eliminar la transmisión y salvar vidas. Reducen el posible riesgo de exposición a los virus de una persona infectada, sea o no asintomática. Las personas que están protegudas contra la iinfección. Además, si las utilizan personas infectadas, las mascarillas impiden que el virus siga transmitiéndose. \n\nLas mascarillas deben utilizarse como parte de un enfoque integral que incluya la adopción de todas las medidas posibles !Háganlo todo!: mantener el distanciamiento físico, evitar entornos cerrados y concurridos en los que haya contacto estrecho entre personas, mejorar la ventilación, lavarse las manos, cubrirse al estornudar y toser, y muchas otras.',
   },
   {
     _id: '60077d1cf4fb3f328c0c6d53',
     question: '¿Qué tipo de mascarilla debe usar cada persona?',
     answer:
-      'Las mascarillas médicas están recomendadas para los siguientes grupos: \n Todo el personal ded salud que trabahe en entornos clínicos. Para más información, consulte nuestras orientaciones sobree el uso de equipo de protección personal por el personal dde atención de salud. \n Las peresonas quee no se encuentreen bien, incluso con síntomas leves, como dolores musculares, tos leve, dolor de garganta o cansancio, \n Las personas que atienden a casos presuntos o confirmados de COVID-19 fuera de un establecimiento de salud.',
+      'Las mascarillas médicas están recomendadas para los siguientes grupos: \n\nTodo el personal ded salud que trabahe en entornos clínicos. Para más información, consulte nuestras orientaciones sobree el uso de equipo de protección personal por el personal dde atención de salud. \n\nLas peresonas quee no se encuentreen bien, incluso con síntomas leves, como dolores musculares, tos leve, dolor de garganta o cansancio, \n\nLas personas que atienden a casos presuntos o confirmados de COVID-19 fuera de un establecimiento de salud.',
   },
 ];
 

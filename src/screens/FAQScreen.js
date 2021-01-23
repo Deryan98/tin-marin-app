@@ -26,8 +26,8 @@ const FAQScreen = ({ navigation }) => {
                 <Card.Title style={styles.card_title}>
                   {faq.question}
                 </Card.Title>
-                <View style={styles.paragraph}>
-                  <Text>{faq.answer}</Text>
+                <View>
+                  <Text style={styles.paragraph}>{faq.answer}</Text>
                 </View>
               </Card>
             );
