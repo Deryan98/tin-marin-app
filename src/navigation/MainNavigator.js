@@ -1,19 +1,17 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import StackNavigation from "./StackNavigation";
-import DrawerContent from "./DrawerContent";
-
+import { StyleSheet, View } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import StackNavigation from './StackNavigation';
+import DrawerContent from './DrawerContent';
 
 const Drawer = createDrawerNavigator();
 
 export default MainNavigator = () => {
-  
   return (
-    <Drawer.Navigator 
+    <Drawer.Navigator
       initialRouteName="app"
-      drawerContent={(props)=> <DrawerContent {...props}/>}>
-      <Drawer.Screen name="app" component={StackNavigation}/>
+      drawerContent={(props) => <DrawerContent {...props} />}>
+      <Drawer.Screen name="app" component={StackNavigation} />
     </Drawer.Navigator>
   );
 };
