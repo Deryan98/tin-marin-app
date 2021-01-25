@@ -47,6 +47,7 @@ const ContactScreen = () => {
         fontSize: 18,
       },
       title: {
+        fontFamily: 'NunitoSans-Bold',
         marginTop: 16,
         paddingVertical: 8,
         borderRadius: 6,
@@ -55,7 +56,6 @@ const ContactScreen = () => {
         color: "#20232a",
         textAlign: "center",
         fontSize: 18,
-        fontWeight: "bold"
       },
       tema: {
         marginTop: 13,

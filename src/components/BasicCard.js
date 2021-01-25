@@ -9,7 +9,7 @@ import {
   Image,
 } from 'react-native';
 
-const BasicCard = ({title, imageURL,  color, textBtn, navigation,screenName}) => {
+const BasicCard = ({title, imageURL,  color, textBtn, url}) => {
 
   
   return (
@@ -22,7 +22,7 @@ const BasicCard = ({title, imageURL,  color, textBtn, navigation,screenName}) =>
         <View style={[styles.button, {backgroundColor: color}]}>
           <TouchableOpacity
             style={styles.opacity}
-            onPress={()=> Linking.openURL('https://www.who.int/es')}>
+            onPress={()=> Linking.openURL(url)}>
             <Text style={styles.buttonText}>{textBtn}</Text>
           </TouchableOpacity>
         </View>
