@@ -1,33 +1,36 @@
-import { fromPairs } from 'lodash';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import BasicCard from '../components/BasicCard';
-import BasicCard2 from '../components/BasicCard2';
 import Colors from '../constants/Colors';
+import {WEBS_RECOMM} from '../data/dummy-data';
+
+
 
 
 const WebLinksScreen = (navigation) => {
+  
+  const [links, setlinks] = useState([]);
+
+  useEffect(() => {
+    
+  })
   return (
     <ScrollView showsVerticalScrollIndicator={true}>
       <View style={styles.view}>
       <Text style={styles.title}>Sitios de Interes</Text>
       <View style={styles.line}></View>
-          <BasicCard
-            title="OMS"
-            imageURL="https://www.eventoplus.com/content/thumbs/960_540/content/imgsxml/galerias/noticias/6992/big-oms966.jpg"
+          {
+            <BasicCard
+            key = {key}
+            title={weblink.title}
+            imageURL={weblink.image}
             color={Colors.magenta}
-            navigation={navigation}
             textBtn="Entrar"
+            url={weblink.url}
           />
-
-          <BasicCard2
-            title="OPS"
-            imageURL="https://www.prensa-latina.cu/images/2020/septiembre/28/0-panamenricana.jpg"
-            color={Colors.magenta}
-            navigation={navigation}
-            textBtn="Entrar"
-          />      
-      </View>
+          ))
+          }
+          </View>
     </ScrollView>
   );
 };
