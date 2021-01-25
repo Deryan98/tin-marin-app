@@ -8,17 +8,27 @@ import {
   Image,
   Dimensions,
 } from 'react-native';
+import { coinButton } from '../helpers/audio';
 
 const GenericCard = ({
+  id,
   title,
+  description,
   imageURL,
+  steps,
   color,
   textBtn,
   navigation,
   screenName,
 }) => {
   const navigating = () => {
-    navigation.navigate(screenName);
+    navigation.navigate(screenName, {
+      id: id,
+      title: title,
+      description: description,
+      image: imageURL,
+      steps: steps,
+    });
   };
 
   return (
@@ -29,7 +39,7 @@ const GenericCard = ({
       <Image source={{ uri: imageURL }} style={styles.img} />
       <View style={styles.viewCard}>
         <View style={[styles.button, { backgroundColor: color }]}>
-          <TouchableOpacity style={styles.opacity} onPress={() => navigating()}>
+          <TouchableOpacity style={styles.opacity} onPressIn={coinButton} onPress={() => navigating()}>
             <Text style={styles.buttonText}>{textBtn}</Text>
           </TouchableOpacity>
         </View>

@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
+import { coinButton } from '../helpers/audio'
 
 const BasicCard2 = ({title, imageURL,  color, textBtn, navigation,screenName}) => {
 
@@ -22,7 +23,9 @@ const BasicCard2 = ({title, imageURL,  color, textBtn, navigation,screenName}) =
         <View style={[styles.button, {backgroundColor: color}]}>
           <TouchableOpacity
             style={styles.opacity}
-            onPress={()=> Linking.openURL('https://www.paho.org/es')}>
+            onPressIn={coinButton}
+            onPress={()=> Linking.openURL('https://www.paho.org/es')}
+            >
             <Text style={styles.buttonText}>{textBtn}</Text>
           </TouchableOpacity>
         </View>
