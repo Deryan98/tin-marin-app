@@ -99,8 +99,7 @@ const styles = StyleSheet.create({
     marginBottom:50
   },
   minilogo:{
-    marginLeft:10,
-    marginRight:20,
+    margin: 5,
     height: 60,
     width: 60,  
   },
