@@ -3,20 +3,31 @@ import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'rea
 import SugerenceCard from '../components/SugerenceCard';
 import Colors from '../constants/Colors';
 import { Picker } from '@react-native-picker/picker';
-import { getAllSuperenceTypes } from '../api/sugerences'
+import { getAllSuperenceTypes, storeSugerence } from '../api/sugerences'
 
 
 const SugerenceScreen = ({ navigation }) => {
   // OBTIENE DATA, ES UNA COLLECCION
   const [sugerenceTypes, setSugerenceTypes] = useState([]);
   //GUARDA EN FORMULARIO ES UNICA
-  const [sugerenceType, setSugerenceType] = useState('ELIJA UNA OPCION');
+  const [sugerenceType, setSugerenceType] = useState('');
+
+  const [comment, setComment] = useState('');
 
   useEffect(() => {
     getAllSuperenceTypes().then((response) => {
       setSugerenceTypes(response);
     })
   }, [])
+
+  const handleComment = (comment) => {
+    console.log(`Guardando texto: ${comment}`)
+    setComment(comment);
+  }
+
+  const handleSend = () => {
+    return
+  }
 
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>
@@ -46,9 +57,10 @@ const SugerenceScreen = ({ navigation }) => {
       <SugerenceCard
         sugerenceType={sugerenceType}
         color={Colors.blueColor}
+        onCommentChange={() => {handleComment()}}
       />
       <View style={styles.view} >
-        <TouchableOpacity
+        <TouchableOpacity onPress={() => handleSend()}
           style={styles.button}
         >
           <Text style={styles.buttonText}> Enviar! </Text>

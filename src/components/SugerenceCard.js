@@ -7,7 +7,11 @@ import {
     TextInput
 } from 'react-native';
 
-const GenericCard = ({ sugerenceType, color }) => {
+const GenericCard = ({ sugerenceType, color, onCommentChange }) => {
+
+    const handleComment = (text) => {
+        onCommentChange(text)
+    }
 
     return (
         <SafeAreaView style={styles.card}>
@@ -22,6 +26,10 @@ const GenericCard = ({ sugerenceType, color }) => {
                     placeholderTextColor="grey"
                     numberOfLines={10}
                     multiline={true}
+                    onChangeText={text=>{
+                        onCommentChange(text)
+                        console.log(text)
+                    }}
                 />
             </View>
         </SafeAreaView>
