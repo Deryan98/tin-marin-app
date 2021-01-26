@@ -8,8 +8,6 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import Bomberos from '../assets/Bomberos.jpg';
-// import Banco from '../assets/Banco.jpg';
 import Covid from '../assets/Covid.jpeg';
 import FAQs from '../assets/FAQs.jpeg';
 import WebLinks from '../assets/WebLinks.jpg';
