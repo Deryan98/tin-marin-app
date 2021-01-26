@@ -155,12 +155,13 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   title: {
+    fontFamily: 'NunitoSans-Bold',
     marginTop: 20,
     fontSize: 30,
     color: '#566573',
-    fontWeight: 'bold',
   },
   paragraph: {
+    fontFamily: 'NunitoSans-Bold',
     marginVertical: 10,
     textAlign: 'justify',
     marginBottom: 10,
@@ -172,6 +173,7 @@ const styles = StyleSheet.create({
   },
   image: { width: '100%', height: 200, borderRadius: 15 },
   subtitle: {
+    fontFamily: 'NunitoSans-Bold',
     marginTop: 20,
     fontSize: 25,
     color: 'red',
@@ -183,6 +185,7 @@ const styles = StyleSheet.create({
     paddingTop: 5,
   },
   card_title: {
+    fontFamily: 'NunitoSans-Bold',
     textAlign: 'justify',
     backgroundColor: Colors.primaryColor,
     color: 'white',

@@ -7,7 +7,9 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Image,
+  Dimensions
 } from 'react-native';
+
 
 const BasicCard = ({title, imageURL,  color, textBtn, url}) => {
 
@@ -38,8 +40,8 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginBottom: 40,
     marginTop: 20,
-    width: 330,
-    height: 200,
+    width: Dimensions.get('window').width/1.2,
+    height: Dimensions.get('window').height/3
   },
   viewCard: {
     flexDirection: 'column',
@@ -50,11 +52,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    height: 40,
     borderTopRightRadius: 15,
     borderTopLeftRadius: 15,
+    height: Dimensions.get('window').height/12
   },
-  titulo: {fontSize: 19, color: '#fff', fontWeight: 'bold'},
+  titulo: {fontSize: 19, color: '#fff', fontWeight: 'bold', textAlign: 'center'},
   button: {
     paddingVertical: 7,
     borderRadius: 10,
