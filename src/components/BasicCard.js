@@ -7,10 +7,12 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Image,
+  Dimensions
 } from 'react-native';
 import { coinButton } from '../helpers/audio'
 
-const BasicCard = ({title, imageURL,  color, textBtn, navigation,screenName}) => {
+
+const BasicCard = ({title, imageURL,  color, textBtn, url}) => {
 
   
   return (
@@ -24,7 +26,7 @@ const BasicCard = ({title, imageURL,  color, textBtn, navigation,screenName}) =>
           <TouchableOpacity
             onPressIn={coinButton}
             style={styles.opacity}
-            onPress={()=> Linking.openURL('https://www.who.int/es')}>
+            onPress={()=> Linking.openURL(url)}>
             <Text style={styles.buttonText}>{textBtn}</Text>
           </TouchableOpacity>
         </View>
@@ -40,8 +42,8 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginBottom: 40,
     marginTop: 20,
-    width: 330,
-    height: 200,
+    width: Dimensions.get('window').width/1.2,
+    height: Dimensions.get('window').height/3
   },
   viewCard: {
     flexDirection: 'column',
@@ -52,11 +54,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    height: 40,
     borderTopRightRadius: 15,
     borderTopLeftRadius: 15,
+    height: Dimensions.get('window').height/12
   },
-  titulo: {fontSize: 19, color: '#fff', fontWeight: 'bold'},
+  titulo: {fontSize: 19, color: '#fff', fontWeight: 'bold', textAlign: 'center'},
   button: {
     paddingVertical: 7,
     borderRadius: 10,

@@ -24,7 +24,10 @@ const ContactScreen = ({ navigation }) => {
             >
               {
                 CONTACTS.map((contact,key) => (
-                  <Picker.Item key={key} label={contact.charge} value={contact.email} /> 
+                  <Picker.Item 
+                  key={key} 
+                  label={contact.charge} 
+                  value={contact.email} /> 
                 ))
               }
             </Picker>
@@ -49,11 +52,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title:{
-        marginTop: 20,
+    marginTop: 20,
+    fontFamily: 'NunitoSans-Bold',
     fontSize: 30,
     color: '#566573',
-    fontWeight: 'bold'
-
   },
   line:{
         height: 1,

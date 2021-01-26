@@ -1,33 +1,50 @@
-import { fromPairs } from 'lodash';
-import React from 'react';
-import { StyleSheet, View, Text, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, View, Text, ScrollView, ActivityIndicator } from 'react-native';
 import BasicCard from '../components/BasicCard';
-import BasicCard2 from '../components/BasicCard2';
 import Colors from '../constants/Colors';
-
+import {getAllLinks} from '../api/weblinks';
 
 const WebLinksScreen = (navigation) => {
+  const [links, setlinks] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+
+  useEffect(() => {
+    getAllLinks().then((response) => {
+      console.log(response);
+      setlinks(response);
+      setLoading(false);
+    })
+  });
   return (
     <ScrollView showsVerticalScrollIndicator={true}>
-      <View style={styles.view}>
-      <Text style={styles.title}>Sitios de Interes</Text>
-      <View style={styles.line}></View>
-          <BasicCard
-            title="OMS"
-            imageURL="https://www.eventoplus.com/content/thumbs/960_540/content/imgsxml/galerias/noticias/6992/big-oms966.jpg"
-            color={Colors.magenta}
-            navigation={navigation}
-            textBtn="Entrar"
+      {loading ? (
+          <ActivityIndicator
+            style={{
+              marginTop: 200,
+            }}
+            size="large"
+            color="#0000ff"
           />
-
-          <BasicCard2
-            title="OPS"
-            imageURL="https://www.prensa-latina.cu/images/2020/septiembre/28/0-panamenricana.jpg"
-            color={Colors.magenta}
-            navigation={navigation}
-            textBtn="Entrar"
-          />      
+        ) : (
+      <View style={styles.view}>
+        <Text style={styles.title}>Sitios de Interes</Text>
+        <View style={styles.line}></View>
+        {
+          links.map((link, key) => (
+            <BasicCard
+              key = {key}
+              imageURL = {link.image}
+              title = {link.title}
+              color = {Colors.magenta}
+              url = {link.url}
+              textBtn = "Saber Mas"
+            />
+          )
+          )
+        }
       </View>
+        )}
     </ScrollView>
   );
 };
@@ -37,18 +54,17 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
   },
-  title:{
+  title: {
     marginTop: 20,
-fontSize: 30,
-color: '#566573',
-fontWeight: 'bold'
-
-},
-line:{
+    fontSize: 30,
+    color: '#566573',
+    fontWeight: 'bold',
+  },
+  line: {
     height: 1,
-width: '90%',
-backgroundColor: '#D5D8DC'
-}
+    width: '90%',
+    backgroundColor: '#D5D8DC',
+  },
 });
 
 export default WebLinksScreen;
