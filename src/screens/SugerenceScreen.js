@@ -1,56 +1,92 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+  Alert,
+} from 'react-native';
 import SugerenceCard from '../components/SugerenceCard';
 import Colors from '../constants/Colors';
 import { Picker } from '@react-native-picker/picker';
-import { getAllSuperenceTypes } from '../api/sugerences'
-
+import { getAllSuperenceTypes, storeSugerence } from '../api/sugerences';
 
 const SugerenceScreen = ({ navigation }) => {
   // OBTIENE DATA, ES UNA COLLECCION
   const [sugerenceTypes, setSugerenceTypes] = useState([]);
   //GUARDA EN FORMULARIO ES UNICA
-  const [sugerenceType, setSugerenceType] = useState('ELIJA UNA OPCION');
+  const [sugerenceType, setSugerenceType] = useState('');
+
+  const [comment, setComment] = useState('');
+
+  const [error, setError] = useState('');
 
   useEffect(() => {
     getAllSuperenceTypes().then((response) => {
       setSugerenceTypes(response);
-    })
-  }, [])
+    });
+  }, []);
+
+  const handleComment = (comment) => {
+    console.log(`Guardando texto: ${comment}`);
+    setComment(comment);
+  };
+
+  const handleSend = () => {
+    if (comment === '' || sugerenceType === '') {
+      setError('Por favor, Ingrese un mensaje');
+      console.log(sugerenceType);
+    } else {
+      storeSugerence(sugerenceType, comment).then((response) => {
+        console.log(`Respuesta del server: ${response.status}`);
+        Alert.alert('Se envió tu Sugerencia con Éxito!!!');
+        setComment('');
+      });
+    }
+  };
 
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>
       <View style={styles.view}>
         <Text style={styles.title}>Sugerencias O Comentarios</Text>
-        <View style={styles.line}>
+        <View style={styles.line}></View>
+        <View style={styles.containerlogo}>
+          <Image
+            style={styles.Logo}
+            source={{
+              uri:
+                'https://tinmarin.org/wp-content/uploads/2020/04/logo-tm-con-marco-blanco.png',
+            }}
+          />
         </View>
-        <View style={styles.containerlogo}><Image style={styles.Logo} source={{ uri: 'https://tinmarin.org/wp-content/uploads/2020/04/logo-tm-con-marco-blanco.png', }} /></View>
         <View style={styles.pickerContainer}>
           <Picker
             style={styles.picker}
             mode="dropdown"
             selectedValue={sugerenceType}
             onValueChange={(itemValue, itemPosition) => {
-              setSugerenceType(itemValue)
-            }}
-          >
-              { 
-                sugerenceTypes.map((sugerenceType, key) => (
-                  <Picker.Item  key={key} label={sugerenceType.name} value={sugerenceType.name} />
-                ))
-              }
+              setSugerenceType(itemValue);
+            }}>
+            {sugerenceTypes.map((sugerenceType, key) => (
+              <Picker.Item
+                key={key}
+                label={sugerenceType.name}
+                value={sugerenceType.name}
+              />
+            ))}
           </Picker>
         </View>
-
       </View>
       <SugerenceCard
         sugerenceType={sugerenceType}
         color={Colors.blueColor}
+        comment={comment}
+        onCommentChange={handleComment}
       />
-      <View style={styles.view} >
-        <TouchableOpacity
-          style={styles.button}
-        >
+      <View style={styles.view}>
+        <TouchableOpacity onPress={() => handleSend()} style={styles.button}>
           <Text style={styles.buttonText}> Enviar! </Text>
         </TouchableOpacity>
       </View>
@@ -75,7 +111,7 @@ const styles = StyleSheet.create({
   pickerItem: {
     height: 100,
     width: 500,
-    width: '100%'
+    width: '100%',
   },
   view: {
     flexDirection: 'column',
@@ -104,27 +140,26 @@ const styles = StyleSheet.create({
     color: '#566573',
     fontWeight: 'bold',
     textAlign: 'center',
-
   },
   line: {
     height: 1,
     width: '90%',
-    backgroundColor: '#D5D8DC'
+    backgroundColor: '#D5D8DC',
   },
   Logo: {
     width: 200,
-    height: 200
+    height: 200,
   },
   containerlogo: {
     alignItems: 'center',
     //backgroundColor: "#ffffff",
     padding: 15,
-    fontFamily: 'NunitoSans-Bold'
+    fontFamily: 'NunitoSans-Bold',
   },
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor: "#ffffff"
+    backgroundColor: '#ffffff',
   },
 });
 
