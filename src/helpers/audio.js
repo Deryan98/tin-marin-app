@@ -7,12 +7,36 @@ export const playButtonPress = () => {
   buttonPress.play();
 }
 
-// const pull = new Sound(require('../audio/pull.mp3'), error => console.log(error));
-// export const playListPull = () => {
-//   pull.play((success) => pull.reset());
-// }
+const heylisten = new Sound (require('../audio/heylisten.mp3'), error=> console.log(error));
+export const heyListenButton = () =>{
+  heylisten.play();
+}
 
-// const pullFinished = new Sound(require('../audio/pullFinished.mp3'), error => console.log(error));
-// export const playListPullFinished = () => {
-//   pullFinished.play((success) => pullFinished.reset());
-// }
+const wow = new Sound (require('../audio/wow.mp3'), error=> console.log(error));
+export const wowButton = () =>{
+  wow.play();
+}
+
+const msn = new Sound (require('../audio/msn.mp3'), error=> console.log(error));
+export const msnButton = () =>{
+  msn.play();
+}
+
+const catc = new Sound (require('../audio/catch.mp3'), error=> console.log(error));
+export const catcButton = () =>{
+  catc.play();
+}
+
+const coin = new Sound (require('../audio/coin.mp3'), error=> console.log(error));
+export const coinButton = () =>{
+  coin.play();
+}
+
+const ohh = new Sound (require('../audio/ohh.mp3'), error=> console.log(error));
+export const ohhButton = () =>{
+  ohh.play();
+}
+
+
+
+

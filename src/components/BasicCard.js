@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
+import { coinButton } from '../helpers/audio'
 
 const BasicCard = ({title, imageURL,  color, textBtn, navigation,screenName}) => {
 
@@ -21,6 +22,7 @@ const BasicCard = ({title, imageURL,  color, textBtn, navigation,screenName}) =>
       <View style={styles.viewCard}>
         <View style={[styles.button, {backgroundColor: color}]}>
           <TouchableOpacity
+            onPressIn={coinButton}
             style={styles.opacity}
             onPress={()=> Linking.openURL('https://www.who.int/es')}>
             <Text style={styles.buttonText}>{textBtn}</Text>

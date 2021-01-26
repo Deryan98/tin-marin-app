@@ -1,5 +1,4 @@
 import React from 'react';
-import Colors from '../constants/Colors';
 import {
     StyleSheet,
     Text,
@@ -8,7 +7,7 @@ import {
     TextInput
 } from 'react-native';
 
-const GenericCard = ({ sugerenceType, color}) => {
+const GenericCard = ({ sugerenceType, color }) => {
 
     return (
         <SafeAreaView style={styles.card}>
@@ -38,10 +37,14 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     textAreaContainer: {
+        paddingHorizontal: 10,
         width: '100%',
-        borderLeftWidth:1,
-        borderRightWidth:1,
-        borderBottomWidth:1,
+        borderColor: '#d1d3e2',
+        borderLeftWidth: 1,
+        borderRightWidth: 1,
+        borderBottomWidth: 1,
+        borderBottomRightRadius: 15,
+        borderBottomLeftRadius: 15,
     },
     textArea: {
         textAlignVertical: 'top',
@@ -52,8 +55,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#fff',
         height: 100,
-        borderBottomRightRadius: 15,
-        borderBottomLeftRadius: 15,
     },
     tituloView: {
         width: '100%',
@@ -65,6 +66,4 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 15,
     },
     titulo: { fontSize: 19, color: '#fff', fontWeight: 'bold' },
-    subTitulo: { fontSize: 19, color: '#858796', fontWeight: 'normal' }
-
 });

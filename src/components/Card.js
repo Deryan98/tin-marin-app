@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
+import { coinButton } from '../helpers/audio'
 
 const Card = ({ exhibition, color, textBtn, navigation}) => {
   const {images, name, _id } = exhibition;
@@ -22,6 +23,7 @@ const Card = ({ exhibition, color, textBtn, navigation}) => {
         <View style={[styles.button, {backgroundColor: color}]}>
           <TouchableOpacity
             style={styles.opacity}
+            onPressIn={coinButton}
             onPress={() => navigation.navigate('information', {_id})}>
             <Text style={styles.buttonText}>{textBtn}</Text>
           </TouchableOpacity>

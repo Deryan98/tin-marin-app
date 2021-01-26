@@ -150,6 +150,7 @@ export default function StackNavigation(props) {
         component={FAQScreen}
         options={{
           title: '',
+          headerLeft: () => buttonLeft(),
         }}
       />
       <Stack.Screen
@@ -157,6 +158,7 @@ export default function StackNavigation(props) {
         component={WebLinksScreen}
         options={{
           title: '',
+          headerLeft: () => buttonLeft(),
         }}
       />
       <Stack.Screen

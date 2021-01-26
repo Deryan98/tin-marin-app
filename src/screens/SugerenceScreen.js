@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
-import ContactCard from '../components/ContactCard';
+import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
 import SugerenceCard from '../components/SugerenceCard';
 import Colors from '../constants/Colors';
 import { Picker } from '@react-native-picker/picker';
-import { CONTACTS } from '../dummy-data/contacts'
 import { getAllSuperenceTypes } from '../api/sugerences'
 
 
 const SugerenceScreen = ({ navigation }) => {
-  const [contactEmail, setContactEmail] = useState('cambialo');
   // OBTIENE DATA, ES UNA COLLECCION
   const [sugerenceTypes, setSugerenceTypes] = useState([]);
   //GUARDA EN FORMULARIO ES UNICA
@@ -18,7 +15,6 @@ const SugerenceScreen = ({ navigation }) => {
   useEffect(() => {
     getAllSuperenceTypes().then((response) => {
       setSugerenceTypes(response);
-      console.log(response);
     })
   }, [])
 
@@ -29,34 +25,76 @@ const SugerenceScreen = ({ navigation }) => {
         <View style={styles.line}>
         </View>
         <View style={styles.containerlogo}><Image style={styles.Logo} source={{ uri: 'https://tinmarin.org/wp-content/uploads/2020/04/logo-tm-con-marco-blanco.png', }} /></View>
-        <Picker
-          style={{ height: 50, width: 250, textAlign: 'center' }}
-          mode="dropdown"
-          selectedValue={sugerenceType}
-          onValueChange={(itemValue, itemPosition) => {
-            setSugerenceType(itemValue)
-          }}
-        >
-          {
-            sugerenceTypes.map((sugerenceType, key) => (
-              <Picker.Item key={key} label={sugerenceType.name} value={sugerenceType.name} />
-            ))
-          }
-        </Picker>
+        <View style={styles.pickerContainer}>
+          <Picker
+            style={styles.picker}
+            mode="dropdown"
+            selectedValue={sugerenceType}
+            onValueChange={(itemValue, itemPosition) => {
+              setSugerenceType(itemValue)
+            }}
+          >
+              { 
+                sugerenceTypes.map((sugerenceType, key) => (
+                  <Picker.Item  key={key} label={sugerenceType.name} value={sugerenceType.name} />
+                ))
+              }
+          </Picker>
+        </View>
 
       </View>
       <SugerenceCard
         sugerenceType={sugerenceType}
         color={Colors.blueColor}
       />
+      <View style={styles.view} >
+        <TouchableOpacity
+          style={styles.button}
+        >
+          <Text style={styles.buttonText}> Enviar! </Text>
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
+  pickerContainer: {
+    flexDirection: 'row',
+    borderRadius: 15,
+    borderWidth: 1,
+    borderColor: '#d1d3e2',
+    overflow: 'hidden',
+  },
+  picker: {
+    height: 50,
+    width: '100%',
+    backgroundColor: '#858796',
+    color: 'white',
+  },
+  pickerItem: {
+    height: 100,
+    width: 500,
+    width: '100%'
+  },
   view: {
     flexDirection: 'column',
     alignItems: 'center',
+  },
+  button: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#e74a3b',
+    marginBottom: 100,
+    height: 55,
+    width: '60%',
+    borderRadius: 10,
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
   },
   title: {
     marginTop: 20,
