@@ -93,10 +93,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   buttonText: {
+    fontFamily: 'NunitoSans-Bold',
     color: '#fff',
     fontWeight: 'bold',
   },
   title: {
+    fontFamily: 'NunitoSans-Bold',
     marginTop: 20,
     fontSize: 30,
     color: '#566573',

@@ -55,10 +55,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
+    fontFamily: 'NunitoSans-Bold',
     marginTop: 20,
     fontSize: 30,
     color: '#566573',
-    fontWeight: 'bold',
   },
   line: {
     height: 1,

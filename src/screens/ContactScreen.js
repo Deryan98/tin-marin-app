@@ -4,6 +4,8 @@ import ContactCard from '../components/ContactCard';
 import Colors from '../constants/Colors';
 import { Picker } from '@react-native-picker/picker';
 import {CONTACTS} from '../dummy-data/contacts'
+import { TouchableOpacity } from 'react-native';
+import { Linking } from 'react-native';
 
 
 const ContactScreen = ({ navigation }) => {
@@ -14,14 +16,20 @@ const ContactScreen = ({ navigation }) => {
           <Text style={styles.title}>Información de Contactos</Text>
           <View style={styles.line}></View>
           <View style={styles.containerlogo}><Image style={styles.Logo} source={{ uri: 'https://tinmarin.org/wp-content/uploads/2020/04/logo-tm-con-marco-blanco.png', }} /></View>
+          <View style={styles.pickerContainer}>
           <Picker
-                style={{ height: 50, width: 250, textAlign: 'center'}}
-                mode = "dropdown"
+            style={styles.picker}
+            
+            mode = "dropdown"
                 selectedValue={contactEmail}  
                 onValueChange={(itemValue, itemPosition) =>  {
                   setContactEmail(itemValue)
                 }}  
             >
+              <Picker.Item 
+                  
+                  label='Seleccione un contacto' 
+                  value='' /> 
               {
                 CONTACTS.map((contact,key) => (
                   <Picker.Item 
@@ -31,6 +39,7 @@ const ContactScreen = ({ navigation }) => {
                 ))
               }
             </Picker>
+  </View>          
             {CONTACTS.map((contact, key) => (contact.email === contactEmail && 
             <ContactCard 
             key = {key}
@@ -41,17 +50,66 @@ const ContactScreen = ({ navigation }) => {
             
           />
             ))}
+            <View style={styles.redes_sociales}>
+            <TouchableOpacity
+              onPress = {()=> Linking.openURL('https://www.facebook.com/MuseoTinMarin/')}
+            >
+            <Image style={styles.minilogo} source={require('../assets/facebook.png')}/>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress = {() => Linking.openURL('https://www.instagram.com/museotinmarin/')}
+              >
+            <Image style={styles.minilogo} source={require('../assets/instagram.png')}/>
+            </TouchableOpacity>
+            <TouchableOpacity
+               onPress = {()=> Linking.openURL('https://twitter.com/MuseoTinMarin')}
+              >
+            <Image style={styles.minilogo} source={require('../assets/twitter.png')}/>
+              </TouchableOpacity>
+              <TouchableOpacity
+               onPress = {()=> Linking.openURL('https://www.youtube.com/channel/UCdpMf5DQvZlcjfX4wum4LmQ')}
+              >
+            <Image style={styles.minilogo} source={require('../assets/youtube.png')}/>
+              </TouchableOpacity>
+              </View>
       </View>
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-        view: {
-        flexDirection: 'column',
+  pickerContainer: {
+    flexDirection: 'row',
+    borderRadius: 15,
+    borderWidth: 1,
+    borderColor: '#d1d3e2',
+    overflow: 'hidden',
+  },
+  picker: {
+    height: 50,
+    width: '100%',
+    backgroundColor: '#858796',
+    color: 'white',
+  },
+  redes_sociales:{
+    marginTop: 80,
+    justifyContent: 'center',
+    width: 100,
+    flexDirection: 'row',
+    marginBottom:50
+  },
+  minilogo:{
+    marginLeft:10,
+    marginRight:20,
+    height: 60,
+    width: 60,  
+  },
+  view: {
+    flexDirection: 'column',
     alignItems: 'center',
   },
   title:{
+    textAlign: 'center',
     marginTop: 20,
     fontFamily: 'NunitoSans-Bold',
     fontSize: 30,

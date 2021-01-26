@@ -84,10 +84,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   title: {
+    fontFamily: 'NunitoSans-Bold',
     marginTop: 20,
     fontSize: 30,
     color: '#566573',
-    fontWeight: 'bold',
     textAlign: 'center',
   },
 

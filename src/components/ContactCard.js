@@ -28,9 +28,11 @@ const styles = StyleSheet.create({
     card: {
         marginBottom: 40,
         marginTop: 20,
-        width: 330,
+        width: '100%',
     },
     viewCard: {
+        borderColor: '#d1d3e2',
+        borderWidth: 1,
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
@@ -40,6 +42,8 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 15,
     },
     tituloView: {
+        borderColor: '#d1d3e2',
+        borderWidth: 1,
         width: '100%',
         flexDirection: 'row',
         alignItems: 'center',

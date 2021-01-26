@@ -194,11 +194,13 @@ const styles = StyleSheet.create({
     borderWidth: 2,
   },
   textItem: {
+    fontFamily: 'NunitoSans-Bold',
     textAlign: 'center',
     fontSize: 13,
     color: '#000',
   },
   overview: {
+    fontFamily: 'NunitoSans-Bold',
     marginHorizontal: 30,
     marginTop: 20,
     textAlign: 'justify',

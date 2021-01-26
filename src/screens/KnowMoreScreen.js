@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title:{
-        marginTop: 20,
+    fontFamily: 'NunitoSans-Bold',
+    marginTop: 20,
     fontSize: 30,
     color: '#566573',
     fontWeight: 'bold'

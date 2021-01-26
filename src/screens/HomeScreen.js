@@ -166,6 +166,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
+    fontFamily: 'NunitoSans-Bold',
     marginTop: 20,
     fontSize: 30,
     color: '#566573',
@@ -193,14 +194,14 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   text: {
+    fontFamily: 'NunitoSans-Bold',
     color: 'white',
     fontSize: 25,
-    fontWeight: 'bold',
   },
   text2: {
+    fontFamily: 'NunitoSans-Bold',
     color: 'white',
     fontSize: 15,
-    fontWeight: 'bold',
   },
 });
 

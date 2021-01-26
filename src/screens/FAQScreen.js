@@ -50,18 +50,20 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   title: {
+    fontFamily: 'NunitoSans-Bold',
     marginTop: 20,
     fontSize: 30,
     color: '#566573',
-    fontWeight: 'bold',
   },
   paragraph: {
+    fontFamily: 'NunitoSans-Bold',
     marginVertical: 10,
     textAlign: 'justify',
     marginBottom: 10,
     fontSize: 15,
   },
   card_title: {
+    fontFamily: 'NunitoSans-Bold',
     textAlign: 'justify',
     backgroundColor: Colors.primaryColor,
     color: 'white',
