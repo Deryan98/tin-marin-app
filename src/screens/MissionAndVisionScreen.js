@@ -4,13 +4,10 @@ import { StyleSheet, Text, View, ScrollView, Image, ImageBackground } from 'reac
 const ContactScreen = () => {
     return (
         <ScrollView style={styles.container}>
-            <Text style={styles.titular}>Conócenos</Text>
-            <View
-              style={{
-                borderBottomColor: 'black',
-                borderBottomWidth: 1,
-              }} />
-            <View style={styles.containerlogo}><Image style={styles.Logo} source={{ uri: 'https://tinmarin.org/wp-content/uploads/2020/04/logo-tm-con-marco-blanco.png', }} /></View>
+          <View style={styles.view}>
+            <Text style={styles.titular}>Misión, Visión y Valores</Text>
+            <View style={styles.line}></View>
+            <View style={styles.containerlogo}><Image style={styles.Logo} source={require('../assets/logoTinMarin.png')}/></View>
             <Text style={styles.tema}>Misión:</Text>
             <Text style={styles.title2}>Contribuir a la formación de los niños y sus acompañantes en ciudadanos integrales y creativos, mediante el aprendizaje significativo, la orientación cultural y la experimentración divertida con integridad, innovación y trabajo en equipo.</Text>
             <Text style={styles.tema}>Visión:</Text>
@@ -23,23 +20,31 @@ const ContactScreen = () => {
           Respeto{"\n"}
           Trabajo en equipo{"\n"}
           </Text>
-            
+          </View>
           </ScrollView>
       );
     }
     export default ContactScreen
   
     const styles = StyleSheet.create({
+      line: {
+        height: 1,
+        width: '90%',
+        backgroundColor: '#D5D8DC',
+      },
       container: {
         flex: 1,
-        padding: 24,
-        backgroundColor: "#ffffff"
+        paddingBottom: 24,
+        paddingHorizontal: 24,
       },
+      view: {
+        flexDirection: 'column',
+        alignItems: 'center',
+      },      
       title2: {
         marginTop: 16,
         paddingVertical: 8,
         borderRadius: 6,
-        backgroundColor: "#ffffff",
         justifyContent: "center",
         color: "#20232a",
         textAlign: "justify",
@@ -51,7 +56,6 @@ const ContactScreen = () => {
         marginTop: 16,
         paddingVertical: 8,
         borderRadius: 6,
-        backgroundColor: "#ffffff",
         justifyContent: "center",
         color: "#20232a",
         textAlign: "center",
@@ -65,17 +69,20 @@ const ContactScreen = () => {
         color: "#B22222"
       },
       Logo: {
-        width: 200,
+        width: 300,
         height: 200
       },
       containerlogo: {
         alignItems: 'center',
-        backgroundColor: "#ffffff",
-        padding: 15
+        paddingHorizontal: 15,
+        paddingVertical: 30
       },
-      titular: {
-        textAlign: "center",
+      titular:{
         fontFamily: 'NunitoSans-Bold',
-        fontSize: 28
+        marginTop: 20,
+        fontSize: 30,
+        color: '#566573',
+        fontWeight: 'bold',
+        textAlign: 'center'
       },
     });

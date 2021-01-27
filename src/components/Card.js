@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginBottom: 40,
     marginTop: 20,
-    width: 330,
+    width: '90%',
     height: 200,
   },
   viewCard: {

@@ -1,8 +1,10 @@
 import React from 'react';
 import { map } from 'lodash';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import GenericCard from '../components/GenericCard';
+import KnoMoreCard from '../components/KnoMoreCard';
 import Colors from '../constants/Colors';
+import InformacionDeContacto from '../assets/InformacionDeContacto.jpg';
+import MisionVisionValores from '../assets/MisionVisionValores.jpg';
 
 
 const KnowMoreScreen = ({ navigation }) => {
@@ -11,18 +13,18 @@ const KnowMoreScreen = ({ navigation }) => {
       <View style={styles.view}>
           <Text style={styles.title}>Conócenos Más</Text>
           <View style={styles.line}></View>
-            <GenericCard
+            <KnoMoreCard
             title="Contactos"
-            imageURL="https://idesaa.edu.mx/blog/wp-content/uploads/2017/08/blog1-2.jpg"
+            imageURL={InformacionDeContacto}
             color={Colors.magenta}
             textBtn="Saber Mas"
             navigation={navigation}
             screenName="contact"
           />
 
-          <GenericCard
+          <KnoMoreCard
             title="Misión, Visión, Valores"
-            imageURL="http://blogs.encamina.com/en-las-nubes/wp-content/uploads/sites/9/2013/02/Misin-vision-valores.jpg"
+            imageURL={MisionVisionValores}
             color={Colors.magenta}
             textBtn="Saber Mas"
             navigation={navigation}

@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { coinButton } from '../helpers/audio';
 
-const GenericCard = ({
+const KnoMoreCard = ({
   id,
   title,
   description,
@@ -36,7 +36,7 @@ const GenericCard = ({
       <View style={[styles.tituloView, { backgroundColor: color }]}>
         <Text style={styles.titulo}>{title}</Text>
       </View>
-      <Image source={{ uri: imageURL }} style={styles.img} />
+      <Image source={(imageURL)} style={styles.img} />
       <View style={styles.viewCard}>
         <View style={[styles.button, { backgroundColor: color }]}>
           <TouchableOpacity style={styles.opacity} onPressIn={coinButton} onPress={() => navigating()}>
@@ -48,7 +48,7 @@ const GenericCard = ({
   );
 };
 
-export default GenericCard;
+export default KnoMoreCard;
 
 const styles = StyleSheet.create({
   card: {

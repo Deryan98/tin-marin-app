@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     marginHorizontal: 10,
-    marginVertical: 10,
   },
   title: {
     fontFamily: 'NunitoSans-Bold',

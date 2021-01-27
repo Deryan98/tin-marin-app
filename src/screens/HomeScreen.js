@@ -40,7 +40,7 @@ const HomeScreen = ({ navigation }) => {
           }}
           style={styles.cardContainer}>
           <ImageBackground
-            imageStyle={{ opacity: 0.5 }}
+            imageStyle={{ opacity: 0.5, ...styles.image }}
             source={Exhibicion}
             style={styles.card}
             borderRadius={10}>
@@ -61,7 +61,7 @@ const HomeScreen = ({ navigation }) => {
           }}
           style={styles.cardContainer}>
           <ImageBackground
-            imageStyle={{ opacity: 0.5 }}
+            imageStyle={{ opacity: 0.5, ...styles.image }}
             source={Covid}
             style={styles.card}
             borderRadius={10}>
@@ -81,7 +81,7 @@ const HomeScreen = ({ navigation }) => {
           }}
           style={styles.cardContainer}>
           <ImageBackground
-            imageStyle={{ opacity: 0.5 }}
+            imageStyle={{ opacity: 0.5, ...styles.image }}
             source={ConocenosMas}
             style={styles.card}
             borderRadius={10}>
@@ -102,7 +102,7 @@ const HomeScreen = ({ navigation }) => {
           }}
           style={styles.cardContainer}>
           <ImageBackground
-            imageStyle={{ opacity: 0.5 }}
+            imageStyle={{ opacity: 0.5, ...styles.image }}
             source={Sugerencias}
             style={styles.card}
             borderRadius={10}>
@@ -123,7 +123,7 @@ const HomeScreen = ({ navigation }) => {
           }}
           style={styles.cardContainer}>
           <ImageBackground
-            imageStyle={{ opacity: 0.5 }}
+            imageStyle={{ opacity: 0.5, ...styles.image }}
             source={FAQs}
             style={styles.card}
             borderRadius={10}>
@@ -143,7 +143,7 @@ const HomeScreen = ({ navigation }) => {
           }}
           style={{ ...styles.cardContainer, marginBottom: 30 }}>
           <ImageBackground
-            imageStyle={{ opacity: 0.5 }}
+            imageStyle={{ opacity: 0.5, ...styles.image }}
             source={WebLinks}
             style={styles.card}
             borderRadius={10}>
@@ -161,6 +161,9 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  image:{
+    width: '100%'
+  },
   view: {
     flexDirection: 'column',
     alignItems: 'center',
@@ -178,7 +181,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#D5D8DC',
   },
   card: {
-    width: 350,
+    width: '90%',
     height: 200,
     backgroundColor: 'rgb(0,0,0)',
     borderRadius: 10,

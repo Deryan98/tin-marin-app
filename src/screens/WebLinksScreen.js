@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
   view: {
     flexDirection: 'column',
     alignItems: 'center',
+    paddingBottom: 30
   },
   title: {
     fontFamily: 'NunitoSans-Bold',

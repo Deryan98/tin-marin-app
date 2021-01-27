@@ -17,10 +17,7 @@ const ContactScreen = ({ navigation }) => {
         <View style={styles.containerlogo}>
           <Image
             style={styles.Logo}
-            source={{
-              uri:
-                'https://tinmarin.org/wp-content/uploads/2020/04/logo-tm-con-marco-blanco.png',
-            }}
+            source={require('../assets/logoTinMarin.png')}
           />
         </View>
         <View style={styles.pickerContainer}>
@@ -130,7 +127,6 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    marginTop: 20,
     fontFamily: 'NunitoSans-Bold',
     fontSize: 30,
     color: '#566573',
@@ -141,19 +137,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#D5D8DC',
   },
   Logo: {
-    width: 200,
-    height: 200,
+    width: 300,
+    height: 200
   },
   containerlogo: {
     alignItems: 'center',
-    //backgroundColor: "#ffffff",
-    // padding: 15,
-    fontFamily: 'NunitoSans-Bold',
+    paddingHorizontal: 15,
+    paddingVertical: 30
   },
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor: '#ffffff',
   },
 });
 
