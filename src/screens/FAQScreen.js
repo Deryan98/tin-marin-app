@@ -1,6 +1,13 @@
 import { map } from 'lodash';
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Text, SafeAreaView } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  SafeAreaView,
+  ActivityIndicator,
+} from 'react-native';
+import { getAllFAQs } from '../api/faqs';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Card } from 'react-native-elements';
 import { FAQs } from '../data/dummy-data';
@@ -10,29 +17,43 @@ const FAQScreen = ({ navigation }) => {
   const [faqs, setFaqs] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setLoading(false);
-  // }, []);
+  useEffect(() => {
+    getAllFAQs().then((response) => {
+      // console.log(response);
+      setFaqs(response);
+      setLoading(false);
+    });
+  }, []);
 
   return (
     <SafeAreaView>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={styles.view}>
-          <Text style={styles.title}>Preguntas Frecuentes</Text>
-          <View style={styles.line}></View>
-          {FAQs.map((faq, index) => {
-            return (
-              <Card key={index} containerStyle={{ borderRadius: 15 }}>
-                <Card.Title style={styles.card_title}>
-                  {faq.question}
-                </Card.Title>
-                <View>
-                  <Text style={styles.paragraph}>{faq.answer}</Text>
-                </View>
-              </Card>
-            );
-          })}
-        </View>
+        {loading ? (
+          <ActivityIndicator
+            style={{
+              marginTop: 200,
+            }}
+            size="large"
+            color="#0000ff"
+          />
+        ) : (
+          <View style={styles.view}>
+            <Text style={styles.title}>Preguntas Frecuentes</Text>
+            <View style={styles.line}></View>
+            {faqs.map((faq, index) => {
+              return (
+                <Card key={index} containerStyle={{ borderRadius: 15 }}>
+                  <Card.Title style={styles.card_title}>
+                    {faq.question}
+                  </Card.Title>
+                  <View>
+                    <Text style={styles.paragraph}>{faq.answer}</Text>
+                  </View>
+                </Card>
+              );
+            })}
+          </View>
+        )}
       </ScrollView>
     </SafeAreaView>
   );
@@ -47,6 +68,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     marginHorizontal: 10,
+    marginBottom: 30,
   },
   title: {
     fontFamily: 'NunitoSans-Bold',
@@ -57,7 +79,7 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     fontFamily: 'NunitoSans-Bold',
-    marginVertical: 10,
+    // marginVertical: 10,
     textAlign: 'justify',
     marginBottom: 10,
     fontSize: 15,

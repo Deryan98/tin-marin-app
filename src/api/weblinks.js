@@ -1,4 +1,4 @@
-import { API_DEV } from '../constants/URL';
+import { API_DEV, API_HOST } from '../constants/URL';
 
 export const getAllLinks = (signal) => {
   const url = `${API_DEV}/recommended-websites`;
