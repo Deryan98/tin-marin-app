@@ -14,7 +14,7 @@ const DrawerContent = (props) => {
         <Avatar.Image
           backgroundColor={'#4E73DF'}
           size={100}
-          source={require('../assets/logo.gif')}
+          source={require('../assets/logoDrawer.png')}
         />
       </Drawer.Section>
       <Drawer.Section>
