@@ -7,26 +7,25 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Image,
-  Dimensions
+  Dimensions,
 } from 'react-native';
-import { coinButton } from '../helpers/audio'
+import { coinButton } from '../helpers/audio';
 
-
-const BasicCard = ({title, imageURL,  color, textBtn, url}) => {
-
-  
+const BasicCard = ({ title, imageURL, color, textBtn, url }) => {
+  console.log(`Width: ${Dimensions.get('window').width}`);
+  console.log(`Height: ${Dimensions.get('window').height}`);
   return (
     <SafeAreaView style={styles.card}>
-      <View style={[styles.tituloView, {backgroundColor: color}]}>
+      <View style={[styles.tituloView, { backgroundColor: color }]}>
         <Text style={styles.titulo}>{title}</Text>
       </View>
-      <Image source={{uri: imageURL}} style={styles.img} />
+      <Image source={{ uri: imageURL }} style={styles.img} />
       <View style={styles.viewCard}>
-        <View style={[styles.button, {backgroundColor: color}]}>
+        <View style={[styles.button, { backgroundColor: color }]}>
           <TouchableOpacity
             onPressIn={coinButton}
             style={styles.opacity}
-            onPress={()=> Linking.openURL(url)}>
+            onPress={() => Linking.openURL(url)}>
             <Text style={styles.buttonText}>{textBtn}</Text>
           </TouchableOpacity>
         </View>
@@ -40,10 +39,9 @@ export default BasicCard;
 const styles = StyleSheet.create({
   card: {
     borderRadius: 15,
-    marginBottom: 40,
-    marginTop: 20,
-    width: Dimensions.get('window').width/1.2,
-    height: Dimensions.get('window').height/3
+    marginVertical: 40,
+    width: Dimensions.get('window').width / 1.2,
+    height: Dimensions.get('window').height / 3,
   },
   viewCard: {
     flexDirection: 'column',
@@ -56,9 +54,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderTopRightRadius: 15,
     borderTopLeftRadius: 15,
-    height: Dimensions.get('window').height/12
+    height: '35%',
   },
-  titulo: {fontSize: 19, color: '#fff', fontWeight: 'bold', textAlign: 'center'},
+  titulo: {
+    marginHorizontal: 10,
+    fontSize: Dimensions.get('window').height > 600 ? 19 : 14,
+    color: '#fff',
+    fontWeight: 'bold',
+    textAlign: 'justify',
+  },
   button: {
     paddingVertical: 7,
     borderRadius: 10,

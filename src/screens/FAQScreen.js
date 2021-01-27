@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'NunitoSans-Bold',
+    textAlign: 'center',
     marginTop: 20,
     fontSize: 30,
     color: '#566573',

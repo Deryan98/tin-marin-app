@@ -4,8 +4,8 @@ import {
   View,
   Image,
   SafeAreaView,
-  ActivityIndicator,
   TouchableOpacity,
+  Dimensions,
 } from 'react-native';
 import { getAllCovidRecommendations } from '../api/covid';
 import { Card, Icon, Text } from 'react-native-elements';
@@ -16,6 +16,7 @@ import { coinButton } from '../helpers/audio';
 
 const CovidInfo = ({ navigation, route }) => {
   const { title, description, image, steps } = route.params;
+  console.log(Dimensions.get('window').width);
 
   return (
     <SafeAreaView>
@@ -178,13 +179,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   footer_column: {
-    width: 150,
+    width: Dimensions.get('window').width / 2,
     marginHorizontal: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
   footer_links: {
-    fontSize: 15,
+    // padding: 10,
+    fontSize: Dimensions.get('window').width > 400 ? 15 : 12,
     color: Colors.primaryColor,
   },
   line: {

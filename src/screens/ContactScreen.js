@@ -1,77 +1,98 @@
-import React,{useState} from 'react';
-import { StyleSheet, Text, View, ScrollView, Image} from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 import ContactCard from '../components/ContactCard';
 import Colors from '../constants/Colors';
 import { Picker } from '@react-native-picker/picker';
-import {CONTACTS} from '../dummy-data/contacts'
+import { CONTACTS } from '../dummy-data/contacts';
 import { TouchableOpacity } from 'react-native';
 import { Linking } from 'react-native';
 
-
 const ContactScreen = ({ navigation }) => {
-  const [contactEmail, setContactEmail] = useState('cambialo');
+  const [contactEmail, setContactEmail] = useState('');
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>
       <View style={styles.view}>
-          <Text style={styles.title}>Información de Contactos</Text>
-          <View style={styles.line}></View>
-          <View style={styles.containerlogo}><Image style={styles.Logo} source={{ uri: 'https://tinmarin.org/wp-content/uploads/2020/04/logo-tm-con-marco-blanco.png', }} /></View>
-          <View style={styles.pickerContainer}>
+        <Text style={styles.title}>Información de Contactos</Text>
+        <View style={styles.line}></View>
+        <View style={styles.containerlogo}>
+          <Image
+            style={styles.Logo}
+            source={{
+              uri:
+                'https://tinmarin.org/wp-content/uploads/2020/04/logo-tm-con-marco-blanco.png',
+            }}
+          />
+        </View>
+        <View style={styles.pickerContainer}>
           <Picker
             style={styles.picker}
-            
-            mode = "dropdown"
-                selectedValue={contactEmail}  
-                onValueChange={(itemValue, itemPosition) =>  {
-                  setContactEmail(itemValue)
-                }}  
-            >
-              <Picker.Item 
-                  
-                  label='Seleccione un contacto' 
-                  value='' /> 
-              {
-                CONTACTS.map((contact,key) => (
-                  <Picker.Item 
-                  key={key} 
-                  label={contact.charge} 
-                  value={contact.email} /> 
-                ))
-              }
-            </Picker>
-  </View>          
-            {CONTACTS.map((contact, key) => (contact.email === contactEmail && 
-            <ContactCard 
-            key = {key}
-            charge={contact.charge}
-            color={Colors.blueColor}
-            name={contact.name}
-            email= {contact.email}
-            
-          />
+            mode="dropdown"
+            selectedValue={contactEmail}
+            onValueChange={(itemValue, itemPosition) => {
+              setContactEmail(itemValue);
+            }}>
+            <Picker.Item label="Seleccione un contacto" value="" />
+            {CONTACTS.map((contact, key) => (
+              <Picker.Item
+                key={key}
+                label={contact.charge}
+                value={contact.email}
+              />
             ))}
-            <View style={styles.redes_sociales}>
-            <TouchableOpacity
-              onPress = {()=> Linking.openURL('https://www.facebook.com/MuseoTinMarin/')}
-            >
-            <Image style={styles.minilogo} source={require('../assets/facebook.png')}/>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress = {() => Linking.openURL('https://www.instagram.com/museotinmarin/')}
-              >
-            <Image style={styles.minilogo} source={require('../assets/instagram.png')}/>
-            </TouchableOpacity>
-            <TouchableOpacity
-               onPress = {()=> Linking.openURL('https://twitter.com/MuseoTinMarin')}
-              >
-            <Image style={styles.minilogo} source={require('../assets/twitter.png')}/>
-              </TouchableOpacity>
-              <TouchableOpacity
-               onPress = {()=> Linking.openURL('https://www.youtube.com/channel/UCdpMf5DQvZlcjfX4wum4LmQ')}
-              >
-            <Image style={styles.minilogo} source={require('../assets/youtube.png')}/>
-              </TouchableOpacity>
-              </View>
+          </Picker>
+        </View>
+        {CONTACTS.map(
+          (contact, key) =>
+            contact.email === contactEmail && (
+              <ContactCard
+                key={key}
+                charge={contact.charge}
+                color={Colors.blueColor}
+                name={contact.name}
+                email={contact.email}
+              />
+            ),
+        )}
+        <View style={styles.redes_sociales}>
+          <TouchableOpacity
+            onPress={() =>
+              Linking.openURL('https://www.facebook.com/MuseoTinMarin/')
+            }>
+            <Image
+              style={styles.minilogo}
+              source={require('../assets/facebook.png')}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              Linking.openURL('https://www.instagram.com/museotinmarin/')
+            }>
+            <Image
+              style={styles.minilogo}
+              source={require('../assets/instagram.png')}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              Linking.openURL('https://twitter.com/MuseoTinMarin')
+            }>
+            <Image
+              style={styles.minilogo}
+              source={require('../assets/twitter.png')}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              Linking.openURL(
+                'https://www.youtube.com/channel/UCdpMf5DQvZlcjfX4wum4LmQ',
+              )
+            }>
+            <Image
+              style={styles.minilogo}
+              source={require('../assets/youtube.png')}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
@@ -91,48 +112,48 @@ const styles = StyleSheet.create({
     backgroundColor: '#858796',
     color: 'white',
   },
-  redes_sociales:{
-    marginTop: 80,
+  redes_sociales: {
+    marginTop: 10,
     justifyContent: 'center',
     width: 100,
     flexDirection: 'row',
-    marginBottom:50
+    marginBottom: 50,
   },
-  minilogo:{
+  minilogo: {
     margin: 5,
     height: 60,
-    width: 60,  
+    width: 60,
   },
   view: {
     flexDirection: 'column',
     alignItems: 'center',
   },
-  title:{
+  title: {
     textAlign: 'center',
     marginTop: 20,
     fontFamily: 'NunitoSans-Bold',
     fontSize: 30,
     color: '#566573',
   },
-  line:{
-        height: 1,
+  line: {
+    height: 1,
     width: '90%',
-    backgroundColor: '#D5D8DC'
+    backgroundColor: '#D5D8DC',
   },
   Logo: {
     width: 200,
-    height: 200
+    height: 200,
   },
   containerlogo: {
     alignItems: 'center',
     //backgroundColor: "#ffffff",
-    padding: 15,
-    fontFamily: 'NunitoSans-Bold'
+    // padding: 15,
+    fontFamily: 'NunitoSans-Bold',
   },
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor: "#ffffff"
+    backgroundColor: '#ffffff',
   },
 });
 
