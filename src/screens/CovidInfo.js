@@ -150,6 +150,7 @@ const styles = StyleSheet.create({
   },
   image: { width: '100%', height: 200, borderRadius: 15 },
   subtitle: {
+    textAlign: 'center',
     fontFamily: 'NunitoSans-Bold',
     marginTop: 20,
     fontSize: 25,
