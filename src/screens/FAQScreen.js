@@ -20,7 +20,7 @@ const FAQScreen = ({ navigation }) => {
   useEffect(() => {
     getAllFAQs().then((response) => {
       // console.log(response);
-      // setFaqs(response);
+      setFaqs(response);
       setLoading(false);
     });
   }, []);
