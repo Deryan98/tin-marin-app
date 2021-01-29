@@ -12,8 +12,8 @@ import {
 import { coinButton } from '../helpers/audio';
 
 const BasicCard = ({ title, imageURL, color, textBtn, url }) => {
-  console.log(`Width: ${Dimensions.get('window').width}`);
-  console.log(`Height: ${Dimensions.get('window').height}`);
+  // console.log(`Width: ${Dimensions.get('window').width}`);
+  // console.log(`Height: ${Dimensions.get('window').height}`);
   return (
     <SafeAreaView style={styles.card}>
       <View style={[styles.tituloView, { backgroundColor: color }]}>

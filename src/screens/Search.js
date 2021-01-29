@@ -30,13 +30,13 @@ const Search = ({ navigation }) => {
   }, [search]);
 
   const onChangeSearch = (e) => {
-    if(size(e) > 0){
+    if (size(e) > 0) {
       setLoading(true);
-    }else {
-      setLoading(false)
+    } else {
+      setLoading(false);
     }
     setSearch(e);
-  }
+  };
 
   return (
     <SafeAreaView style={styles.view}>
@@ -57,7 +57,9 @@ const Search = ({ navigation }) => {
             size="large"
             color="#0000ff"
           />
-        ) : size(exhibitions) == 0 ? <Text style={styles.text}>No se encontraron exhibiciones</Text>:(
+        ) : size(exhibitions) == 0 ? (
+          <Text style={styles.text}>No se encontraron exhibiciones</Text>
+        ) : (
           <View style={styles.container}>
             {map(exhibitions, (exhibition, index) => {
               if (index % 2 == 0) {
@@ -94,10 +96,10 @@ const styles = StyleSheet.create({
   view: {
     marginBottom: 50,
   },
-  text:{
+  text: {
     fontFamily: 'NunitoSans-Bold',
     textAlign: 'center',
     fontSize: 20,
-    color: "gray",
-  }
+    color: 'gray',
+  },
 });

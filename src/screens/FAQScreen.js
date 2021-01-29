@@ -10,8 +10,8 @@ import {
 import { getAllFAQs } from '../api/faqs';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Card } from 'react-native-elements';
-import { FAQs } from '../data/dummy-data';
 import Colors from '../constants/Colors';
+import { size } from 'lodash';
 
 const FAQScreen = ({ navigation }) => {
   const [faqs, setFaqs] = useState(null);
@@ -20,7 +20,7 @@ const FAQScreen = ({ navigation }) => {
   useEffect(() => {
     getAllFAQs().then((response) => {
       // console.log(response);
-      setFaqs(response);
+      // setFaqs(response);
       setLoading(false);
     });
   }, []);
@@ -36,6 +36,10 @@ const FAQScreen = ({ navigation }) => {
             size="large"
             color="#0000ff"
           />
+        ) : size(faqs) == 0 ? (
+          <Text style={styles.text}>
+            No se encontraron Preguntas Frecuentes
+          </Text>
         ) : (
           <View style={styles.view}>
             <Text style={styles.title}>Preguntas Frecuentes</Text>
@@ -99,6 +103,12 @@ const styles = StyleSheet.create({
     height: 1,
     width: '90%',
     backgroundColor: '#D5D8DC',
+  },
+  text: {
+    fontFamily: 'NunitoSans-Bold',
+    textAlign: 'center',
+    fontSize: 20,
+    color: 'gray',
   },
 });
 export default FAQScreen;

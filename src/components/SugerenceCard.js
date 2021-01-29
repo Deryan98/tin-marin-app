@@ -22,7 +22,7 @@ const GenericCard = ({ sugerenceType, color, comment, onCommentChange }) => {
           value={comment}
           onChangeText={(text) => {
             handleComment(text);
-            console.log(text);
+            // console.log(text);
           }}
         />
       </View>

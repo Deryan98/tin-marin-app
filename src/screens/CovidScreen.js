@@ -11,8 +11,7 @@ import { Text } from 'react-native-elements';
 import GenericCard from '../components/GenericCard';
 import Colors from '../constants/Colors';
 import { ScrollView } from 'react-native-gesture-handler';
-import { COVIDS } from '../data/dummy-data';
-import URL from '../constants/URL';
+import { size } from 'lodash';
 
 const CovidScreen = ({ navigation }) => {
   // const [covidInfo, setCovidInfo] = useState(null);
@@ -39,6 +38,8 @@ const CovidScreen = ({ navigation }) => {
             size="large"
             color="#0000ff"
           />
+        ) : size(covid) == 0 ? (
+          <Text style={styles.text}>No se encontraron Recomendaciones</Text>
         ) : (
           <View style={styles.view}>
             <Text style={styles.title}>Recomendaciones para el Covid-19</Text>
@@ -95,5 +96,11 @@ const styles = StyleSheet.create({
     height: 1,
     width: '90%',
     backgroundColor: '#D5D8DC',
+  },
+  text: {
+    fontFamily: 'NunitoSans-Bold',
+    textAlign: 'center',
+    fontSize: 20,
+    color: 'gray',
   },
 });

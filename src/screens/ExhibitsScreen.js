@@ -1,10 +1,16 @@
 import { map } from 'lodash';
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, ScrollView, ActivityIndicator } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  ActivityIndicator,
+} from 'react-native';
 import { getAllExhibitions } from '../api/exhibitions';
 import Card from '../components/Card';
 import Colors from '../constants/Colors';
-import URL from '../constants/URL';
+import { size } from 'lodash';
 
 const ExhibitsScreen = ({ navigation }) => {
   const [exhibitions, setExhibitions] = useState(null);
@@ -14,40 +20,43 @@ const ExhibitsScreen = ({ navigation }) => {
   useEffect(() => {
     getAllExhibitions().then((response) => {
       setExhibitions(response);
-      setLoading(false)
+      setLoading(false);
     });
   }, []);
 
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
-      {
-        loading ?  
-        <ActivityIndicator style={{
-          marginTop: 200
-        }} size="large" color="#0000ff"/>
-        :
+      {loading ? (
+        <ActivityIndicator
+          style={{
+            marginTop: 200,
+          }}
+          size="large"
+          color="#0000ff"
+        />
+      ) : size(exhibitions) == 0 ? (
+        <Text style={styles.text}>No se encontraron Exhibiciones</Text>
+      ) : (
         <View style={styles.view}>
-        <Text style={styles.title}>Exhibiciones</Text>
-        <View style={styles.line}></View>
-        {map(exhibitions, (exhibition, index) => {
-          if (index % 2 === 0) {
-            swapColor = !swapColor;
-          }
-          return (
-            <Card
-              key={exhibition._id}
-              index={index}
-              textBtn="Conócela"
-              color={swapColor ? Colors.green : Colors.magenta}
-              exhibition={exhibition}
-              navigation={navigation}
-            />
-          );
-        })}
-      </View>
-    
-      }
-     
+          <Text style={styles.title}>Exhibiciones</Text>
+          <View style={styles.line}></View>
+          {map(exhibitions, (exhibition, index) => {
+            if (index % 2 === 0) {
+              swapColor = !swapColor;
+            }
+            return (
+              <Card
+                key={exhibition._id}
+                index={index}
+                textBtn="Conócela"
+                color={swapColor ? Colors.green : Colors.magenta}
+                exhibition={exhibition}
+                navigation={navigation}
+              />
+            );
+          })}
+        </View>
+      )}
     </ScrollView>
   );
 };
@@ -57,17 +66,23 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
   },
-  title:{
+  title: {
     fontFamily: 'NunitoSans-Bold',
     marginTop: 20,
     fontSize: 30,
     color: '#566573',
   },
-  line:{
+  line: {
     height: 1,
     width: '90%',
-    backgroundColor: '#D5D8DC'
-  }
+    backgroundColor: '#D5D8DC',
+  },
+  text: {
+    fontFamily: 'NunitoSans-Bold',
+    textAlign: 'center',
+    fontSize: 20,
+    color: 'gray',
+  },
 });
 
 export default ExhibitsScreen;

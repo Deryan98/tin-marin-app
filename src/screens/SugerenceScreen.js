@@ -30,17 +30,17 @@ const SugerenceScreen = ({ navigation }) => {
   }, []);
 
   const handleComment = (comment) => {
-    console.log(`Guardando texto: ${comment}`);
+    // console.log(`Guardando texto: ${comment}`);
     setComment(comment);
   };
 
   const handleSend = () => {
     if (comment === '' || sugerenceType === '') {
       setError('Por favor, Ingrese un mensaje');
-      console.log(sugerenceType);
+      // console.log(sugerenceType);
     } else {
       storeSugerence(sugerenceType, comment).then((response) => {
-        console.log(`Respuesta del server: ${response.status}`);
+        // console.log(`Respuesta del server: ${response.status}`);
         Alert.alert('Se envió tu Sugerencia con Éxito!!!');
         setComment('');
       });
@@ -144,12 +144,12 @@ const styles = StyleSheet.create({
   },
   Logo: {
     width: 300,
-    height: 200
+    height: 200,
   },
   containerlogo: {
     alignItems: 'center',
     paddingHorizontal: 15,
-    paddingVertical: 30
+    paddingVertical: 30,
   },
   container: {
     flex: 1,

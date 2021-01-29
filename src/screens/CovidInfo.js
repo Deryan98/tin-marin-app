@@ -16,7 +16,7 @@ import { coinButton } from '../helpers/audio';
 
 const CovidInfo = ({ navigation, route }) => {
   const { title, description, image, steps } = route.params;
-  console.log(Dimensions.get('window').width);
+  // console.log(Dimensions.get('window').width);
 
   return (
     <SafeAreaView>
