@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
-import { playButtonPress } from '../helpers/audio'
+import { playButtonPress } from '../helpers/audio';
 import {
   Modal,
   ModalButton,
@@ -12,8 +12,7 @@ import {
 
 import MContent from './Modal';
 
-const ModalBody = ({ showModal, visible }) => {
-  
+const ModalBody = ({ showModal, visible, curiousInfo }) => {
   return (
     <Modal
       visible={visible}
@@ -30,7 +29,7 @@ const ModalBody = ({ showModal, visible }) => {
         </ModalFooter>
       }>
       <ModalContent>
-        <MContent />
+        <MContent curiousInfo={curiousInfo} />
       </ModalContent>
     </Modal>
   );

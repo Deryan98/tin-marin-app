@@ -34,7 +34,11 @@ const InfoCard = ({ route }) => {
         {logoURL && <InfoSponsor url={logoURL} />}
         <InfoFooter exhibition={exhibition} />
       </ScrollView>
-      <ModalBody visible={visible} showModal={showModal} />
+      <ModalBody
+        visible={visible}
+        showModal={showModal}
+        curiousInfo={exhibition.curiousInfo}
+      />
     </SafeAreaView>
   );
 };
@@ -76,7 +80,16 @@ const InfoTitle = ({ exhibition }) => {
 const InfoSponsor = ({ url }) => {
   return (
     <View style={styles.viewSponsor}>
-      <Title style={{ color: 'black', fontSize: 17, fontWeight: 'bold', marginHorizontal: 30, marginTop: 5 }}>Patrocina: </Title>
+      <Title
+        style={{
+          color: 'black',
+          fontSize: 17,
+          fontWeight: 'bold',
+          marginHorizontal: 30,
+          marginTop: 5,
+        }}>
+        Patrocina:{' '}
+      </Title>
       <Image source={{ uri: url }} style={styles.imgSponsor} />
     </View>
   );

@@ -1,15 +1,12 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import Tin from '../assets/tin.png';
 
-const Modal = () => {
+const Modal = ({ curiousInfo }) => {
   return (
     <View style={styles.content}>
       <Image source={Tin} style={styles.img} />
-      <Text style={styles.text}>
-        La exhibición del avión es probablemente una de las favoritas desde el
-        momento de su inauguración
-      </Text>
+      <Text style={styles.text}>{curiousInfo}</Text>
     </View>
   );
 };
@@ -36,6 +33,6 @@ const styles = StyleSheet.create({
     fontSize: 16.5,
     width: '63%',
     textAlign: 'left',
-    paddingLeft: 10
+    paddingLeft: 10,
   },
 });
