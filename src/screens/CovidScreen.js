@@ -13,6 +13,12 @@ import Colors from '../constants/Colors';
 import { ScrollView } from 'react-native-gesture-handler';
 import { size } from 'lodash';
 
+/**
+ * Pantalla que muestra una lista de tarjetas sobre recomendaciones sobre el COVID-19
+ * @param {prop} navigation - Contiene información básica de navegación
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {SafeAreaView} Regreesa una layout con la maquetación de la pantalla
+ */
 const CovidScreen = ({ navigation }) => {
   // const [covidInfo, setCovidInfo] = useState(null);
   const [covid, setCovid] = useState(null);
@@ -56,6 +62,14 @@ const CovidScreen = ({ navigation }) => {
   );
 };
 
+/**
+ * Componente que se utiliza para iterar las tarjetas
+ * @param {prop} navigation
+ * @param {Array<string>} covidRecs - Contiene la información del estado covid.
+ * @param {boolean} swapColor - Variable de control para intercambiar color.
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {GenericCard} Retorna una lista de tarjetas de tipo {@link GenericCard}
+ */
 const CovidList = ({ navigation, covidRecs, swapColor }) => {
   return covidRecs.map((covid, index) => {
     if (index % 2 === 0) swapColor = !swapColor;

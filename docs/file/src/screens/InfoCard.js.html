@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/screens/InfoCard.js | tinMarin</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllCovidRecommendations">getAllCovidRecommendations</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllExhibitions">getAllExhibitions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getExhibitionById">getExhibitionById</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getExhibitionByName">getExhibitionByName</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllFAQs">getAllFAQs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllSuperenceTypes">getAllSuperenceTypes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-storeSugerence">storeSugerence</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllLinks">getAllLinks</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components">components</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard">BasicCard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard2">BasicCard2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Card">Card</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GenericCard">GenericCard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DrawerMenu">DrawerMenu</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GenericCard">GenericCard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnoMoreCard">KnoMoreCard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Modal">Modal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ModalBody">ModalBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GenericCard">GenericCard</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#constants">constants</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-API_DEV">API_DEV</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-API_HOST">API_HOST</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#dummy-data">dummy-data</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CONTACTS">CONTACTS</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#helpers">helpers</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-catcButton">catcButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-coinButton">coinButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-heyListenButton">heyListenButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-msnButton">msnButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ohhButton">ohhButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-playButtonPress">playButtonPress</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wowButton">wowButton</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#navigation">navigation</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DrawerContent">DrawerContent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-StackNavigation">StackNavigation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MainNavigator">MainNavigator</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#screens">screens</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidInfo">CovidInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FollowSteps">FollowSteps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Footer">Footer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FooterLinks">FooterLinks</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MainParagraph">MainParagraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-RenderImage">RenderImage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidScreen">CovidScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DonationScreen">DonationScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EventsScreen">EventsScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FAQScreen">FAQScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-HomeScreen">HomeScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnowMoreScreen">KnowMoreScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Search">Search</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SugerenceScreen">SugerenceScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-WebLinksScreen">WebLinksScreen</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/screens/InfoCard.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React, { useState, useEffect } from &apos;react&apos;;
+import { StyleSheet, SafeAreaView, View, Image } from &apos;react-native&apos;;
+import { IconButton, Text, Title } from &apos;react-native-paper&apos;;
+import { getExhibitionById } from &apos;../api/exhibitions&apos;;
+import ModalBody from &apos;../components/ModalBody&apos;;
+import { ScrollView } from &apos;react-native-gesture-handler&apos;;
+import { map, size } from &apos;lodash&apos;;
+
+const InfoCard = ({ route }) =&gt; {
+  const { _id } = route.params;
+  const [visible, setVisible] = useState(false);
+  const [exhibition, setExhibition] = useState(null);
+
+  const showModal = () =&gt; setVisible(!visible);
+
+  useEffect(() =&gt; {
+    getExhibitionById(_id).then((response) =&gt; {
+      setExhibition(response);
+    });
+  }, []);
+
+  if (!exhibition) return null;
+
+  const [imageURL] = exhibition.images;
+  const [logoURL] = exhibition.sponsorLogo;
+
+  return (
+    &lt;SafeAreaView&gt;
+      &lt;ScrollView showsVerticalScrollIndicator={false}&gt;
+        &lt;InfoImage path={imageURL} /&gt;
+        &lt;InfoModal setVisible={setVisible} /&gt;
+        &lt;InfoTitle exhibition={exhibition} /&gt;
+        &lt;Text style={styles.overview}&gt;{exhibition.description}&lt;/Text&gt;
+        {logoURL &amp;&amp; &lt;InfoSponsor url={logoURL} /&gt;}
+        &lt;InfoFooter exhibition={exhibition} /&gt;
+      &lt;/ScrollView&gt;
+      &lt;ModalBody
+        visible={visible}
+        showModal={showModal}
+        curiousInfo={exhibition.curiousInfo}
+      /&gt;
+    &lt;/SafeAreaView&gt;
+  );
+};
+
+export default InfoCard;
+
+const InfoImage = ({ path }) =&gt; {
+  return (
+    &lt;View style={styles.viewPoster}&gt;
+      &lt;Image style={styles.poster} source={{ uri: path }} /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const InfoModal = ({ setVisible }) =&gt; {
+  return (
+    &lt;View style={styles.viewModal}&gt;
+      &lt;IconButton
+        icon=&quot;information-variant&quot;
+        size={30}
+        color=&quot;#000&quot;
+        style={styles.info}
+        onPress={() =&gt; setVisible(true)}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const InfoTitle = ({ exhibition }) =&gt; {
+  return (
+    &lt;View style={styles.viewInfo}&gt;
+      &lt;Title style={{ color: &apos;#F29F05&apos;, fontWeight: &apos;bold&apos;, fontSize: 23 }}&gt;
+        {exhibition.name}
+      &lt;/Title&gt;
+    &lt;/View&gt;
+  );
+};
+
+const InfoSponsor = ({ url }) =&gt; {
+  return (
+    &lt;View style={styles.viewSponsor}&gt;
+      &lt;Title
+        style={{
+          color: &apos;black&apos;,
+          fontSize: 17,
+          fontWeight: &apos;bold&apos;,
+          marginHorizontal: 30,
+          marginTop: 5,
+        }}&gt;
+        Patrocina:{&apos; &apos;}
+      &lt;/Title&gt;
+      &lt;Image source={{ uri: url }} style={styles.imgSponsor} /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const InfoFooter = ({ exhibition }) =&gt; {
+  const {
+    minimumAge,
+    maximumAge,
+    educationArea,
+    duration,
+    capacity,
+  } = exhibition;
+  return (
+    &lt;View style={styles.viewFooter}&gt;
+      &lt;FooterItem
+        title=&quot;Educaci&#xF3;n:&quot;
+        desc={educationArea}
+        icon=&quot;book-open-variant&quot;
+      /&gt;
+      &lt;FooterItem
+        title=&quot;Edades:&quot;
+        desc={`${minimumAge} a ${maximumAge} a&#xF1;os`}
+        icon=&quot;human-male-boy&quot;
+      /&gt;
+      &lt;FooterItem
+        title=&quot;Duraci&#xF3;n:&quot;
+        desc={duration == 1 ? `${duration} minuto` : `${duration} minutos`}
+        icon=&quot;clock-time-three-outline&quot;
+      /&gt;
+      &lt;FooterItem
+        title=&quot;Capacidad:&quot;
+        desc={capacity == 1 ? `${capacity} ni&#xF1;o` : `${capacity} ni&#xF1;os`}
+        icon=&quot;account-group&quot;
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const FooterItem = ({ title, desc, icon }) =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;IconButton
+        icon={icon}
+        size={30}
+        color=&quot;#F87311&quot;
+        style={styles.footerItem}
+      /&gt;
+      &lt;Text style={[styles.textItem, { fontWeight: &apos;bold&apos; }]}&gt;{title}&lt;/Text&gt;
+      {Array.isArray(desc) ? (
+        map(desc, (d, index) =&gt; (
+          &lt;Text key={index} style={styles.textItem}&gt;
+            {d}
+            {index !== size(desc) - 1 &amp;&amp; &apos;, &apos;}
+          &lt;/Text&gt;
+        ))
+      ) : (
+        &lt;Text style={styles.textItem}&gt;{desc}&lt;/Text&gt;
+      )}
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  viewPoster: {
+    shadowColor: &apos;#000&apos;,
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 10,
+  },
+  poster: {
+    width: &apos;100%&apos;,
+    height: 500,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+  },
+  info: {
+    backgroundColor: &apos;#fff&apos;,
+    marginTop: -40,
+    marginRight: 30,
+    width: 60,
+    height: 60,
+    borderRadius: 100,
+    borderColor: &apos;#000&apos;,
+    borderWidth: 0.15,
+  },
+  viewInfo: {
+    marginHorizontal: 30,
+  },
+  viewRating: {
+    marginHorizontal: 30,
+    marginTop: 10,
+    flexDirection: &apos;row&apos;,
+    alignItems: &apos;center&apos;,
+  },
+  viewModal: {
+    justifyContent: &apos;flex-end&apos;,
+    alignItems: &apos;flex-end&apos;,
+  },
+  viewFooter: {
+    marginVertical: 20,
+    marginHorizontal: 20,
+    flexDirection: &apos;row&apos;,
+    justifyContent: &apos;space-between&apos;,
+  },
+  footerItem: {
+    borderRadius: 100,
+    width: 60,
+    height: 60,
+    backgroundColor: &apos;#fff&apos;,
+    borderColor: &apos;#F87311&apos;,
+    borderWidth: 2,
+  },
+  textItem: {
+    fontFamily: &apos;NunitoSans-Bold&apos;,
+    textAlign: &apos;center&apos;,
+    fontSize: 13,
+    color: &apos;#000&apos;,
+  },
+  overview: {
+    fontFamily: &apos;NunitoSans-Bold&apos;,
+    marginHorizontal: 30,
+    marginTop: 20,
+    textAlign: &apos;justify&apos;,
+    color: &apos;#929292&apos;,
+    fontSize: 16,
+  },
+  imgSponsor: {
+    width: 160,
+    height: 100,
+    alignSelf: &apos;center&apos;,
+    marginTop: 4,
+    marginBottom: 2,
+  },
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

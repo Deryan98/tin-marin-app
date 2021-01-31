@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   View,
@@ -7,16 +7,21 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import { getAllCovidRecommendations } from '../api/covid';
 import { Card, Icon, Text } from 'react-native-elements';
 import Colors from '../constants/Colors';
 import { ScrollView } from 'react-native-gesture-handler';
-import { COVIDS } from '../data/dummy-data';
 import { coinButton } from '../helpers/audio';
 
+/**
+ * Pantalla que muestra los detalles de una recomendación para prevenir COVID-19
+ * @param {prop} navigation - Contiene información básica de navegación
+ * @param {prop} route - Recibe parametros importantes para mostrar en pantalla
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://reactnavigation.org/docs/route-prop/
+ * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista
+ */
 const CovidInfo = ({ navigation, route }) => {
   const { title, description, image, steps } = route.params;
-  // console.log(Dimensions.get('window').width);
 
   return (
     <SafeAreaView>
@@ -35,7 +40,14 @@ const CovidInfo = ({ navigation, route }) => {
   );
 };
 
-const MainParagraph = ({ description }) => {
+/**
+ * Este componente muestra el párrafo principal que contiene la descripción
+ * de una recomendación.
+ * Se llama en la pantalla {@link CovidInfo}.
+ * @param {Array<string>} description - Contiene una lista de tipo string con la descripción
+ * @return {View} Devuelve una vista con los párrafos iterados en un componente <Text>
+ */
+export const MainParagraph = ({ description }) => {
   return (
     <View style={styles.view}>
       {description.map((paragraph, index) => (
@@ -45,7 +57,12 @@ const MainParagraph = ({ description }) => {
   );
 };
 
-const RenderImage = ({ url }) => {
+/**
+ * Este componente se encarga de Renderizar una imagen
+ * @param {string} url - Contiene la url de una imagen a mostrar.
+ * @return {View} Retorna una vista con la imagen cargada.
+ */
+export const RenderImage = ({ url }) => {
   return (
     <View style={{ ...styles.imageContainer }}>
       <Image style={styles.image} source={{ uri: url }} />
@@ -53,7 +70,12 @@ const RenderImage = ({ url }) => {
   );
 };
 
-const FollowSteps = ({ steps }) => {
+/**
+ * Componente que muestra los pasos principales para seguir una recomendación.
+ * @param {Array<string>} steps - contiene una lista de tipo string con la información de recomenadaciones a seguir.
+ * @return {Card} Devuelve una tarjeta con el listado de recomendaciones a seguir.
+ */
+export const FollowSteps = ({ steps }) => {
   return (
     <Card containerStyle={{ borderRadius: 15 }}>
       <Card.Title style={styles.card_title}>
@@ -71,7 +93,13 @@ const FollowSteps = ({ steps }) => {
   );
 };
 
-const Footer = ({ navigation }) => {
+/**
+ * Componente que muestra un pie de página.
+ * @param {prop} navigation
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {View} Devuelve una vista con Enlaces
+ */
+export const Footer = ({ navigation }) => {
   return (
     <View style={styles.footer}>
       <FooterLinks
@@ -94,7 +122,18 @@ const Footer = ({ navigation }) => {
   );
 };
 
-const FooterLinks = ({
+/**
+ * Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla.
+ * @param {string} name - Nombre del Icono a mostrar.
+ * @param {string} color - Color del Icono a mostrar.
+ * @param {number} size - Tamaño del Icono.
+ * @param {string} text - Texto a mostrar del enlace.
+ * @param {string} screenRouteName - Nombre de la pantalla a la cuál se navegará.
+ * @param {prop} navigation
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {TouchableOpacity} Devuelve una vista presionable
+ */
+export const FooterLinks = ({
   navigation,
   name,
   color,

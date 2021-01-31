@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/screens/CovidInfo.js | tinMarin</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllCovidRecommendations">getAllCovidRecommendations</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllExhibitions">getAllExhibitions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getExhibitionById">getExhibitionById</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getExhibitionByName">getExhibitionByName</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllFAQs">getAllFAQs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllSuperenceTypes">getAllSuperenceTypes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-storeSugerence">storeSugerence</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllLinks">getAllLinks</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components">components</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard">BasicCard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard2">BasicCard2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Card">Card</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GenericCard">GenericCard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DrawerMenu">DrawerMenu</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GenericCard">GenericCard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnoMoreCard">KnoMoreCard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Modal">Modal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ModalBody">ModalBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GenericCard">GenericCard</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#constants">constants</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-API_DEV">API_DEV</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-API_HOST">API_HOST</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#dummy-data">dummy-data</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CONTACTS">CONTACTS</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#helpers">helpers</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-catcButton">catcButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-coinButton">coinButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-heyListenButton">heyListenButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-msnButton">msnButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ohhButton">ohhButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-playButtonPress">playButtonPress</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wowButton">wowButton</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#navigation">navigation</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DrawerContent">DrawerContent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-StackNavigation">StackNavigation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MainNavigator">MainNavigator</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#screens">screens</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidInfo">CovidInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FollowSteps">FollowSteps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Footer">Footer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FooterLinks">FooterLinks</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MainParagraph">MainParagraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-RenderImage">RenderImage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidScreen">CovidScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DonationScreen">DonationScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EventsScreen">EventsScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FAQScreen">FAQScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-HomeScreen">HomeScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnowMoreScreen">KnowMoreScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Search">Search</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SugerenceScreen">SugerenceScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-WebLinksScreen">WebLinksScreen</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/screens/CovidInfo.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React from &apos;react&apos;;
+import {
+  StyleSheet,
+  View,
+  Image,
+  SafeAreaView,
+  TouchableOpacity,
+  Dimensions,
+} from &apos;react-native&apos;;
+import { Card, Icon, Text } from &apos;react-native-elements&apos;;
+import Colors from &apos;../constants/Colors&apos;;
+import { ScrollView } from &apos;react-native-gesture-handler&apos;;
+import { coinButton } from &apos;../helpers/audio&apos;;
+
+/**
+ * Pantalla que muestra los detalles de una recomendaci&#xF3;n para prevenir COVID-19
+ * @param {prop} navigation - Contiene informaci&#xF3;n b&#xE1;sica de navegaci&#xF3;n
+ * @param {prop} route - Recibe parametros importantes para mostrar en pantalla
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://reactnavigation.org/docs/route-prop/
+ * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista
+ */
+const CovidInfo = ({ navigation, route }) =&gt; {
+  const { title, description, image, steps } = route.params;
+
+  return (
+    &lt;SafeAreaView&gt;
+      &lt;ScrollView showsVerticalScrollIndicator={false}&gt;
+        &lt;View style={styles.view}&gt;
+          &lt;Text style={styles.title}&gt;{title}&lt;/Text&gt;
+          &lt;View style={styles.line}&gt;&lt;/View&gt;
+          &lt;MainParagraph description={description} /&gt;
+          &lt;RenderImage url={image} /&gt;
+          &lt;Text style={styles.subtitle}&gt;Recomendaciones a Seguir&lt;/Text&gt;
+          &lt;FollowSteps steps={steps} /&gt;
+          &lt;Footer navigation={navigation} /&gt;
+        &lt;/View&gt;
+      &lt;/ScrollView&gt;
+    &lt;/SafeAreaView&gt;
+  );
+};
+
+/**
+ * Este componente muestra el p&#xE1;rrafo principal que contiene la descripci&#xF3;n
+ * de una recomendaci&#xF3;n.
+ * Se llama en la pantalla {@link CovidInfo}.
+ * @param {Array&lt;string&gt;} description - Contiene una lista de tipo string con la descripci&#xF3;n
+ * @return {View} Devuelve una vista con los p&#xE1;rrafos iterados en un componente &lt;Text&gt;
+ */
+export const MainParagraph = ({ description }) =&gt; {
+  return (
+    &lt;View style={styles.view}&gt;
+      {description.map((paragraph, index) =&gt; (
+        &lt;Text key={index} style={styles.paragraph}&gt;{`${paragraph}\n`}&lt;/Text&gt;
+      ))}
+    &lt;/View&gt;
+  );
+};
+
+/**
+ * Este componente se encarga de Renderizar una imagen
+ * @param {string} url - Contiene la url de una imagen a mostrar.
+ * @return {View} Retorna una vista con la imagen cargada.
+ */
+export const RenderImage = ({ url }) =&gt; {
+  return (
+    &lt;View style={{ ...styles.imageContainer }}&gt;
+      &lt;Image style={styles.image} source={{ uri: url }} /&gt;
+    &lt;/View&gt;
+  );
+};
+
+/**
+ * Componente que muestra los pasos principales para seguir una recomendaci&#xF3;n.
+ * @param {Array&lt;string&gt;} steps - contiene una lista de tipo string con la informaci&#xF3;n de recomenadaciones a seguir.
+ * @return {Card} Devuelve una tarjeta con el listado de recomendaciones a seguir.
+ */
+export const FollowSteps = ({ steps }) =&gt; {
+  return (
+    &lt;Card containerStyle={{ borderRadius: 15 }}&gt;
+      &lt;Card.Title style={styles.card_title}&gt;
+        A continuaci&#xF3;n se muestran las siguientes indicaciones:
+      &lt;/Card.Title&gt;
+      &lt;View&gt;
+        {steps.map((step, index) =&gt; (
+          &lt;View key={index}&gt;
+            &lt;Text style={{ ...styles.paragraph }}&gt;{`\u2022 ${step}`}&lt;/Text&gt;
+            &lt;Card.Divider /&gt;
+          &lt;/View&gt;
+        ))}
+      &lt;/View&gt;
+    &lt;/Card&gt;
+  );
+};
+
+/**
+ * Componente que muestra un pie de p&#xE1;gina.
+ * @param {prop} navigation
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {View} Devuelve una vista con Enlaces
+ */
+export const Footer = ({ navigation }) =&gt; {
+  return (
+    &lt;View style={styles.footer}&gt;
+      &lt;FooterLinks
+        text=&quot;Preguntas Frecuentes&quot;
+        name=&quot;question-circle&quot;
+        color=&quot;darkturquoise&quot;
+        size={75}
+        navigation={navigation}
+        screenRouteName=&quot;FAQs&quot;
+      /&gt;
+      &lt;FooterLinks
+        text=&quot;Sitios de Interes&quot;
+        name=&quot;exclamation-circle&quot;
+        color=&quot;green&quot;
+        size={75}
+        navigation={navigation}
+        screenRouteName=&quot;WebLinks&quot;
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+/**
+ * Componente para mostrar un Enlace del pie de p&#xE1;gina que al presionarlo dirige a otra pantalla.
+ * @param {string} name - Nombre del Icono a mostrar.
+ * @param {string} color - Color del Icono a mostrar.
+ * @param {number} size - Tama&#xF1;o del Icono.
+ * @param {string} text - Texto a mostrar del enlace.
+ * @param {string} screenRouteName - Nombre de la pantalla a la cu&#xE1;l se navegar&#xE1;.
+ * @param {prop} navigation
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {TouchableOpacity} Devuelve una vista presionable
+ */
+export const FooterLinks = ({
+  navigation,
+  name,
+  color,
+  size,
+  text,
+  screenRouteName,
+}) =&gt; {
+  return (
+    &lt;TouchableOpacity
+      style={{ borderRadius: 15 }}
+      onPressIn={coinButton}
+      onPress={() =&gt; {
+        navigation.navigate(screenRouteName);
+      }}&gt;
+      &lt;View style={styles.footer_column}&gt;
+        &lt;Icon
+          name={name}
+          type=&quot;font-awesome-5&quot;
+          solid
+          color={color}
+          size={size}
+        /&gt;
+        &lt;Text style={styles.footer_links}&gt;{text}&lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/TouchableOpacity&gt;
+  );
+};
+
+export default CovidInfo;
+
+const styles = StyleSheet.create({
+  view: {
+    flexDirection: &apos;column&apos;,
+    alignItems: &apos;center&apos;,
+    marginHorizontal: 10,
+  },
+  title: {
+    fontFamily: &apos;NunitoSans-Bold&apos;,
+    marginTop: 20,
+    fontSize: 30,
+    color: &apos;#566573&apos;,
+  },
+  paragraph: {
+    fontFamily: &apos;NunitoSans-Bold&apos;,
+    marginVertical: 10,
+    textAlign: &apos;justify&apos;,
+    marginBottom: 10,
+    fontSize: 15,
+  },
+  imageContainer: {
+    width: &apos;95%&apos;,
+    height: 200,
+  },
+  image: { width: &apos;100%&apos;, height: 200, borderRadius: 15 },
+  subtitle: {
+    textAlign: &apos;center&apos;,
+    fontFamily: &apos;NunitoSans-Bold&apos;,
+    marginTop: 20,
+    fontSize: 25,
+    color: &apos;red&apos;,
+    fontWeight: &apos;bold&apos;,
+  },
+  subtitleView: {
+    flexDirection: &apos;row&apos;,
+    paddingLeft: 10,
+    paddingTop: 5,
+  },
+  card_title: {
+    fontFamily: &apos;NunitoSans-Bold&apos;,
+    textAlign: &apos;justify&apos;,
+    backgroundColor: Colors.primaryColor,
+    color: &apos;white&apos;,
+    marginTop: -15,
+    marginHorizontal: -16,
+    padding: 15,
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+  },
+  footer: {
+    marginVertical: 20,
+    width: &apos;100%&apos;,
+    flexDirection: &apos;row&apos;,
+    justifyContent: &apos;center&apos;,
+  },
+  footer_column: {
+    width: Dimensions.get(&apos;window&apos;).width / 2,
+    marginHorizontal: 10,
+    justifyContent: &apos;center&apos;,
+    alignItems: &apos;center&apos;,
+  },
+  footer_links: {
+    // padding: 10,
+    fontSize: Dimensions.get(&apos;window&apos;).width &gt; 400 ? 15 : 12,
+    color: Colors.primaryColor,
+  },
+  line: {
+    height: 1,
+    width: &apos;90%&apos;,
+    backgroundColor: &apos;#D5D8DC&apos;,
+  },
+  ul: {
+    width: 5,
+    height: 5,
+    backgroundColor: &apos;black&apos;,
+    borderRadius: 15,
+  },
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+[
+  {
+    "name": "FooterLinks",
+    "filePath": "src/screens/CovidInfo.js",
+    "lines": [
+      {
+        "lineNumber": 124,
+        "line": "/**"
+      },
+      {
+        "lineNumber": 125,
+        "line": " * Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla."
+      },
+      {
+        "lineNumber": 126,
+        "line": " * @param {string} name - Nombre del Icono a mostrar."
+      },
+      {
+        "lineNumber": 127,
+        "line": " * @param {string} color - Color del Icono a mostrar."
+      },
+      {
+        "lineNumber": 128,
+        "line": " * @param {number} size - Tamaño del Icono."
+      },
+      {
+        "lineNumber": 129,
+        "line": " * @param {string} text - Texto a mostrar del enlace."
+      },
+      {
+        "lineNumber": 130,
+        "line": " * @param {string} screenRouteName - Nombre de la pantalla a la cuál se navegará."
+      },
+      {
+        "lineNumber": 131,
+        "line": " * @param {prop} navigation"
+      },
+      {
+        "lineNumber": 132,
+        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
+      },
+      {
+        "lineNumber": 133,
+        "line": " * @return {TouchableOpacity} Devuelve una vista presionable"
+      },
+      {
+        "lineNumber": 134,
+        "line": " */"
+      },
+      {
+        "lineNumber": 135,
+        "line": "export const FooterLinks = ({"
+      }
+    ],
+    "codeParams": [
+      "*"
+    ],
+    "docParams": [
+      "name",
+      "color",
+      "size",
+      "text",
+      "screenRouteName",
+      "navigation"
+    ]
+  },
+  {
+    "name": "CovidInfo",
+    "filePath": "src/screens/CovidInfo.js",
+    "lines": [
+      {
+        "lineNumber": 14,
+        "line": "/**"
+      },
+      {
+        "lineNumber": 15,
+        "line": " * Pantalla que muestra los detalles de una recomendación para prevenir COVID-19"
+      },
+      {
+        "lineNumber": 16,
+        "line": " * @param {prop} navigation - Contiene información básica de navegación"
+      },
+      {
+        "lineNumber": 17,
+        "line": " * @param {prop} route - Recibe parametros importantes para mostrar en pantalla"
+      },
+      {
+        "lineNumber": 18,
+        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
+      },
+      {
+        "lineNumber": 19,
+        "line": " * @see https://reactnavigation.org/docs/route-prop/"
+      },
+      {
+        "lineNumber": 20,
+        "line": " * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista"
+      },
+      {
+        "lineNumber": 21,
+        "line": " */"
+      },
+      {
+        "lineNumber": 22,
+        "line": "const CovidInfo = ({ navigation, route }) => {"
+      }
+    ],
+    "codeParams": [
+      "*"
+    ],
+    "docParams": [
+      "navigation",
+      "route"
+    ]
+  },
+  {
+    "name": "CovidList",
+    "filePath": "src/screens/CovidScreen.js",
+    "lines": [
+      {
+        "lineNumber": 64,
+        "line": "/**"
+      },
+      {
+        "lineNumber": 65,
+        "line": " * Componente que se utiliza para iterar las tarjetas"
+      },
+      {
+        "lineNumber": 66,
+        "line": " * @param {prop} navigation"
+      },
+      {
+        "lineNumber": 67,
+        "line": " * @param {Array<string>} covidRecs - Contiene la información del estado covid."
+      },
+      {
+        "lineNumber": 68,
+        "line": " * @param {boolean} swapColor - Variable de control para intercambiar color."
+      },
+      {
+        "lineNumber": 69,
+        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
+      },
+      {
+        "lineNumber": 70,
+        "line": " * @return {GenericCard} Retorna una lista de tarjetas de tipo {@link GenericCard}"
+      },
+      {
+        "lineNumber": 71,
+        "line": " */"
+      },
+      {
+        "lineNumber": 72,
+        "line": "const CovidList = ({ navigation, covidRecs, swapColor }) => {"
+      }
+    ],
+    "codeParams": [
+      "*"
+    ],
+    "docParams": [
+      "navigation",
+      "covidRecs",
+      "swapColor"
+    ]
+  }
+]
