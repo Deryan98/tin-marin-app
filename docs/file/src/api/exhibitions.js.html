@@ -68,14 +68,12 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MainParagraph">MainParagraph</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-RenderImage">RenderImage</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidScreen">CovidScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DonationScreen">DonationScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EventsScreen">EventsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FAQScreen">FAQScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnowMoreScreen">KnowMoreScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MissionAndVisionScreen">MissionAndVisionScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Search">Search</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SugerenceScreen">SugerenceScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-WebLinksScreen">WebLinksScreen</a></span></span></li>
@@ -86,6 +84,16 @@
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/exhibitions.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { API_HOST } from &apos;../constants/URL&apos;;
 
+/**
+ * Petici&#xF3;n fetch que consume el endpoint para obtener un JSON con las Exhibiciones.
+ * @property {string} url - Contiene la ruta del endpoint.
+ * @return {Promise&lt;string[], MyError&gt;} Esta promesa retorna un arreglo
+ *  de tipo String con toda la
+ * informaci&#xF3;n de las exhibiciones.
+ * @todo Agregue validaciones cuando hay problemas en la conectividad.
+ * @example getAllExhibitions()
+ * .then((response) =&gt; {...});
+ */
 export function getAllExhibitions() {
   const url = `${API_HOST}/exhibitions`;
 
@@ -98,6 +106,16 @@ export function getAllExhibitions() {
     });
 }
 
+/**
+ * Petici&#xF3;n fetch que consume el endpoint para obtener un JSON con el detalle de una Exhibici&#xF3;n.
+ * @param {string} idExhibition - ID de la exhibici&#xF3;n a mostrar.
+ * @property {string} url - Contiene la ruta del endpoint.
+ * @return {Promise&lt;string[], MyError&gt;} Esta promesa retorna un objeto JSON
+ * con el detalle de una exhibici&#xF3;n.
+ * @todo Agregue validaciones cuando hay problemas en la conectividad.
+ * @example getExhibitionById(&apos;5ff944b427c7c600175674ef&apos;)
+ * .then((response) =&gt; {...});
+ */
 export function getExhibitionById(idExhibition) {
   const url = `${API_HOST}/exhibitions/${idExhibition}`;
 
@@ -110,6 +128,17 @@ export function getExhibitionById(idExhibition) {
     });
 }
 
+/**
+ * Petici&#xF3;n fetch que consume el endpoint para obtener un arreglo de Nombres que coincidan con una variable nombre definida por el Usuario.
+ * @param {string} name - Nombre de la exhibici&#xF3;n a mostrar.
+ * @property {string} url - Contiene la ruta del endpoint.
+ * @return {Promise&lt;string[], MyError&gt;} Esta promesa retorna un arreglo
+ *  de tipo String con toda la
+ * informaci&#xF3;n de las exhibiciones que coincidan con el nombre.
+ * @todo Agregue validaciones cuando hay problemas en la conectividad.
+ * @example getExhibitionByName(&apos;El Avi&#xF3;n&apos;)
+ * .then((response) =&gt; {...});
+ */
 export function getExhibitionByName(name) {
   const url = `${API_HOST}/exhibitions/?name=${name}`;
 

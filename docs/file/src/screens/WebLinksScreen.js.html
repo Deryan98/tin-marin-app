@@ -68,14 +68,12 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MainParagraph">MainParagraph</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-RenderImage">RenderImage</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidScreen">CovidScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DonationScreen">DonationScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EventsScreen">EventsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FAQScreen">FAQScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnowMoreScreen">KnowMoreScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MissionAndVisionScreen">MissionAndVisionScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Search">Search</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SugerenceScreen">SugerenceScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-WebLinksScreen">WebLinksScreen</a></span></span></li>
@@ -103,7 +101,23 @@ LogBox.ignoreAllLogs();
 /**
  * Pantalla que muestra la lista de Sitios de Inter&#xE9;s.
  * @param {prop} navigation - Contiene informaci&#xF3;n b&#xE1;sica de navegaci&#xF3;n
+ * @property {Array&lt;Object&gt;} links - Lista que contiene Objetos con estructura de un Sitios de Inter&#xE9;s.
+ * @property {function} setlinks - M&#xE9;todo de acceso indirecto para modificar la propieadad links.
+ * @property {boolean} loading - Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene.
+ * @property {function} setLoading - M&#xE9;todo de acceso indirecto para modificar la propieadad loading.
+ * @property {boolean} fetched - Variable auxiliar para validar el tiempo de respuesta de una promesa.
+ * @property {function} setFetched - M&#xE9;todo de acceso indirecto para modificar la propieadad fetched.
+ * @property {function} useEffect - Hook de React que permite realizar tareas as&#xED;ncronas a la vista.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su m&#xE9;todo accesor.
+ * @property {Promise} getAllLinks - {@link getAllLinks} | Promesa que devuelve la informaci&#xF3;n dependiendo la respuesta del servidor.
+ * @property {AbortController} abortController - Patr&#xF3;n de dise&#xF1;o que se implementa para validar promesas.
+ * @property {AbortSignal} signal - Objeto que se comunica con abortController en caso una promesa falle.
  * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://reactjs.org/docs/hooks-effect.html
+ * @see https://reactjs.org/docs/hooks-state.html
+ * @seee https://developer.mozilla.org/en-US/docs/Web/API/AbortController
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortController/signal
+ * @experimental La promesa getAllLinks presenta un fallo de m&#xFA;ltiples llamadas as&#xED;ncronas.
  * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetaci&#xF3;n de la pantalla.
  */
 const WebLinksScreen = ({ navigation }) =&gt; {
@@ -153,7 +167,9 @@ const WebLinksScreen = ({ navigation }) =&gt; {
     &lt;/ScrollView&gt;
   );
 };
-
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   view: {
     flexDirection: &apos;column&apos;,

@@ -16,6 +16,10 @@ import { coinButton } from '../helpers/audio';
  * Pantalla que muestra los detalles de una recomendación para prevenir COVID-19
  * @param {prop} navigation - Contiene información básica de navegación
  * @param {prop} route - Recibe parametros importantes para mostrar en pantalla
+ * @param {string} title - Describe el título de una recomendación.
+ * @param {Array<string>} description - Contiene un arreglo de párrafos.
+ * @param {string} image - Contiene la imagen relacionada con la recomendación.
+ * @param {Array<string>} steps - Contiene un arreglo con los pasos a seguir.
  * @see https://reactnavigation.org/docs/navigation-prop/
  * @see https://reactnavigation.org/docs/route-prop/
  * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista
@@ -168,6 +172,9 @@ export const FooterLinks = ({
 
 export default CovidInfo;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   view: {
     flexDirection: 'column',

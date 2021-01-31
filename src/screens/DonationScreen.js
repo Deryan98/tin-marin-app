@@ -1,14 +1,20 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
+/**
+ * @ignore
+ */
 const DonationScreen = () => {
-    return (
-        <View>
-            <Text>Donation Screen</Text>
-        </View>
-    )
-}
+  return (
+    <View>
+      <Text>Donation Screen</Text>
+    </View>
+  );
+};
 
-export default DonationScreen
+export default DonationScreen;
 
-const styles = StyleSheet.create({})
+/**
+ * @ignore
+ */
+const styles = StyleSheet.create({});

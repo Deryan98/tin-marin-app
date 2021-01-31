@@ -10,7 +10,13 @@ import { Linking } from 'react-native';
 /**
  * Pantalla que muestra información de contacto de los trabajadores de la entidad.
  * @param {prop} navigation - Contiene información básica de navegación
+ * @property {string} contactEmail - Email de un contacto, cambia su valor dependiendo el valor que se seleccione en el componente Picker
+ * @property {function} setContactEmail - Método de acceso indirecto para modificar la propieadad contactEmail.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.
+ * @property {Array<Object>} CONTACTS - Arreglo que contiene información estática de los contactos Tin Marín.
  * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://github.com/react-native-picker/picker
+ * @see https://reactjs.org/docs/hooks-state.html
  * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.
  */
 const ContactScreen = ({ navigation }) => {
@@ -56,6 +62,7 @@ const ContactScreen = ({ navigation }) => {
               />
             ),
         )}
+
         <View style={styles.redes_sociales}>
           <TouchableOpacity
             onPress={() =>
@@ -101,6 +108,9 @@ const ContactScreen = ({ navigation }) => {
   );
 };
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   pickerContainer: {
     flexDirection: 'row',

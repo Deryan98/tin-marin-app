@@ -68,14 +68,12 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MainParagraph">MainParagraph</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-RenderImage">RenderImage</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidScreen">CovidScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DonationScreen">DonationScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EventsScreen">EventsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FAQScreen">FAQScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnowMoreScreen">KnowMoreScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MissionAndVisionScreen">MissionAndVisionScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Search">Search</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SugerenceScreen">SugerenceScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-WebLinksScreen">WebLinksScreen</a></span></span></li>
@@ -96,7 +94,13 @@ import { Linking } from &apos;react-native&apos;;
 /**
  * Pantalla que muestra informaci&#xF3;n de contacto de los trabajadores de la entidad.
  * @param {prop} navigation - Contiene informaci&#xF3;n b&#xE1;sica de navegaci&#xF3;n
+ * @property {string} contactEmail - Email de un contacto, cambia su valor dependiendo el valor que se seleccione en el componente Picker
+ * @property {function} setContactEmail - M&#xE9;todo de acceso indirecto para modificar la propieadad contactEmail.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su m&#xE9;todo accesor.
+ * @property {Array&lt;Object&gt;} CONTACTS - Arreglo que contiene informaci&#xF3;n est&#xE1;tica de los contactos Tin Mar&#xED;n.
  * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://github.com/react-native-picker/picker
+ * @see https://reactjs.org/docs/hooks-state.html
  * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetaci&#xF3;n de la pantalla.
  */
 const ContactScreen = ({ navigation }) =&gt; {
@@ -142,6 +146,7 @@ const ContactScreen = ({ navigation }) =&gt; {
               /&gt;
             ),
         )}
+
         &lt;View style={styles.redes_sociales}&gt;
           &lt;TouchableOpacity
             onPress={() =&gt;
@@ -187,6 +192,9 @@ const ContactScreen = ({ navigation }) =&gt; {
   );
 };
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   pickerContainer: {
     flexDirection: &apos;row&apos;,

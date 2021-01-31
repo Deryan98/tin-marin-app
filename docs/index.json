@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/api/covid.js",
-    "content": "import { API_DEV, API_HOST } from '../constants/URL';\n\n/**\n * @return {Promise<string[], MyError>} Esta promesa retorna un arreglo\n *  de tipo String con toda la\n * información de las recomendaciones.\n * @todo Agregue validaciones cuando hay problemas en la conectividad\n */\nexport const getAllCovidRecommendations = () => {\n  const url = `${API_DEV}/recommendations`;\n\n  return fetch(url)\n    .then((response) => response.json())\n    .then((result) => result);\n};\n",
+    "content": "import { API_DEV, API_HOST } from '../constants/URL';\n\n/**\n * Petición fetch que consume el endpoint para obtener un JSON con las Recomendaciones Covid-19\n * @property {string} url - Contiene la ruta del endpoint.\n * @return {Promise<string[], MyError>} Esta promesa retorna un arreglo\n *  de tipo String con toda la\n * información de las recomendaciones.\n * @todo Agregue validaciones cuando hay problemas en la conectividad\n * @example getAllCovidRecommendations()\n * .then((response) => {...});\n */\nexport const getAllCovidRecommendations = () => {\n  const url = `${API_DEV}/recommendations`;\n\n  return fetch(url)\n    .then((response) => response.json())\n    .then((result) => result);\n};\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/api/covid.js",
     "access": "public",
@@ -587,10 +587,25 @@
     "export": true,
     "importPath": "tinMarin/src/api/covid.js",
     "importStyle": "{getAllCovidRecommendations}",
-    "description": "",
-    "lineNumber": 9,
+    "description": "Petición fetch que consume el endpoint para obtener un JSON con las Recomendaciones Covid-19",
+    "examples": [
+      "getAllCovidRecommendations()\n.then((response) => {...});"
+    ],
+    "lineNumber": 13,
     "todo": [
       "Agregue validaciones cuando hay problemas en la conectividad"
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": "Contiene la ruta del endpoint."
+      }
     ],
     "return": {
       "nullable": null,
@@ -606,7 +621,7 @@
     "__docId__": 50,
     "kind": "file",
     "name": "src/api/exhibitions.js",
-    "content": "import { API_HOST } from '../constants/URL';\n\nexport function getAllExhibitions() {\n  const url = `${API_HOST}/exhibitions`;\n\n  return fetch(url)\n    .then((response) => {\n      return response.json();\n    })\n    .then((result) => {\n      return result;\n    });\n}\n\nexport function getExhibitionById(idExhibition) {\n  const url = `${API_HOST}/exhibitions/${idExhibition}`;\n\n  return fetch(url)\n    .then((response) => {\n      return response.json();\n    })\n    .then((result) => {\n      return result;\n    });\n}\n\nexport function getExhibitionByName(name) {\n  const url = `${API_HOST}/exhibitions/?name=${name}`;\n\n  return fetch(url)\n    .then((response) => {\n      // console.log(response)\n      return response.json();\n    })\n    .then((result) => {\n      // console.log(result)\n      return result;\n    });\n}\n",
+    "content": "import { API_HOST } from '../constants/URL';\n\n/**\n * Petición fetch que consume el endpoint para obtener un JSON con las Exhibiciones.\n * @property {string} url - Contiene la ruta del endpoint.\n * @return {Promise<string[], MyError>} Esta promesa retorna un arreglo\n *  de tipo String con toda la\n * información de las exhibiciones.\n * @todo Agregue validaciones cuando hay problemas en la conectividad.\n * @example getAllExhibitions()\n * .then((response) => {...});\n */\nexport function getAllExhibitions() {\n  const url = `${API_HOST}/exhibitions`;\n\n  return fetch(url)\n    .then((response) => {\n      return response.json();\n    })\n    .then((result) => {\n      return result;\n    });\n}\n\n/**\n * Petición fetch que consume el endpoint para obtener un JSON con el detalle de una Exhibición.\n * @param {string} idExhibition - ID de la exhibición a mostrar.\n * @property {string} url - Contiene la ruta del endpoint.\n * @return {Promise<string[], MyError>} Esta promesa retorna un objeto JSON\n * con el detalle de una exhibición.\n * @todo Agregue validaciones cuando hay problemas en la conectividad.\n * @example getExhibitionById('5ff944b427c7c600175674ef')\n * .then((response) => {...});\n */\nexport function getExhibitionById(idExhibition) {\n  const url = `${API_HOST}/exhibitions/${idExhibition}`;\n\n  return fetch(url)\n    .then((response) => {\n      return response.json();\n    })\n    .then((result) => {\n      return result;\n    });\n}\n\n/**\n * Petición fetch que consume el endpoint para obtener un arreglo de Nombres que coincidan con una variable nombre definida por el Usuario.\n * @param {string} name - Nombre de la exhibición a mostrar.\n * @property {string} url - Contiene la ruta del endpoint.\n * @return {Promise<string[], MyError>} Esta promesa retorna un arreglo\n *  de tipo String con toda la\n * información de las exhibiciones que coincidan con el nombre.\n * @todo Agregue validaciones cuando hay problemas en la conectividad.\n * @example getExhibitionByName('El Avión')\n * .then((response) => {...});\n */\nexport function getExhibitionByName(name) {\n  const url = `${API_HOST}/exhibitions/?name=${name}`;\n\n  return fetch(url)\n    .then((response) => {\n      // console.log(response)\n      return response.json();\n    })\n    .then((result) => {\n      // console.log(result)\n      return result;\n    });\n}\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/api/exhibitions.js",
     "access": "public",
@@ -626,15 +641,35 @@
     "export": true,
     "importPath": "tinMarin/src/api/exhibitions.js",
     "importStyle": "{getAllExhibitions}",
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
-    "params": [],
+    "description": "Petición fetch que consume el endpoint para obtener un JSON con las Exhibiciones.",
+    "examples": [
+      "getAllExhibitions()\n.then((response) => {...});"
+    ],
+    "lineNumber": 13,
+    "todo": [
+      "Agregue validaciones cuando hay problemas en la conectividad."
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": "Contiene la ruta del endpoint."
+      }
+    ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "Promise<string[], MyError>"
+      ],
+      "spread": false,
+      "description": "Esta promesa retorna un arreglo\n de tipo String con toda la\ninformación de las exhibiciones."
+    },
+    "params": []
   },
   {
     "__docId__": 52,
@@ -649,21 +684,45 @@
     "export": true,
     "importPath": "tinMarin/src/api/exhibitions.js",
     "importStyle": "{getExhibitionById}",
-    "description": null,
-    "lineNumber": 15,
-    "undocument": true,
+    "description": "Petición fetch que consume el endpoint para obtener un JSON con el detalle de una Exhibición.",
+    "examples": [
+      "getExhibitionById('5ff944b427c7c600175674ef')\n.then((response) => {...});"
+    ],
+    "lineNumber": 35,
+    "todo": [
+      "Agregue validaciones cuando hay problemas en la conectividad."
+    ],
     "params": [
       {
-        "name": "idExhibition",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "idExhibition",
+        "description": "ID de la exhibición a mostrar."
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": "Contiene la ruta del endpoint."
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Promise<string[], MyError>"
+      ],
+      "spread": false,
+      "description": "Esta promesa retorna un objeto JSON\ncon el detalle de una exhibición."
     }
   },
   {
@@ -679,28 +738,52 @@
     "export": true,
     "importPath": "tinMarin/src/api/exhibitions.js",
     "importStyle": "{getExhibitionByName}",
-    "description": null,
-    "lineNumber": 27,
-    "undocument": true,
+    "description": "Petición fetch que consume el endpoint para obtener un arreglo de Nombres que coincidan con una variable nombre definida por el Usuario.",
+    "examples": [
+      "getExhibitionByName('El Avión')\n.then((response) => {...});"
+    ],
+    "lineNumber": 58,
+    "todo": [
+      "Agregue validaciones cuando hay problemas en la conectividad."
+    ],
     "params": [
       {
-        "name": "name",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "Nombre de la exhibición a mostrar."
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": "Contiene la ruta del endpoint."
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Promise<string[], MyError>"
+      ],
+      "spread": false,
+      "description": "Esta promesa retorna un arreglo\n de tipo String con toda la\ninformación de las exhibiciones que coincidan con el nombre."
     }
   },
   {
     "__docId__": 54,
     "kind": "file",
     "name": "src/api/faqs.js",
-    "content": "import { API_DEV, API_HOST } from '../constants/URL';\n\n/**\n * @return {Promise<string[], MyError>} Esta promesa retorna un arreglo\n *  de tipo String con toda la\n * información de las preguntas frecuentes.\n * @todo Agregue validaciones cuando hay problemas en la conectividad\n */\nexport const getAllFAQs = () => {\n  const url = `${API_DEV}/faqs`;\n  return fetch(url)\n    .then((response) => response.json())\n    .then((result) => result);\n};\n",
+    "content": "import { API_DEV, API_HOST } from '../constants/URL';\n\n/**\n * Petición fetch que consume el endpoint para obtener un JSON con las Preguntas Frecuentes.\n * @property {string} url - Contiene la ruta del endpoint.\n * @return {Promise<string[], MyError>} Esta promesa retorna un arreglo.\n *  de tipo String con toda la\n * información de las preguntas frecuentes.\n * @todo Agregue validaciones cuando hay problemas en la conectividad.\n *  @example getAllFAQs()\n * .then((response) => {...});\n */\nexport const getAllFAQs = () => {\n  const url = `${API_DEV}/faqs`;\n  return fetch(url)\n    .then((response) => response.json())\n    .then((result) => result);\n};\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/api/faqs.js",
     "access": "public",
@@ -720,10 +803,25 @@
     "export": true,
     "importPath": "tinMarin/src/api/faqs.js",
     "importStyle": "{getAllFAQs}",
-    "description": "",
-    "lineNumber": 9,
+    "description": "Petición fetch que consume el endpoint para obtener un JSON con las Preguntas Frecuentes.",
+    "examples": [
+      "getAllFAQs()\n.then((response) => {...});"
+    ],
+    "lineNumber": 13,
     "todo": [
-      "Agregue validaciones cuando hay problemas en la conectividad"
+      "Agregue validaciones cuando hay problemas en la conectividad."
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": "Contiene la ruta del endpoint."
+      }
     ],
     "return": {
       "nullable": null,
@@ -731,7 +829,7 @@
         "Promise<string[], MyError>"
       ],
       "spread": false,
-      "description": "Esta promesa retorna un arreglo\n de tipo String con toda la\ninformación de las preguntas frecuentes."
+      "description": "Esta promesa retorna un arreglo.\n de tipo String con toda la\ninformación de las preguntas frecuentes."
     },
     "params": []
   },
@@ -739,7 +837,7 @@
     "__docId__": 56,
     "kind": "file",
     "name": "src/api/sugerences.js",
-    "content": "import { API_DEV, API_HOST } from '../constants/URL';\n\n/**\n * @return {Promise<string[], MyError>} Esta promesa retorna un arreglo\n *  de tipo String con toda la\n * información de los Tipos de Sugerencia.\n * @todo Agregue validaciones cuando hay problemas en la conectividad\n */\nexport const getAllSuperenceTypes = () => {\n  const url = `${API_DEV}/suggestiontypes`;\n  return fetch(url)\n    .then((response) => response.json())\n    .then((result) => result);\n};\n\n/**\n * @return {Promise<string[], MyError>}\n * Esta promesa realiza una petición de tipo POST y crea un nuevo registro\n * con la información de una sugerencia.\n * @param {string} suggestionType - Aquí se almacena el tipo de sugerencia.\n * @param {string} suggestion - Aquí se guarda la sugerencia que realiza un usuario.\n * @todo Agregue validaciones cuando hay problemas en la conectividad.\n */\nexport const storeSugerence = (suggestionType, suggestion) => {\n  const url = `${API_DEV}/suggestions`;\n  return fetch(url, {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      suggestionType,\n      suggestion,\n    }),\n  });\n};\n",
+    "content": "import { API_DEV, API_HOST } from '../constants/URL';\n\n/**\n * Petición fetch que consume el endpoint para obtener un JSON con los Tipos de Sugerencia.\n * @property {string} url - Contiene la ruta del endpoint.\n * @return {Promise<string[], MyError>} Esta promesa retorna un arreglo\n *  de tipo String con toda la\n * información de los Tipos de Sugerencia.\n * @todo Agregue validaciones cuando hay problemas en la conectividad.\n * @example getAllSuperenceTypes()\n * .then((response) => {...});\n */\nexport const getAllSuperenceTypes = () => {\n  const url = `${API_DEV}/suggestiontypes`;\n  return fetch(url)\n    .then((response) => response.json())\n    .then((result) => result);\n};\n\n/**\n * Petición fetch de tipo POST que consume el endpoint para enviar un JSON y crear una nueva Sugerencia en la base de datos.\n * @property {string} url - Contiene la ruta del endpoint\n * @return {Promise<string[], MyError>}\n * Esta promesa realiza una petición de tipo POST y crea un nuevo registro\n * con la información de una sugerencia.\n * @param {string} suggestionType - Aquí se almacena el tipo de sugerencia.\n * @param {string} suggestion - Aquí se guarda la sugerencia que realiza un usuario.\n * @todo Agregue validaciones cuando hay problemas en la conectividad.\n * @example storeSugerence(sugerenceType, comment)\n * .then((response) => {...});\n */\nexport const storeSugerence = (suggestionType, suggestion) => {\n  const url = `${API_DEV}/suggestions`;\n  return fetch(url, {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      suggestionType,\n      suggestion,\n    }),\n  });\n};\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/api/sugerences.js",
     "access": "public",
@@ -759,10 +857,25 @@
     "export": true,
     "importPath": "tinMarin/src/api/sugerences.js",
     "importStyle": "{getAllSuperenceTypes}",
-    "description": "",
-    "lineNumber": 9,
+    "description": "Petición fetch que consume el endpoint para obtener un JSON con los Tipos de Sugerencia.",
+    "examples": [
+      "getAllSuperenceTypes()\n.then((response) => {...});"
+    ],
+    "lineNumber": 13,
     "todo": [
-      "Agregue validaciones cuando hay problemas en la conectividad"
+      "Agregue validaciones cuando hay problemas en la conectividad."
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": "Contiene la ruta del endpoint."
+      }
     ],
     "return": {
       "nullable": null,
@@ -787,8 +900,11 @@
     "export": true,
     "importPath": "tinMarin/src/api/sugerences.js",
     "importStyle": "{storeSugerence}",
-    "description": "",
-    "lineNumber": 24,
+    "description": "Petición fetch de tipo POST que consume el endpoint para enviar un JSON y crear una nueva Sugerencia en la base de datos.",
+    "examples": [
+      "storeSugerence(sugerenceType, comment)\n.then((response) => {...});"
+    ],
+    "lineNumber": 32,
     "todo": [
       "Agregue validaciones cuando hay problemas en la conectividad."
     ],
@@ -814,6 +930,18 @@
         "description": "Aquí se guarda la sugerencia que realiza un usuario."
       }
     ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": "Contiene la ruta del endpoint"
+      }
+    ],
     "return": {
       "nullable": null,
       "types": [
@@ -827,7 +955,7 @@
     "__docId__": 59,
     "kind": "file",
     "name": "src/api/weblinks.js",
-    "content": "import { API_DEV, API_HOST } from '../constants/URL';\n\n/**\n * @return {Promise<string[], MyError>} Esta promesa retorna un arreglo\n *  de tipo String con toda la\n * información de los Sitios de Interés.\n * @todo Agregue validaciones cuando hay problemas en la conectividad.\n * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortController/signal\n * @param {AbortController.signal} signal - Se le pasa como parámetro a la funcion fetch\n * permite abortar la petición en caso esta se tarde más de lo esperado.\n */\nexport const getAllLinks = (signal) => {\n  const url = `${API_DEV}/recommended-websites`;\n\n  return fetch(url, { signal: signal })\n    .then((response) => response.json())\n    .then((result) => result);\n};\n",
+    "content": "import { API_DEV, API_HOST } from '../constants/URL';\n\n/**\n * Petición fetch que consume el endpoint para obtener un JSON con los Sitios de Interés.\n * @return {Promise<string[], MyError>} Esta promesa retorna un arreglo\n *  de tipo String con toda la\n * información de los Sitios de Interés.\n * @todo Agregue validaciones cuando hay problemas en la conectividad.\n * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortController/signal\n * @param {AbortController.signal} signal - Se le pasa como parámetro a la funcion fetch\n * permite abortar la petición en caso esta se tarde más de lo esperado.\n */\nexport const getAllLinks = (signal) => {\n  const url = `${API_DEV}/recommended-websites`;\n\n  return fetch(url, { signal: signal })\n    .then((response) => response.json())\n    .then((result) => result);\n};\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/api/weblinks.js",
     "access": "public",
@@ -847,11 +975,11 @@
     "export": true,
     "importPath": "tinMarin/src/api/weblinks.js",
     "importStyle": "{getAllLinks}",
-    "description": "",
+    "description": "Petición fetch que consume el endpoint para obtener un JSON con los Sitios de Interés.",
     "see": [
       "https://developer.mozilla.org/en-US/docs/Web/API/AbortController/signal"
     ],
-    "lineNumber": 12,
+    "lineNumber": 13,
     "todo": [
       "Agregue validaciones cuando hay problemas en la conectividad."
     ],
@@ -1583,7 +1711,7 @@
     "__docId__": 92,
     "kind": "file",
     "name": "src/constants/URL.js",
-    "content": "export default {\n  banco:\n    'https://tinmarin.org/wp-content/uploads/2019/11/banco-opt-1024x788.jpg',\n  avion: 'https://tinmarin.org/wp-content/uploads/2019/11/avion-1024x787.jpg',\n  hospital:\n    'https://tinmarin.org/wp-content/uploads/2020/04/hospital-1024x788.png',\n};\n\n/**\n * Constante que contiene el endpoint de producción\n * @type {string}\n */\nexport const API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\n\n/**\n * Constante que contiene el endpoint de desarrollo\n * @type {string}\n */\nexport const API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\n",
+    "content": "export default {\n  banco:\n    'https://tinmarin.org/wp-content/uploads/2019/11/banco-opt-1024x788.jpg',\n  avion: 'https://tinmarin.org/wp-content/uploads/2019/11/avion-1024x787.jpg',\n  hospital:\n    'https://tinmarin.org/wp-content/uploads/2020/04/hospital-1024x788.png',\n};\n\n/**\n * Constante que contiene el endpoint de producción\n * @type {string}\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\n */\nexport const API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\n\n/**\n * Constante que contiene el endpoint de desarrollo\n * @type {string}\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\n */\nexport const API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/constants/URL.js",
     "access": "public",
@@ -1602,7 +1730,10 @@
     "importPath": "tinMarin/src/constants/URL.js",
     "importStyle": "{API_HOST}",
     "description": "Constante que contiene el endpoint de producción",
-    "lineNumber": 13,
+    "examples": [
+      "API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';"
+    ],
+    "lineNumber": 14,
     "type": {
       "nullable": null,
       "types": [
@@ -1624,7 +1755,10 @@
     "importPath": "tinMarin/src/constants/URL.js",
     "importStyle": "{API_DEV}",
     "description": "Constante que contiene el endpoint de desarrollo",
-    "lineNumber": 19,
+    "examples": [
+      "API_DEV = 'https://tinmarin.herokuapp.com/api/v1';"
+    ],
+    "lineNumber": 21,
     "type": {
       "nullable": null,
       "types": [
@@ -2211,7 +2345,7 @@
     "__docId__": 122,
     "kind": "file",
     "name": "src/screens/ContactScreen.js",
-    "content": "import React, { useState } from 'react';\nimport { StyleSheet, Text, View, ScrollView, Image } from 'react-native';\nimport ContactCard from '../components/ContactCard';\nimport Colors from '../constants/Colors';\nimport { Picker } from '@react-native-picker/picker';\nimport { CONTACTS } from '../dummy-data/contacts';\nimport { TouchableOpacity } from 'react-native';\nimport { Linking } from 'react-native';\n\n/**\n * Pantalla que muestra información de contacto de los trabajadores de la entidad.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst ContactScreen = ({ navigation }) => {\n  const [contactEmail, setContactEmail] = useState('');\n  return (\n    <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Información de Contactos</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <View style={styles.pickerContainer}>\n          <Picker\n            style={styles.picker}\n            mode=\"dropdown\"\n            selectedValue={contactEmail}\n            onValueChange={(itemValue, itemPosition) => {\n              setContactEmail(itemValue);\n            }}>\n            <Picker.Item label=\"Seleccione un contacto\" value=\"\" />\n            {CONTACTS.map((contact, key) => (\n              <Picker.Item\n                key={key}\n                label={contact.charge}\n                value={contact.email}\n              />\n            ))}\n          </Picker>\n        </View>\n        {CONTACTS.map(\n          (contact, key) =>\n            contact.email === contactEmail && (\n              <ContactCard\n                key={key}\n                charge={contact.charge}\n                color={Colors.blueColor}\n                name={contact.name}\n                email={contact.email}\n              />\n            ),\n        )}\n        <View style={styles.redes_sociales}>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://www.facebook.com/MuseoTinMarin/')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/facebook.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://www.instagram.com/museotinmarin/')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/instagram.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://twitter.com/MuseoTinMarin')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/twitter.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL(\n                'https://www.youtube.com/channel/UCdpMf5DQvZlcjfX4wum4LmQ',\n              )\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/youtube.png')}\n            />\n          </TouchableOpacity>\n        </View>\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  pickerContainer: {\n    flexDirection: 'row',\n    borderRadius: 15,\n    borderWidth: 1,\n    borderColor: '#d1d3e2',\n    overflow: 'hidden',\n  },\n  picker: {\n    height: 50,\n    width: '100%',\n    backgroundColor: '#858796',\n    color: 'white',\n  },\n  redes_sociales: {\n    marginTop: 10,\n    justifyContent: 'center',\n    width: 100,\n    flexDirection: 'row',\n    marginBottom: 50,\n  },\n  minilogo: {\n    margin: 5,\n    height: 60,\n    width: 60,\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 30,\n    color: '#566573',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  Logo: {\n    width: 300,\n    height: 200,\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30,\n  },\n  container: {\n    flex: 1,\n    padding: 24,\n  },\n});\n\nexport default ContactScreen;\n",
+    "content": "import React, { useState } from 'react';\nimport { StyleSheet, Text, View, ScrollView, Image } from 'react-native';\nimport ContactCard from '../components/ContactCard';\nimport Colors from '../constants/Colors';\nimport { Picker } from '@react-native-picker/picker';\nimport { CONTACTS } from '../dummy-data/contacts';\nimport { TouchableOpacity } from 'react-native';\nimport { Linking } from 'react-native';\n\n/**\n * Pantalla que muestra información de contacto de los trabajadores de la entidad.\n * @param {prop} navigation - Contiene información básica de navegación\n * @property {string} contactEmail - Email de un contacto, cambia su valor dependiendo el valor que se seleccione en el componente Picker\n * @property {function} setContactEmail - Método de acceso indirecto para modificar la propieadad contactEmail.\n * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.\n * @property {Array<Object>} CONTACTS - Arreglo que contiene información estática de los contactos Tin Marín.\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @see https://github.com/react-native-picker/picker\n * @see https://reactjs.org/docs/hooks-state.html\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst ContactScreen = ({ navigation }) => {\n  const [contactEmail, setContactEmail] = useState('');\n  return (\n    <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Información de Contactos</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <View style={styles.pickerContainer}>\n          <Picker\n            style={styles.picker}\n            mode=\"dropdown\"\n            selectedValue={contactEmail}\n            onValueChange={(itemValue, itemPosition) => {\n              setContactEmail(itemValue);\n            }}>\n            <Picker.Item label=\"Seleccione un contacto\" value=\"\" />\n            {CONTACTS.map((contact, key) => (\n              <Picker.Item\n                key={key}\n                label={contact.charge}\n                value={contact.email}\n              />\n            ))}\n          </Picker>\n        </View>\n        {CONTACTS.map(\n          (contact, key) =>\n            contact.email === contactEmail && (\n              <ContactCard\n                key={key}\n                charge={contact.charge}\n                color={Colors.blueColor}\n                name={contact.name}\n                email={contact.email}\n              />\n            ),\n        )}\n\n        <View style={styles.redes_sociales}>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://www.facebook.com/MuseoTinMarin/')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/facebook.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://www.instagram.com/museotinmarin/')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/instagram.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://twitter.com/MuseoTinMarin')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/twitter.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL(\n                'https://www.youtube.com/channel/UCdpMf5DQvZlcjfX4wum4LmQ',\n              )\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/youtube.png')}\n            />\n          </TouchableOpacity>\n        </View>\n      </View>\n    </ScrollView>\n  );\n};\n\n/**\n * @ignore\n */\nconst styles = StyleSheet.create({\n  pickerContainer: {\n    flexDirection: 'row',\n    borderRadius: 15,\n    borderWidth: 1,\n    borderColor: '#d1d3e2',\n    overflow: 'hidden',\n  },\n  picker: {\n    height: 50,\n    width: '100%',\n    backgroundColor: '#858796',\n    color: 'white',\n  },\n  redes_sociales: {\n    marginTop: 10,\n    justifyContent: 'center',\n    width: 100,\n    flexDirection: 'row',\n    marginBottom: 50,\n  },\n  minilogo: {\n    margin: 5,\n    height: 60,\n    width: 60,\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 30,\n    color: '#566573',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  Logo: {\n    width: 300,\n    height: 200,\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30,\n  },\n  container: {\n    flex: 1,\n    padding: 24,\n  },\n});\n\nexport default ContactScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/ContactScreen.js",
     "access": "public",
@@ -2229,15 +2363,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/ContactScreen.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 104,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 114,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 124,
@@ -2254,9 +2387,11 @@
     "importStyle": "ContactScreen",
     "description": "Pantalla que muestra información de contacto de los trabajadores de la entidad.",
     "see": [
-      "https://reactnavigation.org/docs/navigation-prop/"
+      "https://reactnavigation.org/docs/navigation-prop/",
+      "https://github.com/react-native-picker/picker",
+      "https://reactjs.org/docs/hooks-state.html"
     ],
-    "lineNumber": 16,
+    "lineNumber": 22,
     "params": [
       {
         "nullable": null,
@@ -2267,6 +2402,48 @@
         "optional": false,
         "name": "navigation",
         "description": "Contiene información básica de navegación"
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "contactEmail",
+        "description": "Email de un contacto, cambia su valor dependiendo el valor que se seleccione en el componente Picker"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setContactEmail",
+        "description": "Método de acceso indirecto para modificar la propieadad contactEmail."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useState",
+        "description": "Hook de React que permite crear una variable de estado con su método accesor."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array<Object>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "CONTACTS",
+        "description": "Arreglo que contiene información estática de los contactos Tin Marín."
       }
     ],
     "return": {
@@ -2282,7 +2459,7 @@
     "__docId__": 125,
     "kind": "file",
     "name": "src/screens/CovidInfo.js",
-    "content": "import React from 'react';\nimport {\n  StyleSheet,\n  View,\n  Image,\n  SafeAreaView,\n  TouchableOpacity,\n  Dimensions,\n} from 'react-native';\nimport { Card, Icon, Text } from 'react-native-elements';\nimport Colors from '../constants/Colors';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { coinButton } from '../helpers/audio';\n\n/**\n * Pantalla que muestra los detalles de una recomendación para prevenir COVID-19\n * @param {prop} navigation - Contiene información básica de navegación\n * @param {prop} route - Recibe parametros importantes para mostrar en pantalla\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @see https://reactnavigation.org/docs/route-prop/\n * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista\n */\nconst CovidInfo = ({ navigation, route }) => {\n  const { title, description, image, steps } = route.params;\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        <View style={styles.view}>\n          <Text style={styles.title}>{title}</Text>\n          <View style={styles.line}></View>\n          <MainParagraph description={description} />\n          <RenderImage url={image} />\n          <Text style={styles.subtitle}>Recomendaciones a Seguir</Text>\n          <FollowSteps steps={steps} />\n          <Footer navigation={navigation} />\n        </View>\n      </ScrollView>\n    </SafeAreaView>\n  );\n};\n\n/**\n * Este componente muestra el párrafo principal que contiene la descripción\n * de una recomendación.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {Array<string>} description - Contiene una lista de tipo string con la descripción\n * @return {View} Devuelve una vista con los párrafos iterados en un componente <Text>\n */\nexport const MainParagraph = ({ description }) => {\n  return (\n    <View style={styles.view}>\n      {description.map((paragraph, index) => (\n        <Text key={index} style={styles.paragraph}>{`${paragraph}\\n`}</Text>\n      ))}\n    </View>\n  );\n};\n\n/**\n * Este componente se encarga de Renderizar una imagen.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {string} url - Contiene la url de una imagen a mostrar.\n * @return {View} Retorna una vista con la imagen cargada.\n */\nexport const RenderImage = ({ url }) => {\n  return (\n    <View style={{ ...styles.imageContainer }}>\n      <Image style={styles.image} source={{ uri: url }} />\n    </View>\n  );\n};\n\n/**\n * Componente que muestra los pasos principales para seguir una recomendación.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {Array<string>} steps - contiene una lista de tipo string con la información de recomenadaciones a seguir.\n * @return {Card} Devuelve una tarjeta con el listado de recomendaciones a seguir.\n */\nexport const FollowSteps = ({ steps }) => {\n  return (\n    <Card containerStyle={{ borderRadius: 15 }}>\n      <Card.Title style={styles.card_title}>\n        A continuación se muestran las siguientes indicaciones:\n      </Card.Title>\n      <View>\n        {steps.map((step, index) => (\n          <View key={index}>\n            <Text style={{ ...styles.paragraph }}>{`\\u2022 ${step}`}</Text>\n            <Card.Divider />\n          </View>\n        ))}\n      </View>\n    </Card>\n  );\n};\n\n/**\n * Componente que muestra un pie de página.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {prop} navigation\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {View} Devuelve una vista con Enlaces\n */\nexport const Footer = ({ navigation }) => {\n  return (\n    <View style={styles.footer}>\n      <FooterLinks\n        text=\"Preguntas Frecuentes\"\n        name=\"question-circle\"\n        color=\"darkturquoise\"\n        size={75}\n        navigation={navigation}\n        screenRouteName=\"FAQs\"\n      />\n      <FooterLinks\n        text=\"Sitios de Interes\"\n        name=\"exclamation-circle\"\n        color=\"green\"\n        size={75}\n        navigation={navigation}\n        screenRouteName=\"WebLinks\"\n      />\n    </View>\n  );\n};\n\n/**\n * Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla.\n * Se llama en el componente {@link Footer}.\n * @param {string} name - Nombre del Icono a mostrar.\n * @param {string} color - Color del Icono a mostrar.\n * @param {number} size - Tamaño del Icono.\n * @param {string} text - Texto a mostrar del enlace.\n * @param {string} screenRouteName - Nombre de la pantalla a la cuál se navegará.\n * @param {prop} navigation\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {TouchableOpacity} Devuelve una vista presionable\n */\nexport const FooterLinks = ({\n  navigation,\n  name,\n  color,\n  size,\n  text,\n  screenRouteName,\n}) => {\n  return (\n    <TouchableOpacity\n      style={{ borderRadius: 15 }}\n      onPressIn={coinButton}\n      onPress={() => {\n        navigation.navigate(screenRouteName);\n      }}>\n      <View style={styles.footer_column}>\n        <Icon\n          name={name}\n          type=\"font-awesome-5\"\n          solid\n          color={color}\n          size={size}\n        />\n        <Text style={styles.footer_links}>{text}</Text>\n      </View>\n    </TouchableOpacity>\n  );\n};\n\nexport default CovidInfo;\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    marginHorizontal: 10,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  paragraph: {\n    fontFamily: 'NunitoSans-Bold',\n    marginVertical: 10,\n    textAlign: 'justify',\n    marginBottom: 10,\n    fontSize: 15,\n  },\n  imageContainer: {\n    width: '95%',\n    height: 200,\n  },\n  image: { width: '100%', height: 200, borderRadius: 15 },\n  subtitle: {\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 25,\n    color: 'red',\n    fontWeight: 'bold',\n  },\n  subtitleView: {\n    flexDirection: 'row',\n    paddingLeft: 10,\n    paddingTop: 5,\n  },\n  card_title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'justify',\n    backgroundColor: Colors.primaryColor,\n    color: 'white',\n    marginTop: -15,\n    marginHorizontal: -16,\n    padding: 15,\n    borderTopLeftRadius: 15,\n    borderTopRightRadius: 15,\n  },\n  footer: {\n    marginVertical: 20,\n    width: '100%',\n    flexDirection: 'row',\n    justifyContent: 'center',\n  },\n  footer_column: {\n    width: Dimensions.get('window').width / 2,\n    marginHorizontal: 10,\n    justifyContent: 'center',\n    alignItems: 'center',\n  },\n  footer_links: {\n    // padding: 10,\n    fontSize: Dimensions.get('window').width > 400 ? 15 : 12,\n    color: Colors.primaryColor,\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  ul: {\n    width: 5,\n    height: 5,\n    backgroundColor: 'black',\n    borderRadius: 15,\n  },\n});\n",
+    "content": "import React from 'react';\nimport {\n  StyleSheet,\n  View,\n  Image,\n  SafeAreaView,\n  TouchableOpacity,\n  Dimensions,\n} from 'react-native';\nimport { Card, Icon, Text } from 'react-native-elements';\nimport Colors from '../constants/Colors';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { coinButton } from '../helpers/audio';\n\n/**\n * Pantalla que muestra los detalles de una recomendación para prevenir COVID-19\n * @param {prop} navigation - Contiene información básica de navegación\n * @param {prop} route - Recibe parametros importantes para mostrar en pantalla\n * @param {string} title - Describe el título de una recomendación.\n * @param {Array<string>} description - Contiene un arreglo de párrafos.\n * @param {string} image - Contiene la imagen relacionada con la recomendación.\n * @param {Array<string>} steps - Contiene un arreglo con los pasos a seguir.\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @see https://reactnavigation.org/docs/route-prop/\n * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista\n */\nconst CovidInfo = ({ navigation, route }) => {\n  const { title, description, image, steps } = route.params;\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        <View style={styles.view}>\n          <Text style={styles.title}>{title}</Text>\n          <View style={styles.line}></View>\n          <MainParagraph description={description} />\n          <RenderImage url={image} />\n          <Text style={styles.subtitle}>Recomendaciones a Seguir</Text>\n          <FollowSteps steps={steps} />\n          <Footer navigation={navigation} />\n        </View>\n      </ScrollView>\n    </SafeAreaView>\n  );\n};\n\n/**\n * Este componente muestra el párrafo principal que contiene la descripción\n * de una recomendación.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {Array<string>} description - Contiene una lista de tipo string con la descripción\n * @return {View} Devuelve una vista con los párrafos iterados en un componente <Text>\n */\nexport const MainParagraph = ({ description }) => {\n  return (\n    <View style={styles.view}>\n      {description.map((paragraph, index) => (\n        <Text key={index} style={styles.paragraph}>{`${paragraph}\\n`}</Text>\n      ))}\n    </View>\n  );\n};\n\n/**\n * Este componente se encarga de Renderizar una imagen.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {string} url - Contiene la url de una imagen a mostrar.\n * @return {View} Retorna una vista con la imagen cargada.\n */\nexport const RenderImage = ({ url }) => {\n  return (\n    <View style={{ ...styles.imageContainer }}>\n      <Image style={styles.image} source={{ uri: url }} />\n    </View>\n  );\n};\n\n/**\n * Componente que muestra los pasos principales para seguir una recomendación.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {Array<string>} steps - contiene una lista de tipo string con la información de recomenadaciones a seguir.\n * @return {Card} Devuelve una tarjeta con el listado de recomendaciones a seguir.\n */\nexport const FollowSteps = ({ steps }) => {\n  return (\n    <Card containerStyle={{ borderRadius: 15 }}>\n      <Card.Title style={styles.card_title}>\n        A continuación se muestran las siguientes indicaciones:\n      </Card.Title>\n      <View>\n        {steps.map((step, index) => (\n          <View key={index}>\n            <Text style={{ ...styles.paragraph }}>{`\\u2022 ${step}`}</Text>\n            <Card.Divider />\n          </View>\n        ))}\n      </View>\n    </Card>\n  );\n};\n\n/**\n * Componente que muestra un pie de página.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {prop} navigation\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {View} Devuelve una vista con Enlaces\n */\nexport const Footer = ({ navigation }) => {\n  return (\n    <View style={styles.footer}>\n      <FooterLinks\n        text=\"Preguntas Frecuentes\"\n        name=\"question-circle\"\n        color=\"darkturquoise\"\n        size={75}\n        navigation={navigation}\n        screenRouteName=\"FAQs\"\n      />\n      <FooterLinks\n        text=\"Sitios de Interes\"\n        name=\"exclamation-circle\"\n        color=\"green\"\n        size={75}\n        navigation={navigation}\n        screenRouteName=\"WebLinks\"\n      />\n    </View>\n  );\n};\n\n/**\n * Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla.\n * Se llama en el componente {@link Footer}.\n * @param {string} name - Nombre del Icono a mostrar.\n * @param {string} color - Color del Icono a mostrar.\n * @param {number} size - Tamaño del Icono.\n * @param {string} text - Texto a mostrar del enlace.\n * @param {string} screenRouteName - Nombre de la pantalla a la cuál se navegará.\n * @param {prop} navigation\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {TouchableOpacity} Devuelve una vista presionable\n */\nexport const FooterLinks = ({\n  navigation,\n  name,\n  color,\n  size,\n  text,\n  screenRouteName,\n}) => {\n  return (\n    <TouchableOpacity\n      style={{ borderRadius: 15 }}\n      onPressIn={coinButton}\n      onPress={() => {\n        navigation.navigate(screenRouteName);\n      }}>\n      <View style={styles.footer_column}>\n        <Icon\n          name={name}\n          type=\"font-awesome-5\"\n          solid\n          color={color}\n          size={size}\n        />\n        <Text style={styles.footer_links}>{text}</Text>\n      </View>\n    </TouchableOpacity>\n  );\n};\n\nexport default CovidInfo;\n\n/**\n * @ignore\n */\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    marginHorizontal: 10,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  paragraph: {\n    fontFamily: 'NunitoSans-Bold',\n    marginVertical: 10,\n    textAlign: 'justify',\n    marginBottom: 10,\n    fontSize: 15,\n  },\n  imageContainer: {\n    width: '95%',\n    height: 200,\n  },\n  image: { width: '100%', height: 200, borderRadius: 15 },\n  subtitle: {\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 25,\n    color: 'red',\n    fontWeight: 'bold',\n  },\n  subtitleView: {\n    flexDirection: 'row',\n    paddingLeft: 10,\n    paddingTop: 5,\n  },\n  card_title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'justify',\n    backgroundColor: Colors.primaryColor,\n    color: 'white',\n    marginTop: -15,\n    marginHorizontal: -16,\n    padding: 15,\n    borderTopLeftRadius: 15,\n    borderTopRightRadius: 15,\n  },\n  footer: {\n    marginVertical: 20,\n    width: '100%',\n    flexDirection: 'row',\n    justifyContent: 'center',\n  },\n  footer_column: {\n    width: Dimensions.get('window').width / 2,\n    marginHorizontal: 10,\n    justifyContent: 'center',\n    alignItems: 'center',\n  },\n  footer_links: {\n    // padding: 10,\n    fontSize: Dimensions.get('window').width > 400 ? 15 : 12,\n    color: Colors.primaryColor,\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  ul: {\n    width: 5,\n    height: 5,\n    backgroundColor: 'black',\n    borderRadius: 15,\n  },\n});\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/CovidInfo.js",
     "access": "public",
@@ -2303,7 +2480,7 @@
     "importPath": "tinMarin/src/screens/CovidInfo.js",
     "importStyle": "{MainParagraph}",
     "description": "Este componente muestra el párrafo principal que contiene la descripción\nde una recomendación.\nSe llama en la pantalla {@link CovidInfo}.",
-    "lineNumber": 50,
+    "lineNumber": 54,
     "params": [
       {
         "nullable": null,
@@ -2339,7 +2516,7 @@
     "importPath": "tinMarin/src/screens/CovidInfo.js",
     "importStyle": "{RenderImage}",
     "description": "Este componente se encarga de Renderizar una imagen.\nSe llama en la pantalla {@link CovidInfo}.",
-    "lineNumber": 66,
+    "lineNumber": 70,
     "params": [
       {
         "nullable": null,
@@ -2375,7 +2552,7 @@
     "importPath": "tinMarin/src/screens/CovidInfo.js",
     "importStyle": "{FollowSteps}",
     "description": "Componente que muestra los pasos principales para seguir una recomendación.\nSe llama en la pantalla {@link CovidInfo}.",
-    "lineNumber": 80,
+    "lineNumber": 84,
     "params": [
       {
         "nullable": null,
@@ -2414,7 +2591,7 @@
     "see": [
       "https://reactnavigation.org/docs/navigation-prop/"
     ],
-    "lineNumber": 105,
+    "lineNumber": 109,
     "params": [
       {
         "nullable": null,
@@ -2453,7 +2630,7 @@
     "see": [
       "https://reactnavigation.org/docs/navigation-prop/"
     ],
-    "lineNumber": 140,
+    "lineNumber": 144,
     "params": [
       {
         "nullable": null,
@@ -2536,15 +2713,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/CovidInfo.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 171,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 178,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 132,
@@ -2564,7 +2740,7 @@
       "https://reactnavigation.org/docs/navigation-prop/",
       "https://reactnavigation.org/docs/route-prop/"
     ],
-    "lineNumber": 23,
+    "lineNumber": 27,
     "params": [
       {
         "nullable": null,
@@ -2585,6 +2761,46 @@
         "optional": false,
         "name": "route",
         "description": "Recibe parametros importantes para mostrar en pantalla"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "title",
+        "description": "Describe el título de una recomendación."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array<string>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "description",
+        "description": "Contiene un arreglo de párrafos."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "image",
+        "description": "Contiene la imagen relacionada con la recomendación."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array<string>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "steps",
+        "description": "Contiene un arreglo con los pasos a seguir."
       }
     ],
     "return": {
@@ -2600,7 +2816,7 @@
     "__docId__": 133,
     "kind": "file",
     "name": "src/screens/CovidScreen.js",
-    "content": "import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  View,\n  Image,\n  SafeAreaView,\n  ActivityIndicator,\n} from 'react-native';\nimport { getAllCovidRecommendations } from '../api/covid';\nimport { Text } from 'react-native-elements';\nimport GenericCard from '../components/GenericCard';\nimport Colors from '../constants/Colors';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { size } from 'lodash';\n\n/**\n * Pantalla que muestra una lista de tarjetas sobre recomendaciones sobre el COVID-19\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {SafeAreaView} Regreesa una layout con la maquetación de la pantalla\n */\nconst CovidScreen = ({ navigation }) => {\n  // const [covidInfo, setCovidInfo] = useState(null);\n  const [covid, setCovid] = useState(null);\n  const [loading, setLoading] = useState(true);\n  let swapColor = true;\n\n  useEffect(() => {\n    getAllCovidRecommendations().then((response) => {\n      // console.log(response);\n      setCovid(response);\n      setLoading(false);\n    });\n  }, []);\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        {loading ? (\n          <ActivityIndicator\n            style={{\n              marginTop: 200,\n            }}\n            size=\"large\"\n            color=\"#0000ff\"\n          />\n        ) : size(covid) == 0 ? (\n          <Text style={styles.text}>No se encontraron Recomendaciones</Text>\n        ) : (\n          <View style={styles.view}>\n            <Text style={styles.title}>Recomendaciones para el Covid-19</Text>\n            <View style={styles.line}></View>\n            <CovidList\n              covidRecs={covid}\n              navigation={navigation}\n              swapColor={swapColor}\n            />\n          </View>\n        )}\n      </ScrollView>\n    </SafeAreaView>\n  );\n};\n\n/**\n * Componente que se utiliza para iterar las tarjetas\n * @param {prop} navigation\n * @param {Array<string>} covidRecs - Contiene la información del estado covid.\n * @param {boolean} swapColor - Variable de control para intercambiar color.\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {GenericCard} Retorna una lista de tarjetas de tipo {@link GenericCard}\n */\nconst CovidList = ({ navigation, covidRecs, swapColor }) => {\n  return covidRecs.map((covid, index) => {\n    if (index % 2 === 0) swapColor = !swapColor;\n    return (\n      <GenericCard\n        key={index}\n        id={covid._id}\n        title={covid.title}\n        description={covid.description}\n        imageURL={covid.image}\n        steps={covid.steps}\n        color={swapColor ? Colors.green : Colors.magenta}\n        textBtn=\"Saber Más\"\n        navigation={navigation}\n        screenName=\"InfoCovid\"\n      />\n    );\n  });\n};\n\nexport default CovidScreen;\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    marginHorizontal: 10,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    textAlign: 'center',\n  },\n\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\n",
+    "content": "import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  View,\n  Image,\n  SafeAreaView,\n  ActivityIndicator,\n} from 'react-native';\nimport { getAllCovidRecommendations } from '../api/covid';\nimport { Text } from 'react-native-elements';\nimport GenericCard from '../components/GenericCard';\nimport Colors from '../constants/Colors';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { size } from 'lodash';\n\n/**\n * Pantalla que muestra una lista de tarjetas sobre recomendaciones sobre el COVID-19\n * @param {prop} navigation - Contiene información básica de navegación\n * @property {Array<Object>} covid - Lista que contiene Objetos con estructura de una Recomendación Covid-19.\n * @property {function} setCovid - Método de acceso indirecto para modificar la propieadad covid.\n * @property {boolean} loading - Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene.\n * @property {function} setLoading - Método de acceso indirecto para modificar la propieadad loading.\n * @property {boolean} swapColor - Variable auxiliar para cambiar color de tarjetas cada posición: (índice mod 2).\n * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.\n * @property {Promise} getAllCovidRecommendations - {@link getAllCovidRecommendations} | Promesa que devuelve la información dependiendo la respuesta del servidor.\n * @property {function} size - Función de la librería lodash | Devuelve el tamaño de una colección.\n * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @see https://reactjs.org/docs/hooks-effect.html\n * @see https://lodash.com/docs/4.17.15#size\n * @see https://reactjs.org/docs/hooks-state.html\n * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\n * @return {SafeAreaView} Regresa una layout con la maquetación de la pantalla\n */\nconst CovidScreen = ({ navigation }) => {\n  // const [covidInfo, setCovidInfo] = useState(null);\n  const [covid, setCovid] = useState(null);\n  const [loading, setLoading] = useState(true);\n  let swapColor = true;\n\n  useEffect(() => {\n    getAllCovidRecommendations().then((response) => {\n      // console.log(response);\n      setCovid(response);\n      setLoading(false);\n    });\n  }, []);\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        {loading ? (\n          <ActivityIndicator\n            style={{\n              marginTop: 200,\n            }}\n            size=\"large\"\n            color=\"#0000ff\"\n          />\n        ) : size(covid) == 0 ? (\n          <Text style={styles.text}>No se encontraron Recomendaciones</Text>\n        ) : (\n          <View style={styles.view}>\n            <Text style={styles.title}>Recomendaciones para el Covid-19</Text>\n            <View style={styles.line}></View>\n            <CovidList\n              covidRecs={covid}\n              navigation={navigation}\n              swapColor={swapColor}\n            />\n          </View>\n        )}\n      </ScrollView>\n    </SafeAreaView>\n  );\n};\n\n/**\n * Componente que se utiliza para iterar las tarjetas\n * @param {prop} navigation\n * @param {Array<string>} covidRecs - Contiene la información del estado covid.\n * @param {boolean} swapColor - Variable de control para intercambiar color.\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {GenericCard} Retorna una lista de tarjetas de tipo {@link GenericCard}\n */\nconst CovidList = ({ navigation, covidRecs, swapColor }) => {\n  return covidRecs.map((covid, index) => {\n    if (index % 2 === 0) swapColor = !swapColor;\n    return (\n      <GenericCard\n        key={index}\n        id={covid._id}\n        title={covid.title}\n        description={covid.description}\n        imageURL={covid.image}\n        steps={covid.steps}\n        color={swapColor ? Colors.green : Colors.magenta}\n        textBtn=\"Saber Más\"\n        navigation={navigation}\n        screenName=\"InfoCovid\"\n      />\n    );\n  });\n};\n\nexport default CovidScreen;\n\n/**\n * @ignore\n */\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    marginHorizontal: 10,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    textAlign: 'center',\n  },\n\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/CovidScreen.js",
     "access": "public",
@@ -2624,7 +2840,7 @@
     "see": [
       "https://reactnavigation.org/docs/navigation-prop/"
     ],
-    "lineNumber": 73,
+    "lineNumber": 86,
     "params": [
       {
         "nullable": null,
@@ -2678,15 +2894,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/CovidScreen.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 95,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 111,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 136,
@@ -2703,9 +2918,13 @@
     "importStyle": "CovidScreen",
     "description": "Pantalla que muestra una lista de tarjetas sobre recomendaciones sobre el COVID-19",
     "see": [
-      "https://reactnavigation.org/docs/navigation-prop/"
+      "https://reactnavigation.org/docs/navigation-prop/",
+      "https://reactjs.org/docs/hooks-effect.html",
+      "https://lodash.com/docs/4.17.15#size",
+      "https://reactjs.org/docs/hooks-state.html",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
     ],
-    "lineNumber": 22,
+    "lineNumber": 35,
     "params": [
       {
         "nullable": null,
@@ -2718,20 +2937,112 @@
         "description": "Contiene información básica de navegación"
       }
     ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Array<Object>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "covid",
+        "description": "Lista que contiene Objetos con estructura de una Recomendación Covid-19."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setCovid",
+        "description": "Método de acceso indirecto para modificar la propieadad covid."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "loading",
+        "description": "Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setLoading",
+        "description": "Método de acceso indirecto para modificar la propieadad loading."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "swapColor",
+        "description": "Variable auxiliar para cambiar color de tarjetas cada posición: (índice mod 2)."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useEffect",
+        "description": "Hook de React que permite realizar tareas asíncronas a la vista."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Promise"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "getAllCovidRecommendations",
+        "description": "{@link getAllCovidRecommendations} | Promesa que devuelve la información dependiendo la respuesta del servidor."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "size",
+        "description": "Función de la librería lodash | Devuelve el tamaño de una colección."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useState",
+        "description": "Hook de React que permite crear una variable de estado con su método accesor."
+      }
+    ],
     "return": {
       "nullable": null,
       "types": [
         "SafeAreaView"
       ],
       "spread": false,
-      "description": "Regreesa una layout con la maquetación de la pantalla"
+      "description": "Regresa una layout con la maquetación de la pantalla"
     }
   },
   {
     "__docId__": 137,
     "kind": "file",
     "name": "src/screens/DonationScreen.js",
-    "content": "import React from 'react'\nimport { StyleSheet, Text, View } from 'react-native'\n\nconst DonationScreen = () => {\n    return (\n        <View>\n            <Text>Donation Screen</Text>\n        </View>\n    )\n}\n\nexport default DonationScreen\n\nconst styles = StyleSheet.create({})\n",
+    "content": "import React from 'react';\nimport { StyleSheet, Text, View } from 'react-native';\n\n/**\n * @ignore\n */\nconst DonationScreen = () => {\n  return (\n    <View>\n      <Text>Donation Screen</Text>\n    </View>\n  );\n};\n\nexport default DonationScreen;\n\n/**\n * @ignore\n */\nconst styles = StyleSheet.create({});\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/DonationScreen.js",
     "access": "public",
@@ -2749,15 +3060,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/DonationScreen.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 14,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 20,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 139,
@@ -2772,9 +3082,9 @@
     "export": true,
     "importPath": "tinMarin/src/screens/DonationScreen.js",
     "importStyle": "DonationScreen",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 7,
+    "ignore": true,
     "params": [],
     "return": {
       "types": [
@@ -2786,7 +3096,7 @@
     "__docId__": 140,
     "kind": "file",
     "name": "src/screens/EventsScreen.js",
-    "content": "import React from 'react'\nimport { StyleSheet, Text, View } from 'react-native'\n\nconst EventsScreen = () => {\n    return (\n        <View>\n            <Text>Pantalla eventos</Text>\n        </View>\n    )\n}\n\nexport default EventsScreen\n\nconst styles = StyleSheet.create({})\n",
+    "content": "import React from 'react';\nimport { StyleSheet, Text, View } from 'react-native';\n\n/**\n * @ignore\n */\nconst EventsScreen = () => {\n  return (\n    <View>\n      <Text>Pantalla eventos</Text>\n    </View>\n  );\n};\n\nexport default EventsScreen;\n\n/**\n * @ignore\n */\nconst styles = StyleSheet.create({});\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/EventsScreen.js",
     "access": "public",
@@ -2804,15 +3114,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/EventsScreen.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 14,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 20,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 142,
@@ -2827,9 +3136,9 @@
     "export": true,
     "importPath": "tinMarin/src/screens/EventsScreen.js",
     "importStyle": "EventsScreen",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 7,
+    "ignore": true,
     "params": [],
     "return": {
       "types": [
@@ -2841,7 +3150,7 @@
     "__docId__": 143,
     "kind": "file",
     "name": "src/screens/ExhibitsScreen.js",
-    "content": "import { map } from 'lodash';\nimport React, { useEffect, useState } from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  ScrollView,\n  ActivityIndicator,\n} from 'react-native';\nimport { getAllExhibitions } from '../api/exhibitions';\nimport Card from '../components/Card';\nimport Colors from '../constants/Colors';\nimport { size } from 'lodash';\n\nconst ExhibitsScreen = ({ navigation }) => {\n  const [exhibitions, setExhibitions] = useState(null);\n  const [loading, setLoading] = useState(true);\n  let swapColor = true;\n\n  useEffect(() => {\n    getAllExhibitions().then((response) => {\n      setExhibitions(response);\n      setLoading(false);\n    });\n  }, []);\n\n  return (\n    <ScrollView showsVerticalScrollIndicator={false}>\n      {loading ? (\n        <ActivityIndicator\n          style={{\n            marginTop: 200,\n          }}\n          size=\"large\"\n          color=\"#0000ff\"\n        />\n      ) : size(exhibitions) == 0 ? (\n        <Text style={styles.text}>No se encontraron Exhibiciones</Text>\n      ) : (\n        <View style={styles.view}>\n          <Text style={styles.title}>Exhibiciones</Text>\n          <View style={styles.line}></View>\n          {map(exhibitions, (exhibition, index) => {\n            if (index % 2 === 0) {\n              swapColor = !swapColor;\n            }\n            return (\n              <Card\n                key={exhibition._id}\n                index={index}\n                textBtn=\"Conócela\"\n                color={swapColor ? Colors.green : Colors.magenta}\n                exhibition={exhibition}\n                navigation={navigation}\n              />\n            );\n          })}\n        </View>\n      )}\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\n\nexport default ExhibitsScreen;\n",
+    "content": "import { map } from 'lodash';\nimport React, { useEffect, useState } from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  ScrollView,\n  ActivityIndicator,\n} from 'react-native';\nimport { getAllExhibitions } from '../api/exhibitions';\nimport Card from '../components/Card';\nimport Colors from '../constants/Colors';\nimport { size } from 'lodash';\n\n/**\n * Pantalla que muestra una lista de tarjetas sobre las Exhibiciones\n * @param {prop} navigation - Contiene información básica de navegación\n * @property {Array<Object>} exhibitions - Lista que contiene Objetos con estructura de una Recomendación Covid-19.\n * @property {function} setExhibitions - Método de acceso indirecto para modificar la propieadad covid.\n * @property {boolean} loading - Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene.\n * @property {function} setLoading - Método de acceso indirecto para modificar la propieadad loading.\n * @property {boolean} swapColor - Variable auxiliar para cambiar color de tarjetas cada posición: (índice mod 2).\n * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.\n * @property {Promise} getAllExhibitions - {@link getAllExhibitions} | Promesa que devuelve la información dependiendo la respuesta del servidor.\n * @property {function} size - Función de la librería lodash | Devuelve el tamaño de una colección.\n * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @see https://reactjs.org/docs/hooks-effect.html\n * @see https://lodash.com/docs/4.17.15#size\n * @see https://reactjs.org/docs/hooks-state.html\n * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst ExhibitsScreen = ({ navigation }) => {\n  const [exhibitions, setExhibitions] = useState(null);\n  const [loading, setLoading] = useState(true);\n  let swapColor = true;\n\n  useEffect(() => {\n    getAllExhibitions().then((response) => {\n      setExhibitions(response);\n      setLoading(false);\n    });\n  }, []);\n\n  return (\n    <ScrollView showsVerticalScrollIndicator={false}>\n      {loading ? (\n        <ActivityIndicator\n          style={{\n            marginTop: 200,\n          }}\n          size=\"large\"\n          color=\"#0000ff\"\n        />\n      ) : size(exhibitions) == 0 ? (\n        <Text style={styles.text}>No se encontraron Exhibiciones</Text>\n      ) : (\n        <View style={styles.view}>\n          <Text style={styles.title}>Exhibiciones</Text>\n          <View style={styles.line}></View>\n          {map(exhibitions, (exhibition, index) => {\n            if (index % 2 === 0) {\n              swapColor = !swapColor;\n            }\n            return (\n              <Card\n                key={exhibition._id}\n                index={index}\n                textBtn=\"Conócela\"\n                color={swapColor ? Colors.green : Colors.magenta}\n                exhibition={exhibition}\n                navigation={navigation}\n              />\n            );\n          })}\n        </View>\n      )}\n    </ScrollView>\n  );\n};\n\n/**\n *@ignore\n */\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\n\nexport default ExhibitsScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/ExhibitsScreen.js",
     "access": "public",
@@ -2859,15 +3168,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/ExhibitsScreen.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 64,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 86,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 145,
@@ -2882,32 +3190,133 @@
     "export": true,
     "importPath": "tinMarin/src/screens/ExhibitsScreen.js",
     "importStyle": "ExhibitsScreen",
-    "description": null,
-    "lineNumber": 15,
-    "undocument": true,
+    "description": "Pantalla que muestra una lista de tarjetas sobre las Exhibiciones",
+    "see": [
+      "https://reactnavigation.org/docs/navigation-prop/",
+      "https://reactjs.org/docs/hooks-effect.html",
+      "https://lodash.com/docs/4.17.15#size",
+      "https://reactjs.org/docs/hooks-state.html",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+    ],
+    "lineNumber": 34,
     "params": [
       {
-        "name": "objectPattern",
+        "nullable": null,
         "types": [
-          "{\"navigation\": *}"
+          "prop"
         ],
-        "defaultRaw": {
-          "navigation": null
-        },
-        "defaultValue": "{\"navigation\":null}"
+        "spread": false,
+        "optional": false,
+        "name": "navigation",
+        "description": "Contiene información básica de navegación"
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Array<Object>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "exhibitions",
+        "description": "Lista que contiene Objetos con estructura de una Recomendación Covid-19."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setExhibitions",
+        "description": "Método de acceso indirecto para modificar la propieadad covid."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "loading",
+        "description": "Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setLoading",
+        "description": "Método de acceso indirecto para modificar la propieadad loading."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "swapColor",
+        "description": "Variable auxiliar para cambiar color de tarjetas cada posición: (índice mod 2)."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useEffect",
+        "description": "Hook de React que permite realizar tareas asíncronas a la vista."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Promise"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "getAllExhibitions",
+        "description": "{@link getAllExhibitions} | Promesa que devuelve la información dependiendo la respuesta del servidor."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "size",
+        "description": "Función de la librería lodash | Devuelve el tamaño de una colección."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useState",
+        "description": "Hook de React que permite crear una variable de estado con su método accesor."
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "ScrollView"
+      ],
+      "spread": false,
+      "description": "Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla."
     }
   },
   {
     "__docId__": 146,
     "kind": "file",
     "name": "src/screens/FAQScreen.js",
-    "content": "import { map } from 'lodash';\nimport React, { useState, useEffect } from 'react';\nimport {\n  View,\n  StyleSheet,\n  Text,\n  SafeAreaView,\n  ActivityIndicator,\n} from 'react-native';\nimport { getAllFAQs } from '../api/faqs';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { Card } from 'react-native-elements';\nimport Colors from '../constants/Colors';\nimport { size } from 'lodash';\n\n/**\n * Pantalla que muestra una lista de tarjetas con preguntas frecuentes.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {SafeAreaView} Regreesa una layout con la maquetación de la pantalla\n */\nconst FAQScreen = ({ navigation }) => {\n  const [faqs, setFaqs] = useState(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    getAllFAQs().then((response) => {\n      setFaqs(response);\n      setLoading(false);\n    });\n  }, []);\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        {loading ? (\n          <ActivityIndicator\n            style={{\n              marginTop: 200,\n            }}\n            size=\"large\"\n            color=\"#0000ff\"\n          />\n        ) : size(faqs) == 0 ? (\n          <Text style={styles.text}>\n            No se encontraron Preguntas Frecuentes\n          </Text>\n        ) : (\n          <View style={styles.view}>\n            <Text style={styles.title}>Preguntas Frecuentes</Text>\n            <View style={styles.line}></View>\n            {faqs.map((faq, index) => {\n              return (\n                <Card key={index} containerStyle={{ borderRadius: 15 }}>\n                  <Card.Title style={styles.card_title}>\n                    {faq.question}\n                  </Card.Title>\n                  <View>\n                    <Text style={styles.paragraph}>{faq.answer}</Text>\n                  </View>\n                </Card>\n              );\n            })}\n          </View>\n        )}\n      </ScrollView>\n    </SafeAreaView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    marginHorizontal: 10,\n    marginBottom: 30,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  paragraph: {\n    fontFamily: 'NunitoSans-Bold',\n    // marginVertical: 10,\n    textAlign: 'justify',\n    marginBottom: 10,\n    fontSize: 15,\n  },\n  card_title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'justify',\n    backgroundColor: Colors.primaryColor,\n    color: 'white',\n    marginTop: -15,\n    marginHorizontal: -16,\n    padding: 15,\n    borderTopLeftRadius: 15,\n    borderTopRightRadius: 15,\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\nexport default FAQScreen;\n",
+    "content": "import { map } from 'lodash';\nimport React, { useState, useEffect } from 'react';\nimport {\n  View,\n  StyleSheet,\n  Text,\n  SafeAreaView,\n  ActivityIndicator,\n} from 'react-native';\nimport { getAllFAQs } from '../api/faqs';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { Card } from 'react-native-elements';\nimport Colors from '../constants/Colors';\nimport { size } from 'lodash';\n\n/**\n * Pantalla que muestra una lista de tarjetas con preguntas frecuentes.\n * @param {prop} navigation - Contiene información básica de navegación\n * @property {Array<Object>} faqs - Lista que contiene Objetos con estructura de una Pregunta Frecuente.\n * @property {function} setFaqs - Método de acceso indirecto para modificar la propieadad faqs.\n * @property {boolean} loading - Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene.\n * @property {function} setLoading - Método de acceso indirecto para modificar la propieadad loading.\n * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.\n * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.\n * @property {Promise} getAllFAQs - {@link getAllFAQs} | Promesa que devuelve la información dependiendo la respuesta del servidor.\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @see https://reactjs.org/docs/hooks-effect.html\n * @see https://reactjs.org/docs/hooks-state.html\n * @see @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\n * @return {SafeAreaView} Regreesa una layout con la maquetación de la pantalla\n */\nconst FAQScreen = ({ navigation }) => {\n  const [faqs, setFaqs] = useState(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    getAllFAQs().then((response) => {\n      setFaqs(response);\n      setLoading(false);\n    });\n  }, []);\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        {loading ? (\n          <ActivityIndicator\n            style={{\n              marginTop: 200,\n            }}\n            size=\"large\"\n            color=\"#0000ff\"\n          />\n        ) : size(faqs) == 0 ? (\n          <Text style={styles.text}>\n            No se encontraron Preguntas Frecuentes\n          </Text>\n        ) : (\n          <View style={styles.view}>\n            <Text style={styles.title}>Preguntas Frecuentes</Text>\n            <View style={styles.line}></View>\n            {faqs.map((faq, index) => {\n              return (\n                <Card key={index} containerStyle={{ borderRadius: 15 }}>\n                  <Card.Title style={styles.card_title}>\n                    {faq.question}\n                  </Card.Title>\n                  <View>\n                    <Text style={styles.paragraph}>{faq.answer}</Text>\n                  </View>\n                </Card>\n              );\n            })}\n          </View>\n        )}\n      </ScrollView>\n    </SafeAreaView>\n  );\n};\n\n/**\n * @ignore\n */\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    marginHorizontal: 10,\n    marginBottom: 30,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  paragraph: {\n    fontFamily: 'NunitoSans-Bold',\n    // marginVertical: 10,\n    textAlign: 'justify',\n    marginBottom: 10,\n    fontSize: 15,\n  },\n  card_title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'justify',\n    backgroundColor: Colors.primaryColor,\n    color: 'white',\n    marginTop: -15,\n    marginHorizontal: -16,\n    padding: 15,\n    borderTopLeftRadius: 15,\n    borderTopRightRadius: 15,\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\nexport default FAQScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/FAQScreen.js",
     "access": "public",
@@ -2925,15 +3334,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/FAQScreen.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 71,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 84,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 148,
@@ -2950,9 +3358,18 @@
     "importStyle": "FAQScreen",
     "description": "Pantalla que muestra una lista de tarjetas con preguntas frecuentes.",
     "see": [
-      "https://reactnavigation.org/docs/navigation-prop/"
+      "https://reactnavigation.org/docs/navigation-prop/",
+      "https://reactjs.org/docs/hooks-effect.html",
+      "https://reactjs.org/docs/hooks-state.html",
+      ""
     ],
-    "lineNumber": 22,
+    "lineNumber": 32,
+    "unknown": [
+      {
+        "tagName": "@see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\n",
+        "tagValue": ""
+      }
+    ],
     "params": [
       {
         "nullable": null,
@@ -2963,6 +3380,78 @@
         "optional": false,
         "name": "navigation",
         "description": "Contiene información básica de navegación"
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Array<Object>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "faqs",
+        "description": "Lista que contiene Objetos con estructura de una Pregunta Frecuente."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setFaqs",
+        "description": "Método de acceso indirecto para modificar la propieadad faqs."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "loading",
+        "description": "Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setLoading",
+        "description": "Método de acceso indirecto para modificar la propieadad loading."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useEffect",
+        "description": "Hook de React que permite realizar tareas asíncronas a la vista."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useState",
+        "description": "Hook de React que permite crear una variable de estado con su método accesor."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Promise"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "getAllFAQs",
+        "description": "{@link getAllFAQs} | Promesa que devuelve la información dependiendo la respuesta del servidor."
       }
     ],
     "return": {
@@ -2978,7 +3467,7 @@
     "__docId__": 149,
     "kind": "file",
     "name": "src/screens/HomeScreen.js",
-    "content": "import { noConflict } from 'lodash';\nimport React from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  ImageBackground,\n  ScrollView,\n  TouchableOpacity,\n} from 'react-native';\nimport Covid from '../assets/Covid.jpeg';\nimport FAQs from '../assets/FAQs.jpeg';\nimport WebLinks from '../assets/WebLinks.jpg';\nimport Sugerencias from '../assets/Sugerencias.png';\nimport Exhibicion from '../assets/Exhibicion.jpg';\nimport {\n  playButtonPress,\n  heyListenButton,\n  wowButton,\n  msnButton,\n  catcButton,\n  ohhButton,\n} from '../helpers/audio';\nimport ConocenosMas from '../assets/ConocenosMas.jpg';\n\n/**\n * Pantalla Principal que contiene una lista de tarjetas con los accesos directos de los diferentes\n * módulos que posee la aplicación.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla\n */\nconst HomeScreen = ({ navigation }) => {\n  return (\n    <ScrollView>\n      <View style={styles.view}>\n        <TouchableOpacity onPress={playButtonPress}>\n          <Text style={styles.title}>Menu Principal</Text>\n        </TouchableOpacity>\n\n        <View style={styles.line}></View>\n\n        <TouchableOpacity\n          onPressIn={playButtonPress}\n          onPress={() => {\n            navigation.navigate('exhibits');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Exhibicion}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Exhibiciones</Text>\n              <Text style={styles.text2}>\n                Ven y conoce todas nuestras exhibiciones disponibles para que\n                las puedas visitar !\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={heyListenButton}\n          onPress={() => {\n            navigation.navigate('covid');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Covid}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Recomendaciones Covid-19</Text>\n              <Text style={styles.text2}>\n                Toma en cuenta las siguientes recomendaciones al visitarnos!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={ohhButton}\n          onPress={() => {\n            navigation.navigate('knowMore');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={ConocenosMas}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Conocenos Más</Text>\n              <Text style={styles.text2}>\n                Aqui puedes encontrar informacion de contacto, estamos a la\n                orden!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={msnButton}\n          onPress={() => {\n            navigation.navigate('comments');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Sugerencias}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Sugerencias</Text>\n              <Text style={styles.text2}>\n                Para seguir mejorando, puedes dejarnos cualquier duda o\n                inquietud!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={catcButton}\n          onPress={() => {\n            navigation.navigate('FAQs');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={FAQs}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Preguntas Frecuentes</Text>\n              <Text style={styles.text2}>\n                Por si tienes alguna consulta para resolver de forma rápida!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={wowButton}\n          onPress={() => {\n            navigation.navigate('WebLinks');\n          }}\n          style={{ ...styles.cardContainer, marginBottom: 30 }}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={WebLinks}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Sitios de Interés</Text>\n              <Text style={styles.text2}>\n                Si deseas profundizar un poco más en otros temas relevantes!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  image: {\n    width: '100%',\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  card: {\n    width: '90%',\n    height: 200,\n    backgroundColor: 'rgb(0,0,0)',\n    borderRadius: 10,\n  },\n\n  cardContainer: {\n    width: '100%',\n    alignItems: 'center',\n    marginTop: 40,\n  },\n  textContainer: {\n    marginLeft: 20,\n    marginTop: 20,\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    color: 'white',\n    fontSize: 25,\n  },\n  text2: {\n    fontFamily: 'NunitoSans-Bold',\n    color: 'white',\n    fontSize: 15,\n  },\n});\n\nexport default HomeScreen;\n",
+    "content": "import { noConflict } from 'lodash';\nimport React from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  ImageBackground,\n  ScrollView,\n  TouchableOpacity,\n} from 'react-native';\nimport Covid from '../assets/Covid.jpeg';\nimport FAQs from '../assets/FAQs.jpeg';\nimport WebLinks from '../assets/WebLinks.jpg';\nimport Sugerencias from '../assets/Sugerencias.png';\nimport Exhibicion from '../assets/Exhibicion.jpg';\nimport {\n  playButtonPress,\n  heyListenButton,\n  wowButton,\n  msnButton,\n  catcButton,\n  ohhButton,\n} from '../helpers/audio';\nimport ConocenosMas from '../assets/ConocenosMas.jpg';\n\n/**\n * Pantalla Principal que contiene una lista de tarjetas con los accesos directos de los diferentes\n * módulos que posee la aplicación.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla\n */\nconst HomeScreen = ({ navigation }) => {\n  return (\n    <ScrollView>\n      <View style={styles.view}>\n        <TouchableOpacity onPress={playButtonPress}>\n          <Text style={styles.title}>Menu Principal</Text>\n        </TouchableOpacity>\n\n        <View style={styles.line}></View>\n\n        <TouchableOpacity\n          onPressIn={playButtonPress}\n          onPress={() => {\n            navigation.navigate('exhibits');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Exhibicion}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Exhibiciones</Text>\n              <Text style={styles.text2}>\n                Ven y conoce todas nuestras exhibiciones disponibles para que\n                las puedas visitar !\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={heyListenButton}\n          onPress={() => {\n            navigation.navigate('covid');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Covid}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Recomendaciones Covid-19</Text>\n              <Text style={styles.text2}>\n                Toma en cuenta las siguientes recomendaciones al visitarnos!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={ohhButton}\n          onPress={() => {\n            navigation.navigate('knowMore');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={ConocenosMas}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Conocenos Más</Text>\n              <Text style={styles.text2}>\n                Aqui puedes encontrar informacion de contacto, estamos a la\n                orden!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={msnButton}\n          onPress={() => {\n            navigation.navigate('comments');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Sugerencias}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Sugerencias</Text>\n              <Text style={styles.text2}>\n                Para seguir mejorando, puedes dejarnos cualquier duda o\n                inquietud!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={catcButton}\n          onPress={() => {\n            navigation.navigate('FAQs');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={FAQs}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Preguntas Frecuentes</Text>\n              <Text style={styles.text2}>\n                Por si tienes alguna consulta para resolver de forma rápida!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={wowButton}\n          onPress={() => {\n            navigation.navigate('WebLinks');\n          }}\n          style={{ ...styles.cardContainer, marginBottom: 30 }}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={WebLinks}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Sitios de Interés</Text>\n              <Text style={styles.text2}>\n                Si deseas profundizar un poco más en otros temas relevantes!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n      </View>\n    </ScrollView>\n  );\n};\n\n/**\n * @ignore\n */\nconst styles = StyleSheet.create({\n  image: {\n    width: '100%',\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  card: {\n    width: '90%',\n    height: 200,\n    backgroundColor: 'rgb(0,0,0)',\n    borderRadius: 10,\n  },\n\n  cardContainer: {\n    width: '100%',\n    alignItems: 'center',\n    marginTop: 40,\n  },\n  textContainer: {\n    marginLeft: 20,\n    marginTop: 20,\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    color: 'white',\n    fontSize: 25,\n  },\n  text2: {\n    fontFamily: 'NunitoSans-Bold',\n    color: 'white',\n    fontSize: 15,\n  },\n});\n\nexport default HomeScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/HomeScreen.js",
     "access": "public",
@@ -2996,15 +3485,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/HomeScreen.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 170,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 173,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 151,
@@ -3049,7 +3537,7 @@
     "__docId__": 152,
     "kind": "file",
     "name": "src/screens/InfoCard.js",
-    "content": "import React, { useState, useEffect } from 'react';\nimport { StyleSheet, SafeAreaView, View, Image } from 'react-native';\nimport { IconButton, Text, Title } from 'react-native-paper';\nimport { getExhibitionById } from '../api/exhibitions';\nimport ModalBody from '../components/ModalBody';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { map, size } from 'lodash';\n\nconst InfoCard = ({ route }) => {\n  const { _id } = route.params;\n  const [visible, setVisible] = useState(false);\n  const [exhibition, setExhibition] = useState(null);\n\n  const showModal = () => setVisible(!visible);\n\n  useEffect(() => {\n    getExhibitionById(_id).then((response) => {\n      setExhibition(response);\n    });\n  }, []);\n\n  if (!exhibition) return null;\n\n  const [imageURL] = exhibition.images;\n  const [logoURL] = exhibition.sponsorLogo;\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        <InfoImage path={imageURL} />\n        <InfoModal setVisible={setVisible} />\n        <InfoTitle exhibition={exhibition} />\n        <Text style={styles.overview}>{exhibition.description}</Text>\n        {logoURL && <InfoSponsor url={logoURL} />}\n        <InfoFooter exhibition={exhibition} />\n      </ScrollView>\n      <ModalBody\n        visible={visible}\n        showModal={showModal}\n        curiousInfo={exhibition.curiousInfo}\n      />\n    </SafeAreaView>\n  );\n};\n\nexport default InfoCard;\n\nconst InfoImage = ({ path }) => {\n  return (\n    <View style={styles.viewPoster}>\n      <Image style={styles.poster} source={{ uri: path }} />\n    </View>\n  );\n};\n\nconst InfoModal = ({ setVisible }) => {\n  return (\n    <View style={styles.viewModal}>\n      <IconButton\n        icon=\"information-variant\"\n        size={30}\n        color=\"#000\"\n        style={styles.info}\n        onPress={() => setVisible(true)}\n      />\n    </View>\n  );\n};\n\nconst InfoTitle = ({ exhibition }) => {\n  return (\n    <View style={styles.viewInfo}>\n      <Title style={{ color: '#F29F05', fontWeight: 'bold', fontSize: 23 }}>\n        {exhibition.name}\n      </Title>\n    </View>\n  );\n};\n\nconst InfoSponsor = ({ url }) => {\n  return (\n    <View style={styles.viewSponsor}>\n      <Title\n        style={{\n          color: 'black',\n          fontSize: 17,\n          fontWeight: 'bold',\n          marginHorizontal: 30,\n          marginTop: 5,\n        }}>\n        Patrocina:{' '}\n      </Title>\n      <Image source={{ uri: url }} style={styles.imgSponsor} />\n    </View>\n  );\n};\n\nconst InfoFooter = ({ exhibition }) => {\n  const {\n    minimumAge,\n    maximumAge,\n    educationArea,\n    duration,\n    capacity,\n  } = exhibition;\n  return (\n    <View style={styles.viewFooter}>\n      <FooterItem\n        title=\"Educación:\"\n        desc={educationArea}\n        icon=\"book-open-variant\"\n      />\n      <FooterItem\n        title=\"Edades:\"\n        desc={`${minimumAge} a ${maximumAge} años`}\n        icon=\"human-male-boy\"\n      />\n      <FooterItem\n        title=\"Duración:\"\n        desc={duration == 1 ? `${duration} minuto` : `${duration} minutos`}\n        icon=\"clock-time-three-outline\"\n      />\n      <FooterItem\n        title=\"Capacidad:\"\n        desc={capacity == 1 ? `${capacity} niño` : `${capacity} niños`}\n        icon=\"account-group\"\n      />\n    </View>\n  );\n};\n\nconst FooterItem = ({ title, desc, icon }) => {\n  return (\n    <View>\n      <IconButton\n        icon={icon}\n        size={30}\n        color=\"#F87311\"\n        style={styles.footerItem}\n      />\n      <Text style={[styles.textItem, { fontWeight: 'bold' }]}>{title}</Text>\n      {Array.isArray(desc) ? (\n        map(desc, (d, index) => (\n          <Text key={index} style={styles.textItem}>\n            {d}\n            {index !== size(desc) - 1 && ', '}\n          </Text>\n        ))\n      ) : (\n        <Text style={styles.textItem}>{desc}</Text>\n      )}\n    </View>\n  );\n};\n\nconst styles = StyleSheet.create({\n  viewPoster: {\n    shadowColor: '#000',\n    shadowOffset: {\n      width: 0,\n      height: 10,\n    },\n    shadowOpacity: 1,\n    shadowRadius: 10,\n  },\n  poster: {\n    width: '100%',\n    height: 500,\n    borderBottomLeftRadius: 30,\n    borderBottomRightRadius: 30,\n  },\n  info: {\n    backgroundColor: '#fff',\n    marginTop: -40,\n    marginRight: 30,\n    width: 60,\n    height: 60,\n    borderRadius: 100,\n    borderColor: '#000',\n    borderWidth: 0.15,\n  },\n  viewInfo: {\n    marginHorizontal: 30,\n  },\n  viewRating: {\n    marginHorizontal: 30,\n    marginTop: 10,\n    flexDirection: 'row',\n    alignItems: 'center',\n  },\n  viewModal: {\n    justifyContent: 'flex-end',\n    alignItems: 'flex-end',\n  },\n  viewFooter: {\n    marginVertical: 20,\n    marginHorizontal: 20,\n    flexDirection: 'row',\n    justifyContent: 'space-between',\n  },\n  footerItem: {\n    borderRadius: 100,\n    width: 60,\n    height: 60,\n    backgroundColor: '#fff',\n    borderColor: '#F87311',\n    borderWidth: 2,\n  },\n  textItem: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 13,\n    color: '#000',\n  },\n  overview: {\n    fontFamily: 'NunitoSans-Bold',\n    marginHorizontal: 30,\n    marginTop: 20,\n    textAlign: 'justify',\n    color: '#929292',\n    fontSize: 16,\n  },\n  imgSponsor: {\n    width: 160,\n    height: 100,\n    alignSelf: 'center',\n    marginTop: 4,\n    marginBottom: 2,\n  },\n});\n",
+    "content": "import React, { useState, useEffect } from 'react';\nimport { StyleSheet, SafeAreaView, View, Image } from 'react-native';\nimport { IconButton, Text, Title } from 'react-native-paper';\nimport { getExhibitionById } from '../api/exhibitions';\nimport ModalBody from '../components/ModalBody';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { map, size } from 'lodash';\n\n/**\n * Pantalla que muestra los detalles de una Exhibición.\n * @param {prop} route - Recibe parametros importantes para mostrar en pantalla\n * @param {string} _id - ID asociado a una Exhibición.\n * @property {Object} exhibition - Objeto que contiene la estructura de una Exhibición.\n * @property {function} setExhibition - Método de acceso indirecto para modificar la propieadad exhibition.\n * @property {boolean} visible - Variable auxiliar para controlar la visibilidad de un componente <Modal>.\n * @property {function} setVisible - Método de acceso indirecto para modificar la propieadad visible.\n * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.\n * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.\n * @property {Promise} getExhibitionById - {@link getExhibitionById} | Promesa que devuelve la información dependiendo la respuesta del servidor.\n * @property {function} size - Función de la librería lodash | Devuelve el tamaño de una colección.\n * @property {function} map - Función de la librería lodash | Crea un arreglo de valores a partir de cada elemento de una colección.\n * @listens {onPress} | El método showModal se dispara cuando ocurre este evento en un componente <ModalButton>.\n * @see https://lodash.com/docs/4.17.15#size\n * @see https://reactjs.org/docs/hooks-state.html\n * @see https://reactnavigation.org/docs/route-prop/\n * @see https://lodash.com/docs/4.17.15#map\n * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista\n */\nconst InfoCard = ({ route }) => {\n  const { _id } = route.params;\n  const [visible, setVisible] = useState(false);\n  const [exhibition, setExhibition] = useState(null);\n\n  const showModal = () => setVisible(!visible);\n\n  useEffect(() => {\n    getExhibitionById(_id).then((response) => {\n      setExhibition(response);\n    });\n  }, []);\n\n  if (!exhibition) return null;\n\n  const [imageURL] = exhibition.images;\n  const [logoURL] = exhibition.sponsorLogo;\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        <InfoImage path={imageURL} />\n        <InfoModal setVisible={setVisible} />\n        <InfoTitle exhibition={exhibition} />\n        <Text style={styles.overview}>{exhibition.description}</Text>\n        {logoURL && <InfoSponsor url={logoURL} />}\n        <InfoFooter exhibition={exhibition} />\n      </ScrollView>\n      <ModalBody\n        visible={visible}\n        showModal={showModal}\n        curiousInfo={exhibition.curiousInfo}\n      />\n    </SafeAreaView>\n  );\n};\n\nexport default InfoCard;\n\n/**\n *@ignore\n */\nconst InfoImage = ({ path }) => {\n  return (\n    <View style={styles.viewPoster}>\n      <Image style={styles.poster} source={{ uri: path }} />\n    </View>\n  );\n};\n\n/**\n *@ignore\n */\nconst InfoModal = ({ setVisible }) => {\n  return (\n    <View style={styles.viewModal}>\n      <IconButton\n        icon=\"information-variant\"\n        size={30}\n        color=\"#000\"\n        style={styles.info}\n        onPress={() => setVisible(true)}\n      />\n    </View>\n  );\n};\n\n/**\n *@ignore\n */\nconst InfoTitle = ({ exhibition }) => {\n  return (\n    <View style={styles.viewInfo}>\n      <Title style={{ color: '#F29F05', fontWeight: 'bold', fontSize: 23 }}>\n        {exhibition.name}\n      </Title>\n    </View>\n  );\n};\n\n/**\n *@ignore\n */\nconst InfoSponsor = ({ url }) => {\n  return (\n    <View style={styles.viewSponsor}>\n      <Title\n        style={{\n          color: 'black',\n          fontSize: 17,\n          fontWeight: 'bold',\n          marginHorizontal: 30,\n          marginTop: 5,\n        }}>\n        Patrocina:{' '}\n      </Title>\n      <Image source={{ uri: url }} style={styles.imgSponsor} />\n    </View>\n  );\n};\n\n/**\n *@ignore\n */\nconst InfoFooter = ({ exhibition }) => {\n  const {\n    minimumAge,\n    maximumAge,\n    educationArea,\n    duration,\n    capacity,\n  } = exhibition;\n  return (\n    <View style={styles.viewFooter}>\n      <FooterItem\n        title=\"Educación:\"\n        desc={educationArea}\n        icon=\"book-open-variant\"\n      />\n      <FooterItem\n        title=\"Edades:\"\n        desc={`${minimumAge} a ${maximumAge} años`}\n        icon=\"human-male-boy\"\n      />\n      <FooterItem\n        title=\"Duración:\"\n        desc={duration == 1 ? `${duration} minuto` : `${duration} minutos`}\n        icon=\"clock-time-three-outline\"\n      />\n      <FooterItem\n        title=\"Capacidad:\"\n        desc={capacity == 1 ? `${capacity} niño` : `${capacity} niños`}\n        icon=\"account-group\"\n      />\n    </View>\n  );\n};\n\n/**\n *@ignore\n */\nconst FooterItem = ({ title, desc, icon }) => {\n  return (\n    <View>\n      <IconButton\n        icon={icon}\n        size={30}\n        color=\"#F87311\"\n        style={styles.footerItem}\n      />\n      <Text style={[styles.textItem, { fontWeight: 'bold' }]}>{title}</Text>\n      {Array.isArray(desc) ? (\n        map(desc, (d, index) => (\n          <Text key={index} style={styles.textItem}>\n            {d}\n            {index !== size(desc) - 1 && ', '}\n          </Text>\n        ))\n      ) : (\n        <Text style={styles.textItem}>{desc}</Text>\n      )}\n    </View>\n  );\n};\n\n/**\n *@ignore\n */\nconst styles = StyleSheet.create({\n  viewPoster: {\n    shadowColor: '#000',\n    shadowOffset: {\n      width: 0,\n      height: 10,\n    },\n    shadowOpacity: 1,\n    shadowRadius: 10,\n  },\n  poster: {\n    width: '100%',\n    height: 500,\n    borderBottomLeftRadius: 30,\n    borderBottomRightRadius: 30,\n  },\n  info: {\n    backgroundColor: '#fff',\n    marginTop: -40,\n    marginRight: 30,\n    width: 60,\n    height: 60,\n    borderRadius: 100,\n    borderColor: '#000',\n    borderWidth: 0.15,\n  },\n  viewInfo: {\n    marginHorizontal: 30,\n  },\n  viewRating: {\n    marginHorizontal: 30,\n    marginTop: 10,\n    flexDirection: 'row',\n    alignItems: 'center',\n  },\n  viewModal: {\n    justifyContent: 'flex-end',\n    alignItems: 'flex-end',\n  },\n  viewFooter: {\n    marginVertical: 20,\n    marginHorizontal: 20,\n    flexDirection: 'row',\n    justifyContent: 'space-between',\n  },\n  footerItem: {\n    borderRadius: 100,\n    width: 60,\n    height: 60,\n    backgroundColor: '#fff',\n    borderColor: '#F87311',\n    borderWidth: 2,\n  },\n  textItem: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 13,\n    color: '#000',\n  },\n  overview: {\n    fontFamily: 'NunitoSans-Bold',\n    marginHorizontal: 30,\n    marginTop: 20,\n    textAlign: 'justify',\n    color: '#929292',\n    fontSize: 16,\n  },\n  imgSponsor: {\n    width: 160,\n    height: 100,\n    alignSelf: 'center',\n    marginTop: 4,\n    marginBottom: 2,\n  },\n});\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/InfoCard.js",
     "access": "public",
@@ -3069,9 +3557,9 @@
     "export": false,
     "importPath": "tinMarin/src/screens/InfoCard.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 48,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 71,
+    "ignore": true,
     "params": [
       {
         "name": "objectPattern",
@@ -3088,8 +3576,7 @@
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 154,
@@ -3104,9 +3591,9 @@
     "export": false,
     "importPath": "tinMarin/src/screens/InfoCard.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 56,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 82,
+    "ignore": true,
     "params": [
       {
         "name": "objectPattern",
@@ -3123,8 +3610,7 @@
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 155,
@@ -3139,9 +3625,9 @@
     "export": false,
     "importPath": "tinMarin/src/screens/InfoCard.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 70,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 99,
+    "ignore": true,
     "params": [
       {
         "name": "objectPattern",
@@ -3158,8 +3644,7 @@
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 156,
@@ -3174,9 +3659,9 @@
     "export": false,
     "importPath": "tinMarin/src/screens/InfoCard.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 80,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 112,
+    "ignore": true,
     "params": [
       {
         "name": "objectPattern",
@@ -3193,8 +3678,7 @@
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 157,
@@ -3209,9 +3693,9 @@
     "export": false,
     "importPath": "tinMarin/src/screens/InfoCard.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 98,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 133,
+    "ignore": true,
     "params": [
       {
         "name": "objectPattern",
@@ -3228,8 +3712,7 @@
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 158,
@@ -3244,9 +3727,9 @@
     "export": false,
     "importPath": "tinMarin/src/screens/InfoCard.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 132,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 170,
+    "ignore": true,
     "params": [
       {
         "name": "objectPattern",
@@ -3265,8 +3748,7 @@
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 159,
@@ -3279,15 +3761,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/InfoCard.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 156,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 197,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 160,
@@ -3302,32 +3783,150 @@
     "export": true,
     "importPath": "tinMarin/src/screens/InfoCard.js",
     "importStyle": "InfoCard",
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
+    "description": "Pantalla que muestra los detalles de una Exhibición.",
+    "see": [
+      "https://lodash.com/docs/4.17.15#size",
+      "https://reactjs.org/docs/hooks-state.html",
+      "https://reactnavigation.org/docs/route-prop/",
+      "https://lodash.com/docs/4.17.15#map"
+    ],
+    "lineNumber": 29,
     "params": [
       {
-        "name": "objectPattern",
+        "nullable": null,
         "types": [
-          "{\"route\": *}"
+          "prop"
         ],
-        "defaultRaw": {
-          "route": null
-        },
-        "defaultValue": "{\"route\":null}"
+        "spread": false,
+        "optional": false,
+        "name": "route",
+        "description": "Recibe parametros importantes para mostrar en pantalla"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "_id",
+        "description": "ID asociado a una Exhibición."
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "exhibition",
+        "description": "Objeto que contiene la estructura de una Exhibición."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setExhibition",
+        "description": "Método de acceso indirecto para modificar la propieadad exhibition."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "visible",
+        "description": "Variable auxiliar para controlar la visibilidad de un componente <Modal>."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setVisible",
+        "description": "Método de acceso indirecto para modificar la propieadad visible."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useEffect",
+        "description": "Hook de React que permite realizar tareas asíncronas a la vista."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useState",
+        "description": "Hook de React que permite crear una variable de estado con su método accesor."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Promise"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "getExhibitionById",
+        "description": "{@link getExhibitionById} | Promesa que devuelve la información dependiendo la respuesta del servidor."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "size",
+        "description": "Función de la librería lodash | Devuelve el tamaño de una colección."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "map",
+        "description": "Función de la librería lodash | Crea un arreglo de valores a partir de cada elemento de una colección."
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "SafeAreaView"
+      ],
+      "spread": false,
+      "description": "Retorna un componente que contiene maquetada la vista"
+    },
+    "listens": [
+      {
+        "types": [
+          "onPress"
+        ],
+        "description": "| El método showModal se dispara cuando ocurre este evento en un componente <ModalButton>."
+      }
+    ]
   },
   {
     "__docId__": 161,
     "kind": "file",
     "name": "src/screens/KnowMoreScreen.js",
-    "content": "import React from 'react';\nimport { StyleSheet, Text, View, ScrollView } from 'react-native';\nimport KnoMoreCard from '../components/KnoMoreCard';\nimport Colors from '../constants/Colors';\nimport InformacionDeContacto from '../assets/InformacionDeContacto.jpg';\nimport MisionVisionValores from '../assets/MisionVisionValores.jpg';\n\n/**\n * Pantalla que muestra una lista de tarjetas con enlaces a pantallas para conocer más sobre Tin Marín.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst KnowMoreScreen = ({ navigation }) => {\n  return (\n    <ScrollView showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Conócenos Más</Text>\n        <View style={styles.line}></View>\n        <KnoMoreCard\n          title=\"Contactos\"\n          imageURL={InformacionDeContacto}\n          color={Colors.magenta}\n          textBtn=\"Saber Mas\"\n          navigation={navigation}\n          screenName=\"contact\"\n        />\n\n        <KnoMoreCard\n          title=\"Misión, Visión, Valores\"\n          imageURL={MisionVisionValores}\n          color={Colors.magenta}\n          textBtn=\"Saber Mas\"\n          navigation={navigation}\n          screenName=\"missionAndVision\"\n        />\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n});\n\nexport default KnowMoreScreen;\n",
+    "content": "import React from 'react';\nimport { StyleSheet, Text, View, ScrollView } from 'react-native';\nimport KnoMoreCard from '../components/KnoMoreCard';\nimport Colors from '../constants/Colors';\nimport InformacionDeContacto from '../assets/InformacionDeContacto.jpg';\nimport MisionVisionValores from '../assets/MisionVisionValores.jpg';\n\n/**\n * Pantalla que muestra una lista de tarjetas con enlaces a pantallas para conocer más sobre Tin Marín.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst KnowMoreScreen = ({ navigation }) => {\n  return (\n    <ScrollView showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Conócenos Más</Text>\n        <View style={styles.line}></View>\n        <KnoMoreCard\n          title=\"Contactos\"\n          imageURL={InformacionDeContacto}\n          color={Colors.magenta}\n          textBtn=\"Saber Mas\"\n          navigation={navigation}\n          screenName=\"contact\"\n        />\n\n        <KnoMoreCard\n          title=\"Misión, Visión, Valores\"\n          imageURL={MisionVisionValores}\n          color={Colors.magenta}\n          textBtn=\"Saber Mas\"\n          navigation={navigation}\n          screenName=\"missionAndVision\"\n        />\n      </View>\n    </ScrollView>\n  );\n};\n\n/**\n * @ignore\n */\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n});\n\nexport default KnowMoreScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/KnowMoreScreen.js",
     "access": "public",
@@ -3345,15 +3944,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/KnowMoreScreen.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 42,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 45,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 163,
@@ -3398,7 +3996,7 @@
     "__docId__": 164,
     "kind": "file",
     "name": "src/screens/MissionAndVisionScreen.js",
-    "content": "import React from 'react';\nimport { StyleSheet, Text, View, ScrollView, Image } from 'react-native';\n\n/**\n * Pantalla que muestra la misión y visión de la entidad.\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst ContactScreen = () => {\n  return (\n    <ScrollView style={styles.container}>\n      <View style={styles.view}>\n        <Text style={styles.titular}>Misión, Visión y Valores</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <Text style={styles.tema}>Misión:</Text>\n        <Text style={styles.title2}>\n          Contribuir a la formación de los niños y sus acompañantes en\n          ciudadanos integrales y creativos, mediante el aprendizaje\n          significativo, la orientación cultural y la experimentración divertida\n          con integridad, innovación y trabajo en equipo.\n        </Text>\n        <Text style={styles.tema}>Visión:</Text>\n        <Text style={styles.title2}>\n          Ser el espacio favorito, cultural y divertido de los niños para\n          aprender y disfrutar de experiencias únicas, emocionantes e\n          inolvidables; y ser mejores protagonistas de su desarrollo a nivel\n          personal, escolar y social.\n        </Text>\n        <Text style={styles.tema}>Valores:</Text>\n        <Text style={styles.title}>\n          Innovación{'\\n'}\n          Integridad{'\\n'}\n          Lealtad{'\\n'}\n          Respeto{'\\n'}\n          Trabajo en equipo{'\\n'}\n        </Text>\n      </View>\n    </ScrollView>\n  );\n};\nexport default ContactScreen;\n\nconst styles = StyleSheet.create({\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  container: {\n    flex: 1,\n    paddingBottom: 24,\n    paddingHorizontal: 24,\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title2: {\n    marginTop: 16,\n    paddingVertical: 8,\n    borderRadius: 6,\n    justifyContent: 'center',\n    color: '#20232a',\n    textAlign: 'justify',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 18,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 16,\n    paddingVertical: 8,\n    borderRadius: 6,\n    justifyContent: 'center',\n    color: '#20232a',\n    textAlign: 'center',\n    fontSize: 18,\n  },\n  tema: {\n    marginTop: 13,\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 24,\n    color: '#B22222',\n  },\n  Logo: {\n    width: 300,\n    height: 200,\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30,\n  },\n  titular: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n    textAlign: 'center',\n  },\n});\n",
+    "content": "import React from 'react';\nimport { StyleSheet, Text, View, ScrollView, Image } from 'react-native';\n\n/**\n * Pantalla que muestra la misión y visión de la entidad.\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst MissionAndVisionScreen = () => {\n  return (\n    <ScrollView style={styles.container}>\n      <View style={styles.view}>\n        <Text style={styles.titular}>Misión, Visión y Valores</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <Text style={styles.tema}>Misión:</Text>\n        <Text style={styles.title2}>\n          Contribuir a la formación de los niños y sus acompañantes en\n          ciudadanos integrales y creativos, mediante el aprendizaje\n          significativo, la orientación cultural y la experimentración divertida\n          con integridad, innovación y trabajo en equipo.\n        </Text>\n        <Text style={styles.tema}>Visión:</Text>\n        <Text style={styles.title2}>\n          Ser el espacio favorito, cultural y divertido de los niños para\n          aprender y disfrutar de experiencias únicas, emocionantes e\n          inolvidables; y ser mejores protagonistas de su desarrollo a nivel\n          personal, escolar y social.\n        </Text>\n        <Text style={styles.tema}>Valores:</Text>\n        <Text style={styles.title}>\n          Innovación{'\\n'}\n          Integridad{'\\n'}\n          Lealtad{'\\n'}\n          Respeto{'\\n'}\n          Trabajo en equipo{'\\n'}\n        </Text>\n      </View>\n    </ScrollView>\n  );\n};\n\nexport default MissionAndVisionScreen;\n\n/**\n *@ignore\n */\nconst styles = StyleSheet.create({\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  container: {\n    flex: 1,\n    paddingBottom: 24,\n    paddingHorizontal: 24,\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title2: {\n    marginTop: 16,\n    paddingVertical: 8,\n    borderRadius: 6,\n    justifyContent: 'center',\n    color: '#20232a',\n    textAlign: 'justify',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 18,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 16,\n    paddingVertical: 8,\n    borderRadius: 6,\n    justifyContent: 'center',\n    color: '#20232a',\n    textAlign: 'center',\n    fontSize: 18,\n  },\n  tema: {\n    marginTop: 13,\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 24,\n    color: '#B22222',\n  },\n  Logo: {\n    width: 300,\n    height: 200,\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30,\n  },\n  titular: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n    textAlign: 'center',\n  },\n});\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/MissionAndVisionScreen.js",
     "access": "public",
@@ -3416,29 +4014,28 @@
     "export": false,
     "importPath": "tinMarin/src/screens/MissionAndVisionScreen.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 48,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 52,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 166,
     "kind": "function",
-    "name": "ContactScreen",
+    "name": "MissionAndVisionScreen",
     "memberof": "src/screens/MissionAndVisionScreen.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/screens/MissionAndVisionScreen.js~ContactScreen",
+    "longname": "src/screens/MissionAndVisionScreen.js~MissionAndVisionScreen",
     "access": "public",
     "export": true,
     "importPath": "tinMarin/src/screens/MissionAndVisionScreen.js",
-    "importStyle": "ContactScreen",
+    "importStyle": "MissionAndVisionScreen",
     "description": "Pantalla que muestra la misión y visión de la entidad.",
     "lineNumber": 8,
     "return": {
@@ -3521,7 +4118,7 @@
     "__docId__": 170,
     "kind": "file",
     "name": "src/screens/SugerenceScreen.js",
-    "content": "import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  ScrollView,\n  Image,\n  TouchableOpacity,\n  Alert,\n} from 'react-native';\nimport SugerenceCard from '../components/SugerenceCard';\nimport Colors from '../constants/Colors';\nimport { Picker } from '@react-native-picker/picker';\nimport { getAllSuperenceTypes, storeSugerence } from '../api/sugerences';\n\n/**\n * Pantalla que muestra el formulario de sugerencias, para poder enviar un mensaje a la entidad.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst SugerenceScreen = ({ navigation }) => {\n  // OBTIENE DATA, ES UNA COLLECCION\n  const [sugerenceTypes, setSugerenceTypes] = useState([]);\n  //GUARDA EN FORMULARIO ES UNICA\n  const [sugerenceType, setSugerenceType] = useState('');\n\n  const [comment, setComment] = useState('');\n\n  const [error, setError] = useState('');\n\n  useEffect(() => {\n    getAllSuperenceTypes().then((response) => {\n      setSugerenceTypes(response);\n    });\n  }, []);\n\n  const handleComment = (comment) => {\n    // console.log(`Guardando texto: ${comment}`);\n    setComment(comment);\n  };\n\n  const handleSend = () => {\n    if (comment === '' || sugerenceType === '') {\n      setError('Por favor, Ingrese un mensaje');\n      // console.log(sugerenceType);\n    } else {\n      storeSugerence(sugerenceType, comment).then((response) => {\n        // console.log(`Respuesta del server: ${response.status}`);\n        Alert.alert('Se envió tu Sugerencia con Éxito!!!');\n        setComment('');\n      });\n    }\n  };\n\n  return (\n    <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Sugerencias O Comentarios</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <View style={styles.pickerContainer}>\n          <Picker\n            style={styles.picker}\n            mode=\"dropdown\"\n            selectedValue={sugerenceType}\n            onValueChange={(itemValue, itemPosition) => {\n              setSugerenceType(itemValue);\n            }}>\n            {sugerenceTypes.map((sugerenceType, key) => (\n              <Picker.Item\n                key={key}\n                label={sugerenceType.name}\n                value={sugerenceType.name}\n              />\n            ))}\n          </Picker>\n        </View>\n      </View>\n      <SugerenceCard\n        sugerenceType={sugerenceType}\n        color={Colors.blueColor}\n        comment={comment}\n        onCommentChange={handleComment}\n      />\n      <View style={styles.view}>\n        <TouchableOpacity onPress={() => handleSend()} style={styles.button}>\n          <Text style={styles.buttonText}> Enviar! </Text>\n        </TouchableOpacity>\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  pickerContainer: {\n    flexDirection: 'row',\n    borderRadius: 15,\n    borderWidth: 1,\n    borderColor: '#d1d3e2',\n    overflow: 'hidden',\n  },\n  picker: {\n    height: 50,\n    width: '100%',\n    backgroundColor: '#858796',\n    color: 'white',\n  },\n  pickerItem: {\n    height: 100,\n    width: 500,\n    width: '100%',\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  button: {\n    flex: 1,\n    flexDirection: 'column',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: '#e74a3b',\n    marginBottom: 100,\n    height: 55,\n    width: '60%',\n    borderRadius: 10,\n  },\n  buttonText: {\n    fontFamily: 'NunitoSans-Bold',\n    color: '#fff',\n    fontWeight: 'bold',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n    textAlign: 'center',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  Logo: {\n    width: 300,\n    height: 200,\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30,\n  },\n  container: {\n    flex: 1,\n    padding: 24,\n    backgroundColor: '#ffffff',\n  },\n});\n\nexport default SugerenceScreen;\n",
+    "content": "import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  ScrollView,\n  Image,\n  TouchableOpacity,\n  Alert,\n} from 'react-native';\nimport SugerenceCard from '../components/SugerenceCard';\nimport Colors from '../constants/Colors';\nimport { Picker } from '@react-native-picker/picker';\nimport { getAllSuperenceTypes, storeSugerence } from '../api/sugerences';\n\n/**\n * Pantalla que muestra el formulario de sugerencias, para poder enviar un mensaje a la entidad.\n * @param {prop} navigation - Contiene información básica de navegación\n * @property {Array<Object>} sugerenceTypes - Lista que contiene Objetos con estructura de un Tipo de Sugerencia.\n * @property {function} setSugerenceTypes - Método de acceso indirecto para modificar la propieadad sugerenceTypes.\n * @property {string} sugerenceType - Variable que guarda el tipo de sugerencia que seleccione un Usuario.\n * @property {function} setSugerenceType - Método de acceso indirecto para modificar la propieadad sugerenceType.\n * @property {string} comment - Variable que guarda el comentario que desea realizar un Usuario.\n * @property {function} setComment - Método de acceso indirecto para modificar la propieadad comment.\n * @property {string} error - Variable que contiene información de Errores cometidos por el Usuario.\n * @property {function} setError - Método de acceso indirecto para modificar la propieadad error.\n * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.\n * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.\n * @property {Promise} getAllSuperenceTypes - {@link getAllSuperenceTypes} | Promesa que devuelve los tipos de sugerencia dependiendo la respuesta del servidor.\n * @property {Promise} storeSugerence - {@link storeSugerence} | Promesa que crea un nuevo comentario en el servidor y regresa un estatus de 201.\n * @property {function} handleComment - Método que guarda un comentario de tipo string cada vez que se presiona una tecla en la caja de comentario.\n * @property {function} handleSend - Método que valida la información del formulario y envía la información al servidor usando la promesa {@link storeSugerence} o guarda errores de validación.\n * @listens {onChangeText} | El método handleComment se dispara cuando ocurre este evento en un componente <TextInput> que almacena un comentario.\n * @listens {onPress} | El método handleSend se dispara cuando ocurre este evento en un componente <TouchableOpacity> que representa el botón Enviar.\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @see https://reactjs.org/docs/hooks-effect.html\n * @see https://reactjs.org/docs/hooks-state.html\n * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201\n * @see https://reactnative.dev/docs/textinput#onchangetext\n * @see https://reactnative.dev/docs/touchableopacity\n * @see https://github.com/react-native-picker/picker/issues/209\n * @todo Validar la longitud el comentario.\n * @todo Mostrar el texto de error.\n * @todo validar promesas cuando no hay internet.\n * @experimental El componente Picker tiene limitaciones si se desea agregar estilos a Picker.Item.\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst SugerenceScreen = ({ navigation }) => {\n  // OBTIENE DATA, ES UNA COLLECCION\n  const [sugerenceTypes, setSugerenceTypes] = useState([]);\n  //GUARDA EN FORMULARIO ES UNICA\n  const [sugerenceType, setSugerenceType] = useState('');\n\n  const [comment, setComment] = useState('');\n\n  const [error, setError] = useState('');\n\n  useEffect(() => {\n    getAllSuperenceTypes().then((response) => {\n      setSugerenceTypes(response);\n    });\n  }, []);\n\n  const handleComment = (comment) => {\n    // console.log(`Guardando texto: ${comment}`);\n    setComment(comment);\n  };\n\n  const handleSend = () => {\n    if (comment === '' || sugerenceType === '') {\n      setError('Por favor, Ingrese un mensaje');\n      // console.log(sugerenceType);\n    } else {\n      storeSugerence(sugerenceType, comment).then((response) => {\n        // console.log(`Respuesta del server: ${response.status}`);\n        Alert.alert('Se envió tu Sugerencia con Éxito!!!');\n        setComment('');\n      });\n    }\n  };\n\n  return (\n    <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Sugerencias O Comentarios</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <View style={styles.pickerContainer}>\n          <Picker\n            style={styles.picker}\n            mode=\"dropdown\"\n            selectedValue={sugerenceType}\n            onValueChange={(itemValue, itemPosition) => {\n              setSugerenceType(itemValue);\n            }}>\n            {sugerenceTypes.map((sugerenceType, key) => (\n              <Picker.Item\n                key={key}\n                label={sugerenceType.name}\n                value={sugerenceType.name}\n              />\n            ))}\n          </Picker>\n        </View>\n      </View>\n      <SugerenceCard\n        sugerenceType={sugerenceType}\n        color={Colors.blueColor}\n        comment={comment}\n        onCommentChange={handleComment}\n      />\n      <View style={styles.view}>\n        <TouchableOpacity onPress={() => handleSend()} style={styles.button}>\n          <Text style={styles.buttonText}> Enviar! </Text>\n        </TouchableOpacity>\n      </View>\n    </ScrollView>\n  );\n};\n\n/**\n * @ignore\n */\nconst styles = StyleSheet.create({\n  pickerContainer: {\n    flexDirection: 'row',\n    borderRadius: 15,\n    borderWidth: 1,\n    borderColor: '#d1d3e2',\n    overflow: 'hidden',\n  },\n  picker: {\n    height: 50,\n    width: '100%',\n    backgroundColor: '#858796',\n    color: 'white',\n  },\n  pickerItem: {\n    height: 100,\n    width: 500,\n    width: '100%',\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  button: {\n    flex: 1,\n    flexDirection: 'column',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: '#e74a3b',\n    marginBottom: 100,\n    height: 55,\n    width: '60%',\n    borderRadius: 10,\n  },\n  buttonText: {\n    fontFamily: 'NunitoSans-Bold',\n    color: '#fff',\n    fontWeight: 'bold',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n    textAlign: 'center',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  Logo: {\n    width: 300,\n    height: 200,\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30,\n  },\n  container: {\n    flex: 1,\n    padding: 24,\n    backgroundColor: '#ffffff',\n  },\n});\n\nexport default SugerenceScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/SugerenceScreen.js",
     "access": "public",
@@ -3539,15 +4136,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/SugerenceScreen.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 100,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 129,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 172,
@@ -3564,9 +4160,21 @@
     "importStyle": "SugerenceScreen",
     "description": "Pantalla que muestra el formulario de sugerencias, para poder enviar un mensaje a la entidad.",
     "see": [
-      "https://reactnavigation.org/docs/navigation-prop/"
+      "https://reactnavigation.org/docs/navigation-prop/",
+      "https://reactjs.org/docs/hooks-effect.html",
+      "https://reactjs.org/docs/hooks-state.html",
+      "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201",
+      "https://reactnative.dev/docs/textinput#onchangetext",
+      "https://reactnative.dev/docs/touchableopacity",
+      "https://github.com/react-native-picker/picker/issues/209"
     ],
-    "lineNumber": 22,
+    "lineNumber": 48,
+    "experimental": "El componente Picker tiene limitaciones si se desea agregar estilos a Picker.Item.",
+    "todo": [
+      "Validar la longitud el comentario.",
+      "Mostrar el texto de error.",
+      "validar promesas cuando no hay internet."
+    ],
     "params": [
       {
         "nullable": null,
@@ -3579,6 +4187,148 @@
         "description": "Contiene información básica de navegación"
       }
     ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Array<Object>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "sugerenceTypes",
+        "description": "Lista que contiene Objetos con estructura de un Tipo de Sugerencia."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setSugerenceTypes",
+        "description": "Método de acceso indirecto para modificar la propieadad sugerenceTypes."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "sugerenceType",
+        "description": "Variable que guarda el tipo de sugerencia que seleccione un Usuario."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setSugerenceType",
+        "description": "Método de acceso indirecto para modificar la propieadad sugerenceType."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "comment",
+        "description": "Variable que guarda el comentario que desea realizar un Usuario."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setComment",
+        "description": "Método de acceso indirecto para modificar la propieadad comment."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "error",
+        "description": "Variable que contiene información de Errores cometidos por el Usuario."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setError",
+        "description": "Método de acceso indirecto para modificar la propieadad error."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useEffect",
+        "description": "Hook de React que permite realizar tareas asíncronas a la vista."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useState",
+        "description": "Hook de React que permite crear una variable de estado con su método accesor."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Promise"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "getAllSuperenceTypes",
+        "description": "{@link getAllSuperenceTypes} | Promesa que devuelve los tipos de sugerencia dependiendo la respuesta del servidor."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Promise"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "storeSugerence",
+        "description": "{@link storeSugerence} | Promesa que crea un nuevo comentario en el servidor y regresa un estatus de 201."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "handleComment",
+        "description": "Método que guarda un comentario de tipo string cada vez que se presiona una tecla en la caja de comentario."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "handleSend",
+        "description": "Método que valida la información del formulario y envía la información al servidor usando la promesa {@link storeSugerence} o guarda errores de validación."
+      }
+    ],
     "return": {
       "nullable": null,
       "types": [
@@ -3586,13 +4336,27 @@
       ],
       "spread": false,
       "description": "Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla."
-    }
+    },
+    "listens": [
+      {
+        "types": [
+          "onChangeText"
+        ],
+        "description": "| El método handleComment se dispara cuando ocurre este evento en un componente <TextInput> que almacena un comentario."
+      },
+      {
+        "types": [
+          "onPress"
+        ],
+        "description": "| El método handleSend se dispara cuando ocurre este evento en un componente <TouchableOpacity> que representa el botón Enviar."
+      }
+    ]
   },
   {
     "__docId__": 173,
     "kind": "file",
     "name": "src/screens/WebLinksScreen.js",
-    "content": "import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  View,\n  Text,\n  ScrollView,\n  ActivityIndicator,\n} from 'react-native';\nimport BasicCard from '../components/BasicCard';\nimport Colors from '../constants/Colors';\nimport { getAllLinks } from '../api/weblinks';\nimport { LogBox } from 'react-native';\nimport { size } from 'lodash';\n\nLogBox.ignoreAllLogs();\n\n/**\n * Pantalla que muestra la lista de Sitios de Interés.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst WebLinksScreen = ({ navigation }) => {\n  const [links, setlinks] = useState([]);\n  const [loading, setLoading] = useState(true);\n  const [fetched, setFetched] = useState(false);\n\n  useEffect(() => {\n    const abortController = new AbortController();\n    const signal = abortController.signal;\n    getAllLinks(signal).then((response) => {\n      setlinks(response);\n      setLoading(false);\n      setFetched(true);\n    });\n\n    if (fetched) abortController.abort();\n  });\n  return (\n    <ScrollView showsVerticalScrollIndicator={true}>\n      {loading ? (\n        <ActivityIndicator\n          style={{\n            marginTop: 200,\n          }}\n          size=\"large\"\n          color=\"#0000ff\"\n        />\n      ) : size(links) == 0 ? (\n        <Text style={styles.text}>No se encontraron Sitios de Interés</Text>\n      ) : (\n        <View style={styles.view}>\n          <Text style={styles.title}>Sitios de Interes</Text>\n          <View style={styles.line}></View>\n          {links.map((link, key) => (\n            <BasicCard\n              key={key}\n              imageURL={link.image}\n              title={link.title}\n              color={Colors.magenta}\n              url={link.url}\n              textBtn=\"Saber Mas\"\n            />\n          ))}\n        </View>\n      )}\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    paddingBottom: 30,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\n\nexport default WebLinksScreen;\n",
+    "content": "import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  View,\n  Text,\n  ScrollView,\n  ActivityIndicator,\n} from 'react-native';\nimport BasicCard from '../components/BasicCard';\nimport Colors from '../constants/Colors';\nimport { getAllLinks } from '../api/weblinks';\nimport { LogBox } from 'react-native';\nimport { size } from 'lodash';\n\nLogBox.ignoreAllLogs();\n\n/**\n * Pantalla que muestra la lista de Sitios de Interés.\n * @param {prop} navigation - Contiene información básica de navegación\n * @property {Array<Object>} links - Lista que contiene Objetos con estructura de un Sitios de Interés.\n * @property {function} setlinks - Método de acceso indirecto para modificar la propieadad links.\n * @property {boolean} loading - Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene.\n * @property {function} setLoading - Método de acceso indirecto para modificar la propieadad loading.\n * @property {boolean} fetched - Variable auxiliar para validar el tiempo de respuesta de una promesa.\n * @property {function} setFetched - Método de acceso indirecto para modificar la propieadad fetched.\n * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.\n * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.\n * @property {Promise} getAllLinks - {@link getAllLinks} | Promesa que devuelve la información dependiendo la respuesta del servidor.\n * @property {AbortController} abortController - Patrón de diseño que se implementa para validar promesas.\n * @property {AbortSignal} signal - Objeto que se comunica con abortController en caso una promesa falle.\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @see https://reactjs.org/docs/hooks-effect.html\n * @see https://reactjs.org/docs/hooks-state.html\n * @seee https://developer.mozilla.org/en-US/docs/Web/API/AbortController\n * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortController/signal\n * @experimental La promesa getAllLinks presenta un fallo de múltiples llamadas asíncronas.\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst WebLinksScreen = ({ navigation }) => {\n  const [links, setlinks] = useState([]);\n  const [loading, setLoading] = useState(true);\n  const [fetched, setFetched] = useState(false);\n\n  useEffect(() => {\n    const abortController = new AbortController();\n    const signal = abortController.signal;\n    getAllLinks(signal).then((response) => {\n      setlinks(response);\n      setLoading(false);\n      setFetched(true);\n    });\n\n    if (fetched) abortController.abort();\n  });\n  return (\n    <ScrollView showsVerticalScrollIndicator={true}>\n      {loading ? (\n        <ActivityIndicator\n          style={{\n            marginTop: 200,\n          }}\n          size=\"large\"\n          color=\"#0000ff\"\n        />\n      ) : size(links) == 0 ? (\n        <Text style={styles.text}>No se encontraron Sitios de Interés</Text>\n      ) : (\n        <View style={styles.view}>\n          <Text style={styles.title}>Sitios de Interes</Text>\n          <View style={styles.line}></View>\n          {links.map((link, key) => (\n            <BasicCard\n              key={key}\n              imageURL={link.image}\n              title={link.title}\n              color={Colors.magenta}\n              url={link.url}\n              textBtn=\"Saber Mas\"\n            />\n          ))}\n        </View>\n      )}\n    </ScrollView>\n  );\n};\n/**\n * @ignore\n */\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    paddingBottom: 30,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\n\nexport default WebLinksScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/WebLinksScreen.js",
     "access": "public",
@@ -3610,15 +4374,14 @@
     "export": false,
     "importPath": "tinMarin/src/screens/WebLinksScreen.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 71,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 89,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 175,
@@ -3635,9 +4398,19 @@
     "importStyle": "WebLinksScreen",
     "description": "Pantalla que muestra la lista de Sitios de Interés.",
     "see": [
-      "https://reactnavigation.org/docs/navigation-prop/"
+      "https://reactnavigation.org/docs/navigation-prop/",
+      "https://reactjs.org/docs/hooks-effect.html",
+      "https://reactjs.org/docs/hooks-state.html",
+      "https://developer.mozilla.org/en-US/docs/Web/API/AbortController/signal"
     ],
-    "lineNumber": 23,
+    "lineNumber": 39,
+    "experimental": "La promesa getAllLinks presenta un fallo de múltiples llamadas asíncronas.",
+    "unknown": [
+      {
+        "tagName": "@seee",
+        "tagValue": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController"
+      }
+    ],
     "params": [
       {
         "nullable": null,
@@ -3648,6 +4421,118 @@
         "optional": false,
         "name": "navigation",
         "description": "Contiene información básica de navegación"
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Array<Object>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "links",
+        "description": "Lista que contiene Objetos con estructura de un Sitios de Interés."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setlinks",
+        "description": "Método de acceso indirecto para modificar la propieadad links."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "loading",
+        "description": "Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setLoading",
+        "description": "Método de acceso indirecto para modificar la propieadad loading."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fetched",
+        "description": "Variable auxiliar para validar el tiempo de respuesta de una promesa."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setFetched",
+        "description": "Método de acceso indirecto para modificar la propieadad fetched."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useEffect",
+        "description": "Hook de React que permite realizar tareas asíncronas a la vista."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "useState",
+        "description": "Hook de React que permite crear una variable de estado con su método accesor."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Promise"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "getAllLinks",
+        "description": "{@link getAllLinks} | Promesa que devuelve la información dependiendo la respuesta del servidor."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "AbortController"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "abortController",
+        "description": "Patrón de diseño que se implementa para validar promesas."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "AbortSignal"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "signal",
+        "description": "Objeto que se comunica con abortController en caso una promesa falle."
       }
     ],
     "return": {

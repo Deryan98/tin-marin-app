@@ -42,12 +42,6 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
-    "tinmarin/src/screens/missionandvisionscreen.js~contactscreen",
-    "function/index.html#static-function-ContactScreen",
-    "<span>ContactScreen</span> <span class=\"search-result-import-path\">tinMarin/src/screens/MissionAndVisionScreen.js</span>",
-    "function"
-  ],
-  [
     "tinmarin/src/screens/covidinfo.js~covidinfo",
     "function/index.html#static-function-CovidInfo",
     "<span>CovidInfo</span> <span class=\"search-result-import-path\">tinMarin/src/screens/CovidInfo.js</span>",
@@ -60,12 +54,6 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
-    "tinmarin/src/screens/donationscreen.js~donationscreen",
-    "function/index.html#static-function-DonationScreen",
-    "<span>DonationScreen</span> <span class=\"search-result-import-path\">tinMarin/src/screens/DonationScreen.js</span>",
-    "function"
-  ],
-  [
     "tinmarin/src/navigation/drawercontent.js~drawercontent",
     "function/index.html#static-function-DrawerContent",
     "<span>DrawerContent</span> <span class=\"search-result-import-path\">tinMarin/src/navigation/DrawerContent.js</span>",
@@ -75,12 +63,6 @@ window.esdocSearchIndex = [
     "tinmarin/src/components/drawermenu.js~drawermenu",
     "function/index.html#static-function-DrawerMenu",
     "<span>DrawerMenu</span> <span class=\"search-result-import-path\">tinMarin/src/components/DrawerMenu.js</span>",
-    "function"
-  ],
-  [
-    "tinmarin/src/screens/eventsscreen.js~eventsscreen",
-    "function/index.html#static-function-EventsScreen",
-    "<span>EventsScreen</span> <span class=\"search-result-import-path\">tinMarin/src/screens/EventsScreen.js</span>",
     "function"
   ],
   [
@@ -165,6 +147,12 @@ window.esdocSearchIndex = [
     "tinmarin/src/screens/covidinfo.js~mainparagraph",
     "function/index.html#static-function-MainParagraph",
     "<span>MainParagraph</span> <span class=\"search-result-import-path\">tinMarin/src/screens/CovidInfo.js</span>",
+    "function"
+  ],
+  [
+    "tinmarin/src/screens/missionandvisionscreen.js~missionandvisionscreen",
+    "function/index.html#static-function-MissionAndVisionScreen",
+    "<span>MissionAndVisionScreen</span> <span class=\"search-result-import-path\">tinMarin/src/screens/MissionAndVisionScreen.js</span>",
     "function"
   ],
   [

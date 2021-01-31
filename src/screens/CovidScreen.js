@@ -16,8 +16,21 @@ import { size } from 'lodash';
 /**
  * Pantalla que muestra una lista de tarjetas sobre recomendaciones sobre el COVID-19
  * @param {prop} navigation - Contiene información básica de navegación
+ * @property {Array<Object>} covid - Lista que contiene Objetos con estructura de una Recomendación Covid-19.
+ * @property {function} setCovid - Método de acceso indirecto para modificar la propieadad covid.
+ * @property {boolean} loading - Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene.
+ * @property {function} setLoading - Método de acceso indirecto para modificar la propieadad loading.
+ * @property {boolean} swapColor - Variable auxiliar para cambiar color de tarjetas cada posición: (índice mod 2).
+ * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.
+ * @property {Promise} getAllCovidRecommendations - {@link getAllCovidRecommendations} | Promesa que devuelve la información dependiendo la respuesta del servidor.
+ * @property {function} size - Función de la librería lodash | Devuelve el tamaño de una colección.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.
  * @see https://reactnavigation.org/docs/navigation-prop/
- * @return {SafeAreaView} Regreesa una layout con la maquetación de la pantalla
+ * @see https://reactjs.org/docs/hooks-effect.html
+ * @see https://lodash.com/docs/4.17.15#size
+ * @see https://reactjs.org/docs/hooks-state.html
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+ * @return {SafeAreaView} Regresa una layout con la maquetación de la pantalla
  */
 const CovidScreen = ({ navigation }) => {
   // const [covidInfo, setCovidInfo] = useState(null);
@@ -92,6 +105,9 @@ const CovidList = ({ navigation, covidRecs, swapColor }) => {
 
 export default CovidScreen;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   view: {
     flexDirection: 'column',

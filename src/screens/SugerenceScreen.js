@@ -16,7 +16,33 @@ import { getAllSuperenceTypes, storeSugerence } from '../api/sugerences';
 /**
  * Pantalla que muestra el formulario de sugerencias, para poder enviar un mensaje a la entidad.
  * @param {prop} navigation - Contiene información básica de navegación
+ * @property {Array<Object>} sugerenceTypes - Lista que contiene Objetos con estructura de un Tipo de Sugerencia.
+ * @property {function} setSugerenceTypes - Método de acceso indirecto para modificar la propieadad sugerenceTypes.
+ * @property {string} sugerenceType - Variable que guarda el tipo de sugerencia que seleccione un Usuario.
+ * @property {function} setSugerenceType - Método de acceso indirecto para modificar la propieadad sugerenceType.
+ * @property {string} comment - Variable que guarda el comentario que desea realizar un Usuario.
+ * @property {function} setComment - Método de acceso indirecto para modificar la propieadad comment.
+ * @property {string} error - Variable que contiene información de Errores cometidos por el Usuario.
+ * @property {function} setError - Método de acceso indirecto para modificar la propieadad error.
+ * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.
+ * @property {Promise} getAllSuperenceTypes - {@link getAllSuperenceTypes} | Promesa que devuelve los tipos de sugerencia dependiendo la respuesta del servidor.
+ * @property {Promise} storeSugerence - {@link storeSugerence} | Promesa que crea un nuevo comentario en el servidor y regresa un estatus de 201.
+ * @property {function} handleComment - Método que guarda un comentario de tipo string cada vez que se presiona una tecla en la caja de comentario.
+ * @property {function} handleSend - Método que valida la información del formulario y envía la información al servidor usando la promesa {@link storeSugerence} o guarda errores de validación.
+ * @listens {onChangeText} | El método handleComment se dispara cuando ocurre este evento en un componente <TextInput> que almacena un comentario.
+ * @listens {onPress} | El método handleSend se dispara cuando ocurre este evento en un componente <TouchableOpacity> que representa el botón Enviar.
  * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://reactjs.org/docs/hooks-effect.html
+ * @see https://reactjs.org/docs/hooks-state.html
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201
+ * @see https://reactnative.dev/docs/textinput#onchangetext
+ * @see https://reactnative.dev/docs/touchableopacity
+ * @see https://github.com/react-native-picker/picker/issues/209
+ * @todo Validar la longitud el comentario.
+ * @todo Mostrar el texto de error.
+ * @todo validar promesas cuando no hay internet.
+ * @experimental El componente Picker tiene limitaciones si se desea agregar estilos a Picker.Item.
  * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.
  */
 const SugerenceScreen = ({ navigation }) => {
@@ -97,6 +123,9 @@ const SugerenceScreen = ({ navigation }) => {
   );
 };
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   pickerContainer: {
     flexDirection: 'row',

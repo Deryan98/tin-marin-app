@@ -6,6 +6,26 @@ import ModalBody from '../components/ModalBody';
 import { ScrollView } from 'react-native-gesture-handler';
 import { map, size } from 'lodash';
 
+/**
+ * Pantalla que muestra los detalles de una Exhibición.
+ * @param {prop} route - Recibe parametros importantes para mostrar en pantalla
+ * @param {string} _id - ID asociado a una Exhibición.
+ * @property {Object} exhibition - Objeto que contiene la estructura de una Exhibición.
+ * @property {function} setExhibition - Método de acceso indirecto para modificar la propieadad exhibition.
+ * @property {boolean} visible - Variable auxiliar para controlar la visibilidad de un componente <Modal>.
+ * @property {function} setVisible - Método de acceso indirecto para modificar la propieadad visible.
+ * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.
+ * @property {Promise} getExhibitionById - {@link getExhibitionById} | Promesa que devuelve la información dependiendo la respuesta del servidor.
+ * @property {function} size - Función de la librería lodash | Devuelve el tamaño de una colección.
+ * @property {function} map - Función de la librería lodash | Crea un arreglo de valores a partir de cada elemento de una colección.
+ * @listens {onPress} | El método showModal se dispara cuando ocurre este evento en un componente <ModalButton>.
+ * @see https://lodash.com/docs/4.17.15#size
+ * @see https://reactjs.org/docs/hooks-state.html
+ * @see https://reactnavigation.org/docs/route-prop/
+ * @see https://lodash.com/docs/4.17.15#map
+ * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista
+ */
 const InfoCard = ({ route }) => {
   const { _id } = route.params;
   const [visible, setVisible] = useState(false);
@@ -45,6 +65,9 @@ const InfoCard = ({ route }) => {
 
 export default InfoCard;
 
+/**
+ *@ignore
+ */
 const InfoImage = ({ path }) => {
   return (
     <View style={styles.viewPoster}>
@@ -53,6 +76,9 @@ const InfoImage = ({ path }) => {
   );
 };
 
+/**
+ *@ignore
+ */
 const InfoModal = ({ setVisible }) => {
   return (
     <View style={styles.viewModal}>
@@ -67,6 +93,9 @@ const InfoModal = ({ setVisible }) => {
   );
 };
 
+/**
+ *@ignore
+ */
 const InfoTitle = ({ exhibition }) => {
   return (
     <View style={styles.viewInfo}>
@@ -77,6 +106,9 @@ const InfoTitle = ({ exhibition }) => {
   );
 };
 
+/**
+ *@ignore
+ */
 const InfoSponsor = ({ url }) => {
   return (
     <View style={styles.viewSponsor}>
@@ -95,6 +127,9 @@ const InfoSponsor = ({ url }) => {
   );
 };
 
+/**
+ *@ignore
+ */
 const InfoFooter = ({ exhibition }) => {
   const {
     minimumAge,
@@ -129,6 +164,9 @@ const InfoFooter = ({ exhibition }) => {
   );
 };
 
+/**
+ *@ignore
+ */
 const FooterItem = ({ title, desc, icon }) => {
   return (
     <View>
@@ -153,6 +191,9 @@ const FooterItem = ({ title, desc, icon }) => {
   );
 };
 
+/**
+ *@ignore
+ */
 const styles = StyleSheet.create({
   viewPoster: {
     shadowColor: '#000',

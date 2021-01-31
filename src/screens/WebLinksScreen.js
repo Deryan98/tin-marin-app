@@ -17,7 +17,23 @@ LogBox.ignoreAllLogs();
 /**
  * Pantalla que muestra la lista de Sitios de Interés.
  * @param {prop} navigation - Contiene información básica de navegación
+ * @property {Array<Object>} links - Lista que contiene Objetos con estructura de un Sitios de Interés.
+ * @property {function} setlinks - Método de acceso indirecto para modificar la propieadad links.
+ * @property {boolean} loading - Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene.
+ * @property {function} setLoading - Método de acceso indirecto para modificar la propieadad loading.
+ * @property {boolean} fetched - Variable auxiliar para validar el tiempo de respuesta de una promesa.
+ * @property {function} setFetched - Método de acceso indirecto para modificar la propieadad fetched.
+ * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.
+ * @property {Promise} getAllLinks - {@link getAllLinks} | Promesa que devuelve la información dependiendo la respuesta del servidor.
+ * @property {AbortController} abortController - Patrón de diseño que se implementa para validar promesas.
+ * @property {AbortSignal} signal - Objeto que se comunica con abortController en caso una promesa falle.
  * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://reactjs.org/docs/hooks-effect.html
+ * @see https://reactjs.org/docs/hooks-state.html
+ * @seee https://developer.mozilla.org/en-US/docs/Web/API/AbortController
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortController/signal
+ * @experimental La promesa getAllLinks presenta un fallo de múltiples llamadas asíncronas.
  * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.
  */
 const WebLinksScreen = ({ navigation }) => {
@@ -67,7 +83,9 @@ const WebLinksScreen = ({ navigation }) => {
     </ScrollView>
   );
 };
-
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   view: {
     flexDirection: 'column',

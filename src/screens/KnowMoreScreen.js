@@ -39,6 +39,9 @@ const KnowMoreScreen = ({ navigation }) => {
   );
 };
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   view: {
     flexDirection: 'column',

@@ -9,11 +9,13 @@ export default {
 /**
  * Constante que contiene el endpoint de producción
  * @type {string}
+ * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';
  */
 export const API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';
 
 /**
  * Constante que contiene el endpoint de desarrollo
  * @type {string}
+ * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';
  */
 export const API_DEV = 'https://tinmarin.herokuapp.com/api/v1';

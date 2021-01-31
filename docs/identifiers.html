@@ -68,14 +68,12 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MainParagraph">MainParagraph</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-RenderImage">RenderImage</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidScreen">CovidScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DonationScreen">DonationScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EventsScreen">EventsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FAQScreen">FAQScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnowMoreScreen">KnowMoreScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MissionAndVisionScreen">MissionAndVisionScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Search">Search</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SugerenceScreen">SugerenceScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-WebLinksScreen">WebLinksScreen</a></span></span></li>
@@ -114,7 +112,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Petici&#xF3;n fetch que consume el endpoint para obtener un JSON con las Recomendaciones Covid-19</p>
+</div>
       </div>
     </td>
     <td>
@@ -136,13 +135,14 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-getAllExhibitions">getAllExhibitions</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-getAllExhibitions">getAllExhibitions</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span><span>[]</span></span>, <span>MyError</span>&gt;</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Petici&#xF3;n fetch que consume el endpoint para obtener un JSON con las Exhibiciones.</p>
+</div>
       </div>
     </td>
     <td>
@@ -164,13 +164,14 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-getExhibitionById">getExhibitionById</a></span></span><span class="code" data-ice="signature">(idExhibition: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-getExhibitionById">getExhibitionById</a></span></span><span class="code" data-ice="signature">(idExhibition: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span><span>[]</span></span>, <span>MyError</span>&gt;</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Petici&#xF3;n fetch que consume el endpoint para obtener un JSON con el detalle de una Exhibici&#xF3;n.</p>
+</div>
       </div>
     </td>
     <td>
@@ -192,13 +193,14 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-getExhibitionByName">getExhibitionByName</a></span></span><span class="code" data-ice="signature">(name: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-getExhibitionByName">getExhibitionByName</a></span></span><span class="code" data-ice="signature">(name: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span><span>[]</span></span>, <span>MyError</span>&gt;</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Petici&#xF3;n fetch que consume el endpoint para obtener un arreglo de Nombres que coincidan con una variable nombre definida por el Usuario.</p>
+</div>
       </div>
     </td>
     <td>
@@ -226,7 +228,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Petici&#xF3;n fetch que consume el endpoint para obtener un JSON con las Preguntas Frecuentes.</p>
+</div>
       </div>
     </td>
     <td>
@@ -254,7 +257,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Petici&#xF3;n fetch que consume el endpoint para obtener un JSON con los Tipos de Sugerencia.</p>
+</div>
       </div>
     </td>
     <td>
@@ -282,7 +286,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Petici&#xF3;n fetch de tipo POST que consume el endpoint para enviar un JSON y crear una nueva Sugerencia en la base de datos.</p>
+</div>
       </div>
     </td>
     <td>
@@ -310,7 +315,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Petici&#xF3;n fetch que consume el endpoint para obtener un JSON con los Sitios de Inter&#xE9;s.</p>
+</div>
       </div>
     </td>
     <td>
@@ -1067,7 +1073,7 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-CovidInfo">CovidInfo</a></span></span><span class="code" data-ice="signature">(navigation: <span>prop</span>, route: <span>prop</span>): <span>SafeAreaView</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-CovidInfo">CovidInfo</a></span></span><span class="code" data-ice="signature">(navigation: <span>prop</span>, route: <span>prop</span>, title: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, description: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;, image: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, steps: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;): <span>SafeAreaView</span></span>
         </p>
       </div>
       <div>
@@ -1271,69 +1277,14 @@ de una recomendaci&#xF3;n.</p>
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-DonationScreen">DonationScreen</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span><span class="code" data-ice="signature">(navigation: <span>prop</span>): <span>ScrollView</span></span>
         </p>
       </div>
       <div>
         
         
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          <span data-ice="kind-icon" class="kind-function">F</span>
-          
-          
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-EventsScreen">EventsScreen</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          <span data-ice="kind-icon" class="kind-function">F</span>
-          
-          
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;navigation&quot;: <span>*</span>}): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
+        <div data-ice="description"><p>Pantalla que muestra una lista de tarjetas sobre las Exhibiciones</p>
+</div>
       </div>
     </td>
     <td>
@@ -1414,13 +1365,14 @@ m&#xF3;dulos que posee la aplicaci&#xF3;n.</p>
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;route&quot;: <span>*</span>}): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span><span class="code" data-ice="signature">(route: <span>prop</span>, _id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span>SafeAreaView</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Pantalla que muestra los detalles de una Exhibici&#xF3;n.</p>
+</div>
       </div>
     </td>
     <td>
@@ -1471,7 +1423,7 @@ m&#xF3;dulos que posee la aplicaci&#xF3;n.</p>
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span><span class="code" data-ice="signature">(): <span>ScrollView</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-MissionAndVisionScreen">MissionAndVisionScreen</a></span></span><span class="code" data-ice="signature">(): <span>ScrollView</span></span>
         </p>
       </div>
       <div>
@@ -1533,7 +1485,7 @@ m&#xF3;dulos que posee la aplicaci&#xF3;n.</p>
       </div>
       <div>
         
-        
+        <div class="experimental" data-ice="experimental">this function is experimental. El componente Picker tiene limitaciones si se desea agregar estilos a Picker.Item.</div>
         <div data-ice="description"><p>Pantalla que muestra el formulario de sugerencias, para poder enviar un mensaje a la entidad.</p>
 </div>
       </div>
@@ -1562,7 +1514,7 @@ m&#xF3;dulos que posee la aplicaci&#xF3;n.</p>
       </div>
       <div>
         
-        
+        <div class="experimental" data-ice="experimental">this function is experimental. La promesa getAllLinks presenta un fallo de m&#xFA;ltiples llamadas as&#xED;ncronas.</div>
         <div data-ice="description"><p>Pantalla que muestra la lista de Sitios de Inter&#xE9;s.</p>
 </div>
       </div>

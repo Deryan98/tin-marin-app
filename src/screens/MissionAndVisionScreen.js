@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
  * Pantalla que muestra la misión y visión de la entidad.
  * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.
  */
-const ContactScreen = () => {
+const MissionAndVisionScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.view}>
@@ -43,8 +43,12 @@ const ContactScreen = () => {
     </ScrollView>
   );
 };
-export default ContactScreen;
 
+export default MissionAndVisionScreen;
+
+/**
+ *@ignore
+ */
 const styles = StyleSheet.create({
   line: {
     height: 1,

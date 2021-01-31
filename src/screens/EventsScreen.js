@@ -1,14 +1,20 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
+/**
+ * @ignore
+ */
 const EventsScreen = () => {
-    return (
-        <View>
-            <Text>Pantalla eventos</Text>
-        </View>
-    )
-}
+  return (
+    <View>
+      <Text>Pantalla eventos</Text>
+    </View>
+  );
+};
 
-export default EventsScreen
+export default EventsScreen;
 
-const styles = StyleSheet.create({})
+/**
+ * @ignore
+ */
+const styles = StyleSheet.create({});

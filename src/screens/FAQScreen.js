@@ -16,7 +16,17 @@ import { size } from 'lodash';
 /**
  * Pantalla que muestra una lista de tarjetas con preguntas frecuentes.
  * @param {prop} navigation - Contiene información básica de navegación
+ * @property {Array<Object>} faqs - Lista que contiene Objetos con estructura de una Pregunta Frecuente.
+ * @property {function} setFaqs - Método de acceso indirecto para modificar la propieadad faqs.
+ * @property {boolean} loading - Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene.
+ * @property {function} setLoading - Método de acceso indirecto para modificar la propieadad loading.
+ * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.
+ * @property {Promise} getAllFAQs - {@link getAllFAQs} | Promesa que devuelve la información dependiendo la respuesta del servidor.
  * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://reactjs.org/docs/hooks-effect.html
+ * @see https://reactjs.org/docs/hooks-state.html
+ * @see @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
  * @return {SafeAreaView} Regreesa una layout con la maquetación de la pantalla
  */
 const FAQScreen = ({ navigation }) => {
@@ -68,6 +78,9 @@ const FAQScreen = ({ navigation }) => {
   );
 };
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   view: {
     flexDirection: 'column',

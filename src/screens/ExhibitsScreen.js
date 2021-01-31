@@ -12,6 +12,25 @@ import Card from '../components/Card';
 import Colors from '../constants/Colors';
 import { size } from 'lodash';
 
+/**
+ * Pantalla que muestra una lista de tarjetas sobre las Exhibiciones
+ * @param {prop} navigation - Contiene información básica de navegación
+ * @property {Array<Object>} exhibitions - Lista que contiene Objetos con estructura de una Recomendación Covid-19.
+ * @property {function} setExhibitions - Método de acceso indirecto para modificar la propieadad covid.
+ * @property {boolean} loading - Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene.
+ * @property {function} setLoading - Método de acceso indirecto para modificar la propieadad loading.
+ * @property {boolean} swapColor - Variable auxiliar para cambiar color de tarjetas cada posición: (índice mod 2).
+ * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.
+ * @property {Promise} getAllExhibitions - {@link getAllExhibitions} | Promesa que devuelve la información dependiendo la respuesta del servidor.
+ * @property {function} size - Función de la librería lodash | Devuelve el tamaño de una colección.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://reactjs.org/docs/hooks-effect.html
+ * @see https://lodash.com/docs/4.17.15#size
+ * @see https://reactjs.org/docs/hooks-state.html
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+ * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.
+ */
 const ExhibitsScreen = ({ navigation }) => {
   const [exhibitions, setExhibitions] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -61,6 +80,9 @@ const ExhibitsScreen = ({ navigation }) => {
   );
 };
 
+/**
+ *@ignore
+ */
 const styles = StyleSheet.create({
   view: {
     flexDirection: 'column',

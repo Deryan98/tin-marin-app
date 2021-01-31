@@ -68,14 +68,12 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MainParagraph">MainParagraph</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-RenderImage">RenderImage</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidScreen">CovidScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DonationScreen">DonationScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EventsScreen">EventsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FAQScreen">FAQScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnowMoreScreen">KnowMoreScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MissionAndVisionScreen">MissionAndVisionScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Search">Search</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SugerenceScreen">SugerenceScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-WebLinksScreen">WebLinksScreen</a></span></span></li>
@@ -102,8 +100,21 @@ import { size } from &apos;lodash&apos;;
 /**
  * Pantalla que muestra una lista de tarjetas sobre recomendaciones sobre el COVID-19
  * @param {prop} navigation - Contiene informaci&#xF3;n b&#xE1;sica de navegaci&#xF3;n
+ * @property {Array&lt;Object&gt;} covid - Lista que contiene Objetos con estructura de una Recomendaci&#xF3;n Covid-19.
+ * @property {function} setCovid - M&#xE9;todo de acceso indirecto para modificar la propieadad covid.
+ * @property {boolean} loading - Variable auxiliar para indicar si ya hay respuesta del servidor para cargar la vista que contiene.
+ * @property {function} setLoading - M&#xE9;todo de acceso indirecto para modificar la propieadad loading.
+ * @property {boolean} swapColor - Variable auxiliar para cambiar color de tarjetas cada posici&#xF3;n: (&#xED;ndice mod 2).
+ * @property {function} useEffect - Hook de React que permite realizar tareas as&#xED;ncronas a la vista.
+ * @property {Promise} getAllCovidRecommendations - {@link getAllCovidRecommendations} | Promesa que devuelve la informaci&#xF3;n dependiendo la respuesta del servidor.
+ * @property {function} size - Funci&#xF3;n de la librer&#xED;a lodash | Devuelve el tama&#xF1;o de una colecci&#xF3;n.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su m&#xE9;todo accesor.
  * @see https://reactnavigation.org/docs/navigation-prop/
- * @return {SafeAreaView} Regreesa una layout con la maquetaci&#xF3;n de la pantalla
+ * @see https://reactjs.org/docs/hooks-effect.html
+ * @see https://lodash.com/docs/4.17.15#size
+ * @see https://reactjs.org/docs/hooks-state.html
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+ * @return {SafeAreaView} Regresa una layout con la maquetaci&#xF3;n de la pantalla
  */
 const CovidScreen = ({ navigation }) =&gt; {
   // const [covidInfo, setCovidInfo] = useState(null);
@@ -178,6 +189,9 @@ const CovidList = ({ navigation, covidRecs, swapColor }) =&gt; {
 
 export default CovidScreen;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   view: {
     flexDirection: &apos;column&apos;,

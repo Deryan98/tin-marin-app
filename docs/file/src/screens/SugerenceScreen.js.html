@@ -68,14 +68,12 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MainParagraph">MainParagraph</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-RenderImage">RenderImage</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidScreen">CovidScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DonationScreen">DonationScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EventsScreen">EventsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FAQScreen">FAQScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnowMoreScreen">KnowMoreScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MissionAndVisionScreen">MissionAndVisionScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Search">Search</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SugerenceScreen">SugerenceScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-WebLinksScreen">WebLinksScreen</a></span></span></li>
@@ -102,7 +100,33 @@ import { getAllSuperenceTypes, storeSugerence } from &apos;../api/sugerences&apo
 /**
  * Pantalla que muestra el formulario de sugerencias, para poder enviar un mensaje a la entidad.
  * @param {prop} navigation - Contiene informaci&#xF3;n b&#xE1;sica de navegaci&#xF3;n
+ * @property {Array&lt;Object&gt;} sugerenceTypes - Lista que contiene Objetos con estructura de un Tipo de Sugerencia.
+ * @property {function} setSugerenceTypes - M&#xE9;todo de acceso indirecto para modificar la propieadad sugerenceTypes.
+ * @property {string} sugerenceType - Variable que guarda el tipo de sugerencia que seleccione un Usuario.
+ * @property {function} setSugerenceType - M&#xE9;todo de acceso indirecto para modificar la propieadad sugerenceType.
+ * @property {string} comment - Variable que guarda el comentario que desea realizar un Usuario.
+ * @property {function} setComment - M&#xE9;todo de acceso indirecto para modificar la propieadad comment.
+ * @property {string} error - Variable que contiene informaci&#xF3;n de Errores cometidos por el Usuario.
+ * @property {function} setError - M&#xE9;todo de acceso indirecto para modificar la propieadad error.
+ * @property {function} useEffect - Hook de React que permite realizar tareas as&#xED;ncronas a la vista.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su m&#xE9;todo accesor.
+ * @property {Promise} getAllSuperenceTypes - {@link getAllSuperenceTypes} | Promesa que devuelve los tipos de sugerencia dependiendo la respuesta del servidor.
+ * @property {Promise} storeSugerence - {@link storeSugerence} | Promesa que crea un nuevo comentario en el servidor y regresa un estatus de 201.
+ * @property {function} handleComment - M&#xE9;todo que guarda un comentario de tipo string cada vez que se presiona una tecla en la caja de comentario.
+ * @property {function} handleSend - M&#xE9;todo que valida la informaci&#xF3;n del formulario y env&#xED;a la informaci&#xF3;n al servidor usando la promesa {@link storeSugerence} o guarda errores de validaci&#xF3;n.
+ * @listens {onChangeText} | El m&#xE9;todo handleComment se dispara cuando ocurre este evento en un componente &lt;TextInput&gt; que almacena un comentario.
+ * @listens {onPress} | El m&#xE9;todo handleSend se dispara cuando ocurre este evento en un componente &lt;TouchableOpacity&gt; que representa el bot&#xF3;n Enviar.
  * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://reactjs.org/docs/hooks-effect.html
+ * @see https://reactjs.org/docs/hooks-state.html
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201
+ * @see https://reactnative.dev/docs/textinput#onchangetext
+ * @see https://reactnative.dev/docs/touchableopacity
+ * @see https://github.com/react-native-picker/picker/issues/209
+ * @todo Validar la longitud el comentario.
+ * @todo Mostrar el texto de error.
+ * @todo validar promesas cuando no hay internet.
+ * @experimental El componente Picker tiene limitaciones si se desea agregar estilos a Picker.Item.
  * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetaci&#xF3;n de la pantalla.
  */
 const SugerenceScreen = ({ navigation }) =&gt; {
@@ -183,6 +207,9 @@ const SugerenceScreen = ({ navigation }) =&gt; {
   );
 };
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   pickerContainer: {
     flexDirection: &apos;row&apos;,

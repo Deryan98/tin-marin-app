@@ -68,14 +68,12 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MainParagraph">MainParagraph</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-RenderImage">RenderImage</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidScreen">CovidScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DonationScreen">DonationScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EventsScreen">EventsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FAQScreen">FAQScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnowMoreScreen">KnowMoreScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MissionAndVisionScreen">MissionAndVisionScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Search">Search</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SugerenceScreen">SugerenceScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-WebLinksScreen">WebLinksScreen</a></span></span></li>
@@ -92,6 +90,26 @@ import ModalBody from &apos;../components/ModalBody&apos;;
 import { ScrollView } from &apos;react-native-gesture-handler&apos;;
 import { map, size } from &apos;lodash&apos;;
 
+/**
+ * Pantalla que muestra los detalles de una Exhibici&#xF3;n.
+ * @param {prop} route - Recibe parametros importantes para mostrar en pantalla
+ * @param {string} _id - ID asociado a una Exhibici&#xF3;n.
+ * @property {Object} exhibition - Objeto que contiene la estructura de una Exhibici&#xF3;n.
+ * @property {function} setExhibition - M&#xE9;todo de acceso indirecto para modificar la propieadad exhibition.
+ * @property {boolean} visible - Variable auxiliar para controlar la visibilidad de un componente &lt;Modal&gt;.
+ * @property {function} setVisible - M&#xE9;todo de acceso indirecto para modificar la propieadad visible.
+ * @property {function} useEffect - Hook de React que permite realizar tareas as&#xED;ncronas a la vista.
+ * @property {function} useState - Hook de React que permite crear una variable de estado con su m&#xE9;todo accesor.
+ * @property {Promise} getExhibitionById - {@link getExhibitionById} | Promesa que devuelve la informaci&#xF3;n dependiendo la respuesta del servidor.
+ * @property {function} size - Funci&#xF3;n de la librer&#xED;a lodash | Devuelve el tama&#xF1;o de una colecci&#xF3;n.
+ * @property {function} map - Funci&#xF3;n de la librer&#xED;a lodash | Crea un arreglo de valores a partir de cada elemento de una colecci&#xF3;n.
+ * @listens {onPress} | El m&#xE9;todo showModal se dispara cuando ocurre este evento en un componente &lt;ModalButton&gt;.
+ * @see https://lodash.com/docs/4.17.15#size
+ * @see https://reactjs.org/docs/hooks-state.html
+ * @see https://reactnavigation.org/docs/route-prop/
+ * @see https://lodash.com/docs/4.17.15#map
+ * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista
+ */
 const InfoCard = ({ route }) =&gt; {
   const { _id } = route.params;
   const [visible, setVisible] = useState(false);
@@ -131,6 +149,9 @@ const InfoCard = ({ route }) =&gt; {
 
 export default InfoCard;
 
+/**
+ *@ignore
+ */
 const InfoImage = ({ path }) =&gt; {
   return (
     &lt;View style={styles.viewPoster}&gt;
@@ -139,6 +160,9 @@ const InfoImage = ({ path }) =&gt; {
   );
 };
 
+/**
+ *@ignore
+ */
 const InfoModal = ({ setVisible }) =&gt; {
   return (
     &lt;View style={styles.viewModal}&gt;
@@ -153,6 +177,9 @@ const InfoModal = ({ setVisible }) =&gt; {
   );
 };
 
+/**
+ *@ignore
+ */
 const InfoTitle = ({ exhibition }) =&gt; {
   return (
     &lt;View style={styles.viewInfo}&gt;
@@ -163,6 +190,9 @@ const InfoTitle = ({ exhibition }) =&gt; {
   );
 };
 
+/**
+ *@ignore
+ */
 const InfoSponsor = ({ url }) =&gt; {
   return (
     &lt;View style={styles.viewSponsor}&gt;
@@ -181,6 +211,9 @@ const InfoSponsor = ({ url }) =&gt; {
   );
 };
 
+/**
+ *@ignore
+ */
 const InfoFooter = ({ exhibition }) =&gt; {
   const {
     minimumAge,
@@ -215,6 +248,9 @@ const InfoFooter = ({ exhibition }) =&gt; {
   );
 };
 
+/**
+ *@ignore
+ */
 const FooterItem = ({ title, desc, icon }) =&gt; {
   return (
     &lt;View&gt;
@@ -239,6 +275,9 @@ const FooterItem = ({ title, desc, icon }) =&gt; {
   );
 };
 
+/**
+ *@ignore
+ */
 const styles = StyleSheet.create({
   viewPoster: {
     shadowColor: &apos;#000&apos;,

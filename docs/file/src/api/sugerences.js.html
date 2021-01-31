@@ -68,14 +68,12 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MainParagraph">MainParagraph</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-RenderImage">RenderImage</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CovidScreen">CovidScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DonationScreen">DonationScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EventsScreen">EventsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ExhibitsScreen">ExhibitsScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FAQScreen">FAQScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-InfoCard">InfoCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-KnowMoreScreen">KnowMoreScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ContactScreen">ContactScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MissionAndVisionScreen">MissionAndVisionScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Search">Search</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SugerenceScreen">SugerenceScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-WebLinksScreen">WebLinksScreen</a></span></span></li>
@@ -87,10 +85,14 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { API_DEV, API_HOST } from &apos;../constants/URL&apos;;
 
 /**
+ * Petici&#xF3;n fetch que consume el endpoint para obtener un JSON con los Tipos de Sugerencia.
+ * @property {string} url - Contiene la ruta del endpoint.
  * @return {Promise&lt;string[], MyError&gt;} Esta promesa retorna un arreglo
  *  de tipo String con toda la
  * informaci&#xF3;n de los Tipos de Sugerencia.
- * @todo Agregue validaciones cuando hay problemas en la conectividad
+ * @todo Agregue validaciones cuando hay problemas en la conectividad.
+ * @example getAllSuperenceTypes()
+ * .then((response) =&gt; {...});
  */
 export const getAllSuperenceTypes = () =&gt; {
   const url = `${API_DEV}/suggestiontypes`;
@@ -100,12 +102,16 @@ export const getAllSuperenceTypes = () =&gt; {
 };
 
 /**
+ * Petici&#xF3;n fetch de tipo POST que consume el endpoint para enviar un JSON y crear una nueva Sugerencia en la base de datos.
+ * @property {string} url - Contiene la ruta del endpoint
  * @return {Promise&lt;string[], MyError&gt;}
  * Esta promesa realiza una petici&#xF3;n de tipo POST y crea un nuevo registro
  * con la informaci&#xF3;n de una sugerencia.
  * @param {string} suggestionType - Aqu&#xED; se almacena el tipo de sugerencia.
  * @param {string} suggestion - Aqu&#xED; se guarda la sugerencia que realiza un usuario.
  * @todo Agregue validaciones cuando hay problemas en la conectividad.
+ * @example storeSugerence(sugerenceType, comment)
+ * .then((response) =&gt; {...});
  */
 export const storeSugerence = (suggestionType, suggestion) =&gt; {
   const url = `${API_DEV}/suggestions`;

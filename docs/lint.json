@@ -4,55 +4,55 @@
     "filePath": "src/screens/CovidInfo.js",
     "lines": [
       {
-        "lineNumber": 127,
+        "lineNumber": 131,
         "line": "/**"
       },
       {
-        "lineNumber": 128,
+        "lineNumber": 132,
         "line": " * Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla."
       },
       {
-        "lineNumber": 129,
+        "lineNumber": 133,
         "line": " * Se llama en el componente {@link Footer}."
       },
       {
-        "lineNumber": 130,
+        "lineNumber": 134,
         "line": " * @param {string} name - Nombre del Icono a mostrar."
       },
       {
-        "lineNumber": 131,
+        "lineNumber": 135,
         "line": " * @param {string} color - Color del Icono a mostrar."
       },
       {
-        "lineNumber": 132,
+        "lineNumber": 136,
         "line": " * @param {number} size - Tamaño del Icono."
       },
       {
-        "lineNumber": 133,
+        "lineNumber": 137,
         "line": " * @param {string} text - Texto a mostrar del enlace."
       },
       {
-        "lineNumber": 134,
+        "lineNumber": 138,
         "line": " * @param {string} screenRouteName - Nombre de la pantalla a la cuál se navegará."
       },
       {
-        "lineNumber": 135,
+        "lineNumber": 139,
         "line": " * @param {prop} navigation"
       },
       {
-        "lineNumber": 136,
+        "lineNumber": 140,
         "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
       },
       {
-        "lineNumber": 137,
+        "lineNumber": 141,
         "line": " * @return {TouchableOpacity} Devuelve una vista presionable"
       },
       {
-        "lineNumber": 138,
+        "lineNumber": 142,
         "line": " */"
       },
       {
-        "lineNumber": 139,
+        "lineNumber": 143,
         "line": "export const FooterLinks = ({"
       }
     ],
@@ -90,22 +90,38 @@
       },
       {
         "lineNumber": 18,
-        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
+        "line": " * @param {string} title - Describe el título de una recomendación."
       },
       {
         "lineNumber": 19,
-        "line": " * @see https://reactnavigation.org/docs/route-prop/"
+        "line": " * @param {Array<string>} description - Contiene un arreglo de párrafos."
       },
       {
         "lineNumber": 20,
-        "line": " * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista"
+        "line": " * @param {string} image - Contiene la imagen relacionada con la recomendación."
       },
       {
         "lineNumber": 21,
-        "line": " */"
+        "line": " * @param {Array<string>} steps - Contiene un arreglo con los pasos a seguir."
       },
       {
         "lineNumber": 22,
+        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
+      },
+      {
+        "lineNumber": 23,
+        "line": " * @see https://reactnavigation.org/docs/route-prop/"
+      },
+      {
+        "lineNumber": 24,
+        "line": " * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista"
+      },
+      {
+        "lineNumber": 25,
+        "line": " */"
+      },
+      {
+        "lineNumber": 26,
         "line": "const CovidInfo = ({ navigation, route }) => {"
       }
     ],
@@ -114,7 +130,11 @@
     ],
     "docParams": [
       "navigation",
-      "route"
+      "route",
+      "title",
+      "description",
+      "image",
+      "steps"
     ]
   },
   {
@@ -122,39 +142,39 @@
     "filePath": "src/screens/CovidScreen.js",
     "lines": [
       {
-        "lineNumber": 64,
+        "lineNumber": 77,
         "line": "/**"
       },
       {
-        "lineNumber": 65,
+        "lineNumber": 78,
         "line": " * Componente que se utiliza para iterar las tarjetas"
       },
       {
-        "lineNumber": 66,
+        "lineNumber": 79,
         "line": " * @param {prop} navigation"
       },
       {
-        "lineNumber": 67,
+        "lineNumber": 80,
         "line": " * @param {Array<string>} covidRecs - Contiene la información del estado covid."
       },
       {
-        "lineNumber": 68,
+        "lineNumber": 81,
         "line": " * @param {boolean} swapColor - Variable de control para intercambiar color."
       },
       {
-        "lineNumber": 69,
+        "lineNumber": 82,
         "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
       },
       {
-        "lineNumber": 70,
+        "lineNumber": 83,
         "line": " * @return {GenericCard} Retorna una lista de tarjetas de tipo {@link GenericCard}"
       },
       {
-        "lineNumber": 71,
+        "lineNumber": 84,
         "line": " */"
       },
       {
-        "lineNumber": 72,
+        "lineNumber": 85,
         "line": "const CovidList = ({ navigation, covidRecs, swapColor }) => {"
       }
     ],
@@ -165,6 +185,103 @@
       "navigation",
       "covidRecs",
       "swapColor"
+    ]
+  },
+  {
+    "name": "InfoCard",
+    "filePath": "src/screens/InfoCard.js",
+    "lines": [
+      {
+        "lineNumber": 8,
+        "line": "/**"
+      },
+      {
+        "lineNumber": 9,
+        "line": " * Pantalla que muestra los detalles de una Exhibición."
+      },
+      {
+        "lineNumber": 10,
+        "line": " * @param {prop} route - Recibe parametros importantes para mostrar en pantalla"
+      },
+      {
+        "lineNumber": 11,
+        "line": " * @param {string} _id - ID asociado a una Exhibición."
+      },
+      {
+        "lineNumber": 12,
+        "line": " * @property {Object} exhibition - Objeto que contiene la estructura de una Exhibición."
+      },
+      {
+        "lineNumber": 13,
+        "line": " * @property {function} setExhibition - Método de acceso indirecto para modificar la propieadad exhibition."
+      },
+      {
+        "lineNumber": 14,
+        "line": " * @property {boolean} visible - Variable auxiliar para controlar la visibilidad de un componente <Modal>."
+      },
+      {
+        "lineNumber": 15,
+        "line": " * @property {function} setVisible - Método de acceso indirecto para modificar la propieadad visible."
+      },
+      {
+        "lineNumber": 16,
+        "line": " * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista."
+      },
+      {
+        "lineNumber": 17,
+        "line": " * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor."
+      },
+      {
+        "lineNumber": 18,
+        "line": " * @property {Promise} getExhibitionById - {@link getExhibitionById} | Promesa que devuelve la información dependiendo la respuesta del servidor."
+      },
+      {
+        "lineNumber": 19,
+        "line": " * @property {function} size - Función de la librería lodash | Devuelve el tamaño de una colección."
+      },
+      {
+        "lineNumber": 20,
+        "line": " * @property {function} map - Función de la librería lodash | Crea un arreglo de valores a partir de cada elemento de una colección."
+      },
+      {
+        "lineNumber": 21,
+        "line": " * @listens {onPress} | El método showModal se dispara cuando ocurre este evento en un componente <ModalButton>."
+      },
+      {
+        "lineNumber": 22,
+        "line": " * @see https://lodash.com/docs/4.17.15#size"
+      },
+      {
+        "lineNumber": 23,
+        "line": " * @see https://reactjs.org/docs/hooks-state.html"
+      },
+      {
+        "lineNumber": 24,
+        "line": " * @see https://reactnavigation.org/docs/route-prop/"
+      },
+      {
+        "lineNumber": 25,
+        "line": " * @see https://lodash.com/docs/4.17.15#map"
+      },
+      {
+        "lineNumber": 26,
+        "line": " * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista"
+      },
+      {
+        "lineNumber": 27,
+        "line": " */"
+      },
+      {
+        "lineNumber": 28,
+        "line": "const InfoCard = ({ route }) => {"
+      }
+    ],
+    "codeParams": [
+      "*"
+    ],
+    "docParams": [
+      "route",
+      "_id"
     ]
   }
 ]

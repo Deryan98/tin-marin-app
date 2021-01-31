@@ -1,7 +1,7 @@
 {
-  "coverage": "25%",
+  "coverage": "53.26%",
   "expectCount": 92,
-  "actualCount": 23,
+  "actualCount": 49,
   "files": {
     "src/api/covid.js": {
       "expectCount": 1,
@@ -10,12 +10,8 @@
     },
     "src/api/exhibitions.js": {
       "expectCount": 3,
-      "actualCount": 0,
-      "undocumentLines": [
-        3,
-        15,
-        27
-      ]
+      "actualCount": 3,
+      "undocumentLines": []
     },
     "src/api/faqs.js": {
       "expectCount": 1,
@@ -169,90 +165,58 @@
     },
     "src/screens/ContactScreen.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        104
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/screens/CovidInfo.js": {
       "expectCount": 7,
-      "actualCount": 6,
-      "undocumentLines": [
-        171
-      ]
+      "actualCount": 7,
+      "undocumentLines": []
     },
     "src/screens/CovidScreen.js": {
       "expectCount": 3,
-      "actualCount": 2,
-      "undocumentLines": [
-        95
-      ]
+      "actualCount": 3,
+      "undocumentLines": []
     },
     "src/screens/DonationScreen.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        14,
-        4
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/screens/EventsScreen.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        14,
-        4
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/screens/ExhibitsScreen.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        64,
-        15
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/screens/FAQScreen.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        71
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/screens/HomeScreen.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        170
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/screens/InfoCard.js": {
       "expectCount": 8,
-      "actualCount": 0,
-      "undocumentLines": [
-        48,
-        56,
-        70,
-        80,
-        98,
-        132,
-        156,
-        9
-      ]
+      "actualCount": 8,
+      "undocumentLines": []
     },
     "src/screens/KnowMoreScreen.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        42
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/screens/MissionAndVisionScreen.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        48
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/screens/Search.js": {
       "expectCount": 2,
@@ -264,17 +228,13 @@
     },
     "src/screens/SugerenceScreen.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        100
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/screens/WebLinksScreen.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        71
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     }
   }
 }
