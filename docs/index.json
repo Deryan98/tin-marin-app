@@ -2211,7 +2211,7 @@
     "__docId__": 122,
     "kind": "file",
     "name": "src/screens/ContactScreen.js",
-    "content": "import React, { useState } from 'react';\nimport { StyleSheet, Text, View, ScrollView, Image } from 'react-native';\nimport ContactCard from '../components/ContactCard';\nimport Colors from '../constants/Colors';\nimport { Picker } from '@react-native-picker/picker';\nimport { CONTACTS } from '../dummy-data/contacts';\nimport { TouchableOpacity } from 'react-native';\nimport { Linking } from 'react-native';\n\nconst ContactScreen = ({ navigation }) => {\n  const [contactEmail, setContactEmail] = useState('');\n  return (\n    <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Información de Contactos</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <View style={styles.pickerContainer}>\n          <Picker\n            style={styles.picker}\n            mode=\"dropdown\"\n            selectedValue={contactEmail}\n            onValueChange={(itemValue, itemPosition) => {\n              setContactEmail(itemValue);\n            }}>\n            <Picker.Item label=\"Seleccione un contacto\" value=\"\" />\n            {CONTACTS.map((contact, key) => (\n              <Picker.Item\n                key={key}\n                label={contact.charge}\n                value={contact.email}\n              />\n            ))}\n          </Picker>\n        </View>\n        {CONTACTS.map(\n          (contact, key) =>\n            contact.email === contactEmail && (\n              <ContactCard\n                key={key}\n                charge={contact.charge}\n                color={Colors.blueColor}\n                name={contact.name}\n                email={contact.email}\n              />\n            ),\n        )}\n        <View style={styles.redes_sociales}>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://www.facebook.com/MuseoTinMarin/')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/facebook.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://www.instagram.com/museotinmarin/')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/instagram.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://twitter.com/MuseoTinMarin')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/twitter.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL(\n                'https://www.youtube.com/channel/UCdpMf5DQvZlcjfX4wum4LmQ',\n              )\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/youtube.png')}\n            />\n          </TouchableOpacity>\n        </View>\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  pickerContainer: {\n    flexDirection: 'row',\n    borderRadius: 15,\n    borderWidth: 1,\n    borderColor: '#d1d3e2',\n    overflow: 'hidden',\n  },\n  picker: {\n    height: 50,\n    width: '100%',\n    backgroundColor: '#858796',\n    color: 'white',\n  },\n  redes_sociales: {\n    marginTop: 10,\n    justifyContent: 'center',\n    width: 100,\n    flexDirection: 'row',\n    marginBottom: 50,\n  },\n  minilogo: {\n    margin: 5,\n    height: 60,\n    width: 60,\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 30,\n    color: '#566573',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  Logo: {\n    width: 300,\n    height: 200\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30\n  },\n  container: {\n    flex: 1,\n    padding: 24,\n  },\n});\n\nexport default ContactScreen;\n",
+    "content": "import React, { useState } from 'react';\nimport { StyleSheet, Text, View, ScrollView, Image } from 'react-native';\nimport ContactCard from '../components/ContactCard';\nimport Colors from '../constants/Colors';\nimport { Picker } from '@react-native-picker/picker';\nimport { CONTACTS } from '../dummy-data/contacts';\nimport { TouchableOpacity } from 'react-native';\nimport { Linking } from 'react-native';\n\n/**\n * Pantalla que muestra información de contacto de los trabajadores de la entidad.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst ContactScreen = ({ navigation }) => {\n  const [contactEmail, setContactEmail] = useState('');\n  return (\n    <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Información de Contactos</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <View style={styles.pickerContainer}>\n          <Picker\n            style={styles.picker}\n            mode=\"dropdown\"\n            selectedValue={contactEmail}\n            onValueChange={(itemValue, itemPosition) => {\n              setContactEmail(itemValue);\n            }}>\n            <Picker.Item label=\"Seleccione un contacto\" value=\"\" />\n            {CONTACTS.map((contact, key) => (\n              <Picker.Item\n                key={key}\n                label={contact.charge}\n                value={contact.email}\n              />\n            ))}\n          </Picker>\n        </View>\n        {CONTACTS.map(\n          (contact, key) =>\n            contact.email === contactEmail && (\n              <ContactCard\n                key={key}\n                charge={contact.charge}\n                color={Colors.blueColor}\n                name={contact.name}\n                email={contact.email}\n              />\n            ),\n        )}\n        <View style={styles.redes_sociales}>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://www.facebook.com/MuseoTinMarin/')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/facebook.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://www.instagram.com/museotinmarin/')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/instagram.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL('https://twitter.com/MuseoTinMarin')\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/twitter.png')}\n            />\n          </TouchableOpacity>\n          <TouchableOpacity\n            onPress={() =>\n              Linking.openURL(\n                'https://www.youtube.com/channel/UCdpMf5DQvZlcjfX4wum4LmQ',\n              )\n            }>\n            <Image\n              style={styles.minilogo}\n              source={require('../assets/youtube.png')}\n            />\n          </TouchableOpacity>\n        </View>\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  pickerContainer: {\n    flexDirection: 'row',\n    borderRadius: 15,\n    borderWidth: 1,\n    borderColor: '#d1d3e2',\n    overflow: 'hidden',\n  },\n  picker: {\n    height: 50,\n    width: '100%',\n    backgroundColor: '#858796',\n    color: 'white',\n  },\n  redes_sociales: {\n    marginTop: 10,\n    justifyContent: 'center',\n    width: 100,\n    flexDirection: 'row',\n    marginBottom: 50,\n  },\n  minilogo: {\n    margin: 5,\n    height: 60,\n    width: 60,\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 30,\n    color: '#566573',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  Logo: {\n    width: 300,\n    height: 200,\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30,\n  },\n  container: {\n    flex: 1,\n    padding: 24,\n  },\n});\n\nexport default ContactScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/ContactScreen.js",
     "access": "public",
@@ -2230,7 +2230,7 @@
     "importPath": "tinMarin/src/screens/ContactScreen.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 98,
+    "lineNumber": 104,
     "undocument": true,
     "type": {
       "types": [
@@ -2252,32 +2252,37 @@
     "export": true,
     "importPath": "tinMarin/src/screens/ContactScreen.js",
     "importStyle": "ContactScreen",
-    "description": null,
-    "lineNumber": 10,
-    "undocument": true,
+    "description": "Pantalla que muestra información de contacto de los trabajadores de la entidad.",
+    "see": [
+      "https://reactnavigation.org/docs/navigation-prop/"
+    ],
+    "lineNumber": 16,
     "params": [
       {
-        "name": "objectPattern",
+        "nullable": null,
         "types": [
-          "{\"navigation\": *}"
+          "prop"
         ],
-        "defaultRaw": {
-          "navigation": null
-        },
-        "defaultValue": "{\"navigation\":null}"
+        "spread": false,
+        "optional": false,
+        "name": "navigation",
+        "description": "Contiene información básica de navegación"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "ScrollView"
+      ],
+      "spread": false,
+      "description": "Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla."
     }
   },
   {
     "__docId__": 125,
     "kind": "file",
     "name": "src/screens/CovidInfo.js",
-    "content": "import React from 'react';\nimport {\n  StyleSheet,\n  View,\n  Image,\n  SafeAreaView,\n  TouchableOpacity,\n  Dimensions,\n} from 'react-native';\nimport { Card, Icon, Text } from 'react-native-elements';\nimport Colors from '../constants/Colors';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { coinButton } from '../helpers/audio';\n\n/**\n * Pantalla que muestra los detalles de una recomendación para prevenir COVID-19\n * @param {prop} navigation - Contiene información básica de navegación\n * @param {prop} route - Recibe parametros importantes para mostrar en pantalla\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @see https://reactnavigation.org/docs/route-prop/\n * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista\n */\nconst CovidInfo = ({ navigation, route }) => {\n  const { title, description, image, steps } = route.params;\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        <View style={styles.view}>\n          <Text style={styles.title}>{title}</Text>\n          <View style={styles.line}></View>\n          <MainParagraph description={description} />\n          <RenderImage url={image} />\n          <Text style={styles.subtitle}>Recomendaciones a Seguir</Text>\n          <FollowSteps steps={steps} />\n          <Footer navigation={navigation} />\n        </View>\n      </ScrollView>\n    </SafeAreaView>\n  );\n};\n\n/**\n * Este componente muestra el párrafo principal que contiene la descripción\n * de una recomendación.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {Array<string>} description - Contiene una lista de tipo string con la descripción\n * @return {View} Devuelve una vista con los párrafos iterados en un componente <Text>\n */\nexport const MainParagraph = ({ description }) => {\n  return (\n    <View style={styles.view}>\n      {description.map((paragraph, index) => (\n        <Text key={index} style={styles.paragraph}>{`${paragraph}\\n`}</Text>\n      ))}\n    </View>\n  );\n};\n\n/**\n * Este componente se encarga de Renderizar una imagen\n * @param {string} url - Contiene la url de una imagen a mostrar.\n * @return {View} Retorna una vista con la imagen cargada.\n */\nexport const RenderImage = ({ url }) => {\n  return (\n    <View style={{ ...styles.imageContainer }}>\n      <Image style={styles.image} source={{ uri: url }} />\n    </View>\n  );\n};\n\n/**\n * Componente que muestra los pasos principales para seguir una recomendación.\n * @param {Array<string>} steps - contiene una lista de tipo string con la información de recomenadaciones a seguir.\n * @return {Card} Devuelve una tarjeta con el listado de recomendaciones a seguir.\n */\nexport const FollowSteps = ({ steps }) => {\n  return (\n    <Card containerStyle={{ borderRadius: 15 }}>\n      <Card.Title style={styles.card_title}>\n        A continuación se muestran las siguientes indicaciones:\n      </Card.Title>\n      <View>\n        {steps.map((step, index) => (\n          <View key={index}>\n            <Text style={{ ...styles.paragraph }}>{`\\u2022 ${step}`}</Text>\n            <Card.Divider />\n          </View>\n        ))}\n      </View>\n    </Card>\n  );\n};\n\n/**\n * Componente que muestra un pie de página.\n * @param {prop} navigation\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {View} Devuelve una vista con Enlaces\n */\nexport const Footer = ({ navigation }) => {\n  return (\n    <View style={styles.footer}>\n      <FooterLinks\n        text=\"Preguntas Frecuentes\"\n        name=\"question-circle\"\n        color=\"darkturquoise\"\n        size={75}\n        navigation={navigation}\n        screenRouteName=\"FAQs\"\n      />\n      <FooterLinks\n        text=\"Sitios de Interes\"\n        name=\"exclamation-circle\"\n        color=\"green\"\n        size={75}\n        navigation={navigation}\n        screenRouteName=\"WebLinks\"\n      />\n    </View>\n  );\n};\n\n/**\n * Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla.\n * @param {string} name - Nombre del Icono a mostrar.\n * @param {string} color - Color del Icono a mostrar.\n * @param {number} size - Tamaño del Icono.\n * @param {string} text - Texto a mostrar del enlace.\n * @param {string} screenRouteName - Nombre de la pantalla a la cuál se navegará.\n * @param {prop} navigation\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {TouchableOpacity} Devuelve una vista presionable\n */\nexport const FooterLinks = ({\n  navigation,\n  name,\n  color,\n  size,\n  text,\n  screenRouteName,\n}) => {\n  return (\n    <TouchableOpacity\n      style={{ borderRadius: 15 }}\n      onPressIn={coinButton}\n      onPress={() => {\n        navigation.navigate(screenRouteName);\n      }}>\n      <View style={styles.footer_column}>\n        <Icon\n          name={name}\n          type=\"font-awesome-5\"\n          solid\n          color={color}\n          size={size}\n        />\n        <Text style={styles.footer_links}>{text}</Text>\n      </View>\n    </TouchableOpacity>\n  );\n};\n\nexport default CovidInfo;\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    marginHorizontal: 10,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  paragraph: {\n    fontFamily: 'NunitoSans-Bold',\n    marginVertical: 10,\n    textAlign: 'justify',\n    marginBottom: 10,\n    fontSize: 15,\n  },\n  imageContainer: {\n    width: '95%',\n    height: 200,\n  },\n  image: { width: '100%', height: 200, borderRadius: 15 },\n  subtitle: {\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 25,\n    color: 'red',\n    fontWeight: 'bold',\n  },\n  subtitleView: {\n    flexDirection: 'row',\n    paddingLeft: 10,\n    paddingTop: 5,\n  },\n  card_title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'justify',\n    backgroundColor: Colors.primaryColor,\n    color: 'white',\n    marginTop: -15,\n    marginHorizontal: -16,\n    padding: 15,\n    borderTopLeftRadius: 15,\n    borderTopRightRadius: 15,\n  },\n  footer: {\n    marginVertical: 20,\n    width: '100%',\n    flexDirection: 'row',\n    justifyContent: 'center',\n  },\n  footer_column: {\n    width: Dimensions.get('window').width / 2,\n    marginHorizontal: 10,\n    justifyContent: 'center',\n    alignItems: 'center',\n  },\n  footer_links: {\n    // padding: 10,\n    fontSize: Dimensions.get('window').width > 400 ? 15 : 12,\n    color: Colors.primaryColor,\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  ul: {\n    width: 5,\n    height: 5,\n    backgroundColor: 'black',\n    borderRadius: 15,\n  },\n});\n",
+    "content": "import React from 'react';\nimport {\n  StyleSheet,\n  View,\n  Image,\n  SafeAreaView,\n  TouchableOpacity,\n  Dimensions,\n} from 'react-native';\nimport { Card, Icon, Text } from 'react-native-elements';\nimport Colors from '../constants/Colors';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { coinButton } from '../helpers/audio';\n\n/**\n * Pantalla que muestra los detalles de una recomendación para prevenir COVID-19\n * @param {prop} navigation - Contiene información básica de navegación\n * @param {prop} route - Recibe parametros importantes para mostrar en pantalla\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @see https://reactnavigation.org/docs/route-prop/\n * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista\n */\nconst CovidInfo = ({ navigation, route }) => {\n  const { title, description, image, steps } = route.params;\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        <View style={styles.view}>\n          <Text style={styles.title}>{title}</Text>\n          <View style={styles.line}></View>\n          <MainParagraph description={description} />\n          <RenderImage url={image} />\n          <Text style={styles.subtitle}>Recomendaciones a Seguir</Text>\n          <FollowSteps steps={steps} />\n          <Footer navigation={navigation} />\n        </View>\n      </ScrollView>\n    </SafeAreaView>\n  );\n};\n\n/**\n * Este componente muestra el párrafo principal que contiene la descripción\n * de una recomendación.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {Array<string>} description - Contiene una lista de tipo string con la descripción\n * @return {View} Devuelve una vista con los párrafos iterados en un componente <Text>\n */\nexport const MainParagraph = ({ description }) => {\n  return (\n    <View style={styles.view}>\n      {description.map((paragraph, index) => (\n        <Text key={index} style={styles.paragraph}>{`${paragraph}\\n`}</Text>\n      ))}\n    </View>\n  );\n};\n\n/**\n * Este componente se encarga de Renderizar una imagen.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {string} url - Contiene la url de una imagen a mostrar.\n * @return {View} Retorna una vista con la imagen cargada.\n */\nexport const RenderImage = ({ url }) => {\n  return (\n    <View style={{ ...styles.imageContainer }}>\n      <Image style={styles.image} source={{ uri: url }} />\n    </View>\n  );\n};\n\n/**\n * Componente que muestra los pasos principales para seguir una recomendación.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {Array<string>} steps - contiene una lista de tipo string con la información de recomenadaciones a seguir.\n * @return {Card} Devuelve una tarjeta con el listado de recomendaciones a seguir.\n */\nexport const FollowSteps = ({ steps }) => {\n  return (\n    <Card containerStyle={{ borderRadius: 15 }}>\n      <Card.Title style={styles.card_title}>\n        A continuación se muestran las siguientes indicaciones:\n      </Card.Title>\n      <View>\n        {steps.map((step, index) => (\n          <View key={index}>\n            <Text style={{ ...styles.paragraph }}>{`\\u2022 ${step}`}</Text>\n            <Card.Divider />\n          </View>\n        ))}\n      </View>\n    </Card>\n  );\n};\n\n/**\n * Componente que muestra un pie de página.\n * Se llama en la pantalla {@link CovidInfo}.\n * @param {prop} navigation\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {View} Devuelve una vista con Enlaces\n */\nexport const Footer = ({ navigation }) => {\n  return (\n    <View style={styles.footer}>\n      <FooterLinks\n        text=\"Preguntas Frecuentes\"\n        name=\"question-circle\"\n        color=\"darkturquoise\"\n        size={75}\n        navigation={navigation}\n        screenRouteName=\"FAQs\"\n      />\n      <FooterLinks\n        text=\"Sitios de Interes\"\n        name=\"exclamation-circle\"\n        color=\"green\"\n        size={75}\n        navigation={navigation}\n        screenRouteName=\"WebLinks\"\n      />\n    </View>\n  );\n};\n\n/**\n * Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla.\n * Se llama en el componente {@link Footer}.\n * @param {string} name - Nombre del Icono a mostrar.\n * @param {string} color - Color del Icono a mostrar.\n * @param {number} size - Tamaño del Icono.\n * @param {string} text - Texto a mostrar del enlace.\n * @param {string} screenRouteName - Nombre de la pantalla a la cuál se navegará.\n * @param {prop} navigation\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {TouchableOpacity} Devuelve una vista presionable\n */\nexport const FooterLinks = ({\n  navigation,\n  name,\n  color,\n  size,\n  text,\n  screenRouteName,\n}) => {\n  return (\n    <TouchableOpacity\n      style={{ borderRadius: 15 }}\n      onPressIn={coinButton}\n      onPress={() => {\n        navigation.navigate(screenRouteName);\n      }}>\n      <View style={styles.footer_column}>\n        <Icon\n          name={name}\n          type=\"font-awesome-5\"\n          solid\n          color={color}\n          size={size}\n        />\n        <Text style={styles.footer_links}>{text}</Text>\n      </View>\n    </TouchableOpacity>\n  );\n};\n\nexport default CovidInfo;\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    marginHorizontal: 10,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  paragraph: {\n    fontFamily: 'NunitoSans-Bold',\n    marginVertical: 10,\n    textAlign: 'justify',\n    marginBottom: 10,\n    fontSize: 15,\n  },\n  imageContainer: {\n    width: '95%',\n    height: 200,\n  },\n  image: { width: '100%', height: 200, borderRadius: 15 },\n  subtitle: {\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 25,\n    color: 'red',\n    fontWeight: 'bold',\n  },\n  subtitleView: {\n    flexDirection: 'row',\n    paddingLeft: 10,\n    paddingTop: 5,\n  },\n  card_title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'justify',\n    backgroundColor: Colors.primaryColor,\n    color: 'white',\n    marginTop: -15,\n    marginHorizontal: -16,\n    padding: 15,\n    borderTopLeftRadius: 15,\n    borderTopRightRadius: 15,\n  },\n  footer: {\n    marginVertical: 20,\n    width: '100%',\n    flexDirection: 'row',\n    justifyContent: 'center',\n  },\n  footer_column: {\n    width: Dimensions.get('window').width / 2,\n    marginHorizontal: 10,\n    justifyContent: 'center',\n    alignItems: 'center',\n  },\n  footer_links: {\n    // padding: 10,\n    fontSize: Dimensions.get('window').width > 400 ? 15 : 12,\n    color: Colors.primaryColor,\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  ul: {\n    width: 5,\n    height: 5,\n    backgroundColor: 'black',\n    borderRadius: 15,\n  },\n});\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/CovidInfo.js",
     "access": "public",
@@ -2333,8 +2338,8 @@
     "export": true,
     "importPath": "tinMarin/src/screens/CovidInfo.js",
     "importStyle": "{RenderImage}",
-    "description": "Este componente se encarga de Renderizar una imagen",
-    "lineNumber": 65,
+    "description": "Este componente se encarga de Renderizar una imagen.\nSe llama en la pantalla {@link CovidInfo}.",
+    "lineNumber": 66,
     "params": [
       {
         "nullable": null,
@@ -2369,8 +2374,8 @@
     "export": true,
     "importPath": "tinMarin/src/screens/CovidInfo.js",
     "importStyle": "{FollowSteps}",
-    "description": "Componente que muestra los pasos principales para seguir una recomendación.",
-    "lineNumber": 78,
+    "description": "Componente que muestra los pasos principales para seguir una recomendación.\nSe llama en la pantalla {@link CovidInfo}.",
+    "lineNumber": 80,
     "params": [
       {
         "nullable": null,
@@ -2405,11 +2410,11 @@
     "export": true,
     "importPath": "tinMarin/src/screens/CovidInfo.js",
     "importStyle": "{Footer}",
-    "description": "Componente que muestra un pie de página.",
+    "description": "Componente que muestra un pie de página.\nSe llama en la pantalla {@link CovidInfo}.",
     "see": [
       "https://reactnavigation.org/docs/navigation-prop/"
     ],
-    "lineNumber": 102,
+    "lineNumber": 105,
     "params": [
       {
         "nullable": null,
@@ -2444,11 +2449,11 @@
     "export": true,
     "importPath": "tinMarin/src/screens/CovidInfo.js",
     "importStyle": "{FooterLinks}",
-    "description": "Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla.",
+    "description": "Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla.\nSe llama en el componente {@link Footer}.",
     "see": [
       "https://reactnavigation.org/docs/navigation-prop/"
     ],
-    "lineNumber": 136,
+    "lineNumber": 140,
     "params": [
       {
         "nullable": null,
@@ -2532,7 +2537,7 @@
     "importPath": "tinMarin/src/screens/CovidInfo.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 167,
+    "lineNumber": 171,
     "undocument": true,
     "type": {
       "types": [
@@ -2902,7 +2907,7 @@
     "__docId__": 146,
     "kind": "file",
     "name": "src/screens/FAQScreen.js",
-    "content": "import { map } from 'lodash';\nimport React, { useState, useEffect } from 'react';\nimport {\n  View,\n  StyleSheet,\n  Text,\n  SafeAreaView,\n  ActivityIndicator,\n} from 'react-native';\nimport { getAllFAQs } from '../api/faqs';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { Card } from 'react-native-elements';\nimport Colors from '../constants/Colors';\nimport { size } from 'lodash';\n\nconst FAQScreen = ({ navigation }) => {\n  const [faqs, setFaqs] = useState(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    getAllFAQs().then((response) => {\n      // console.log(response);\n      setFaqs(response);\n      setLoading(false);\n    });\n  }, []);\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        {loading ? (\n          <ActivityIndicator\n            style={{\n              marginTop: 200,\n            }}\n            size=\"large\"\n            color=\"#0000ff\"\n          />\n        ) : size(faqs) == 0 ? (\n          <Text style={styles.text}>\n            No se encontraron Preguntas Frecuentes\n          </Text>\n        ) : (\n          <View style={styles.view}>\n            <Text style={styles.title}>Preguntas Frecuentes</Text>\n            <View style={styles.line}></View>\n            {faqs.map((faq, index) => {\n              return (\n                <Card key={index} containerStyle={{ borderRadius: 15 }}>\n                  <Card.Title style={styles.card_title}>\n                    {faq.question}\n                  </Card.Title>\n                  <View>\n                    <Text style={styles.paragraph}>{faq.answer}</Text>\n                  </View>\n                </Card>\n              );\n            })}\n          </View>\n        )}\n      </ScrollView>\n    </SafeAreaView>\n  );\n};\n\nconst ListingCards = () => {\n  return null;\n};\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    marginHorizontal: 10,\n    marginBottom: 30,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  paragraph: {\n    fontFamily: 'NunitoSans-Bold',\n    // marginVertical: 10,\n    textAlign: 'justify',\n    marginBottom: 10,\n    fontSize: 15,\n  },\n  card_title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'justify',\n    backgroundColor: Colors.primaryColor,\n    color: 'white',\n    marginTop: -15,\n    marginHorizontal: -16,\n    padding: 15,\n    borderTopLeftRadius: 15,\n    borderTopRightRadius: 15,\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\nexport default FAQScreen;\n",
+    "content": "import { map } from 'lodash';\nimport React, { useState, useEffect } from 'react';\nimport {\n  View,\n  StyleSheet,\n  Text,\n  SafeAreaView,\n  ActivityIndicator,\n} from 'react-native';\nimport { getAllFAQs } from '../api/faqs';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { Card } from 'react-native-elements';\nimport Colors from '../constants/Colors';\nimport { size } from 'lodash';\n\n/**\n * Pantalla que muestra una lista de tarjetas con preguntas frecuentes.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {SafeAreaView} Regreesa una layout con la maquetación de la pantalla\n */\nconst FAQScreen = ({ navigation }) => {\n  const [faqs, setFaqs] = useState(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    getAllFAQs().then((response) => {\n      setFaqs(response);\n      setLoading(false);\n    });\n  }, []);\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        {loading ? (\n          <ActivityIndicator\n            style={{\n              marginTop: 200,\n            }}\n            size=\"large\"\n            color=\"#0000ff\"\n          />\n        ) : size(faqs) == 0 ? (\n          <Text style={styles.text}>\n            No se encontraron Preguntas Frecuentes\n          </Text>\n        ) : (\n          <View style={styles.view}>\n            <Text style={styles.title}>Preguntas Frecuentes</Text>\n            <View style={styles.line}></View>\n            {faqs.map((faq, index) => {\n              return (\n                <Card key={index} containerStyle={{ borderRadius: 15 }}>\n                  <Card.Title style={styles.card_title}>\n                    {faq.question}\n                  </Card.Title>\n                  <View>\n                    <Text style={styles.paragraph}>{faq.answer}</Text>\n                  </View>\n                </Card>\n              );\n            })}\n          </View>\n        )}\n      </ScrollView>\n    </SafeAreaView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    marginHorizontal: 10,\n    marginBottom: 30,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  paragraph: {\n    fontFamily: 'NunitoSans-Bold',\n    // marginVertical: 10,\n    textAlign: 'justify',\n    marginBottom: 10,\n    fontSize: 15,\n  },\n  card_title: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'justify',\n    backgroundColor: Colors.primaryColor,\n    color: 'white',\n    marginTop: -15,\n    marginHorizontal: -16,\n    padding: 15,\n    borderTopLeftRadius: 15,\n    borderTopRightRadius: 15,\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\nexport default FAQScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/FAQScreen.js",
     "access": "public",
@@ -2911,30 +2916,6 @@
   },
   {
     "__docId__": 147,
-    "kind": "function",
-    "name": "ListingCards",
-    "memberof": "src/screens/FAQScreen.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/screens/FAQScreen.js~ListingCards",
-    "access": "public",
-    "export": false,
-    "importPath": "tinMarin/src/screens/FAQScreen.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 66,
-    "undocument": true,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 148,
     "kind": "variable",
     "name": "styles",
     "memberof": "src/screens/FAQScreen.js",
@@ -2945,7 +2926,7 @@
     "importPath": "tinMarin/src/screens/FAQScreen.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 70,
+    "lineNumber": 71,
     "undocument": true,
     "type": {
       "types": [
@@ -2955,7 +2936,7 @@
     "ignore": true
   },
   {
-    "__docId__": 149,
+    "__docId__": 148,
     "kind": "function",
     "name": "FAQScreen",
     "memberof": "src/screens/FAQScreen.js",
@@ -2967,32 +2948,37 @@
     "export": true,
     "importPath": "tinMarin/src/screens/FAQScreen.js",
     "importStyle": "FAQScreen",
-    "description": null,
-    "lineNumber": 16,
-    "undocument": true,
+    "description": "Pantalla que muestra una lista de tarjetas con preguntas frecuentes.",
+    "see": [
+      "https://reactnavigation.org/docs/navigation-prop/"
+    ],
+    "lineNumber": 22,
     "params": [
       {
-        "name": "objectPattern",
+        "nullable": null,
         "types": [
-          "{\"navigation\": *}"
+          "prop"
         ],
-        "defaultRaw": {
-          "navigation": null
-        },
-        "defaultValue": "{\"navigation\":null}"
+        "spread": false,
+        "optional": false,
+        "name": "navigation",
+        "description": "Contiene información básica de navegación"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "SafeAreaView"
+      ],
+      "spread": false,
+      "description": "Regreesa una layout con la maquetación de la pantalla"
     }
   },
   {
-    "__docId__": 150,
+    "__docId__": 149,
     "kind": "file",
     "name": "src/screens/HomeScreen.js",
-    "content": "import { noConflict } from 'lodash';\nimport React from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  ImageBackground,\n  ScrollView,\n  TouchableOpacity,\n} from 'react-native';\nimport Covid from '../assets/Covid.jpeg';\nimport FAQs from '../assets/FAQs.jpeg';\nimport WebLinks from '../assets/WebLinks.jpg';\nimport Sugerencias from '../assets/Sugerencias.png';\nimport Exhibicion from '../assets/Exhibicion.jpg';\nimport { \n  playButtonPress, \n  heyListenButton,\n  wowButton, \n  msnButton,\n  catcButton,\n  ohhButton\n} from '../helpers/audio';\nimport ConocenosMas from '../assets/ConocenosMas.jpg';\n\nconst HomeScreen = ({ navigation }) => {\n  return (\n    <ScrollView>\n      <View style={styles.view}>\n        <TouchableOpacity onPress={playButtonPress}>\n          <Text style={styles.title}>Menu Principal</Text>\n        </TouchableOpacity>\n\n        <View style={styles.line}></View>\n\n        <TouchableOpacity\n          onPressIn={playButtonPress}\n          onPress={() => {\n            navigation.navigate('exhibits');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Exhibicion}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Exhibiciones</Text>\n              <Text style={styles.text2}>\n                Ven y conoce todas nuestras exhibiciones disponibles para que\n                las puedas visitar !\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={heyListenButton}\n          onPress={() => {\n            navigation.navigate('covid');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Covid}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Recomendaciones Covid-19</Text>\n              <Text style={styles.text2}>\n                Toma en cuenta las siguientes recomendaciones al visitarnos!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={ohhButton}\n          onPress={() => {\n            navigation.navigate('knowMore');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={ConocenosMas}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Conocenos Más</Text>\n              <Text style={styles.text2}>\n                Aqui puedes encontrar informacion de contacto, estamos a la\n                orden!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={msnButton}\n          onPress={() => {\n            navigation.navigate('comments');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Sugerencias}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Sugerencias</Text>\n              <Text style={styles.text2}>\n                Para seguir mejorando, puedes dejarnos cualquier duda o\n                inquietud!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={catcButton}\n          onPress={() => {\n            navigation.navigate('FAQs');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={FAQs}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Preguntas Frecuentes</Text>\n              <Text style={styles.text2}>\n                Por si tienes alguna consulta para resolver de forma rápida!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={wowButton}\n          onPress={() => {\n            navigation.navigate('WebLinks');\n          }}\n          style={{ ...styles.cardContainer, marginBottom: 30 }}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={WebLinks}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Sitios de Interés</Text>\n              <Text style={styles.text2}>\n                Si deseas profundizar un poco más en otros temas relevantes!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  image:{\n    width: '100%'\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  card: {\n    width: '90%',\n    height: 200,\n    backgroundColor: 'rgb(0,0,0)',\n    borderRadius: 10,\n  },\n\n  cardContainer: {\n    width: '100%',\n    alignItems: 'center',\n    marginTop: 40,\n  },\n  textContainer: {\n    marginLeft: 20,\n    marginTop: 20,\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    color: 'white',\n    fontSize: 25,\n  },\n  text2: {\n    fontFamily: 'NunitoSans-Bold',\n    color: 'white',\n    fontSize: 15,\n  },\n});\n\nexport default HomeScreen;\n",
+    "content": "import { noConflict } from 'lodash';\nimport React from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  ImageBackground,\n  ScrollView,\n  TouchableOpacity,\n} from 'react-native';\nimport Covid from '../assets/Covid.jpeg';\nimport FAQs from '../assets/FAQs.jpeg';\nimport WebLinks from '../assets/WebLinks.jpg';\nimport Sugerencias from '../assets/Sugerencias.png';\nimport Exhibicion from '../assets/Exhibicion.jpg';\nimport {\n  playButtonPress,\n  heyListenButton,\n  wowButton,\n  msnButton,\n  catcButton,\n  ohhButton,\n} from '../helpers/audio';\nimport ConocenosMas from '../assets/ConocenosMas.jpg';\n\n/**\n * Pantalla Principal que contiene una lista de tarjetas con los accesos directos de los diferentes\n * módulos que posee la aplicación.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla\n */\nconst HomeScreen = ({ navigation }) => {\n  return (\n    <ScrollView>\n      <View style={styles.view}>\n        <TouchableOpacity onPress={playButtonPress}>\n          <Text style={styles.title}>Menu Principal</Text>\n        </TouchableOpacity>\n\n        <View style={styles.line}></View>\n\n        <TouchableOpacity\n          onPressIn={playButtonPress}\n          onPress={() => {\n            navigation.navigate('exhibits');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Exhibicion}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Exhibiciones</Text>\n              <Text style={styles.text2}>\n                Ven y conoce todas nuestras exhibiciones disponibles para que\n                las puedas visitar !\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={heyListenButton}\n          onPress={() => {\n            navigation.navigate('covid');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Covid}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Recomendaciones Covid-19</Text>\n              <Text style={styles.text2}>\n                Toma en cuenta las siguientes recomendaciones al visitarnos!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={ohhButton}\n          onPress={() => {\n            navigation.navigate('knowMore');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={ConocenosMas}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Conocenos Más</Text>\n              <Text style={styles.text2}>\n                Aqui puedes encontrar informacion de contacto, estamos a la\n                orden!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={msnButton}\n          onPress={() => {\n            navigation.navigate('comments');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={Sugerencias}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Sugerencias</Text>\n              <Text style={styles.text2}>\n                Para seguir mejorando, puedes dejarnos cualquier duda o\n                inquietud!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={catcButton}\n          onPress={() => {\n            navigation.navigate('FAQs');\n          }}\n          style={styles.cardContainer}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={FAQs}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Preguntas Frecuentes</Text>\n              <Text style={styles.text2}>\n                Por si tienes alguna consulta para resolver de forma rápida!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n\n        <TouchableOpacity\n          onPressIn={wowButton}\n          onPress={() => {\n            navigation.navigate('WebLinks');\n          }}\n          style={{ ...styles.cardContainer, marginBottom: 30 }}>\n          <ImageBackground\n            imageStyle={{ opacity: 0.5, ...styles.image }}\n            source={WebLinks}\n            style={styles.card}\n            borderRadius={10}>\n            <View style={styles.textContainer}>\n              <Text style={styles.text}>Sitios de Interés</Text>\n              <Text style={styles.text2}>\n                Si deseas profundizar un poco más en otros temas relevantes!\n              </Text>\n            </View>\n          </ImageBackground>\n        </TouchableOpacity>\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  image: {\n    width: '100%',\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  card: {\n    width: '90%',\n    height: 200,\n    backgroundColor: 'rgb(0,0,0)',\n    borderRadius: 10,\n  },\n\n  cardContainer: {\n    width: '100%',\n    alignItems: 'center',\n    marginTop: 40,\n  },\n  textContainer: {\n    marginLeft: 20,\n    marginTop: 20,\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    color: 'white',\n    fontSize: 25,\n  },\n  text2: {\n    fontFamily: 'NunitoSans-Bold',\n    color: 'white',\n    fontSize: 15,\n  },\n});\n\nexport default HomeScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/HomeScreen.js",
     "access": "public",
@@ -3000,7 +2986,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 151,
+    "__docId__": 150,
     "kind": "variable",
     "name": "styles",
     "memberof": "src/screens/HomeScreen.js",
@@ -3011,7 +2997,7 @@
     "importPath": "tinMarin/src/screens/HomeScreen.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 163,
+    "lineNumber": 170,
     "undocument": true,
     "type": {
       "types": [
@@ -3021,7 +3007,7 @@
     "ignore": true
   },
   {
-    "__docId__": 152,
+    "__docId__": 151,
     "kind": "function",
     "name": "HomeScreen",
     "memberof": "src/screens/HomeScreen.js",
@@ -3033,29 +3019,34 @@
     "export": true,
     "importPath": "tinMarin/src/screens/HomeScreen.js",
     "importStyle": "HomeScreen",
-    "description": null,
-    "lineNumber": 26,
-    "undocument": true,
+    "description": "Pantalla Principal que contiene una lista de tarjetas con los accesos directos de los diferentes\nmódulos que posee la aplicación.",
+    "see": [
+      "https://reactnavigation.org/docs/navigation-prop/"
+    ],
+    "lineNumber": 33,
     "params": [
       {
-        "name": "objectPattern",
+        "nullable": null,
         "types": [
-          "{\"navigation\": *}"
+          "prop"
         ],
-        "defaultRaw": {
-          "navigation": null
-        },
-        "defaultValue": "{\"navigation\":null}"
+        "spread": false,
+        "optional": false,
+        "name": "navigation",
+        "description": "Contiene información básica de navegación"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "ScrollView"
+      ],
+      "spread": false,
+      "description": "Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla"
     }
   },
   {
-    "__docId__": 153,
+    "__docId__": 152,
     "kind": "file",
     "name": "src/screens/InfoCard.js",
     "content": "import React, { useState, useEffect } from 'react';\nimport { StyleSheet, SafeAreaView, View, Image } from 'react-native';\nimport { IconButton, Text, Title } from 'react-native-paper';\nimport { getExhibitionById } from '../api/exhibitions';\nimport ModalBody from '../components/ModalBody';\nimport { ScrollView } from 'react-native-gesture-handler';\nimport { map, size } from 'lodash';\n\nconst InfoCard = ({ route }) => {\n  const { _id } = route.params;\n  const [visible, setVisible] = useState(false);\n  const [exhibition, setExhibition] = useState(null);\n\n  const showModal = () => setVisible(!visible);\n\n  useEffect(() => {\n    getExhibitionById(_id).then((response) => {\n      setExhibition(response);\n    });\n  }, []);\n\n  if (!exhibition) return null;\n\n  const [imageURL] = exhibition.images;\n  const [logoURL] = exhibition.sponsorLogo;\n\n  return (\n    <SafeAreaView>\n      <ScrollView showsVerticalScrollIndicator={false}>\n        <InfoImage path={imageURL} />\n        <InfoModal setVisible={setVisible} />\n        <InfoTitle exhibition={exhibition} />\n        <Text style={styles.overview}>{exhibition.description}</Text>\n        {logoURL && <InfoSponsor url={logoURL} />}\n        <InfoFooter exhibition={exhibition} />\n      </ScrollView>\n      <ModalBody\n        visible={visible}\n        showModal={showModal}\n        curiousInfo={exhibition.curiousInfo}\n      />\n    </SafeAreaView>\n  );\n};\n\nexport default InfoCard;\n\nconst InfoImage = ({ path }) => {\n  return (\n    <View style={styles.viewPoster}>\n      <Image style={styles.poster} source={{ uri: path }} />\n    </View>\n  );\n};\n\nconst InfoModal = ({ setVisible }) => {\n  return (\n    <View style={styles.viewModal}>\n      <IconButton\n        icon=\"information-variant\"\n        size={30}\n        color=\"#000\"\n        style={styles.info}\n        onPress={() => setVisible(true)}\n      />\n    </View>\n  );\n};\n\nconst InfoTitle = ({ exhibition }) => {\n  return (\n    <View style={styles.viewInfo}>\n      <Title style={{ color: '#F29F05', fontWeight: 'bold', fontSize: 23 }}>\n        {exhibition.name}\n      </Title>\n    </View>\n  );\n};\n\nconst InfoSponsor = ({ url }) => {\n  return (\n    <View style={styles.viewSponsor}>\n      <Title\n        style={{\n          color: 'black',\n          fontSize: 17,\n          fontWeight: 'bold',\n          marginHorizontal: 30,\n          marginTop: 5,\n        }}>\n        Patrocina:{' '}\n      </Title>\n      <Image source={{ uri: url }} style={styles.imgSponsor} />\n    </View>\n  );\n};\n\nconst InfoFooter = ({ exhibition }) => {\n  const {\n    minimumAge,\n    maximumAge,\n    educationArea,\n    duration,\n    capacity,\n  } = exhibition;\n  return (\n    <View style={styles.viewFooter}>\n      <FooterItem\n        title=\"Educación:\"\n        desc={educationArea}\n        icon=\"book-open-variant\"\n      />\n      <FooterItem\n        title=\"Edades:\"\n        desc={`${minimumAge} a ${maximumAge} años`}\n        icon=\"human-male-boy\"\n      />\n      <FooterItem\n        title=\"Duración:\"\n        desc={duration == 1 ? `${duration} minuto` : `${duration} minutos`}\n        icon=\"clock-time-three-outline\"\n      />\n      <FooterItem\n        title=\"Capacidad:\"\n        desc={capacity == 1 ? `${capacity} niño` : `${capacity} niños`}\n        icon=\"account-group\"\n      />\n    </View>\n  );\n};\n\nconst FooterItem = ({ title, desc, icon }) => {\n  return (\n    <View>\n      <IconButton\n        icon={icon}\n        size={30}\n        color=\"#F87311\"\n        style={styles.footerItem}\n      />\n      <Text style={[styles.textItem, { fontWeight: 'bold' }]}>{title}</Text>\n      {Array.isArray(desc) ? (\n        map(desc, (d, index) => (\n          <Text key={index} style={styles.textItem}>\n            {d}\n            {index !== size(desc) - 1 && ', '}\n          </Text>\n        ))\n      ) : (\n        <Text style={styles.textItem}>{desc}</Text>\n      )}\n    </View>\n  );\n};\n\nconst styles = StyleSheet.create({\n  viewPoster: {\n    shadowColor: '#000',\n    shadowOffset: {\n      width: 0,\n      height: 10,\n    },\n    shadowOpacity: 1,\n    shadowRadius: 10,\n  },\n  poster: {\n    width: '100%',\n    height: 500,\n    borderBottomLeftRadius: 30,\n    borderBottomRightRadius: 30,\n  },\n  info: {\n    backgroundColor: '#fff',\n    marginTop: -40,\n    marginRight: 30,\n    width: 60,\n    height: 60,\n    borderRadius: 100,\n    borderColor: '#000',\n    borderWidth: 0.15,\n  },\n  viewInfo: {\n    marginHorizontal: 30,\n  },\n  viewRating: {\n    marginHorizontal: 30,\n    marginTop: 10,\n    flexDirection: 'row',\n    alignItems: 'center',\n  },\n  viewModal: {\n    justifyContent: 'flex-end',\n    alignItems: 'flex-end',\n  },\n  viewFooter: {\n    marginVertical: 20,\n    marginHorizontal: 20,\n    flexDirection: 'row',\n    justifyContent: 'space-between',\n  },\n  footerItem: {\n    borderRadius: 100,\n    width: 60,\n    height: 60,\n    backgroundColor: '#fff',\n    borderColor: '#F87311',\n    borderWidth: 2,\n  },\n  textItem: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 13,\n    color: '#000',\n  },\n  overview: {\n    fontFamily: 'NunitoSans-Bold',\n    marginHorizontal: 30,\n    marginTop: 20,\n    textAlign: 'justify',\n    color: '#929292',\n    fontSize: 16,\n  },\n  imgSponsor: {\n    width: 160,\n    height: 100,\n    alignSelf: 'center',\n    marginTop: 4,\n    marginBottom: 2,\n  },\n});\n",
@@ -3066,7 +3057,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 154,
+    "__docId__": 153,
     "kind": "function",
     "name": "InfoImage",
     "memberof": "src/screens/InfoCard.js",
@@ -3101,7 +3092,7 @@
     "ignore": true
   },
   {
-    "__docId__": 155,
+    "__docId__": 154,
     "kind": "function",
     "name": "InfoModal",
     "memberof": "src/screens/InfoCard.js",
@@ -3136,7 +3127,7 @@
     "ignore": true
   },
   {
-    "__docId__": 156,
+    "__docId__": 155,
     "kind": "function",
     "name": "InfoTitle",
     "memberof": "src/screens/InfoCard.js",
@@ -3171,7 +3162,7 @@
     "ignore": true
   },
   {
-    "__docId__": 157,
+    "__docId__": 156,
     "kind": "function",
     "name": "InfoSponsor",
     "memberof": "src/screens/InfoCard.js",
@@ -3206,7 +3197,7 @@
     "ignore": true
   },
   {
-    "__docId__": 158,
+    "__docId__": 157,
     "kind": "function",
     "name": "InfoFooter",
     "memberof": "src/screens/InfoCard.js",
@@ -3241,7 +3232,7 @@
     "ignore": true
   },
   {
-    "__docId__": 159,
+    "__docId__": 158,
     "kind": "function",
     "name": "FooterItem",
     "memberof": "src/screens/InfoCard.js",
@@ -3278,7 +3269,7 @@
     "ignore": true
   },
   {
-    "__docId__": 160,
+    "__docId__": 159,
     "kind": "variable",
     "name": "styles",
     "memberof": "src/screens/InfoCard.js",
@@ -3299,7 +3290,7 @@
     "ignore": true
   },
   {
-    "__docId__": 161,
+    "__docId__": 160,
     "kind": "function",
     "name": "InfoCard",
     "memberof": "src/screens/InfoCard.js",
@@ -3333,10 +3324,10 @@
     }
   },
   {
-    "__docId__": 162,
+    "__docId__": 161,
     "kind": "file",
     "name": "src/screens/KnowMoreScreen.js",
-    "content": "import React from 'react';\nimport { StyleSheet, Text, View, ScrollView } from 'react-native';\nimport KnoMoreCard from '../components/KnoMoreCard';\nimport Colors from '../constants/Colors';\nimport InformacionDeContacto from '../assets/InformacionDeContacto.jpg';\nimport MisionVisionValores from '../assets/MisionVisionValores.jpg';\n\nconst KnowMoreScreen = ({ navigation }) => {\n  return (\n    <ScrollView showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Conócenos Más</Text>\n        <View style={styles.line}></View>\n        <KnoMoreCard\n          title=\"Contactos\"\n          imageURL={InformacionDeContacto}\n          color={Colors.magenta}\n          textBtn=\"Saber Mas\"\n          navigation={navigation}\n          screenName=\"contact\"\n        />\n\n        <KnoMoreCard\n          title=\"Misión, Visión, Valores\"\n          imageURL={MisionVisionValores}\n          color={Colors.magenta}\n          textBtn=\"Saber Mas\"\n          navigation={navigation}\n          screenName=\"missionAndVision\"\n        />\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n});\n\nexport default KnowMoreScreen;\n",
+    "content": "import React from 'react';\nimport { StyleSheet, Text, View, ScrollView } from 'react-native';\nimport KnoMoreCard from '../components/KnoMoreCard';\nimport Colors from '../constants/Colors';\nimport InformacionDeContacto from '../assets/InformacionDeContacto.jpg';\nimport MisionVisionValores from '../assets/MisionVisionValores.jpg';\n\n/**\n * Pantalla que muestra una lista de tarjetas con enlaces a pantallas para conocer más sobre Tin Marín.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst KnowMoreScreen = ({ navigation }) => {\n  return (\n    <ScrollView showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Conócenos Más</Text>\n        <View style={styles.line}></View>\n        <KnoMoreCard\n          title=\"Contactos\"\n          imageURL={InformacionDeContacto}\n          color={Colors.magenta}\n          textBtn=\"Saber Mas\"\n          navigation={navigation}\n          screenName=\"contact\"\n        />\n\n        <KnoMoreCard\n          title=\"Misión, Visión, Valores\"\n          imageURL={MisionVisionValores}\n          color={Colors.magenta}\n          textBtn=\"Saber Mas\"\n          navigation={navigation}\n          screenName=\"missionAndVision\"\n        />\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n});\n\nexport default KnowMoreScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/KnowMoreScreen.js",
     "access": "public",
@@ -3344,7 +3335,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 163,
+    "__docId__": 162,
     "kind": "variable",
     "name": "styles",
     "memberof": "src/screens/KnowMoreScreen.js",
@@ -3355,7 +3346,7 @@
     "importPath": "tinMarin/src/screens/KnowMoreScreen.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 36,
+    "lineNumber": 42,
     "undocument": true,
     "type": {
       "types": [
@@ -3365,7 +3356,7 @@
     "ignore": true
   },
   {
-    "__docId__": 164,
+    "__docId__": 163,
     "kind": "function",
     "name": "KnowMoreScreen",
     "memberof": "src/screens/KnowMoreScreen.js",
@@ -3377,32 +3368,37 @@
     "export": true,
     "importPath": "tinMarin/src/screens/KnowMoreScreen.js",
     "importStyle": "KnowMoreScreen",
-    "description": null,
-    "lineNumber": 8,
-    "undocument": true,
+    "description": "Pantalla que muestra una lista de tarjetas con enlaces a pantallas para conocer más sobre Tin Marín.",
+    "see": [
+      "https://reactnavigation.org/docs/navigation-prop/"
+    ],
+    "lineNumber": 14,
     "params": [
       {
-        "name": "objectPattern",
+        "nullable": null,
         "types": [
-          "{\"navigation\": *}"
+          "prop"
         ],
-        "defaultRaw": {
-          "navigation": null
-        },
-        "defaultValue": "{\"navigation\":null}"
+        "spread": false,
+        "optional": false,
+        "name": "navigation",
+        "description": "Contiene información básica de navegación"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "ScrollView"
+      ],
+      "spread": false,
+      "description": "Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla."
     }
   },
   {
-    "__docId__": 165,
+    "__docId__": 164,
     "kind": "file",
     "name": "src/screens/MissionAndVisionScreen.js",
-    "content": "import React from 'react';\nimport { StyleSheet, Text, View, ScrollView, Image } from 'react-native';\n\nconst ContactScreen = () => {\n  return (\n    <ScrollView style={styles.container}>\n      <View style={styles.view}>\n        <Text style={styles.titular}>Misión, Visión y Valores</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <Text style={styles.tema}>Misión:</Text>\n        <Text style={styles.title2}>\n          Contribuir a la formación de los niños y sus acompañantes en\n          ciudadanos integrales y creativos, mediante el aprendizaje\n          significativo, la orientación cultural y la experimentración divertida\n          con integridad, innovación y trabajo en equipo.\n        </Text>\n        <Text style={styles.tema}>Visión:</Text>\n        <Text style={styles.title2}>\n          Ser el espacio favorito, cultural y divertido de los niños para\n          aprender y disfrutar de experiencias únicas, emocionantes e\n          inolvidables; y ser mejores protagonistas de su desarrollo a nivel\n          personal, escolar y social.\n        </Text>\n        <Text style={styles.tema}>Valores:</Text>\n        <Text style={styles.title}>\n          Innovación{'\\n'}\n          Integridad{'\\n'}\n          Lealtad{'\\n'}\n          Respeto{'\\n'}\n          Trabajo en equipo{'\\n'}\n        </Text>\n      </View>\n    </ScrollView>\n  );\n};\nexport default ContactScreen;\n\nconst styles = StyleSheet.create({\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  container: {\n    flex: 1,\n    paddingBottom: 24,\n    paddingHorizontal: 24,\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title2: {\n    marginTop: 16,\n    paddingVertical: 8,\n    borderRadius: 6,\n    justifyContent: 'center',\n    color: '#20232a',\n    textAlign: 'justify',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 18,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 16,\n    paddingVertical: 8,\n    borderRadius: 6,\n    justifyContent: 'center',\n    color: '#20232a',\n    textAlign: 'center',\n    fontSize: 18,\n  },\n  tema: {\n    marginTop: 13,\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 24,\n    color: '#B22222',\n  },\n  Logo: {\n    width: 300,\n    height: 200,\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30,\n  },\n  titular: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n    textAlign: 'center',\n  },\n});\n",
+    "content": "import React from 'react';\nimport { StyleSheet, Text, View, ScrollView, Image } from 'react-native';\n\n/**\n * Pantalla que muestra la misión y visión de la entidad.\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst ContactScreen = () => {\n  return (\n    <ScrollView style={styles.container}>\n      <View style={styles.view}>\n        <Text style={styles.titular}>Misión, Visión y Valores</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <Text style={styles.tema}>Misión:</Text>\n        <Text style={styles.title2}>\n          Contribuir a la formación de los niños y sus acompañantes en\n          ciudadanos integrales y creativos, mediante el aprendizaje\n          significativo, la orientación cultural y la experimentración divertida\n          con integridad, innovación y trabajo en equipo.\n        </Text>\n        <Text style={styles.tema}>Visión:</Text>\n        <Text style={styles.title2}>\n          Ser el espacio favorito, cultural y divertido de los niños para\n          aprender y disfrutar de experiencias únicas, emocionantes e\n          inolvidables; y ser mejores protagonistas de su desarrollo a nivel\n          personal, escolar y social.\n        </Text>\n        <Text style={styles.tema}>Valores:</Text>\n        <Text style={styles.title}>\n          Innovación{'\\n'}\n          Integridad{'\\n'}\n          Lealtad{'\\n'}\n          Respeto{'\\n'}\n          Trabajo en equipo{'\\n'}\n        </Text>\n      </View>\n    </ScrollView>\n  );\n};\nexport default ContactScreen;\n\nconst styles = StyleSheet.create({\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  container: {\n    flex: 1,\n    paddingBottom: 24,\n    paddingHorizontal: 24,\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  title2: {\n    marginTop: 16,\n    paddingVertical: 8,\n    borderRadius: 6,\n    justifyContent: 'center',\n    color: '#20232a',\n    textAlign: 'justify',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 18,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 16,\n    paddingVertical: 8,\n    borderRadius: 6,\n    justifyContent: 'center',\n    color: '#20232a',\n    textAlign: 'center',\n    fontSize: 18,\n  },\n  tema: {\n    marginTop: 13,\n    textAlign: 'center',\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 24,\n    color: '#B22222',\n  },\n  Logo: {\n    width: 300,\n    height: 200,\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30,\n  },\n  titular: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n    textAlign: 'center',\n  },\n});\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/MissionAndVisionScreen.js",
     "access": "public",
@@ -3410,7 +3406,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 166,
+    "__docId__": 165,
     "kind": "variable",
     "name": "styles",
     "memberof": "src/screens/MissionAndVisionScreen.js",
@@ -3421,7 +3417,7 @@
     "importPath": "tinMarin/src/screens/MissionAndVisionScreen.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 44,
+    "lineNumber": 48,
     "undocument": true,
     "type": {
       "types": [
@@ -3431,7 +3427,7 @@
     "ignore": true
   },
   {
-    "__docId__": 167,
+    "__docId__": 166,
     "kind": "function",
     "name": "ContactScreen",
     "memberof": "src/screens/MissionAndVisionScreen.js",
@@ -3443,18 +3439,20 @@
     "export": true,
     "importPath": "tinMarin/src/screens/MissionAndVisionScreen.js",
     "importStyle": "ContactScreen",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
-    "params": [],
+    "description": "Pantalla que muestra la misión y visión de la entidad.",
+    "lineNumber": 8,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "ScrollView"
+      ],
+      "spread": false,
+      "description": "Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla."
+    },
+    "params": []
   },
   {
-    "__docId__": 168,
+    "__docId__": 167,
     "kind": "file",
     "name": "src/screens/Search.js",
     "content": "import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  View,\n  SafeAreaView,\n  ScrollView,\n  Platform,\n  Text,\n  ActivityIndicator,\n} from 'react-native';\nimport { Searchbar } from 'react-native-paper';\nimport { map, size } from 'lodash';\nimport { getExhibitionByName } from '../api/exhibitions';\nimport Card from '../components/Card';\nimport Colors from '../constants/Colors';\n\nconst Search = ({ navigation }) => {\n  const [search, setSearch] = useState('');\n  const [exhibitions, setExhibitions] = useState(null);\n  const [loading, setLoading] = useState(true);\n  let swapColor = true;\n\n  useEffect(() => {\n    if (size(search) >= 0) {\n      getExhibitionByName(search).then((response) => {\n        setExhibitions(response);\n        setLoading(false);\n      });\n    }\n  }, [search]);\n\n  const onChangeSearch = (e) => {\n    if (size(e) > 0) {\n      setLoading(true);\n    } else {\n      setLoading(false);\n    }\n    setSearch(e);\n  };\n\n  return (\n    <SafeAreaView style={styles.view}>\n      <Searchbar\n        placeholder=\"Buscar tu exhibición\"\n        iconColor=\"#4E73DF\"\n        icon=\"arrow-left\"\n        style={styles.input}\n        inputStyle={{ color: '#000' }}\n        onChangeText={onChangeSearch}\n      />\n      <ScrollView showsVerticalScrollIndicator={false}>\n        {loading ? (\n          <ActivityIndicator\n            style={{\n              marginTop: 200,\n            }}\n            size=\"large\"\n            color=\"#0000ff\"\n          />\n        ) : size(exhibitions) == 0 ? (\n          <Text style={styles.text}>No se encontraron exhibiciones</Text>\n        ) : (\n          <View style={styles.container}>\n            {map(exhibitions, (exhibition, index) => {\n              if (index % 2 == 0) {\n                swapColor = !swapColor;\n              }\n              return (\n                <Card\n                  key={exhibition._id}\n                  index={index}\n                  textBtn=\"Conócela\"\n                  color={swapColor ? Colors.green : Colors.magenta}\n                  exhibition={exhibition}\n                  navigation={navigation}\n                />\n              );\n            })}\n          </View>\n        )}\n      </ScrollView>\n    </SafeAreaView>\n  );\n};\n\nexport default Search;\n\nconst styles = StyleSheet.create({\n  input: {\n    marginTop: -3,\n  },\n  container: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  view: {\n    marginBottom: 50,\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\n",
@@ -3465,7 +3463,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 169,
+    "__docId__": 168,
     "kind": "variable",
     "name": "styles",
     "memberof": "src/screens/Search.js",
@@ -3486,7 +3484,7 @@
     "ignore": true
   },
   {
-    "__docId__": 170,
+    "__docId__": 169,
     "kind": "function",
     "name": "Search",
     "memberof": "src/screens/Search.js",
@@ -3520,10 +3518,10 @@
     }
   },
   {
-    "__docId__": 171,
+    "__docId__": 170,
     "kind": "file",
     "name": "src/screens/SugerenceScreen.js",
-    "content": "import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  ScrollView,\n  Image,\n  TouchableOpacity,\n  Alert,\n} from 'react-native';\nimport SugerenceCard from '../components/SugerenceCard';\nimport Colors from '../constants/Colors';\nimport { Picker } from '@react-native-picker/picker';\nimport { getAllSuperenceTypes, storeSugerence } from '../api/sugerences';\n\nconst SugerenceScreen = ({ navigation }) => {\n  // OBTIENE DATA, ES UNA COLLECCION\n  const [sugerenceTypes, setSugerenceTypes] = useState([]);\n  //GUARDA EN FORMULARIO ES UNICA\n  const [sugerenceType, setSugerenceType] = useState('');\n\n  const [comment, setComment] = useState('');\n\n  const [error, setError] = useState('');\n\n  useEffect(() => {\n    getAllSuperenceTypes().then((response) => {\n      setSugerenceTypes(response);\n    });\n  }, []);\n\n  const handleComment = (comment) => {\n    // console.log(`Guardando texto: ${comment}`);\n    setComment(comment);\n  };\n\n  const handleSend = () => {\n    if (comment === '' || sugerenceType === '') {\n      setError('Por favor, Ingrese un mensaje');\n      // console.log(sugerenceType);\n    } else {\n      storeSugerence(sugerenceType, comment).then((response) => {\n        // console.log(`Respuesta del server: ${response.status}`);\n        Alert.alert('Se envió tu Sugerencia con Éxito!!!');\n        setComment('');\n      });\n    }\n  };\n\n  return (\n    <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Sugerencias O Comentarios</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <View style={styles.pickerContainer}>\n          <Picker\n            style={styles.picker}\n            mode=\"dropdown\"\n            selectedValue={sugerenceType}\n            onValueChange={(itemValue, itemPosition) => {\n              setSugerenceType(itemValue);\n            }}>\n            {sugerenceTypes.map((sugerenceType, key) => (\n              <Picker.Item\n                key={key}\n                label={sugerenceType.name}\n                value={sugerenceType.name}\n              />\n            ))}\n          </Picker>\n        </View>\n      </View>\n      <SugerenceCard\n        sugerenceType={sugerenceType}\n        color={Colors.blueColor}\n        comment={comment}\n        onCommentChange={handleComment}\n      />\n      <View style={styles.view}>\n        <TouchableOpacity onPress={() => handleSend()} style={styles.button}>\n          <Text style={styles.buttonText}> Enviar! </Text>\n        </TouchableOpacity>\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  pickerContainer: {\n    flexDirection: 'row',\n    borderRadius: 15,\n    borderWidth: 1,\n    borderColor: '#d1d3e2',\n    overflow: 'hidden',\n  },\n  picker: {\n    height: 50,\n    width: '100%',\n    backgroundColor: '#858796',\n    color: 'white',\n  },\n  pickerItem: {\n    height: 100,\n    width: 500,\n    width: '100%',\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  button: {\n    flex: 1,\n    flexDirection: 'column',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: '#e74a3b',\n    marginBottom: 100,\n    height: 55,\n    width: '60%',\n    borderRadius: 10,\n  },\n  buttonText: {\n    fontFamily: 'NunitoSans-Bold',\n    color: '#fff',\n    fontWeight: 'bold',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n    textAlign: 'center',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  Logo: {\n    width: 300,\n    height: 200,\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30,\n  },\n  container: {\n    flex: 1,\n    padding: 24,\n    backgroundColor: '#ffffff',\n  },\n});\n\nexport default SugerenceScreen;\n",
+    "content": "import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  ScrollView,\n  Image,\n  TouchableOpacity,\n  Alert,\n} from 'react-native';\nimport SugerenceCard from '../components/SugerenceCard';\nimport Colors from '../constants/Colors';\nimport { Picker } from '@react-native-picker/picker';\nimport { getAllSuperenceTypes, storeSugerence } from '../api/sugerences';\n\n/**\n * Pantalla que muestra el formulario de sugerencias, para poder enviar un mensaje a la entidad.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst SugerenceScreen = ({ navigation }) => {\n  // OBTIENE DATA, ES UNA COLLECCION\n  const [sugerenceTypes, setSugerenceTypes] = useState([]);\n  //GUARDA EN FORMULARIO ES UNICA\n  const [sugerenceType, setSugerenceType] = useState('');\n\n  const [comment, setComment] = useState('');\n\n  const [error, setError] = useState('');\n\n  useEffect(() => {\n    getAllSuperenceTypes().then((response) => {\n      setSugerenceTypes(response);\n    });\n  }, []);\n\n  const handleComment = (comment) => {\n    // console.log(`Guardando texto: ${comment}`);\n    setComment(comment);\n  };\n\n  const handleSend = () => {\n    if (comment === '' || sugerenceType === '') {\n      setError('Por favor, Ingrese un mensaje');\n      // console.log(sugerenceType);\n    } else {\n      storeSugerence(sugerenceType, comment).then((response) => {\n        // console.log(`Respuesta del server: ${response.status}`);\n        Alert.alert('Se envió tu Sugerencia con Éxito!!!');\n        setComment('');\n      });\n    }\n  };\n\n  return (\n    <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>\n      <View style={styles.view}>\n        <Text style={styles.title}>Sugerencias O Comentarios</Text>\n        <View style={styles.line}></View>\n        <View style={styles.containerlogo}>\n          <Image\n            style={styles.Logo}\n            source={require('../assets/logoTinMarin.png')}\n          />\n        </View>\n        <View style={styles.pickerContainer}>\n          <Picker\n            style={styles.picker}\n            mode=\"dropdown\"\n            selectedValue={sugerenceType}\n            onValueChange={(itemValue, itemPosition) => {\n              setSugerenceType(itemValue);\n            }}>\n            {sugerenceTypes.map((sugerenceType, key) => (\n              <Picker.Item\n                key={key}\n                label={sugerenceType.name}\n                value={sugerenceType.name}\n              />\n            ))}\n          </Picker>\n        </View>\n      </View>\n      <SugerenceCard\n        sugerenceType={sugerenceType}\n        color={Colors.blueColor}\n        comment={comment}\n        onCommentChange={handleComment}\n      />\n      <View style={styles.view}>\n        <TouchableOpacity onPress={() => handleSend()} style={styles.button}>\n          <Text style={styles.buttonText}> Enviar! </Text>\n        </TouchableOpacity>\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  pickerContainer: {\n    flexDirection: 'row',\n    borderRadius: 15,\n    borderWidth: 1,\n    borderColor: '#d1d3e2',\n    overflow: 'hidden',\n  },\n  picker: {\n    height: 50,\n    width: '100%',\n    backgroundColor: '#858796',\n    color: 'white',\n  },\n  pickerItem: {\n    height: 100,\n    width: 500,\n    width: '100%',\n  },\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n  },\n  button: {\n    flex: 1,\n    flexDirection: 'column',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: '#e74a3b',\n    marginBottom: 100,\n    height: 55,\n    width: '60%',\n    borderRadius: 10,\n  },\n  buttonText: {\n    fontFamily: 'NunitoSans-Bold',\n    color: '#fff',\n    fontWeight: 'bold',\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    fontSize: 30,\n    color: '#566573',\n    fontWeight: 'bold',\n    textAlign: 'center',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  Logo: {\n    width: 300,\n    height: 200,\n  },\n  containerlogo: {\n    alignItems: 'center',\n    paddingHorizontal: 15,\n    paddingVertical: 30,\n  },\n  container: {\n    flex: 1,\n    padding: 24,\n    backgroundColor: '#ffffff',\n  },\n});\n\nexport default SugerenceScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/SugerenceScreen.js",
     "access": "public",
@@ -3531,7 +3529,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 172,
+    "__docId__": 171,
     "kind": "variable",
     "name": "styles",
     "memberof": "src/screens/SugerenceScreen.js",
@@ -3542,7 +3540,7 @@
     "importPath": "tinMarin/src/screens/SugerenceScreen.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 94,
+    "lineNumber": 100,
     "undocument": true,
     "type": {
       "types": [
@@ -3552,7 +3550,7 @@
     "ignore": true
   },
   {
-    "__docId__": 173,
+    "__docId__": 172,
     "kind": "function",
     "name": "SugerenceScreen",
     "memberof": "src/screens/SugerenceScreen.js",
@@ -3564,32 +3562,37 @@
     "export": true,
     "importPath": "tinMarin/src/screens/SugerenceScreen.js",
     "importStyle": "SugerenceScreen",
-    "description": null,
-    "lineNumber": 16,
-    "undocument": true,
+    "description": "Pantalla que muestra el formulario de sugerencias, para poder enviar un mensaje a la entidad.",
+    "see": [
+      "https://reactnavigation.org/docs/navigation-prop/"
+    ],
+    "lineNumber": 22,
     "params": [
       {
-        "name": "objectPattern",
+        "nullable": null,
         "types": [
-          "{\"navigation\": *}"
+          "prop"
         ],
-        "defaultRaw": {
-          "navigation": null
-        },
-        "defaultValue": "{\"navigation\":null}"
+        "spread": false,
+        "optional": false,
+        "name": "navigation",
+        "description": "Contiene información básica de navegación"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "ScrollView"
+      ],
+      "spread": false,
+      "description": "Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla."
     }
   },
   {
-    "__docId__": 174,
+    "__docId__": 173,
     "kind": "file",
     "name": "src/screens/WebLinksScreen.js",
-    "content": "import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  View,\n  Text,\n  ScrollView,\n  ActivityIndicator,\n} from 'react-native';\nimport BasicCard from '../components/BasicCard';\nimport Colors from '../constants/Colors';\nimport { getAllLinks } from '../api/weblinks';\nimport { LogBox } from 'react-native';\nimport { size } from 'lodash';\n\nLogBox.ignoreAllLogs();\n\nconst WebLinksScreen = ({ navigation }) => {\n  const [links, setlinks] = useState([]);\n  const [loading, setLoading] = useState(true);\n  const [fetched, setFetched] = useState(false);\n\n  useEffect(() => {\n    const abortController = new AbortController();\n    const signal = abortController.signal;\n    getAllLinks(signal).then((response) => {\n      setlinks(response);\n      setLoading(false);\n      setFetched(true);\n    });\n\n    if (fetched) abortController.abort();\n  });\n  return (\n    <ScrollView showsVerticalScrollIndicator={true}>\n      {loading ? (\n        <ActivityIndicator\n          style={{\n            marginTop: 200,\n          }}\n          size=\"large\"\n          color=\"#0000ff\"\n        />\n      ) : size(links) == 0 ? (\n        <Text style={styles.text}>No se encontraron Sitios de Interés</Text>\n      ) : (\n        <View style={styles.view}>\n          <Text style={styles.title}>Sitios de Interes</Text>\n          <View style={styles.line}></View>\n          {links.map((link, key) => (\n            <BasicCard\n              key={key}\n              imageURL={link.image}\n              title={link.title}\n              color={Colors.magenta}\n              url={link.url}\n              textBtn=\"Saber Mas\"\n            />\n          ))}\n        </View>\n      )}\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    paddingBottom: 30,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\n\nexport default WebLinksScreen;\n",
+    "content": "import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  View,\n  Text,\n  ScrollView,\n  ActivityIndicator,\n} from 'react-native';\nimport BasicCard from '../components/BasicCard';\nimport Colors from '../constants/Colors';\nimport { getAllLinks } from '../api/weblinks';\nimport { LogBox } from 'react-native';\nimport { size } from 'lodash';\n\nLogBox.ignoreAllLogs();\n\n/**\n * Pantalla que muestra la lista de Sitios de Interés.\n * @param {prop} navigation - Contiene información básica de navegación\n * @see https://reactnavigation.org/docs/navigation-prop/\n * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.\n */\nconst WebLinksScreen = ({ navigation }) => {\n  const [links, setlinks] = useState([]);\n  const [loading, setLoading] = useState(true);\n  const [fetched, setFetched] = useState(false);\n\n  useEffect(() => {\n    const abortController = new AbortController();\n    const signal = abortController.signal;\n    getAllLinks(signal).then((response) => {\n      setlinks(response);\n      setLoading(false);\n      setFetched(true);\n    });\n\n    if (fetched) abortController.abort();\n  });\n  return (\n    <ScrollView showsVerticalScrollIndicator={true}>\n      {loading ? (\n        <ActivityIndicator\n          style={{\n            marginTop: 200,\n          }}\n          size=\"large\"\n          color=\"#0000ff\"\n        />\n      ) : size(links) == 0 ? (\n        <Text style={styles.text}>No se encontraron Sitios de Interés</Text>\n      ) : (\n        <View style={styles.view}>\n          <Text style={styles.title}>Sitios de Interes</Text>\n          <View style={styles.line}></View>\n          {links.map((link, key) => (\n            <BasicCard\n              key={key}\n              imageURL={link.image}\n              title={link.title}\n              color={Colors.magenta}\n              url={link.url}\n              textBtn=\"Saber Mas\"\n            />\n          ))}\n        </View>\n      )}\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  view: {\n    flexDirection: 'column',\n    alignItems: 'center',\n    paddingBottom: 30,\n  },\n  title: {\n    fontFamily: 'NunitoSans-Bold',\n    marginTop: 20,\n    fontSize: 30,\n    color: '#566573',\n  },\n  line: {\n    height: 1,\n    width: '90%',\n    backgroundColor: '#D5D8DC',\n  },\n  text: {\n    fontFamily: 'NunitoSans-Bold',\n    textAlign: 'center',\n    fontSize: 20,\n    color: 'gray',\n  },\n});\n\nexport default WebLinksScreen;\n",
     "static": true,
     "longname": "/Users/didiercruz/Public/Proyectos/tin-marin-app/src/screens/WebLinksScreen.js",
     "access": "public",
@@ -3597,7 +3600,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 175,
+    "__docId__": 174,
     "kind": "variable",
     "name": "styles",
     "memberof": "src/screens/WebLinksScreen.js",
@@ -3608,7 +3611,7 @@
     "importPath": "tinMarin/src/screens/WebLinksScreen.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 65,
+    "lineNumber": 71,
     "undocument": true,
     "type": {
       "types": [
@@ -3618,7 +3621,7 @@
     "ignore": true
   },
   {
-    "__docId__": 176,
+    "__docId__": 175,
     "kind": "function",
     "name": "WebLinksScreen",
     "memberof": "src/screens/WebLinksScreen.js",
@@ -3630,25 +3633,30 @@
     "export": true,
     "importPath": "tinMarin/src/screens/WebLinksScreen.js",
     "importStyle": "WebLinksScreen",
-    "description": null,
-    "lineNumber": 17,
-    "undocument": true,
+    "description": "Pantalla que muestra la lista de Sitios de Interés.",
+    "see": [
+      "https://reactnavigation.org/docs/navigation-prop/"
+    ],
+    "lineNumber": 23,
     "params": [
       {
-        "name": "objectPattern",
+        "nullable": null,
         "types": [
-          "{\"navigation\": *}"
+          "prop"
         ],
-        "defaultRaw": {
-          "navigation": null
-        },
-        "defaultValue": "{\"navigation\":null}"
+        "spread": false,
+        "optional": false,
+        "name": "navigation",
+        "description": "Contiene información básica de navegación"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "ScrollView"
+      ],
+      "spread": false,
+      "description": "Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla."
     }
   },
   {

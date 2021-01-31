@@ -100,6 +100,12 @@ import { size } from &apos;lodash&apos;;
 
 LogBox.ignoreAllLogs();
 
+/**
+ * Pantalla que muestra la lista de Sitios de Inter&#xE9;s.
+ * @param {prop} navigation - Contiene informaci&#xF3;n b&#xE1;sica de navegaci&#xF3;n
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetaci&#xF3;n de la pantalla.
+ */
 const WebLinksScreen = ({ navigation }) =&gt; {
   const [links, setlinks] = useState([]);
   const [loading, setLoading] = useState(true);

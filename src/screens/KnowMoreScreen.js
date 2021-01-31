@@ -5,6 +5,12 @@ import Colors from '../constants/Colors';
 import InformacionDeContacto from '../assets/InformacionDeContacto.jpg';
 import MisionVisionValores from '../assets/MisionVisionValores.jpg';
 
+/**
+ * Pantalla que muestra una lista de tarjetas con enlaces a pantallas para conocer más sobre Tin Marín.
+ * @param {prop} navigation - Contiene información básica de navegación
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.
+ */
 const KnowMoreScreen = ({ navigation }) => {
   return (
     <ScrollView showsVerticalScrollIndicator={true}>

@@ -14,6 +14,12 @@ import { size } from 'lodash';
 
 LogBox.ignoreAllLogs();
 
+/**
+ * Pantalla que muestra la lista de Sitios de Interés.
+ * @param {prop} navigation - Contiene información básica de navegación
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.
+ */
 const WebLinksScreen = ({ navigation }) => {
   const [links, setlinks] = useState([]);
   const [loading, setLoading] = useState(true);

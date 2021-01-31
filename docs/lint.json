@@ -4,51 +4,55 @@
     "filePath": "src/screens/CovidInfo.js",
     "lines": [
       {
-        "lineNumber": 124,
+        "lineNumber": 127,
         "line": "/**"
       },
       {
-        "lineNumber": 125,
+        "lineNumber": 128,
         "line": " * Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla."
       },
       {
-        "lineNumber": 126,
-        "line": " * @param {string} name - Nombre del Icono a mostrar."
-      },
-      {
-        "lineNumber": 127,
-        "line": " * @param {string} color - Color del Icono a mostrar."
-      },
-      {
-        "lineNumber": 128,
-        "line": " * @param {number} size - Tamaño del Icono."
-      },
-      {
         "lineNumber": 129,
-        "line": " * @param {string} text - Texto a mostrar del enlace."
+        "line": " * Se llama en el componente {@link Footer}."
       },
       {
         "lineNumber": 130,
-        "line": " * @param {string} screenRouteName - Nombre de la pantalla a la cuál se navegará."
+        "line": " * @param {string} name - Nombre del Icono a mostrar."
       },
       {
         "lineNumber": 131,
-        "line": " * @param {prop} navigation"
+        "line": " * @param {string} color - Color del Icono a mostrar."
       },
       {
         "lineNumber": 132,
-        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
+        "line": " * @param {number} size - Tamaño del Icono."
       },
       {
         "lineNumber": 133,
-        "line": " * @return {TouchableOpacity} Devuelve una vista presionable"
+        "line": " * @param {string} text - Texto a mostrar del enlace."
       },
       {
         "lineNumber": 134,
-        "line": " */"
+        "line": " * @param {string} screenRouteName - Nombre de la pantalla a la cuál se navegará."
       },
       {
         "lineNumber": 135,
+        "line": " * @param {prop} navigation"
+      },
+      {
+        "lineNumber": 136,
+        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
+      },
+      {
+        "lineNumber": 137,
+        "line": " * @return {TouchableOpacity} Devuelve una vista presionable"
+      },
+      {
+        "lineNumber": 138,
+        "line": " */"
+      },
+      {
+        "lineNumber": 139,
         "line": "export const FooterLinks = ({"
       }
     ],

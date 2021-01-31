@@ -1,7 +1,7 @@
 {
-  "coverage": "17.2%",
-  "expectCount": 93,
-  "actualCount": 16,
+  "coverage": "25%",
+  "expectCount": 92,
+  "actualCount": 23,
   "files": {
     "src/api/covid.js": {
       "expectCount": 1,
@@ -169,17 +169,16 @@
     },
     "src/screens/ContactScreen.js": {
       "expectCount": 2,
-      "actualCount": 0,
+      "actualCount": 1,
       "undocumentLines": [
-        98,
-        10
+        104
       ]
     },
     "src/screens/CovidInfo.js": {
       "expectCount": 7,
       "actualCount": 6,
       "undocumentLines": [
-        167
+        171
       ]
     },
     "src/screens/CovidScreen.js": {
@@ -214,20 +213,17 @@
       ]
     },
     "src/screens/FAQScreen.js": {
-      "expectCount": 3,
-      "actualCount": 0,
+      "expectCount": 2,
+      "actualCount": 1,
       "undocumentLines": [
-        66,
-        70,
-        16
+        71
       ]
     },
     "src/screens/HomeScreen.js": {
       "expectCount": 2,
-      "actualCount": 0,
+      "actualCount": 1,
       "undocumentLines": [
-        163,
-        26
+        170
       ]
     },
     "src/screens/InfoCard.js": {
@@ -246,18 +242,16 @@
     },
     "src/screens/KnowMoreScreen.js": {
       "expectCount": 2,
-      "actualCount": 0,
+      "actualCount": 1,
       "undocumentLines": [
-        36,
-        8
+        42
       ]
     },
     "src/screens/MissionAndVisionScreen.js": {
       "expectCount": 2,
-      "actualCount": 0,
+      "actualCount": 1,
       "undocumentLines": [
-        44,
-        4
+        48
       ]
     },
     "src/screens/Search.js": {
@@ -270,18 +264,16 @@
     },
     "src/screens/SugerenceScreen.js": {
       "expectCount": 2,
-      "actualCount": 0,
+      "actualCount": 1,
       "undocumentLines": [
-        94,
-        16
+        100
       ]
     },
     "src/screens/WebLinksScreen.js": {
       "expectCount": 2,
-      "actualCount": 0,
+      "actualCount": 1,
       "undocumentLines": [
-        65,
-        17
+        71
       ]
     }
   }

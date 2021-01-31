@@ -13,6 +13,12 @@ import Colors from '../constants/Colors';
 import { Picker } from '@react-native-picker/picker';
 import { getAllSuperenceTypes, storeSugerence } from '../api/sugerences';
 
+/**
+ * Pantalla que muestra el formulario de sugerencias, para poder enviar un mensaje a la entidad.
+ * @param {prop} navigation - Contiene información básica de navegación
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.
+ */
 const SugerenceScreen = ({ navigation }) => {
   // OBTIENE DATA, ES UNA COLLECCION
   const [sugerenceTypes, setSugerenceTypes] = useState([]);

@@ -13,13 +13,18 @@ import { Card } from 'react-native-elements';
 import Colors from '../constants/Colors';
 import { size } from 'lodash';
 
+/**
+ * Pantalla que muestra una lista de tarjetas con preguntas frecuentes.
+ * @param {prop} navigation - Contiene información básica de navegación
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {SafeAreaView} Regreesa una layout con la maquetación de la pantalla
+ */
 const FAQScreen = ({ navigation }) => {
   const [faqs, setFaqs] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getAllFAQs().then((response) => {
-      // console.log(response);
       setFaqs(response);
       setLoading(false);
     });
@@ -61,10 +66,6 @@ const FAQScreen = ({ navigation }) => {
       </ScrollView>
     </SafeAreaView>
   );
-};
-
-const ListingCards = () => {
-  return null;
 };
 
 const styles = StyleSheet.create({

@@ -7,6 +7,12 @@ import { CONTACTS } from '../dummy-data/contacts';
 import { TouchableOpacity } from 'react-native';
 import { Linking } from 'react-native';
 
+/**
+ * Pantalla que muestra información de contacto de los trabajadores de la entidad.
+ * @param {prop} navigation - Contiene información básica de navegación
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.
+ */
 const ContactScreen = ({ navigation }) => {
   const [contactEmail, setContactEmail] = useState('');
   return (
@@ -138,12 +144,12 @@ const styles = StyleSheet.create({
   },
   Logo: {
     width: 300,
-    height: 200
+    height: 200,
   },
   containerlogo: {
     alignItems: 'center',
     paddingHorizontal: 15,
-    paddingVertical: 30
+    paddingVertical: 30,
   },
   container: {
     flex: 1,

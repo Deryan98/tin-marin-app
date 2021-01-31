@@ -58,7 +58,8 @@ export const MainParagraph = ({ description }) => {
 };
 
 /**
- * Este componente se encarga de Renderizar una imagen
+ * Este componente se encarga de Renderizar una imagen.
+ * Se llama en la pantalla {@link CovidInfo}.
  * @param {string} url - Contiene la url de una imagen a mostrar.
  * @return {View} Retorna una vista con la imagen cargada.
  */
@@ -72,6 +73,7 @@ export const RenderImage = ({ url }) => {
 
 /**
  * Componente que muestra los pasos principales para seguir una recomendación.
+ * Se llama en la pantalla {@link CovidInfo}.
  * @param {Array<string>} steps - contiene una lista de tipo string con la información de recomenadaciones a seguir.
  * @return {Card} Devuelve una tarjeta con el listado de recomendaciones a seguir.
  */
@@ -95,6 +97,7 @@ export const FollowSteps = ({ steps }) => {
 
 /**
  * Componente que muestra un pie de página.
+ * Se llama en la pantalla {@link CovidInfo}.
  * @param {prop} navigation
  * @see https://reactnavigation.org/docs/navigation-prop/
  * @return {View} Devuelve una vista con Enlaces
@@ -124,6 +127,7 @@ export const Footer = ({ navigation }) => {
 
 /**
  * Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla.
+ * Se llama en el componente {@link Footer}.
  * @param {string} name - Nombre del Icono a mostrar.
  * @param {string} color - Color del Icono a mostrar.
  * @param {number} size - Tamaño del Icono.

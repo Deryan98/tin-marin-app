@@ -13,16 +13,23 @@ import FAQs from '../assets/FAQs.jpeg';
 import WebLinks from '../assets/WebLinks.jpg';
 import Sugerencias from '../assets/Sugerencias.png';
 import Exhibicion from '../assets/Exhibicion.jpg';
-import { 
-  playButtonPress, 
+import {
+  playButtonPress,
   heyListenButton,
-  wowButton, 
+  wowButton,
   msnButton,
   catcButton,
-  ohhButton
+  ohhButton,
 } from '../helpers/audio';
 import ConocenosMas from '../assets/ConocenosMas.jpg';
 
+/**
+ * Pantalla Principal que contiene una lista de tarjetas con los accesos directos de los diferentes
+ * módulos que posee la aplicación.
+ * @param {prop} navigation - Contiene información básica de navegación
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla
+ */
 const HomeScreen = ({ navigation }) => {
   return (
     <ScrollView>
@@ -161,8 +168,8 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  image:{
-    width: '100%'
+  image: {
+    width: '100%',
   },
   view: {
     flexDirection: 'column',
