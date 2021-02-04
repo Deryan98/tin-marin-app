@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1562,
+  "end": 1508,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1562,
+    "end": 1508,
     "loc": {
       "start": {
         "line": 1,
@@ -99,8 +99,8 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 28,
-        "end": 76,
+        "start": 27,
+        "end": 75,
         "loc": {
           "start": {
             "line": 2,
@@ -114,8 +114,8 @@
         "specifiers": [
           {
             "type": "ImportSpecifier",
-            "start": 37,
-            "end": 47,
+            "start": 36,
+            "end": 46,
             "loc": {
               "start": {
                 "line": 2,
@@ -128,8 +128,8 @@
             },
             "imported": {
               "type": "Identifier",
-              "start": 37,
-              "end": 47,
+              "start": 36,
+              "end": 46,
               "loc": {
                 "start": {
                   "line": 2,
@@ -145,8 +145,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 37,
-              "end": 47,
+              "start": 36,
+              "end": 46,
               "loc": {
                 "start": {
                   "line": 2,
@@ -163,8 +163,8 @@
           },
           {
             "type": "ImportSpecifier",
-            "start": 49,
-            "end": 53,
+            "start": 48,
+            "end": 52,
             "loc": {
               "start": {
                 "line": 2,
@@ -177,8 +177,8 @@
             },
             "imported": {
               "type": "Identifier",
-              "start": 49,
-              "end": 53,
+              "start": 48,
+              "end": 52,
               "loc": {
                 "start": {
                   "line": 2,
@@ -194,8 +194,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 49,
-              "end": 53,
+              "start": 48,
+              "end": 52,
               "loc": {
                 "start": {
                   "line": 2,
@@ -213,8 +213,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 61,
-          "end": 75,
+          "start": 60,
+          "end": 74,
           "loc": {
             "start": {
               "line": 2,
@@ -234,8 +234,8 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 78,
-        "end": 143,
+        "start": 76,
+        "end": 141,
         "loc": {
           "start": {
             "line": 3,
@@ -249,8 +249,8 @@
         "specifiers": [
           {
             "type": "ImportSpecifier",
-            "start": 87,
-            "end": 108,
+            "start": 85,
+            "end": 106,
             "loc": {
               "start": {
                 "line": 3,
@@ -263,8 +263,8 @@
             },
             "imported": {
               "type": "Identifier",
-              "start": 87,
-              "end": 108,
+              "start": 85,
+              "end": 106,
               "loc": {
                 "start": {
                   "line": 3,
@@ -280,8 +280,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 87,
-              "end": 108,
+              "start": 85,
+              "end": 106,
               "loc": {
                 "start": {
                   "line": 3,
@@ -299,8 +299,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 116,
-          "end": 142,
+          "start": 114,
+          "end": 140,
           "loc": {
             "start": {
               "line": 3,
@@ -320,8 +320,8 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 145,
-        "end": 193,
+        "start": 142,
+        "end": 190,
         "loc": {
           "start": {
             "line": 4,
@@ -335,8 +335,8 @@
         "specifiers": [
           {
             "type": "ImportDefaultSpecifier",
-            "start": 152,
-            "end": 167,
+            "start": 149,
+            "end": 164,
             "loc": {
               "start": {
                 "line": 4,
@@ -349,8 +349,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 152,
-              "end": 167,
+              "start": 149,
+              "end": 164,
               "loc": {
                 "start": {
                   "line": 4,
@@ -368,8 +368,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 173,
-          "end": 192,
+          "start": 170,
+          "end": 189,
           "loc": {
             "start": {
               "line": 4,
@@ -389,8 +389,8 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 195,
-        "end": 239,
+        "start": 191,
+        "end": 235,
         "loc": {
           "start": {
             "line": 5,
@@ -404,8 +404,8 @@
         "specifiers": [
           {
             "type": "ImportDefaultSpecifier",
-            "start": 202,
-            "end": 215,
+            "start": 198,
+            "end": 211,
             "loc": {
               "start": {
                 "line": 5,
@@ -418,8 +418,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 202,
-              "end": 215,
+              "start": 198,
+              "end": 211,
               "loc": {
                 "start": {
                   "line": 5,
@@ -437,8 +437,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 221,
-          "end": 238,
+          "start": 217,
+          "end": 234,
           "loc": {
             "start": {
               "line": 5,
@@ -458,8 +458,8 @@
       },
       {
         "type": "VariableDeclaration",
-        "start": 243,
-        "end": 282,
+        "start": 237,
+        "end": 276,
         "loc": {
           "start": {
             "line": 7,
@@ -473,8 +473,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 249,
-            "end": 281,
+            "start": 243,
+            "end": 275,
             "loc": {
               "start": {
                 "line": 7,
@@ -487,8 +487,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 249,
-              "end": 255,
+              "start": 243,
+              "end": 249,
               "loc": {
                 "start": {
                   "line": 7,
@@ -504,8 +504,8 @@
             },
             "init": {
               "type": "CallExpression",
-              "start": 258,
-              "end": 281,
+              "start": 252,
+              "end": 275,
               "loc": {
                 "start": {
                   "line": 7,
@@ -518,8 +518,8 @@
               },
               "callee": {
                 "type": "Identifier",
-                "start": 258,
-                "end": 279,
+                "start": 252,
+                "end": 273,
                 "loc": {
                   "start": {
                     "line": 7,
@@ -541,8 +541,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 286,
-        "end": 552,
+        "start": 278,
+        "end": 536,
         "loc": {
           "start": {
             "line": 9,
@@ -555,8 +555,8 @@
         },
         "declaration": {
           "type": "AssignmentExpression",
-          "start": 301,
-          "end": 551,
+          "start": 293,
+          "end": 535,
           "loc": {
             "start": {
               "line": 9,
@@ -570,8 +570,8 @@
           "operator": "=",
           "left": {
             "type": "Identifier",
-            "start": 301,
-            "end": 314,
+            "start": 293,
+            "end": 306,
             "loc": {
               "start": {
                 "line": 9,
@@ -587,8 +587,8 @@
           },
           "right": {
             "type": "ArrowFunctionExpression",
-            "start": 317,
-            "end": 551,
+            "start": 309,
+            "end": 535,
             "loc": {
               "start": {
                 "line": 9,
@@ -606,8 +606,8 @@
             "params": [],
             "body": {
               "type": "BlockStatement",
-              "start": 323,
-              "end": 551,
+              "start": 315,
+              "end": 535,
               "loc": {
                 "start": {
                   "line": 9,
@@ -621,8 +621,8 @@
               "body": [
                 {
                   "type": "ReturnStatement",
-                  "start": 328,
-                  "end": 548,
+                  "start": 319,
+                  "end": 533,
                   "loc": {
                     "start": {
                       "line": 10,
@@ -635,8 +635,8 @@
                   },
                   "argument": {
                     "type": "JSXElement",
-                    "start": 342,
-                    "end": 542,
+                    "start": 332,
+                    "end": 528,
                     "loc": {
                       "start": {
                         "line": 11,
@@ -649,8 +649,8 @@
                     },
                     "openingElement": {
                       "type": "JSXOpeningElement",
-                      "start": 342,
-                      "end": 453,
+                      "start": 332,
+                      "end": 441,
                       "loc": {
                         "start": {
                           "line": 11,
@@ -664,8 +664,8 @@
                       "attributes": [
                         {
                           "type": "JSXAttribute",
-                          "start": 367,
-                          "end": 389,
+                          "start": 356,
+                          "end": 378,
                           "loc": {
                             "start": {
                               "line": 12,
@@ -678,8 +678,8 @@
                           },
                           "name": {
                             "type": "JSXIdentifier",
-                            "start": 367,
-                            "end": 383,
+                            "start": 356,
+                            "end": 372,
                             "loc": {
                               "start": {
                                 "line": 12,
@@ -694,8 +694,8 @@
                           },
                           "value": {
                             "type": "StringLiteral",
-                            "start": 384,
-                            "end": 389,
+                            "start": 373,
+                            "end": 378,
                             "loc": {
                               "start": {
                                 "line": 12,
@@ -712,8 +712,8 @@
                         },
                         {
                           "type": "JSXAttribute",
-                          "start": 397,
-                          "end": 452,
+                          "start": 385,
+                          "end": 440,
                           "loc": {
                             "start": {
                               "line": 13,
@@ -726,8 +726,8 @@
                           },
                           "name": {
                             "type": "JSXIdentifier",
-                            "start": 397,
-                            "end": 410,
+                            "start": 385,
+                            "end": 398,
                             "loc": {
                               "start": {
                                 "line": 13,
@@ -742,8 +742,8 @@
                           },
                           "value": {
                             "type": "JSXExpressionContainer",
-                            "start": 411,
-                            "end": 452,
+                            "start": 399,
+                            "end": 440,
                             "loc": {
                               "start": {
                                 "line": 13,
@@ -756,8 +756,8 @@
                             },
                             "expression": {
                               "type": "ArrowFunctionExpression",
-                              "start": 412,
-                              "end": 451,
+                              "start": 400,
+                              "end": 439,
                               "loc": {
                                 "start": {
                                   "line": 13,
@@ -775,8 +775,8 @@
                               "params": [
                                 {
                                   "type": "Identifier",
-                                  "start": 413,
-                                  "end": 418,
+                                  "start": 401,
+                                  "end": 406,
                                   "loc": {
                                     "start": {
                                       "line": 13,
@@ -793,8 +793,8 @@
                               ],
                               "body": {
                                 "type": "JSXElement",
-                                "start": 423,
-                                "end": 451,
+                                "start": 411,
+                                "end": 439,
                                 "loc": {
                                   "start": {
                                     "line": 13,
@@ -807,8 +807,8 @@
                                 },
                                 "openingElement": {
                                   "type": "JSXOpeningElement",
-                                  "start": 423,
-                                  "end": 451,
+                                  "start": 411,
+                                  "end": 439,
                                   "loc": {
                                     "start": {
                                       "line": 13,
@@ -822,8 +822,8 @@
                                   "attributes": [
                                     {
                                       "type": "JSXSpreadAttribute",
-                                      "start": 438,
-                                      "end": 448,
+                                      "start": 426,
+                                      "end": 436,
                                       "loc": {
                                         "start": {
                                           "line": 13,
@@ -836,8 +836,8 @@
                                       },
                                       "argument": {
                                         "type": "Identifier",
-                                        "start": 442,
-                                        "end": 447,
+                                        "start": 430,
+                                        "end": 435,
                                         "loc": {
                                           "start": {
                                             "line": 13,
@@ -855,8 +855,8 @@
                                   ],
                                   "name": {
                                     "type": "JSXIdentifier",
-                                    "start": 424,
-                                    "end": 437,
+                                    "start": 412,
+                                    "end": 425,
                                     "loc": {
                                       "start": {
                                         "line": 13,
@@ -880,8 +880,8 @@
                       ],
                       "name": {
                         "type": "JSXMemberExpression",
-                        "start": 343,
-                        "end": 359,
+                        "start": 333,
+                        "end": 349,
                         "loc": {
                           "start": {
                             "line": 11,
@@ -894,8 +894,8 @@
                         },
                         "object": {
                           "type": "JSXIdentifier",
-                          "start": 343,
-                          "end": 349,
+                          "start": 333,
+                          "end": 339,
                           "loc": {
                             "start": {
                               "line": 11,
@@ -910,8 +910,8 @@
                         },
                         "property": {
                           "type": "JSXIdentifier",
-                          "start": 350,
-                          "end": 359,
+                          "start": 340,
+                          "end": 349,
                           "loc": {
                             "start": {
                               "line": 11,
@@ -929,8 +929,8 @@
                     },
                     "closingElement": {
                       "type": "JSXClosingElement",
-                      "start": 523,
-                      "end": 542,
+                      "start": 509,
+                      "end": 528,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -943,8 +943,8 @@
                       },
                       "name": {
                         "type": "JSXMemberExpression",
-                        "start": 525,
-                        "end": 541,
+                        "start": 511,
+                        "end": 527,
                         "loc": {
                           "start": {
                             "line": 15,
@@ -957,8 +957,8 @@
                         },
                         "object": {
                           "type": "JSXIdentifier",
-                          "start": 525,
-                          "end": 531,
+                          "start": 511,
+                          "end": 517,
                           "loc": {
                             "start": {
                               "line": 15,
@@ -973,8 +973,8 @@
                         },
                         "property": {
                           "type": "JSXIdentifier",
-                          "start": 532,
-                          "end": 541,
+                          "start": 518,
+                          "end": 527,
                           "loc": {
                             "start": {
                               "line": 15,
@@ -992,8 +992,8 @@
                     "children": [
                       {
                         "type": "JSXText",
-                        "start": 453,
-                        "end": 461,
+                        "start": 441,
+                        "end": 448,
                         "loc": {
                           "start": {
                             "line": 13,
@@ -1009,8 +1009,8 @@
                       },
                       {
                         "type": "JSXElement",
-                        "start": 461,
-                        "end": 517,
+                        "start": 448,
+                        "end": 504,
                         "loc": {
                           "start": {
                             "line": 14,
@@ -1023,8 +1023,8 @@
                         },
                         "openingElement": {
                           "type": "JSXOpeningElement",
-                          "start": 461,
-                          "end": 517,
+                          "start": 448,
+                          "end": 504,
                           "loc": {
                             "start": {
                               "line": 14,
@@ -1038,8 +1038,8 @@
                           "attributes": [
                             {
                               "type": "JSXAttribute",
-                              "start": 476,
-                              "end": 486,
+                              "start": 463,
+                              "end": 473,
                               "loc": {
                                 "start": {
                                   "line": 14,
@@ -1052,8 +1052,8 @@
                               },
                               "name": {
                                 "type": "JSXIdentifier",
-                                "start": 476,
-                                "end": 480,
+                                "start": 463,
+                                "end": 467,
                                 "loc": {
                                   "start": {
                                     "line": 14,
@@ -1068,8 +1068,8 @@
                               },
                               "value": {
                                 "type": "StringLiteral",
-                                "start": 481,
-                                "end": 486,
+                                "start": 468,
+                                "end": 473,
                                 "loc": {
                                   "start": {
                                     "line": 14,
@@ -1086,8 +1086,8 @@
                             },
                             {
                               "type": "JSXAttribute",
-                              "start": 487,
-                              "end": 514,
+                              "start": 474,
+                              "end": 501,
                               "loc": {
                                 "start": {
                                   "line": 14,
@@ -1100,8 +1100,8 @@
                               },
                               "name": {
                                 "type": "JSXIdentifier",
-                                "start": 487,
-                                "end": 496,
+                                "start": 474,
+                                "end": 483,
                                 "loc": {
                                   "start": {
                                     "line": 14,
@@ -1116,8 +1116,8 @@
                               },
                               "value": {
                                 "type": "JSXExpressionContainer",
-                                "start": 497,
-                                "end": 514,
+                                "start": 484,
+                                "end": 501,
                                 "loc": {
                                   "start": {
                                     "line": 14,
@@ -1130,8 +1130,8 @@
                                 },
                                 "expression": {
                                   "type": "Identifier",
-                                  "start": 498,
-                                  "end": 513,
+                                  "start": 485,
+                                  "end": 500,
                                   "loc": {
                                     "start": {
                                       "line": 14,
@@ -1150,8 +1150,8 @@
                           ],
                           "name": {
                             "type": "JSXMemberExpression",
-                            "start": 462,
-                            "end": 475,
+                            "start": 449,
+                            "end": 462,
                             "loc": {
                               "start": {
                                 "line": 14,
@@ -1164,8 +1164,8 @@
                             },
                             "object": {
                               "type": "JSXIdentifier",
-                              "start": 462,
-                              "end": 468,
+                              "start": 449,
+                              "end": 455,
                               "loc": {
                                 "start": {
                                   "line": 14,
@@ -1180,8 +1180,8 @@
                             },
                             "property": {
                               "type": "JSXIdentifier",
-                              "start": 469,
-                              "end": 475,
+                              "start": 456,
+                              "end": 462,
                               "loc": {
                                 "start": {
                                   "line": 14,
@@ -1202,8 +1202,8 @@
                       },
                       {
                         "type": "JSXText",
-                        "start": 517,
-                        "end": 523,
+                        "start": 504,
+                        "end": 509,
                         "loc": {
                           "start": {
                             "line": 14,
@@ -1220,7 +1220,7 @@
                     ],
                     "extra": {
                       "parenthesized": true,
-                      "parenStart": 335
+                      "parenStart": 326
                     }
                   }
                 }
@@ -1233,8 +1233,8 @@
             {
               "type": "CommentLine",
               "value": " const styles = StyleSheet.create({",
-              "start": 556,
-              "end": 593,
+              "start": 538,
+              "end": 575,
               "loc": {
                 "start": {
                   "line": 19,
@@ -1249,8 +1249,8 @@
             {
               "type": "CommentLine",
               "value": "   drawerStyle: {",
-              "start": 595,
-              "end": 614,
+              "start": 576,
+              "end": 595,
               "loc": {
                 "start": {
                   "line": 20,
@@ -1265,8 +1265,8 @@
             {
               "type": "CommentLine",
               "value": "     backgroundColor: Colors.primaryColor,",
-              "start": 616,
-              "end": 660,
+              "start": 596,
+              "end": 640,
               "loc": {
                 "start": {
                   "line": 21,
@@ -1281,8 +1281,8 @@
             {
               "type": "CommentLine",
               "value": "     width: 240,",
-              "start": 662,
-              "end": 680,
+              "start": 641,
+              "end": 659,
               "loc": {
                 "start": {
                   "line": 22,
@@ -1297,8 +1297,8 @@
             {
               "type": "CommentLine",
               "value": "   },",
-              "start": 682,
-              "end": 689,
+              "start": 660,
+              "end": 667,
               "loc": {
                 "start": {
                   "line": 23,
@@ -1313,8 +1313,8 @@
             {
               "type": "CommentLine",
               "value": "   drawerIcon: {",
-              "start": 691,
-              "end": 709,
+              "start": 668,
+              "end": 686,
               "loc": {
                 "start": {
                   "line": 24,
@@ -1329,8 +1329,8 @@
             {
               "type": "CommentLine",
               "value": "     //backgroundColor: 'white',",
-              "start": 711,
-              "end": 745,
+              "start": 687,
+              "end": 721,
               "loc": {
                 "start": {
                   "line": 25,
@@ -1345,8 +1345,8 @@
             {
               "type": "CommentLine",
               "value": "   },",
-              "start": 747,
-              "end": 754,
+              "start": 722,
+              "end": 729,
               "loc": {
                 "start": {
                   "line": 26,
@@ -1361,8 +1361,8 @@
             {
               "type": "CommentLine",
               "value": "   drawerLabel: {fontWeight: 'bold'},",
-              "start": 756,
-              "end": 795,
+              "start": 730,
+              "end": 769,
               "loc": {
                 "start": {
                   "line": 27,
@@ -1377,8 +1377,8 @@
             {
               "type": "CommentLine",
               "value": " });",
-              "start": 797,
-              "end": 803,
+              "start": 770,
+              "end": 776,
               "loc": {
                 "start": {
                   "line": 28,
@@ -1393,8 +1393,8 @@
             {
               "type": "CommentLine",
               "value": " const drawerContentOptions = {",
-              "start": 807,
-              "end": 840,
+              "start": 778,
+              "end": 811,
               "loc": {
                 "start": {
                   "line": 30,
@@ -1409,8 +1409,8 @@
             {
               "type": "CommentLine",
               "value": "   activeTintColor: Colors.activeDrawerItemTintColor,",
-              "start": 842,
-              "end": 897,
+              "start": 812,
+              "end": 867,
               "loc": {
                 "start": {
                   "line": 31,
@@ -1425,8 +1425,8 @@
             {
               "type": "CommentLine",
               "value": "   inactiveTintColor: Colors.inactiveDrawerItemTintColor,",
-              "start": 899,
-              "end": 958,
+              "start": 868,
+              "end": 927,
               "loc": {
                 "start": {
                   "line": 32,
@@ -1441,8 +1441,8 @@
             {
               "type": "CommentLine",
               "value": "   itemStyle: {marginVertical: 5},",
-              "start": 960,
-              "end": 996,
+              "start": 928,
+              "end": 964,
               "loc": {
                 "start": {
                   "line": 33,
@@ -1457,8 +1457,8 @@
             {
               "type": "CommentLine",
               "value": " };",
-              "start": 998,
-              "end": 1003,
+              "start": 965,
+              "end": 970,
               "loc": {
                 "start": {
                   "line": 34,
@@ -1473,8 +1473,8 @@
             {
               "type": "CommentLine",
               "value": " const screenOptions = (drawerLabel, iconName, iconType) => {",
-              "start": 1007,
-              "end": 1070,
+              "start": 972,
+              "end": 1035,
               "loc": {
                 "start": {
                   "line": 36,
@@ -1489,8 +1489,8 @@
             {
               "type": "CommentLine",
               "value": "   return {",
-              "start": 1072,
-              "end": 1085,
+              "start": 1036,
+              "end": 1049,
               "loc": {
                 "start": {
                   "line": 37,
@@ -1505,8 +1505,8 @@
             {
               "type": "CommentLine",
               "value": "     headerShown: true,",
-              "start": 1087,
-              "end": 1112,
+              "start": 1050,
+              "end": 1075,
               "loc": {
                 "start": {
                   "line": 38,
@@ -1521,8 +1521,8 @@
             {
               "type": "CommentLine",
               "value": "     headerTitle: drawerLabel,",
-              "start": 1114,
-              "end": 1146,
+              "start": 1076,
+              "end": 1108,
               "loc": {
                 "start": {
                   "line": 39,
@@ -1537,8 +1537,8 @@
             {
               "type": "CommentLine",
               "value": "     drawerLabel: ({focused, color}) => (",
-              "start": 1148,
-              "end": 1191,
+              "start": 1109,
+              "end": 1152,
               "loc": {
                 "start": {
                   "line": 40,
@@ -1553,8 +1553,8 @@
             {
               "type": "CommentLine",
               "value": "       <Text style={{...styles.drawerLabel, color: color}}>{drawerLabel}</Text>",
-              "start": 1193,
-              "end": 1274,
+              "start": 1153,
+              "end": 1234,
               "loc": {
                 "start": {
                   "line": 41,
@@ -1569,8 +1569,8 @@
             {
               "type": "CommentLine",
               "value": "     ),",
-              "start": 1276,
-              "end": 1285,
+              "start": 1235,
+              "end": 1244,
               "loc": {
                 "start": {
                   "line": 42,
@@ -1585,8 +1585,8 @@
             {
               "type": "CommentLine",
               "value": "     drawerIcon: ({focused, color, size}) => (",
-              "start": 1287,
-              "end": 1335,
+              "start": 1245,
+              "end": 1293,
               "loc": {
                 "start": {
                   "line": 43,
@@ -1601,8 +1601,8 @@
             {
               "type": "CommentLine",
               "value": "       <Icon",
-              "start": 1337,
-              "end": 1351,
+              "start": 1294,
+              "end": 1308,
               "loc": {
                 "start": {
                   "line": 44,
@@ -1617,8 +1617,8 @@
             {
               "type": "CommentLine",
               "value": "         name={iconName}",
-              "start": 1353,
-              "end": 1379,
+              "start": 1309,
+              "end": 1335,
               "loc": {
                 "start": {
                   "line": 45,
@@ -1633,8 +1633,8 @@
             {
               "type": "CommentLine",
               "value": "         type={iconType}",
-              "start": 1381,
-              "end": 1407,
+              "start": 1336,
+              "end": 1362,
               "loc": {
                 "start": {
                   "line": 46,
@@ -1649,8 +1649,8 @@
             {
               "type": "CommentLine",
               "value": "         color={color}",
-              "start": 1409,
-              "end": 1433,
+              "start": 1363,
+              "end": 1387,
               "loc": {
                 "start": {
                   "line": 47,
@@ -1665,8 +1665,8 @@
             {
               "type": "CommentLine",
               "value": "         size={size}",
-              "start": 1435,
-              "end": 1457,
+              "start": 1388,
+              "end": 1410,
               "loc": {
                 "start": {
                   "line": 48,
@@ -1681,8 +1681,8 @@
             {
               "type": "CommentLine",
               "value": "         style={styles.drawerIcon}",
-              "start": 1459,
-              "end": 1495,
+              "start": 1411,
+              "end": 1447,
               "loc": {
                 "start": {
                   "line": 49,
@@ -1697,8 +1697,8 @@
             {
               "type": "CommentLine",
               "value": "         solid={true}",
-              "start": 1497,
-              "end": 1520,
+              "start": 1448,
+              "end": 1471,
               "loc": {
                 "start": {
                   "line": 50,
@@ -1713,8 +1713,8 @@
             {
               "type": "CommentLine",
               "value": "       />",
-              "start": 1522,
-              "end": 1533,
+              "start": 1472,
+              "end": 1483,
               "loc": {
                 "start": {
                   "line": 51,
@@ -1729,8 +1729,8 @@
             {
               "type": "CommentLine",
               "value": "     ),",
-              "start": 1535,
-              "end": 1544,
+              "start": 1484,
+              "end": 1493,
               "loc": {
                 "start": {
                   "line": 52,
@@ -1745,8 +1745,8 @@
             {
               "type": "CommentLine",
               "value": "   };",
-              "start": 1546,
-              "end": 1553,
+              "start": 1494,
+              "end": 1501,
               "loc": {
                 "start": {
                   "line": 53,
@@ -1761,8 +1761,8 @@
             {
               "type": "CommentLine",
               "value": " };",
-              "start": 1555,
-              "end": 1560,
+              "start": 1502,
+              "end": 1507,
               "loc": {
                 "start": {
                   "line": 54,
@@ -1780,8 +1780,8 @@
           {
             "type": "CommentLine",
             "value": " const styles = StyleSheet.create({",
-            "start": 556,
-            "end": 593,
+            "start": 538,
+            "end": 575,
             "loc": {
               "start": {
                 "line": 19,
@@ -1796,8 +1796,8 @@
           {
             "type": "CommentLine",
             "value": "   drawerStyle: {",
-            "start": 595,
-            "end": 614,
+            "start": 576,
+            "end": 595,
             "loc": {
               "start": {
                 "line": 20,
@@ -1812,8 +1812,8 @@
           {
             "type": "CommentLine",
             "value": "     backgroundColor: Colors.primaryColor,",
-            "start": 616,
-            "end": 660,
+            "start": 596,
+            "end": 640,
             "loc": {
               "start": {
                 "line": 21,
@@ -1828,8 +1828,8 @@
           {
             "type": "CommentLine",
             "value": "     width: 240,",
-            "start": 662,
-            "end": 680,
+            "start": 641,
+            "end": 659,
             "loc": {
               "start": {
                 "line": 22,
@@ -1844,8 +1844,8 @@
           {
             "type": "CommentLine",
             "value": "   },",
-            "start": 682,
-            "end": 689,
+            "start": 660,
+            "end": 667,
             "loc": {
               "start": {
                 "line": 23,
@@ -1860,8 +1860,8 @@
           {
             "type": "CommentLine",
             "value": "   drawerIcon: {",
-            "start": 691,
-            "end": 709,
+            "start": 668,
+            "end": 686,
             "loc": {
               "start": {
                 "line": 24,
@@ -1876,8 +1876,8 @@
           {
             "type": "CommentLine",
             "value": "     //backgroundColor: 'white',",
-            "start": 711,
-            "end": 745,
+            "start": 687,
+            "end": 721,
             "loc": {
               "start": {
                 "line": 25,
@@ -1892,8 +1892,8 @@
           {
             "type": "CommentLine",
             "value": "   },",
-            "start": 747,
-            "end": 754,
+            "start": 722,
+            "end": 729,
             "loc": {
               "start": {
                 "line": 26,
@@ -1908,8 +1908,8 @@
           {
             "type": "CommentLine",
             "value": "   drawerLabel: {fontWeight: 'bold'},",
-            "start": 756,
-            "end": 795,
+            "start": 730,
+            "end": 769,
             "loc": {
               "start": {
                 "line": 27,
@@ -1924,8 +1924,8 @@
           {
             "type": "CommentLine",
             "value": " });",
-            "start": 797,
-            "end": 803,
+            "start": 770,
+            "end": 776,
             "loc": {
               "start": {
                 "line": 28,
@@ -1940,8 +1940,8 @@
           {
             "type": "CommentLine",
             "value": " const drawerContentOptions = {",
-            "start": 807,
-            "end": 840,
+            "start": 778,
+            "end": 811,
             "loc": {
               "start": {
                 "line": 30,
@@ -1956,8 +1956,8 @@
           {
             "type": "CommentLine",
             "value": "   activeTintColor: Colors.activeDrawerItemTintColor,",
-            "start": 842,
-            "end": 897,
+            "start": 812,
+            "end": 867,
             "loc": {
               "start": {
                 "line": 31,
@@ -1972,8 +1972,8 @@
           {
             "type": "CommentLine",
             "value": "   inactiveTintColor: Colors.inactiveDrawerItemTintColor,",
-            "start": 899,
-            "end": 958,
+            "start": 868,
+            "end": 927,
             "loc": {
               "start": {
                 "line": 32,
@@ -1988,8 +1988,8 @@
           {
             "type": "CommentLine",
             "value": "   itemStyle: {marginVertical: 5},",
-            "start": 960,
-            "end": 996,
+            "start": 928,
+            "end": 964,
             "loc": {
               "start": {
                 "line": 33,
@@ -2004,8 +2004,8 @@
           {
             "type": "CommentLine",
             "value": " };",
-            "start": 998,
-            "end": 1003,
+            "start": 965,
+            "end": 970,
             "loc": {
               "start": {
                 "line": 34,
@@ -2020,8 +2020,8 @@
           {
             "type": "CommentLine",
             "value": " const screenOptions = (drawerLabel, iconName, iconType) => {",
-            "start": 1007,
-            "end": 1070,
+            "start": 972,
+            "end": 1035,
             "loc": {
               "start": {
                 "line": 36,
@@ -2036,8 +2036,8 @@
           {
             "type": "CommentLine",
             "value": "   return {",
-            "start": 1072,
-            "end": 1085,
+            "start": 1036,
+            "end": 1049,
             "loc": {
               "start": {
                 "line": 37,
@@ -2052,8 +2052,8 @@
           {
             "type": "CommentLine",
             "value": "     headerShown: true,",
-            "start": 1087,
-            "end": 1112,
+            "start": 1050,
+            "end": 1075,
             "loc": {
               "start": {
                 "line": 38,
@@ -2068,8 +2068,8 @@
           {
             "type": "CommentLine",
             "value": "     headerTitle: drawerLabel,",
-            "start": 1114,
-            "end": 1146,
+            "start": 1076,
+            "end": 1108,
             "loc": {
               "start": {
                 "line": 39,
@@ -2084,8 +2084,8 @@
           {
             "type": "CommentLine",
             "value": "     drawerLabel: ({focused, color}) => (",
-            "start": 1148,
-            "end": 1191,
+            "start": 1109,
+            "end": 1152,
             "loc": {
               "start": {
                 "line": 40,
@@ -2100,8 +2100,8 @@
           {
             "type": "CommentLine",
             "value": "       <Text style={{...styles.drawerLabel, color: color}}>{drawerLabel}</Text>",
-            "start": 1193,
-            "end": 1274,
+            "start": 1153,
+            "end": 1234,
             "loc": {
               "start": {
                 "line": 41,
@@ -2116,8 +2116,8 @@
           {
             "type": "CommentLine",
             "value": "     ),",
-            "start": 1276,
-            "end": 1285,
+            "start": 1235,
+            "end": 1244,
             "loc": {
               "start": {
                 "line": 42,
@@ -2132,8 +2132,8 @@
           {
             "type": "CommentLine",
             "value": "     drawerIcon: ({focused, color, size}) => (",
-            "start": 1287,
-            "end": 1335,
+            "start": 1245,
+            "end": 1293,
             "loc": {
               "start": {
                 "line": 43,
@@ -2148,8 +2148,8 @@
           {
             "type": "CommentLine",
             "value": "       <Icon",
-            "start": 1337,
-            "end": 1351,
+            "start": 1294,
+            "end": 1308,
             "loc": {
               "start": {
                 "line": 44,
@@ -2164,8 +2164,8 @@
           {
             "type": "CommentLine",
             "value": "         name={iconName}",
-            "start": 1353,
-            "end": 1379,
+            "start": 1309,
+            "end": 1335,
             "loc": {
               "start": {
                 "line": 45,
@@ -2180,8 +2180,8 @@
           {
             "type": "CommentLine",
             "value": "         type={iconType}",
-            "start": 1381,
-            "end": 1407,
+            "start": 1336,
+            "end": 1362,
             "loc": {
               "start": {
                 "line": 46,
@@ -2196,8 +2196,8 @@
           {
             "type": "CommentLine",
             "value": "         color={color}",
-            "start": 1409,
-            "end": 1433,
+            "start": 1363,
+            "end": 1387,
             "loc": {
               "start": {
                 "line": 47,
@@ -2212,8 +2212,8 @@
           {
             "type": "CommentLine",
             "value": "         size={size}",
-            "start": 1435,
-            "end": 1457,
+            "start": 1388,
+            "end": 1410,
             "loc": {
               "start": {
                 "line": 48,
@@ -2228,8 +2228,8 @@
           {
             "type": "CommentLine",
             "value": "         style={styles.drawerIcon}",
-            "start": 1459,
-            "end": 1495,
+            "start": 1411,
+            "end": 1447,
             "loc": {
               "start": {
                 "line": 49,
@@ -2244,8 +2244,8 @@
           {
             "type": "CommentLine",
             "value": "         solid={true}",
-            "start": 1497,
-            "end": 1520,
+            "start": 1448,
+            "end": 1471,
             "loc": {
               "start": {
                 "line": 50,
@@ -2260,8 +2260,8 @@
           {
             "type": "CommentLine",
             "value": "       />",
-            "start": 1522,
-            "end": 1533,
+            "start": 1472,
+            "end": 1483,
             "loc": {
               "start": {
                 "line": 51,
@@ -2276,8 +2276,8 @@
           {
             "type": "CommentLine",
             "value": "     ),",
-            "start": 1535,
-            "end": 1544,
+            "start": 1484,
+            "end": 1493,
             "loc": {
               "start": {
                 "line": 52,
@@ -2292,8 +2292,8 @@
           {
             "type": "CommentLine",
             "value": "   };",
-            "start": 1546,
-            "end": 1553,
+            "start": 1494,
+            "end": 1501,
             "loc": {
               "start": {
                 "line": 53,
@@ -2308,8 +2308,8 @@
           {
             "type": "CommentLine",
             "value": " };",
-            "start": 1555,
-            "end": 1560,
+            "start": 1502,
+            "end": 1507,
             "loc": {
               "start": {
                 "line": 54,
@@ -2330,8 +2330,8 @@
     {
       "type": "CommentLine",
       "value": " const styles = StyleSheet.create({",
-      "start": 556,
-      "end": 593,
+      "start": 538,
+      "end": 575,
       "loc": {
         "start": {
           "line": 19,
@@ -2346,8 +2346,8 @@
     {
       "type": "CommentLine",
       "value": "   drawerStyle: {",
-      "start": 595,
-      "end": 614,
+      "start": 576,
+      "end": 595,
       "loc": {
         "start": {
           "line": 20,
@@ -2362,8 +2362,8 @@
     {
       "type": "CommentLine",
       "value": "     backgroundColor: Colors.primaryColor,",
-      "start": 616,
-      "end": 660,
+      "start": 596,
+      "end": 640,
       "loc": {
         "start": {
           "line": 21,
@@ -2378,8 +2378,8 @@
     {
       "type": "CommentLine",
       "value": "     width: 240,",
-      "start": 662,
-      "end": 680,
+      "start": 641,
+      "end": 659,
       "loc": {
         "start": {
           "line": 22,
@@ -2394,8 +2394,8 @@
     {
       "type": "CommentLine",
       "value": "   },",
-      "start": 682,
-      "end": 689,
+      "start": 660,
+      "end": 667,
       "loc": {
         "start": {
           "line": 23,
@@ -2410,8 +2410,8 @@
     {
       "type": "CommentLine",
       "value": "   drawerIcon: {",
-      "start": 691,
-      "end": 709,
+      "start": 668,
+      "end": 686,
       "loc": {
         "start": {
           "line": 24,
@@ -2426,8 +2426,8 @@
     {
       "type": "CommentLine",
       "value": "     //backgroundColor: 'white',",
-      "start": 711,
-      "end": 745,
+      "start": 687,
+      "end": 721,
       "loc": {
         "start": {
           "line": 25,
@@ -2442,8 +2442,8 @@
     {
       "type": "CommentLine",
       "value": "   },",
-      "start": 747,
-      "end": 754,
+      "start": 722,
+      "end": 729,
       "loc": {
         "start": {
           "line": 26,
@@ -2458,8 +2458,8 @@
     {
       "type": "CommentLine",
       "value": "   drawerLabel: {fontWeight: 'bold'},",
-      "start": 756,
-      "end": 795,
+      "start": 730,
+      "end": 769,
       "loc": {
         "start": {
           "line": 27,
@@ -2474,8 +2474,8 @@
     {
       "type": "CommentLine",
       "value": " });",
-      "start": 797,
-      "end": 803,
+      "start": 770,
+      "end": 776,
       "loc": {
         "start": {
           "line": 28,
@@ -2490,8 +2490,8 @@
     {
       "type": "CommentLine",
       "value": " const drawerContentOptions = {",
-      "start": 807,
-      "end": 840,
+      "start": 778,
+      "end": 811,
       "loc": {
         "start": {
           "line": 30,
@@ -2506,8 +2506,8 @@
     {
       "type": "CommentLine",
       "value": "   activeTintColor: Colors.activeDrawerItemTintColor,",
-      "start": 842,
-      "end": 897,
+      "start": 812,
+      "end": 867,
       "loc": {
         "start": {
           "line": 31,
@@ -2522,8 +2522,8 @@
     {
       "type": "CommentLine",
       "value": "   inactiveTintColor: Colors.inactiveDrawerItemTintColor,",
-      "start": 899,
-      "end": 958,
+      "start": 868,
+      "end": 927,
       "loc": {
         "start": {
           "line": 32,
@@ -2538,8 +2538,8 @@
     {
       "type": "CommentLine",
       "value": "   itemStyle: {marginVertical: 5},",
-      "start": 960,
-      "end": 996,
+      "start": 928,
+      "end": 964,
       "loc": {
         "start": {
           "line": 33,
@@ -2554,8 +2554,8 @@
     {
       "type": "CommentLine",
       "value": " };",
-      "start": 998,
-      "end": 1003,
+      "start": 965,
+      "end": 970,
       "loc": {
         "start": {
           "line": 34,
@@ -2570,8 +2570,8 @@
     {
       "type": "CommentLine",
       "value": " const screenOptions = (drawerLabel, iconName, iconType) => {",
-      "start": 1007,
-      "end": 1070,
+      "start": 972,
+      "end": 1035,
       "loc": {
         "start": {
           "line": 36,
@@ -2586,8 +2586,8 @@
     {
       "type": "CommentLine",
       "value": "   return {",
-      "start": 1072,
-      "end": 1085,
+      "start": 1036,
+      "end": 1049,
       "loc": {
         "start": {
           "line": 37,
@@ -2602,8 +2602,8 @@
     {
       "type": "CommentLine",
       "value": "     headerShown: true,",
-      "start": 1087,
-      "end": 1112,
+      "start": 1050,
+      "end": 1075,
       "loc": {
         "start": {
           "line": 38,
@@ -2618,8 +2618,8 @@
     {
       "type": "CommentLine",
       "value": "     headerTitle: drawerLabel,",
-      "start": 1114,
-      "end": 1146,
+      "start": 1076,
+      "end": 1108,
       "loc": {
         "start": {
           "line": 39,
@@ -2634,8 +2634,8 @@
     {
       "type": "CommentLine",
       "value": "     drawerLabel: ({focused, color}) => (",
-      "start": 1148,
-      "end": 1191,
+      "start": 1109,
+      "end": 1152,
       "loc": {
         "start": {
           "line": 40,
@@ -2650,8 +2650,8 @@
     {
       "type": "CommentLine",
       "value": "       <Text style={{...styles.drawerLabel, color: color}}>{drawerLabel}</Text>",
-      "start": 1193,
-      "end": 1274,
+      "start": 1153,
+      "end": 1234,
       "loc": {
         "start": {
           "line": 41,
@@ -2666,8 +2666,8 @@
     {
       "type": "CommentLine",
       "value": "     ),",
-      "start": 1276,
-      "end": 1285,
+      "start": 1235,
+      "end": 1244,
       "loc": {
         "start": {
           "line": 42,
@@ -2682,8 +2682,8 @@
     {
       "type": "CommentLine",
       "value": "     drawerIcon: ({focused, color, size}) => (",
-      "start": 1287,
-      "end": 1335,
+      "start": 1245,
+      "end": 1293,
       "loc": {
         "start": {
           "line": 43,
@@ -2698,8 +2698,8 @@
     {
       "type": "CommentLine",
       "value": "       <Icon",
-      "start": 1337,
-      "end": 1351,
+      "start": 1294,
+      "end": 1308,
       "loc": {
         "start": {
           "line": 44,
@@ -2714,8 +2714,8 @@
     {
       "type": "CommentLine",
       "value": "         name={iconName}",
-      "start": 1353,
-      "end": 1379,
+      "start": 1309,
+      "end": 1335,
       "loc": {
         "start": {
           "line": 45,
@@ -2730,8 +2730,8 @@
     {
       "type": "CommentLine",
       "value": "         type={iconType}",
-      "start": 1381,
-      "end": 1407,
+      "start": 1336,
+      "end": 1362,
       "loc": {
         "start": {
           "line": 46,
@@ -2746,8 +2746,8 @@
     {
       "type": "CommentLine",
       "value": "         color={color}",
-      "start": 1409,
-      "end": 1433,
+      "start": 1363,
+      "end": 1387,
       "loc": {
         "start": {
           "line": 47,
@@ -2762,8 +2762,8 @@
     {
       "type": "CommentLine",
       "value": "         size={size}",
-      "start": 1435,
-      "end": 1457,
+      "start": 1388,
+      "end": 1410,
       "loc": {
         "start": {
           "line": 48,
@@ -2778,8 +2778,8 @@
     {
       "type": "CommentLine",
       "value": "         style={styles.drawerIcon}",
-      "start": 1459,
-      "end": 1495,
+      "start": 1411,
+      "end": 1447,
       "loc": {
         "start": {
           "line": 49,
@@ -2794,8 +2794,8 @@
     {
       "type": "CommentLine",
       "value": "         solid={true}",
-      "start": 1497,
-      "end": 1520,
+      "start": 1448,
+      "end": 1471,
       "loc": {
         "start": {
           "line": 50,
@@ -2810,8 +2810,8 @@
     {
       "type": "CommentLine",
       "value": "       />",
-      "start": 1522,
-      "end": 1533,
+      "start": 1472,
+      "end": 1483,
       "loc": {
         "start": {
           "line": 51,
@@ -2826,8 +2826,8 @@
     {
       "type": "CommentLine",
       "value": "     ),",
-      "start": 1535,
-      "end": 1544,
+      "start": 1484,
+      "end": 1493,
       "loc": {
         "start": {
           "line": 52,
@@ -2842,8 +2842,8 @@
     {
       "type": "CommentLine",
       "value": "   };",
-      "start": 1546,
-      "end": 1553,
+      "start": 1494,
+      "end": 1501,
       "loc": {
         "start": {
           "line": 53,
@@ -2858,8 +2858,8 @@
     {
       "type": "CommentLine",
       "value": " };",
-      "start": 1555,
-      "end": 1560,
+      "start": 1502,
+      "end": 1507,
       "loc": {
         "start": {
           "line": 54,
@@ -3021,8 +3021,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 28,
-      "end": 34,
+      "start": 27,
+      "end": 33,
       "loc": {
         "start": {
           "line": 2,
@@ -3046,8 +3046,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 35,
-      "end": 36,
+      "start": 34,
+      "end": 35,
       "loc": {
         "start": {
           "line": 2,
@@ -3072,8 +3072,8 @@
         "binop": null
       },
       "value": "StyleSheet",
-      "start": 37,
-      "end": 47,
+      "start": 36,
+      "end": 46,
       "loc": {
         "start": {
           "line": 2,
@@ -3098,8 +3098,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 47,
-      "end": 48,
+      "start": 46,
+      "end": 47,
       "loc": {
         "start": {
           "line": 2,
@@ -3124,8 +3124,8 @@
         "binop": null
       },
       "value": "View",
-      "start": 49,
-      "end": 53,
+      "start": 48,
+      "end": 52,
       "loc": {
         "start": {
           "line": 2,
@@ -3149,8 +3149,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 54,
-      "end": 55,
+      "start": 53,
+      "end": 54,
       "loc": {
         "start": {
           "line": 2,
@@ -3175,8 +3175,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 56,
-      "end": 60,
+      "start": 55,
+      "end": 59,
       "loc": {
         "start": {
           "line": 2,
@@ -3202,8 +3202,8 @@
         "updateContext": null
       },
       "value": "react-native",
-      "start": 61,
-      "end": 75,
+      "start": 60,
+      "end": 74,
       "loc": {
         "start": {
           "line": 2,
@@ -3228,8 +3228,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 75,
-      "end": 76,
+      "start": 74,
+      "end": 75,
       "loc": {
         "start": {
           "line": 2,
@@ -3256,8 +3256,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 78,
-      "end": 84,
+      "start": 76,
+      "end": 82,
       "loc": {
         "start": {
           "line": 3,
@@ -3281,8 +3281,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 85,
-      "end": 86,
+      "start": 83,
+      "end": 84,
       "loc": {
         "start": {
           "line": 3,
@@ -3307,8 +3307,8 @@
         "binop": null
       },
       "value": "createDrawerNavigator",
-      "start": 87,
-      "end": 108,
+      "start": 85,
+      "end": 106,
       "loc": {
         "start": {
           "line": 3,
@@ -3332,8 +3332,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 109,
-      "end": 110,
+      "start": 107,
+      "end": 108,
       "loc": {
         "start": {
           "line": 3,
@@ -3358,8 +3358,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 111,
-      "end": 115,
+      "start": 109,
+      "end": 113,
       "loc": {
         "start": {
           "line": 3,
@@ -3385,8 +3385,8 @@
         "updateContext": null
       },
       "value": "@react-navigation/drawer",
-      "start": 116,
-      "end": 142,
+      "start": 114,
+      "end": 140,
       "loc": {
         "start": {
           "line": 3,
@@ -3411,8 +3411,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 142,
-      "end": 143,
+      "start": 140,
+      "end": 141,
       "loc": {
         "start": {
           "line": 3,
@@ -3439,8 +3439,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 145,
-      "end": 151,
+      "start": 142,
+      "end": 148,
       "loc": {
         "start": {
           "line": 4,
@@ -3465,8 +3465,8 @@
         "binop": null
       },
       "value": "StackNavigation",
-      "start": 152,
-      "end": 167,
+      "start": 149,
+      "end": 164,
       "loc": {
         "start": {
           "line": 4,
@@ -3491,8 +3491,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 168,
-      "end": 172,
+      "start": 165,
+      "end": 169,
       "loc": {
         "start": {
           "line": 4,
@@ -3518,8 +3518,8 @@
         "updateContext": null
       },
       "value": "./StackNavigation",
-      "start": 173,
-      "end": 192,
+      "start": 170,
+      "end": 189,
       "loc": {
         "start": {
           "line": 4,
@@ -3544,8 +3544,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 192,
-      "end": 193,
+      "start": 189,
+      "end": 190,
       "loc": {
         "start": {
           "line": 4,
@@ -3572,8 +3572,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 195,
-      "end": 201,
+      "start": 191,
+      "end": 197,
       "loc": {
         "start": {
           "line": 5,
@@ -3598,8 +3598,8 @@
         "binop": null
       },
       "value": "DrawerContent",
-      "start": 202,
-      "end": 215,
+      "start": 198,
+      "end": 211,
       "loc": {
         "start": {
           "line": 5,
@@ -3624,8 +3624,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 216,
-      "end": 220,
+      "start": 212,
+      "end": 216,
       "loc": {
         "start": {
           "line": 5,
@@ -3651,8 +3651,8 @@
         "updateContext": null
       },
       "value": "./DrawerContent",
-      "start": 221,
-      "end": 238,
+      "start": 217,
+      "end": 234,
       "loc": {
         "start": {
           "line": 5,
@@ -3677,8 +3677,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 238,
-      "end": 239,
+      "start": 234,
+      "end": 235,
       "loc": {
         "start": {
           "line": 5,
@@ -3705,8 +3705,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 243,
-      "end": 248,
+      "start": 237,
+      "end": 242,
       "loc": {
         "start": {
           "line": 7,
@@ -3731,8 +3731,8 @@
         "binop": null
       },
       "value": "Drawer",
-      "start": 249,
-      "end": 255,
+      "start": 243,
+      "end": 249,
       "loc": {
         "start": {
           "line": 7,
@@ -3758,8 +3758,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 256,
-      "end": 257,
+      "start": 250,
+      "end": 251,
       "loc": {
         "start": {
           "line": 7,
@@ -3784,8 +3784,8 @@
         "binop": null
       },
       "value": "createDrawerNavigator",
-      "start": 258,
-      "end": 279,
+      "start": 252,
+      "end": 273,
       "loc": {
         "start": {
           "line": 7,
@@ -3809,8 +3809,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 279,
-      "end": 280,
+      "start": 273,
+      "end": 274,
       "loc": {
         "start": {
           "line": 7,
@@ -3834,8 +3834,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 280,
-      "end": 281,
+      "start": 274,
+      "end": 275,
       "loc": {
         "start": {
           "line": 7,
@@ -3860,8 +3860,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 281,
-      "end": 282,
+      "start": 275,
+      "end": 276,
       "loc": {
         "start": {
           "line": 7,
@@ -3888,8 +3888,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 286,
-      "end": 292,
+      "start": 278,
+      "end": 284,
       "loc": {
         "start": {
           "line": 9,
@@ -3916,8 +3916,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 293,
-      "end": 300,
+      "start": 285,
+      "end": 292,
       "loc": {
         "start": {
           "line": 9,
@@ -3942,8 +3942,8 @@
         "binop": null
       },
       "value": "MainNavigator",
-      "start": 301,
-      "end": 314,
+      "start": 293,
+      "end": 306,
       "loc": {
         "start": {
           "line": 9,
@@ -3969,8 +3969,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 315,
-      "end": 316,
+      "start": 307,
+      "end": 308,
       "loc": {
         "start": {
           "line": 9,
@@ -3994,8 +3994,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 317,
-      "end": 318,
+      "start": 309,
+      "end": 310,
       "loc": {
         "start": {
           "line": 9,
@@ -4019,8 +4019,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 318,
-      "end": 319,
+      "start": 310,
+      "end": 311,
       "loc": {
         "start": {
           "line": 9,
@@ -4045,8 +4045,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 320,
-      "end": 322,
+      "start": 312,
+      "end": 314,
       "loc": {
         "start": {
           "line": 9,
@@ -4070,8 +4070,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 323,
-      "end": 324,
+      "start": 315,
+      "end": 316,
       "loc": {
         "start": {
           "line": 9,
@@ -4098,8 +4098,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 328,
-      "end": 334,
+      "start": 319,
+      "end": 325,
       "loc": {
         "start": {
           "line": 10,
@@ -4123,8 +4123,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 335,
-      "end": 336,
+      "start": 326,
+      "end": 327,
       "loc": {
         "start": {
           "line": 10,
@@ -4148,8 +4148,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 342,
-      "end": 343,
+      "start": 332,
+      "end": 333,
       "loc": {
         "start": {
           "line": 11,
@@ -4175,8 +4175,8 @@
         "updateContext": null
       },
       "value": "Drawer",
-      "start": 343,
-      "end": 349,
+      "start": 333,
+      "end": 339,
       "loc": {
         "start": {
           "line": 11,
@@ -4201,8 +4201,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 349,
-      "end": 350,
+      "start": 339,
+      "end": 340,
       "loc": {
         "start": {
           "line": 11,
@@ -4228,8 +4228,8 @@
         "updateContext": null
       },
       "value": "Navigator",
-      "start": 350,
-      "end": 359,
+      "start": 340,
+      "end": 349,
       "loc": {
         "start": {
           "line": 11,
@@ -4255,8 +4255,8 @@
         "updateContext": null
       },
       "value": "initialRouteName",
-      "start": 367,
-      "end": 383,
+      "start": 356,
+      "end": 372,
       "loc": {
         "start": {
           "line": 12,
@@ -4282,8 +4282,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 383,
-      "end": 384,
+      "start": 372,
+      "end": 373,
       "loc": {
         "start": {
           "line": 12,
@@ -4309,8 +4309,8 @@
         "updateContext": null
       },
       "value": "app",
-      "start": 384,
-      "end": 389,
+      "start": 373,
+      "end": 378,
       "loc": {
         "start": {
           "line": 12,
@@ -4336,8 +4336,8 @@
         "updateContext": null
       },
       "value": "drawerContent",
-      "start": 397,
-      "end": 410,
+      "start": 385,
+      "end": 398,
       "loc": {
         "start": {
           "line": 13,
@@ -4363,8 +4363,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 410,
-      "end": 411,
+      "start": 398,
+      "end": 399,
       "loc": {
         "start": {
           "line": 13,
@@ -4388,8 +4388,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 411,
-      "end": 412,
+      "start": 399,
+      "end": 400,
       "loc": {
         "start": {
           "line": 13,
@@ -4413,8 +4413,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 412,
-      "end": 413,
+      "start": 400,
+      "end": 401,
       "loc": {
         "start": {
           "line": 13,
@@ -4439,8 +4439,8 @@
         "binop": null
       },
       "value": "props",
-      "start": 413,
-      "end": 418,
+      "start": 401,
+      "end": 406,
       "loc": {
         "start": {
           "line": 13,
@@ -4464,8 +4464,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 418,
-      "end": 419,
+      "start": 406,
+      "end": 407,
       "loc": {
         "start": {
           "line": 13,
@@ -4490,8 +4490,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 420,
-      "end": 422,
+      "start": 408,
+      "end": 410,
       "loc": {
         "start": {
           "line": 13,
@@ -4515,8 +4515,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 423,
-      "end": 424,
+      "start": 411,
+      "end": 412,
       "loc": {
         "start": {
           "line": 13,
@@ -4542,8 +4542,8 @@
         "updateContext": null
       },
       "value": "DrawerContent",
-      "start": 424,
-      "end": 437,
+      "start": 412,
+      "end": 425,
       "loc": {
         "start": {
           "line": 13,
@@ -4567,8 +4567,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 438,
-      "end": 439,
+      "start": 426,
+      "end": 427,
       "loc": {
         "start": {
           "line": 13,
@@ -4593,8 +4593,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 439,
-      "end": 442,
+      "start": 427,
+      "end": 430,
       "loc": {
         "start": {
           "line": 13,
@@ -4619,8 +4619,8 @@
         "binop": null
       },
       "value": "props",
-      "start": 442,
-      "end": 447,
+      "start": 430,
+      "end": 435,
       "loc": {
         "start": {
           "line": 13,
@@ -4644,8 +4644,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 447,
-      "end": 448,
+      "start": 435,
+      "end": 436,
       "loc": {
         "start": {
           "line": 13,
@@ -4671,8 +4671,8 @@
         "updateContext": null
       },
       "value": "/",
-      "start": 449,
-      "end": 450,
+      "start": 437,
+      "end": 438,
       "loc": {
         "start": {
           "line": 13,
@@ -4696,8 +4696,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 450,
-      "end": 451,
+      "start": 438,
+      "end": 439,
       "loc": {
         "start": {
           "line": 13,
@@ -4721,8 +4721,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 451,
-      "end": 452,
+      "start": 439,
+      "end": 440,
       "loc": {
         "start": {
           "line": 13,
@@ -4746,8 +4746,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 452,
-      "end": 453,
+      "start": 440,
+      "end": 441,
       "loc": {
         "start": {
           "line": 13,
@@ -4773,8 +4773,8 @@
         "updateContext": null
       },
       "value": "\n      ",
-      "start": 453,
-      "end": 461,
+      "start": 441,
+      "end": 448,
       "loc": {
         "start": {
           "line": 13,
@@ -4798,8 +4798,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 461,
-      "end": 462,
+      "start": 448,
+      "end": 449,
       "loc": {
         "start": {
           "line": 14,
@@ -4825,8 +4825,8 @@
         "updateContext": null
       },
       "value": "Drawer",
-      "start": 462,
-      "end": 468,
+      "start": 449,
+      "end": 455,
       "loc": {
         "start": {
           "line": 14,
@@ -4851,8 +4851,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 468,
-      "end": 469,
+      "start": 455,
+      "end": 456,
       "loc": {
         "start": {
           "line": 14,
@@ -4878,8 +4878,8 @@
         "updateContext": null
       },
       "value": "Screen",
-      "start": 469,
-      "end": 475,
+      "start": 456,
+      "end": 462,
       "loc": {
         "start": {
           "line": 14,
@@ -4905,8 +4905,8 @@
         "updateContext": null
       },
       "value": "name",
-      "start": 476,
-      "end": 480,
+      "start": 463,
+      "end": 467,
       "loc": {
         "start": {
           "line": 14,
@@ -4932,8 +4932,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 480,
-      "end": 481,
+      "start": 467,
+      "end": 468,
       "loc": {
         "start": {
           "line": 14,
@@ -4959,8 +4959,8 @@
         "updateContext": null
       },
       "value": "app",
-      "start": 481,
-      "end": 486,
+      "start": 468,
+      "end": 473,
       "loc": {
         "start": {
           "line": 14,
@@ -4986,8 +4986,8 @@
         "updateContext": null
       },
       "value": "component",
-      "start": 487,
-      "end": 496,
+      "start": 474,
+      "end": 483,
       "loc": {
         "start": {
           "line": 14,
@@ -5013,8 +5013,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 496,
-      "end": 497,
+      "start": 483,
+      "end": 484,
       "loc": {
         "start": {
           "line": 14,
@@ -5038,8 +5038,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 497,
-      "end": 498,
+      "start": 484,
+      "end": 485,
       "loc": {
         "start": {
           "line": 14,
@@ -5064,8 +5064,8 @@
         "binop": null
       },
       "value": "StackNavigation",
-      "start": 498,
-      "end": 513,
+      "start": 485,
+      "end": 500,
       "loc": {
         "start": {
           "line": 14,
@@ -5089,8 +5089,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 513,
-      "end": 514,
+      "start": 500,
+      "end": 501,
       "loc": {
         "start": {
           "line": 14,
@@ -5116,8 +5116,8 @@
         "updateContext": null
       },
       "value": "/",
-      "start": 515,
-      "end": 516,
+      "start": 502,
+      "end": 503,
       "loc": {
         "start": {
           "line": 14,
@@ -5141,8 +5141,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 516,
-      "end": 517,
+      "start": 503,
+      "end": 504,
       "loc": {
         "start": {
           "line": 14,
@@ -5168,8 +5168,8 @@
         "updateContext": null
       },
       "value": "\n    ",
-      "start": 517,
-      "end": 523,
+      "start": 504,
+      "end": 509,
       "loc": {
         "start": {
           "line": 14,
@@ -5193,8 +5193,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 523,
-      "end": 524,
+      "start": 509,
+      "end": 510,
       "loc": {
         "start": {
           "line": 15,
@@ -5220,8 +5220,8 @@
         "updateContext": null
       },
       "value": "/",
-      "start": 524,
-      "end": 525,
+      "start": 510,
+      "end": 511,
       "loc": {
         "start": {
           "line": 15,
@@ -5247,8 +5247,8 @@
         "updateContext": null
       },
       "value": "Drawer",
-      "start": 525,
-      "end": 531,
+      "start": 511,
+      "end": 517,
       "loc": {
         "start": {
           "line": 15,
@@ -5273,8 +5273,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 531,
-      "end": 532,
+      "start": 517,
+      "end": 518,
       "loc": {
         "start": {
           "line": 15,
@@ -5300,8 +5300,8 @@
         "updateContext": null
       },
       "value": "Navigator",
-      "start": 532,
-      "end": 541,
+      "start": 518,
+      "end": 527,
       "loc": {
         "start": {
           "line": 15,
@@ -5325,8 +5325,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 541,
-      "end": 542,
+      "start": 527,
+      "end": 528,
       "loc": {
         "start": {
           "line": 15,
@@ -5350,8 +5350,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 546,
-      "end": 547,
+      "start": 531,
+      "end": 532,
       "loc": {
         "start": {
           "line": 16,
@@ -5376,8 +5376,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 547,
-      "end": 548,
+      "start": 532,
+      "end": 533,
       "loc": {
         "start": {
           "line": 16,
@@ -5401,8 +5401,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 550,
-      "end": 551,
+      "start": 534,
+      "end": 535,
       "loc": {
         "start": {
           "line": 17,
@@ -5427,8 +5427,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 551,
-      "end": 552,
+      "start": 535,
+      "end": 536,
       "loc": {
         "start": {
           "line": 17,
@@ -5443,8 +5443,8 @@
     {
       "type": "CommentLine",
       "value": " const styles = StyleSheet.create({",
-      "start": 556,
-      "end": 593,
+      "start": 538,
+      "end": 575,
       "loc": {
         "start": {
           "line": 19,
@@ -5459,8 +5459,8 @@
     {
       "type": "CommentLine",
       "value": "   drawerStyle: {",
-      "start": 595,
-      "end": 614,
+      "start": 576,
+      "end": 595,
       "loc": {
         "start": {
           "line": 20,
@@ -5475,8 +5475,8 @@
     {
       "type": "CommentLine",
       "value": "     backgroundColor: Colors.primaryColor,",
-      "start": 616,
-      "end": 660,
+      "start": 596,
+      "end": 640,
       "loc": {
         "start": {
           "line": 21,
@@ -5491,8 +5491,8 @@
     {
       "type": "CommentLine",
       "value": "     width: 240,",
-      "start": 662,
-      "end": 680,
+      "start": 641,
+      "end": 659,
       "loc": {
         "start": {
           "line": 22,
@@ -5507,8 +5507,8 @@
     {
       "type": "CommentLine",
       "value": "   },",
-      "start": 682,
-      "end": 689,
+      "start": 660,
+      "end": 667,
       "loc": {
         "start": {
           "line": 23,
@@ -5523,8 +5523,8 @@
     {
       "type": "CommentLine",
       "value": "   drawerIcon: {",
-      "start": 691,
-      "end": 709,
+      "start": 668,
+      "end": 686,
       "loc": {
         "start": {
           "line": 24,
@@ -5539,8 +5539,8 @@
     {
       "type": "CommentLine",
       "value": "     //backgroundColor: 'white',",
-      "start": 711,
-      "end": 745,
+      "start": 687,
+      "end": 721,
       "loc": {
         "start": {
           "line": 25,
@@ -5555,8 +5555,8 @@
     {
       "type": "CommentLine",
       "value": "   },",
-      "start": 747,
-      "end": 754,
+      "start": 722,
+      "end": 729,
       "loc": {
         "start": {
           "line": 26,
@@ -5571,8 +5571,8 @@
     {
       "type": "CommentLine",
       "value": "   drawerLabel: {fontWeight: 'bold'},",
-      "start": 756,
-      "end": 795,
+      "start": 730,
+      "end": 769,
       "loc": {
         "start": {
           "line": 27,
@@ -5587,8 +5587,8 @@
     {
       "type": "CommentLine",
       "value": " });",
-      "start": 797,
-      "end": 803,
+      "start": 770,
+      "end": 776,
       "loc": {
         "start": {
           "line": 28,
@@ -5603,8 +5603,8 @@
     {
       "type": "CommentLine",
       "value": " const drawerContentOptions = {",
-      "start": 807,
-      "end": 840,
+      "start": 778,
+      "end": 811,
       "loc": {
         "start": {
           "line": 30,
@@ -5619,8 +5619,8 @@
     {
       "type": "CommentLine",
       "value": "   activeTintColor: Colors.activeDrawerItemTintColor,",
-      "start": 842,
-      "end": 897,
+      "start": 812,
+      "end": 867,
       "loc": {
         "start": {
           "line": 31,
@@ -5635,8 +5635,8 @@
     {
       "type": "CommentLine",
       "value": "   inactiveTintColor: Colors.inactiveDrawerItemTintColor,",
-      "start": 899,
-      "end": 958,
+      "start": 868,
+      "end": 927,
       "loc": {
         "start": {
           "line": 32,
@@ -5651,8 +5651,8 @@
     {
       "type": "CommentLine",
       "value": "   itemStyle: {marginVertical: 5},",
-      "start": 960,
-      "end": 996,
+      "start": 928,
+      "end": 964,
       "loc": {
         "start": {
           "line": 33,
@@ -5667,8 +5667,8 @@
     {
       "type": "CommentLine",
       "value": " };",
-      "start": 998,
-      "end": 1003,
+      "start": 965,
+      "end": 970,
       "loc": {
         "start": {
           "line": 34,
@@ -5683,8 +5683,8 @@
     {
       "type": "CommentLine",
       "value": " const screenOptions = (drawerLabel, iconName, iconType) => {",
-      "start": 1007,
-      "end": 1070,
+      "start": 972,
+      "end": 1035,
       "loc": {
         "start": {
           "line": 36,
@@ -5699,8 +5699,8 @@
     {
       "type": "CommentLine",
       "value": "   return {",
-      "start": 1072,
-      "end": 1085,
+      "start": 1036,
+      "end": 1049,
       "loc": {
         "start": {
           "line": 37,
@@ -5715,8 +5715,8 @@
     {
       "type": "CommentLine",
       "value": "     headerShown: true,",
-      "start": 1087,
-      "end": 1112,
+      "start": 1050,
+      "end": 1075,
       "loc": {
         "start": {
           "line": 38,
@@ -5731,8 +5731,8 @@
     {
       "type": "CommentLine",
       "value": "     headerTitle: drawerLabel,",
-      "start": 1114,
-      "end": 1146,
+      "start": 1076,
+      "end": 1108,
       "loc": {
         "start": {
           "line": 39,
@@ -5747,8 +5747,8 @@
     {
       "type": "CommentLine",
       "value": "     drawerLabel: ({focused, color}) => (",
-      "start": 1148,
-      "end": 1191,
+      "start": 1109,
+      "end": 1152,
       "loc": {
         "start": {
           "line": 40,
@@ -5763,8 +5763,8 @@
     {
       "type": "CommentLine",
       "value": "       <Text style={{...styles.drawerLabel, color: color}}>{drawerLabel}</Text>",
-      "start": 1193,
-      "end": 1274,
+      "start": 1153,
+      "end": 1234,
       "loc": {
         "start": {
           "line": 41,
@@ -5779,8 +5779,8 @@
     {
       "type": "CommentLine",
       "value": "     ),",
-      "start": 1276,
-      "end": 1285,
+      "start": 1235,
+      "end": 1244,
       "loc": {
         "start": {
           "line": 42,
@@ -5795,8 +5795,8 @@
     {
       "type": "CommentLine",
       "value": "     drawerIcon: ({focused, color, size}) => (",
-      "start": 1287,
-      "end": 1335,
+      "start": 1245,
+      "end": 1293,
       "loc": {
         "start": {
           "line": 43,
@@ -5811,8 +5811,8 @@
     {
       "type": "CommentLine",
       "value": "       <Icon",
-      "start": 1337,
-      "end": 1351,
+      "start": 1294,
+      "end": 1308,
       "loc": {
         "start": {
           "line": 44,
@@ -5827,8 +5827,8 @@
     {
       "type": "CommentLine",
       "value": "         name={iconName}",
-      "start": 1353,
-      "end": 1379,
+      "start": 1309,
+      "end": 1335,
       "loc": {
         "start": {
           "line": 45,
@@ -5843,8 +5843,8 @@
     {
       "type": "CommentLine",
       "value": "         type={iconType}",
-      "start": 1381,
-      "end": 1407,
+      "start": 1336,
+      "end": 1362,
       "loc": {
         "start": {
           "line": 46,
@@ -5859,8 +5859,8 @@
     {
       "type": "CommentLine",
       "value": "         color={color}",
-      "start": 1409,
-      "end": 1433,
+      "start": 1363,
+      "end": 1387,
       "loc": {
         "start": {
           "line": 47,
@@ -5875,8 +5875,8 @@
     {
       "type": "CommentLine",
       "value": "         size={size}",
-      "start": 1435,
-      "end": 1457,
+      "start": 1388,
+      "end": 1410,
       "loc": {
         "start": {
           "line": 48,
@@ -5891,8 +5891,8 @@
     {
       "type": "CommentLine",
       "value": "         style={styles.drawerIcon}",
-      "start": 1459,
-      "end": 1495,
+      "start": 1411,
+      "end": 1447,
       "loc": {
         "start": {
           "line": 49,
@@ -5907,8 +5907,8 @@
     {
       "type": "CommentLine",
       "value": "         solid={true}",
-      "start": 1497,
-      "end": 1520,
+      "start": 1448,
+      "end": 1471,
       "loc": {
         "start": {
           "line": 50,
@@ -5923,8 +5923,8 @@
     {
       "type": "CommentLine",
       "value": "       />",
-      "start": 1522,
-      "end": 1533,
+      "start": 1472,
+      "end": 1483,
       "loc": {
         "start": {
           "line": 51,
@@ -5939,8 +5939,8 @@
     {
       "type": "CommentLine",
       "value": "     ),",
-      "start": 1535,
-      "end": 1544,
+      "start": 1484,
+      "end": 1493,
       "loc": {
         "start": {
           "line": 52,
@@ -5955,8 +5955,8 @@
     {
       "type": "CommentLine",
       "value": "   };",
-      "start": 1546,
-      "end": 1553,
+      "start": 1494,
+      "end": 1501,
       "loc": {
         "start": {
           "line": 53,
@@ -5971,8 +5971,8 @@
     {
       "type": "CommentLine",
       "value": " };",
-      "start": 1555,
-      "end": 1560,
+      "start": 1502,
+      "end": 1507,
       "loc": {
         "start": {
           "line": 54,
@@ -5997,8 +5997,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1562,
-      "end": 1562,
+      "start": 1508,
+      "end": 1508,
       "loc": {
         "start": {
           "line": 55,

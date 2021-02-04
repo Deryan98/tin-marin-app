@@ -5,59 +5,59 @@
     "lines": [
       {
         "lineNumber": 13,
-        "line": "/**\r"
+        "line": "/**"
       },
       {
         "lineNumber": 14,
-        "line": " * Tarjeta utilizada para mostrar información, de la pantalla Sitios de Interes.\r"
+        "line": " * Tarjeta utilizada para mostrar información, de la pantalla Sitios de Interes."
       },
       {
         "lineNumber": 15,
-        "line": " * @param {string} title - Almacena el titulo en una cadena de texto, que se muestra en pantalla. \r"
+        "line": " * @param {string} title - Almacena el titulo en una cadena de texto, que se muestra en pantalla. "
       },
       {
         "lineNumber": 16,
-        "line": " * @param {image} imageURL - Componente que muestra imagen en pantalla.\r"
+        "line": " * @param {image} imageURL - Componente que muestra imagen en pantalla."
       },
       {
         "lineNumber": 17,
-        "line": " * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.\r"
+        "line": " * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta."
       },
       {
         "lineNumber": 18,
-        "line": " * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta.  \r"
+        "line": " * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta.  "
       },
       {
         "lineNumber": 19,
-        "line": " * @param {uri} url - Componente que almacena una dirección web\r"
+        "line": " * @param {uri} url - Componente que almacena una dirección web"
       },
       {
         "lineNumber": 20,
-        "line": " * @see https://reactnative.dev/docs/image \r"
+        "line": " * @see https://reactnative.dev/docs/image "
       },
       {
         "lineNumber": 21,
-        "line": " * @see https://reactnative.dev/docs/text\r"
+        "line": " * @see https://reactnative.dev/docs/text"
       },
       {
         "lineNumber": 22,
-        "line": " * @see https://reactnative.dev/docs/colors\r"
+        "line": " * @see https://reactnative.dev/docs/colors"
       },
       {
         "lineNumber": 23,
-        "line": " * @return {SafeAreaView} Retorna un layout cuyos limites se encuentran en un area segura.\r"
+        "line": " * @return {SafeAreaView} Retorna un layout cuyos limites se encuentran en un area segura."
       },
       {
         "lineNumber": 24,
-        "line": " */\r"
+        "line": " */"
       },
       {
         "lineNumber": 25,
-        "line": "\r"
+        "line": ""
       },
       {
         "lineNumber": 26,
-        "line": "const BasicCard = ({ title, imageURL, color, textBtn, url }) => {\r"
+        "line": "const BasicCard = ({ title, imageURL, color, textBtn, url }) => {"
       }
     ],
     "codeParams": [
@@ -77,67 +77,67 @@
     "lines": [
       {
         "lineNumber": 11,
-        "line": "/**\r"
+        "line": "/**"
       },
       {
         "lineNumber": 12,
-        "line": " * Tarjeta utilizada para mostrar la información de las pantallas: Información de Covid, Exhibiciones, Preguntas Frecuentes, Busqueda    \r"
+        "line": " * Tarjeta utilizada para mostrar la información de las pantallas: Información de Covid, Exhibiciones, Preguntas Frecuentes, Busqueda    "
       },
       {
         "lineNumber": 13,
-        "line": " * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.\r"
+        "line": " * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta."
       },
       {
         "lineNumber": 14,
-        "line": " * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta.\r"
+        "line": " * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta."
       },
       {
         "lineNumber": 15,
-        "line": " * @param {prop} navigation - Contiene información básica de navegación\r"
+        "line": " * @param {prop} navigation - Contiene información básica de navegación"
       },
       {
         "lineNumber": 16,
-        "line": " * @property {function} exhibition - Método de acceso indirecto para acceder a parametros.\r"
+        "line": " * @property {function} exhibition - Método de acceso indirecto para acceder a parametros."
       },
       {
         "lineNumber": 17,
-        "line": " * @property {function} imageURL - Método de acceso\r"
+        "line": " * @property {function} imageURL - Método de acceso"
       },
       {
         "lineNumber": 18,
-        "line": " * @see https://reactnative.dev/docs/intro-react\r"
+        "line": " * @see https://reactnative.dev/docs/intro-react"
       },
       {
         "lineNumber": 19,
-        "line": " * @see https://reactnative.dev/docs/text\r"
+        "line": " * @see https://reactnative.dev/docs/text"
       },
       {
         "lineNumber": 20,
-        "line": " * @see https://reactnavigation.org/docs/navigation-prop/  \r"
+        "line": " * @see https://reactnavigation.org/docs/navigation-prop/  "
       },
       {
         "lineNumber": 21,
-        "line": " * @see https://reactnative.dev/docs/safeareaview\r"
+        "line": " * @see https://reactnative.dev/docs/safeareaview"
       },
       {
         "lineNumber": 22,
-        "line": " * @return {SafeAreaView} Retorna un layout cuyos limites se encuentran en un area segura.\r"
+        "line": " * @return {SafeAreaView} Retorna un layout cuyos limites se encuentran en un area segura."
       },
       {
         "lineNumber": 23,
-        "line": " }}\r"
+        "line": " }}"
       },
       {
         "lineNumber": 24,
-        "line": " */\r"
+        "line": " */"
       },
       {
         "lineNumber": 25,
-        "line": "\r"
+        "line": ""
       },
       {
         "lineNumber": 26,
-        "line": "const Card = ({ exhibition, color, textBtn, navigation}) => {\r"
+        "line": "const Card = ({ exhibition, color, textBtn, navigation}) => {"
       }
     ],
     "codeParams": [
@@ -155,51 +155,51 @@
     "lines": [
       {
         "lineNumber": 3,
-        "line": "/**\r"
+        "line": "/**"
       },
       {
         "lineNumber": 4,
-        "line": " * Tarjeta utilizada para mostrar la información de la pantalla Contacto.\r"
+        "line": " * Tarjeta utilizada para mostrar la información de la pantalla Contacto."
       },
       {
         "lineNumber": 5,
-        "line": " * @param {string} charge - Cadena que almacena el cargo que tiene cada contacto del museo.\r"
+        "line": " * @param {string} charge - Cadena que almacena el cargo que tiene cada contacto del museo."
       },
       {
         "lineNumber": 6,
-        "line": " * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.\r"
+        "line": " * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta."
       },
       {
         "lineNumber": 7,
-        "line": " * @param {string} name - Cadena que almacena el nombre de los contactos.\r"
+        "line": " * @param {string} name - Cadena que almacena el nombre de los contactos."
       },
       {
         "lineNumber": 8,
-        "line": " * @param {string} email - Cadena que almacena el email de los contactos.\r"
+        "line": " * @param {string} email - Cadena que almacena el email de los contactos."
       },
       {
         "lineNumber": 9,
-        "line": " * @see https://reactnative.dev/docs/text\r"
+        "line": " * @see https://reactnative.dev/docs/text"
       },
       {
         "lineNumber": 10,
-        "line": " * @see https://reactnative.dev/docs/safeareaview\r"
+        "line": " * @see https://reactnative.dev/docs/safeareaview"
       },
       {
         "lineNumber": 11,
-        "line": " * @return {SafeAreaView} - Retorna un layout cuyos limites se encuentran en un area segura.\r"
+        "line": " * @return {SafeAreaView} - Retorna un layout cuyos limites se encuentran en un area segura."
       },
       {
         "lineNumber": 12,
-        "line": " */\r"
+        "line": " */"
       },
       {
         "lineNumber": 13,
-        "line": "\r"
+        "line": ""
       },
       {
         "lineNumber": 14,
-        "line": "const GenericCard = ({ charge, color, name, email }) => {\r"
+        "line": "const GenericCard = ({ charge, color, name, email }) => {"
       }
     ],
     "codeParams": [
@@ -218,67 +218,67 @@
     "lines": [
       {
         "lineNumber": 12,
-        "line": "/**\r"
+        "line": "/**"
       },
       {
         "lineNumber": 13,
-        "line": " * Tarjeta utilizada por la pantalla Covid-19, para mostrar las opciones en dicho apartado.\r"
+        "line": " * Tarjeta utilizada por la pantalla Covid-19, para mostrar las opciones en dicho apartado."
       },
       {
         "lineNumber": 14,
-        "line": " * @param {prop} navigation - Contiene información básica de navegación.\r"
+        "line": " * @param {prop} navigation - Contiene información básica de navegación."
       },
       {
         "lineNumber": 15,
-        "line": " * @param {string} id - Contiene en una cadena de texto el id.\r"
+        "line": " * @param {string} id - Contiene en una cadena de texto el id."
       },
       {
         "lineNumber": 16,
-        "line": " * @param {string} title - Contiene en una cadena de texto el titulo.\r"
+        "line": " * @param {string} title - Contiene en una cadena de texto el titulo."
       },
       {
         "lineNumber": 17,
-        "line": " * @param {string} description - Se almacena en una cadena la descripción.\r"
+        "line": " * @param {string} description - Se almacena en una cadena la descripción."
       },
       {
         "lineNumber": 18,
-        "line": " * @param {image} imageURL - Componente que muestra imagen en pantalla.\r"
+        "line": " * @param {image} imageURL - Componente que muestra imagen en pantalla."
       },
       {
         "lineNumber": 19,
-        "line": " * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.\r"
+        "line": " * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta."
       },
       {
         "lineNumber": 20,
-        "line": " * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta.\r"
+        "line": " * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta."
       },
       {
         "lineNumber": 21,
-        "line": " * @param {string} screenName - Cadena que almacena el nombre de la pantalla.\r"
+        "line": " * @param {string} screenName - Cadena que almacena el nombre de la pantalla."
       },
       {
         "lineNumber": 22,
-        "line": " * @see https://reactnavigation.org/docs/navigation-prop/\r"
+        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
       },
       {
         "lineNumber": 23,
-        "line": " * @see https://reactnative.dev/docs/image\r"
+        "line": " * @see https://reactnative.dev/docs/image"
       },
       {
         "lineNumber": 24,
-        "line": " * @see https://reactnative.dev/docs/text\r"
+        "line": " * @see https://reactnative.dev/docs/text"
       },
       {
         "lineNumber": 25,
-        "line": " * @return {SafeAreaView} - Retorna un layout cuyos limites se encuentran en un area segura.\r"
+        "line": " * @return {SafeAreaView} - Retorna un layout cuyos limites se encuentran en un area segura."
       },
       {
         "lineNumber": 26,
-        "line": " */\r"
+        "line": " */"
       },
       {
         "lineNumber": 27,
-        "line": "const GenericCard = ({\r"
+        "line": "const GenericCard = ({"
       }
     ],
     "codeParams": [
@@ -301,67 +301,67 @@
     "lines": [
       {
         "lineNumber": 13,
-        "line": "/**\r"
+        "line": "/**"
       },
       {
         "lineNumber": 14,
-        "line": " * Tarjeta utilizada por la pantalla Covid-19, para mostrar las opciones en dicho apartado.\r"
+        "line": " * Tarjeta utilizada por la pantalla Covid-19, para mostrar las opciones en dicho apartado."
       },
       {
         "lineNumber": 15,
-        "line": " * @param {prop} navigation - Contiene información básica de navegación.\r"
+        "line": " * @param {prop} navigation - Contiene información básica de navegación."
       },
       {
         "lineNumber": 16,
-        "line": " * @param {string} id - Contiene en una cadena de texto el id.\r"
+        "line": " * @param {string} id - Contiene en una cadena de texto el id."
       },
       {
         "lineNumber": 17,
-        "line": " * @param {string} title - Contiene en una cadena de texto el titulo.\r"
+        "line": " * @param {string} title - Contiene en una cadena de texto el titulo."
       },
       {
         "lineNumber": 18,
-        "line": " * @param {string} description - Se almacena en una cadena la descripción.\r"
+        "line": " * @param {string} description - Se almacena en una cadena la descripción."
       },
       {
         "lineNumber": 19,
-        "line": " * @param {image} imageURL - Componente que muestra imagen en pantalla.\r"
+        "line": " * @param {image} imageURL - Componente que muestra imagen en pantalla."
       },
       {
         "lineNumber": 20,
-        "line": " * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.\r"
+        "line": " * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta."
       },
       {
         "lineNumber": 21,
-        "line": " * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta.\r"
+        "line": " * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta."
       },
       {
         "lineNumber": 22,
-        "line": " * @param {string} screenName - Cadena que almacena el nombre de la pantalla.\r"
+        "line": " * @param {string} screenName - Cadena que almacena el nombre de la pantalla."
       },
       {
         "lineNumber": 23,
-        "line": " * @see https://reactnavigation.org/docs/navigation-prop/\r"
+        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
       },
       {
         "lineNumber": 24,
-        "line": " * @see https://reactnative.dev/docs/image\r"
+        "line": " * @see https://reactnative.dev/docs/image"
       },
       {
         "lineNumber": 25,
-        "line": " * @see https://reactnative.dev/docs/text\r"
+        "line": " * @see https://reactnative.dev/docs/text"
       },
       {
         "lineNumber": 26,
-        "line": " * @return {SafeAreaView} - Retorna un layout cuyos limites se encuentran en un area segura.\r"
+        "line": " * @return {SafeAreaView} - Retorna un layout cuyos limites se encuentran en un area segura."
       },
       {
         "lineNumber": 27,
-        "line": " */\r"
+        "line": " */"
       },
       {
         "lineNumber": 28,
-        "line": "const KnoMoreCard = ({\r"
+        "line": "const KnoMoreCard = ({"
       }
     ],
     "codeParams": [
@@ -384,55 +384,55 @@
     "lines": [
       {
         "lineNumber": 131,
-        "line": "/**\r"
+        "line": "/**"
       },
       {
         "lineNumber": 132,
-        "line": " * Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla.\r"
+        "line": " * Componente para mostrar un Enlace del pie de página que al presionarlo dirige a otra pantalla."
       },
       {
         "lineNumber": 133,
-        "line": " * Se llama en el componente {@link Footer}.\r"
+        "line": " * Se llama en el componente {@link Footer}."
       },
       {
         "lineNumber": 134,
-        "line": " * @param {string} name - Nombre del Icono a mostrar.\r"
+        "line": " * @param {string} name - Nombre del Icono a mostrar."
       },
       {
         "lineNumber": 135,
-        "line": " * @param {string} color - Color del Icono a mostrar.\r"
+        "line": " * @param {string} color - Color del Icono a mostrar."
       },
       {
         "lineNumber": 136,
-        "line": " * @param {number} size - Tamaño del Icono.\r"
+        "line": " * @param {number} size - Tamaño del Icono."
       },
       {
         "lineNumber": 137,
-        "line": " * @param {string} text - Texto a mostrar del enlace.\r"
+        "line": " * @param {string} text - Texto a mostrar del enlace."
       },
       {
         "lineNumber": 138,
-        "line": " * @param {string} screenRouteName - Nombre de la pantalla a la cuál se navegará.\r"
+        "line": " * @param {string} screenRouteName - Nombre de la pantalla a la cuál se navegará."
       },
       {
         "lineNumber": 139,
-        "line": " * @param {prop} navigation\r"
+        "line": " * @param {prop} navigation"
       },
       {
         "lineNumber": 140,
-        "line": " * @see https://reactnavigation.org/docs/navigation-prop/\r"
+        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
       },
       {
         "lineNumber": 141,
-        "line": " * @return {TouchableOpacity} Devuelve una vista presionable\r"
+        "line": " * @return {TouchableOpacity} Devuelve una vista presionable"
       },
       {
         "lineNumber": 142,
-        "line": " */\r"
+        "line": " */"
       },
       {
         "lineNumber": 143,
-        "line": "export const FooterLinks = ({\r"
+        "line": "export const FooterLinks = ({"
       }
     ],
     "codeParams": [
@@ -453,55 +453,55 @@
     "lines": [
       {
         "lineNumber": 14,
-        "line": "/**\r"
+        "line": "/**"
       },
       {
         "lineNumber": 15,
-        "line": " * Pantalla que muestra los detalles de una recomendación para prevenir COVID-19\r"
+        "line": " * Pantalla que muestra los detalles de una recomendación para prevenir COVID-19"
       },
       {
         "lineNumber": 16,
-        "line": " * @param {prop} navigation - Contiene información básica de navegación\r"
+        "line": " * @param {prop} navigation - Contiene información básica de navegación"
       },
       {
         "lineNumber": 17,
-        "line": " * @param {prop} route - Recibe parametros importantes para mostrar en pantalla\r"
+        "line": " * @param {prop} route - Recibe parametros importantes para mostrar en pantalla"
       },
       {
         "lineNumber": 18,
-        "line": " * @param {string} title - Describe el título de una recomendación.\r"
+        "line": " * @param {string} title - Describe el título de una recomendación."
       },
       {
         "lineNumber": 19,
-        "line": " * @param {Array<string>} description - Contiene un arreglo de párrafos.\r"
+        "line": " * @param {Array<string>} description - Contiene un arreglo de párrafos."
       },
       {
         "lineNumber": 20,
-        "line": " * @param {string} image - Contiene la imagen relacionada con la recomendación.\r"
+        "line": " * @param {string} image - Contiene la imagen relacionada con la recomendación."
       },
       {
         "lineNumber": 21,
-        "line": " * @param {Array<string>} steps - Contiene un arreglo con los pasos a seguir.\r"
+        "line": " * @param {Array<string>} steps - Contiene un arreglo con los pasos a seguir."
       },
       {
         "lineNumber": 22,
-        "line": " * @see https://reactnavigation.org/docs/navigation-prop/\r"
+        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
       },
       {
         "lineNumber": 23,
-        "line": " * @see https://reactnavigation.org/docs/route-prop/\r"
+        "line": " * @see https://reactnavigation.org/docs/route-prop/"
       },
       {
         "lineNumber": 24,
-        "line": " * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista\r"
+        "line": " * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista"
       },
       {
         "lineNumber": 25,
-        "line": " */\r"
+        "line": " */"
       },
       {
         "lineNumber": 26,
-        "line": "const CovidInfo = ({ navigation, route }) => {\r"
+        "line": "const CovidInfo = ({ navigation, route }) => {"
       }
     ],
     "codeParams": [
@@ -522,39 +522,39 @@
     "lines": [
       {
         "lineNumber": 77,
-        "line": "/**\r"
+        "line": "/**"
       },
       {
         "lineNumber": 78,
-        "line": " * Componente que se utiliza para iterar las tarjetas\r"
+        "line": " * Componente que se utiliza para iterar las tarjetas"
       },
       {
         "lineNumber": 79,
-        "line": " * @param {prop} navigation\r"
+        "line": " * @param {prop} navigation"
       },
       {
         "lineNumber": 80,
-        "line": " * @param {Array<string>} covidRecs - Contiene la información del estado covid.\r"
+        "line": " * @param {Array<string>} covidRecs - Contiene la información del estado covid."
       },
       {
         "lineNumber": 81,
-        "line": " * @param {boolean} swapColor - Variable de control para intercambiar color.\r"
+        "line": " * @param {boolean} swapColor - Variable de control para intercambiar color."
       },
       {
         "lineNumber": 82,
-        "line": " * @see https://reactnavigation.org/docs/navigation-prop/\r"
+        "line": " * @see https://reactnavigation.org/docs/navigation-prop/"
       },
       {
         "lineNumber": 83,
-        "line": " * @return {GenericCard} Retorna una lista de tarjetas de tipo {@link GenericCard}\r"
+        "line": " * @return {GenericCard} Retorna una lista de tarjetas de tipo {@link GenericCard}"
       },
       {
         "lineNumber": 84,
-        "line": " */\r"
+        "line": " */"
       },
       {
         "lineNumber": 85,
-        "line": "const CovidList = ({ navigation, covidRecs, swapColor }) => {\r"
+        "line": "const CovidList = ({ navigation, covidRecs, swapColor }) => {"
       }
     ],
     "codeParams": [
@@ -572,87 +572,87 @@
     "lines": [
       {
         "lineNumber": 8,
-        "line": "/**\r"
+        "line": "/**"
       },
       {
         "lineNumber": 9,
-        "line": " * Pantalla que muestra los detalles de una Exhibición.\r"
+        "line": " * Pantalla que muestra los detalles de una Exhibición."
       },
       {
         "lineNumber": 10,
-        "line": " * @param {prop} route - Recibe parametros importantes para mostrar en pantalla\r"
+        "line": " * @param {prop} route - Recibe parametros importantes para mostrar en pantalla"
       },
       {
         "lineNumber": 11,
-        "line": " * @param {string} _id - ID asociado a una Exhibición.\r"
+        "line": " * @param {string} _id - ID asociado a una Exhibición."
       },
       {
         "lineNumber": 12,
-        "line": " * @property {Object} exhibition - Objeto que contiene la estructura de una Exhibición.\r"
+        "line": " * @property {Object} exhibition - Objeto que contiene la estructura de una Exhibición."
       },
       {
         "lineNumber": 13,
-        "line": " * @property {function} setExhibition - Método de acceso indirecto para modificar la propieadad exhibition.\r"
+        "line": " * @property {function} setExhibition - Método de acceso indirecto para modificar la propieadad exhibition."
       },
       {
         "lineNumber": 14,
-        "line": " * @property {boolean} visible - Variable auxiliar para controlar la visibilidad de un componente <Modal>.\r"
+        "line": " * @property {boolean} visible - Variable auxiliar para controlar la visibilidad de un componente <Modal>."
       },
       {
         "lineNumber": 15,
-        "line": " * @property {function} setVisible - Método de acceso indirecto para modificar la propieadad visible.\r"
+        "line": " * @property {function} setVisible - Método de acceso indirecto para modificar la propieadad visible."
       },
       {
         "lineNumber": 16,
-        "line": " * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista.\r"
+        "line": " * @property {function} useEffect - Hook de React que permite realizar tareas asíncronas a la vista."
       },
       {
         "lineNumber": 17,
-        "line": " * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor.\r"
+        "line": " * @property {function} useState - Hook de React que permite crear una variable de estado con su método accesor."
       },
       {
         "lineNumber": 18,
-        "line": " * @property {Promise} getExhibitionById - {@link getExhibitionById} | Promesa que devuelve la información dependiendo la respuesta del servidor.\r"
+        "line": " * @property {Promise} getExhibitionById - {@link getExhibitionById} | Promesa que devuelve la información dependiendo la respuesta del servidor."
       },
       {
         "lineNumber": 19,
-        "line": " * @property {function} size - Función de la librería lodash | Devuelve el tamaño de una colección.\r"
+        "line": " * @property {function} size - Función de la librería lodash | Devuelve el tamaño de una colección."
       },
       {
         "lineNumber": 20,
-        "line": " * @property {function} map - Función de la librería lodash | Crea un arreglo de valores a partir de cada elemento de una colección.\r"
+        "line": " * @property {function} map - Función de la librería lodash | Crea un arreglo de valores a partir de cada elemento de una colección."
       },
       {
         "lineNumber": 21,
-        "line": " * @listens {onPress} | El método showModal se dispara cuando ocurre este evento en un componente <ModalButton>.\r"
+        "line": " * @listens {onPress} | El método showModal se dispara cuando ocurre este evento en un componente <ModalButton>."
       },
       {
         "lineNumber": 22,
-        "line": " * @see https://lodash.com/docs/4.17.15#size\r"
+        "line": " * @see https://lodash.com/docs/4.17.15#size"
       },
       {
         "lineNumber": 23,
-        "line": " * @see https://reactjs.org/docs/hooks-state.html\r"
+        "line": " * @see https://reactjs.org/docs/hooks-state.html"
       },
       {
         "lineNumber": 24,
-        "line": " * @see https://reactnavigation.org/docs/route-prop/\r"
+        "line": " * @see https://reactnavigation.org/docs/route-prop/"
       },
       {
         "lineNumber": 25,
-        "line": " * @see https://lodash.com/docs/4.17.15#map\r"
+        "line": " * @see https://lodash.com/docs/4.17.15#map"
       },
       {
         "lineNumber": 26,
-        "line": " * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista\r"
+        "line": " * @return {SafeAreaView} Retorna un componente que contiene maquetada la vista"
       },
       {
         "lineNumber": 27,
-        "line": " */\r"
+        "line": " */"
       },
       {
         "lineNumber": 28,
-        "line": "const InfoCard = ({ route }) => {\r"
+        "line": "const InfoCard = ({ route }) => {"
       }
     ],
     "codeParams": [

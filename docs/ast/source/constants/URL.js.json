@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 720,
+  "end": 699,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 720,
+    "end": 699,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 0,
-        "end": 280,
+        "end": 274,
         "loc": {
           "start": {
             "line": 1,
@@ -45,7 +45,7 @@
         "declaration": {
           "type": "ObjectExpression",
           "start": 15,
-          "end": 279,
+          "end": 273,
           "loc": {
             "start": {
               "line": 1,
@@ -59,8 +59,8 @@
           "properties": [
             {
               "type": "ObjectProperty",
-              "start": 20,
-              "end": 104,
+              "start": 19,
+              "end": 102,
               "loc": {
                 "start": {
                   "line": 2,
@@ -76,8 +76,8 @@
               "computed": false,
               "key": {
                 "type": "Identifier",
-                "start": 20,
-                "end": 25,
+                "start": 19,
+                "end": 24,
                 "loc": {
                   "start": {
                     "line": 2,
@@ -93,8 +93,8 @@
               },
               "value": {
                 "type": "StringLiteral",
-                "start": 32,
-                "end": 104,
+                "start": 30,
+                "end": 102,
                 "loc": {
                   "start": {
                     "line": 3,
@@ -114,8 +114,8 @@
             },
             {
               "type": "ObjectProperty",
-              "start": 109,
-              "end": 184,
+              "start": 106,
+              "end": 181,
               "loc": {
                 "start": {
                   "line": 4,
@@ -131,8 +131,8 @@
               "computed": false,
               "key": {
                 "type": "Identifier",
-                "start": 109,
-                "end": 114,
+                "start": 106,
+                "end": 111,
                 "loc": {
                   "start": {
                     "line": 4,
@@ -148,8 +148,8 @@
               },
               "value": {
                 "type": "StringLiteral",
-                "start": 116,
-                "end": 184,
+                "start": 113,
+                "end": 181,
                 "loc": {
                   "start": {
                     "line": 4,
@@ -169,8 +169,8 @@
             },
             {
               "type": "ObjectProperty",
-              "start": 189,
-              "end": 275,
+              "start": 185,
+              "end": 270,
               "loc": {
                 "start": {
                   "line": 5,
@@ -186,8 +186,8 @@
               "computed": false,
               "key": {
                 "type": "Identifier",
-                "start": 189,
-                "end": 197,
+                "start": 185,
+                "end": 193,
                 "loc": {
                   "start": {
                     "line": 5,
@@ -203,8 +203,8 @@
               },
               "value": {
                 "type": "StringLiteral",
-                "start": 204,
-                "end": 275,
+                "start": 199,
+                "end": 270,
                 "loc": {
                   "start": {
                     "line": 6,
@@ -227,9 +227,9 @@
           "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Constante que contiene el endpoint de producción\r\n * @type {string}\r\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\r\n ",
-              "start": 284,
-              "end": 434,
+              "value": "*\n * Constante que contiene el endpoint de producción\n * @type {string}\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\n ",
+              "start": 276,
+              "end": 422,
               "loc": {
                 "start": {
                   "line": 9,
@@ -246,9 +246,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Constante que contiene el endpoint de producción\r\n * @type {string}\r\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\r\n ",
-            "start": 284,
-            "end": 434,
+            "value": "*\n * Constante que contiene el endpoint de producción\n * @type {string}\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\n ",
+            "start": 276,
+            "end": 422,
             "loc": {
               "start": {
                 "line": 9,
@@ -264,8 +264,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 436,
-        "end": 505,
+        "start": 423,
+        "end": 492,
         "loc": {
           "start": {
             "line": 14,
@@ -280,8 +280,8 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 443,
-          "end": 505,
+          "start": 430,
+          "end": 492,
           "loc": {
             "start": {
               "line": 14,
@@ -295,8 +295,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 449,
-              "end": 504,
+              "start": 436,
+              "end": 491,
               "loc": {
                 "start": {
                   "line": 14,
@@ -309,8 +309,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 449,
-                "end": 457,
+                "start": 436,
+                "end": 444,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -327,8 +327,8 @@
               },
               "init": {
                 "type": "StringLiteral",
-                "start": 460,
-                "end": 504,
+                "start": 447,
+                "end": 491,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -352,9 +352,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Constante que contiene el endpoint de producción\r\n * @type {string}\r\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\r\n ",
-              "start": 284,
-              "end": 434,
+              "value": "*\n * Constante que contiene el endpoint de producción\n * @type {string}\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\n ",
+              "start": 276,
+              "end": 422,
               "loc": {
                 "start": {
                   "line": 9,
@@ -370,9 +370,9 @@
           "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Constante que contiene el endpoint de desarrollo\r\n * @type {string}\r\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\r\n ",
-              "start": 509,
-              "end": 653,
+              "value": "*\n * Constante que contiene el endpoint de desarrollo\n * @type {string}\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\n ",
+              "start": 494,
+              "end": 634,
               "loc": {
                 "start": {
                   "line": 16,
@@ -389,9 +389,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Constante que contiene el endpoint de producción\r\n * @type {string}\r\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\r\n ",
-            "start": 284,
-            "end": 434,
+            "value": "*\n * Constante que contiene el endpoint de producción\n * @type {string}\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\n ",
+            "start": 276,
+            "end": 422,
             "loc": {
               "start": {
                 "line": 9,
@@ -407,9 +407,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Constante que contiene el endpoint de desarrollo\r\n * @type {string}\r\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\r\n ",
-            "start": 509,
-            "end": 653,
+            "value": "*\n * Constante que contiene el endpoint de desarrollo\n * @type {string}\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\n ",
+            "start": 494,
+            "end": 634,
             "loc": {
               "start": {
                 "line": 16,
@@ -425,8 +425,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 655,
-        "end": 718,
+        "start": 635,
+        "end": 698,
         "loc": {
           "start": {
             "line": 21,
@@ -441,8 +441,8 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 662,
-          "end": 718,
+          "start": 642,
+          "end": 698,
           "loc": {
             "start": {
               "line": 21,
@@ -456,8 +456,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 668,
-              "end": 717,
+              "start": 648,
+              "end": 697,
               "loc": {
                 "start": {
                   "line": 21,
@@ -470,8 +470,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 668,
-                "end": 675,
+                "start": 648,
+                "end": 655,
                 "loc": {
                   "start": {
                     "line": 21,
@@ -488,8 +488,8 @@
               },
               "init": {
                 "type": "StringLiteral",
-                "start": 678,
-                "end": 717,
+                "start": 658,
+                "end": 697,
                 "loc": {
                   "start": {
                     "line": 21,
@@ -513,9 +513,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Constante que contiene el endpoint de desarrollo\r\n * @type {string}\r\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\r\n ",
-              "start": 509,
-              "end": 653,
+              "value": "*\n * Constante que contiene el endpoint de desarrollo\n * @type {string}\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\n ",
+              "start": 494,
+              "end": 634,
               "loc": {
                 "start": {
                   "line": 16,
@@ -533,9 +533,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Constante que contiene el endpoint de desarrollo\r\n * @type {string}\r\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\r\n ",
-            "start": 509,
-            "end": 653,
+            "value": "*\n * Constante que contiene el endpoint de desarrollo\n * @type {string}\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\n ",
+            "start": 494,
+            "end": 634,
             "loc": {
               "start": {
                 "line": 16,
@@ -555,9 +555,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Constante que contiene el endpoint de producción\r\n * @type {string}\r\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\r\n ",
-      "start": 284,
-      "end": 434,
+      "value": "*\n * Constante que contiene el endpoint de producción\n * @type {string}\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\n ",
+      "start": 276,
+      "end": 422,
       "loc": {
         "start": {
           "line": 9,
@@ -571,9 +571,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Constante que contiene el endpoint de desarrollo\r\n * @type {string}\r\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\r\n ",
-      "start": 509,
-      "end": 653,
+      "value": "*\n * Constante que contiene el endpoint de desarrollo\n * @type {string}\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\n ",
+      "start": 494,
+      "end": 634,
       "loc": {
         "start": {
           "line": 16,
@@ -681,8 +681,8 @@
         "binop": null
       },
       "value": "banco",
-      "start": 20,
-      "end": 25,
+      "start": 19,
+      "end": 24,
       "loc": {
         "start": {
           "line": 2,
@@ -707,8 +707,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 25,
-      "end": 26,
+      "start": 24,
+      "end": 25,
       "loc": {
         "start": {
           "line": 2,
@@ -734,8 +734,8 @@
         "updateContext": null
       },
       "value": "https://tinmarin.org/wp-content/uploads/2019/11/banco-opt-1024x788.jpg",
-      "start": 32,
-      "end": 104,
+      "start": 30,
+      "end": 102,
       "loc": {
         "start": {
           "line": 3,
@@ -760,8 +760,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 104,
-      "end": 105,
+      "start": 102,
+      "end": 103,
       "loc": {
         "start": {
           "line": 3,
@@ -786,8 +786,8 @@
         "binop": null
       },
       "value": "avion",
-      "start": 109,
-      "end": 114,
+      "start": 106,
+      "end": 111,
       "loc": {
         "start": {
           "line": 4,
@@ -812,8 +812,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 114,
-      "end": 115,
+      "start": 111,
+      "end": 112,
       "loc": {
         "start": {
           "line": 4,
@@ -839,8 +839,8 @@
         "updateContext": null
       },
       "value": "https://tinmarin.org/wp-content/uploads/2019/11/avion-1024x787.jpg",
-      "start": 116,
-      "end": 184,
+      "start": 113,
+      "end": 181,
       "loc": {
         "start": {
           "line": 4,
@@ -865,8 +865,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 184,
-      "end": 185,
+      "start": 181,
+      "end": 182,
       "loc": {
         "start": {
           "line": 4,
@@ -891,8 +891,8 @@
         "binop": null
       },
       "value": "hospital",
-      "start": 189,
-      "end": 197,
+      "start": 185,
+      "end": 193,
       "loc": {
         "start": {
           "line": 5,
@@ -917,8 +917,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 197,
-      "end": 198,
+      "start": 193,
+      "end": 194,
       "loc": {
         "start": {
           "line": 5,
@@ -944,8 +944,8 @@
         "updateContext": null
       },
       "value": "https://tinmarin.org/wp-content/uploads/2020/04/hospital-1024x788.png",
-      "start": 204,
-      "end": 275,
+      "start": 199,
+      "end": 270,
       "loc": {
         "start": {
           "line": 6,
@@ -970,8 +970,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 275,
-      "end": 276,
+      "start": 270,
+      "end": 271,
       "loc": {
         "start": {
           "line": 6,
@@ -995,8 +995,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 278,
-      "end": 279,
+      "start": 272,
+      "end": 273,
       "loc": {
         "start": {
           "line": 7,
@@ -1021,8 +1021,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 279,
-      "end": 280,
+      "start": 273,
+      "end": 274,
       "loc": {
         "start": {
           "line": 7,
@@ -1036,9 +1036,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Constante que contiene el endpoint de producción\r\n * @type {string}\r\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\r\n ",
-      "start": 284,
-      "end": 434,
+      "value": "*\n * Constante que contiene el endpoint de producción\n * @type {string}\n * @example API_HOST = 'https://tin-marin-app.herokuapp.com/api/v1';\n ",
+      "start": 276,
+      "end": 422,
       "loc": {
         "start": {
           "line": 9,
@@ -1065,8 +1065,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 436,
-      "end": 442,
+      "start": 423,
+      "end": 429,
       "loc": {
         "start": {
           "line": 14,
@@ -1093,8 +1093,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 443,
-      "end": 448,
+      "start": 430,
+      "end": 435,
       "loc": {
         "start": {
           "line": 14,
@@ -1119,8 +1119,8 @@
         "binop": null
       },
       "value": "API_HOST",
-      "start": 449,
-      "end": 457,
+      "start": 436,
+      "end": 444,
       "loc": {
         "start": {
           "line": 14,
@@ -1146,8 +1146,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 458,
-      "end": 459,
+      "start": 445,
+      "end": 446,
       "loc": {
         "start": {
           "line": 14,
@@ -1173,8 +1173,8 @@
         "updateContext": null
       },
       "value": "https://tin-marin-app.herokuapp.com/api/v1",
-      "start": 460,
-      "end": 504,
+      "start": 447,
+      "end": 491,
       "loc": {
         "start": {
           "line": 14,
@@ -1199,8 +1199,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 504,
-      "end": 505,
+      "start": 491,
+      "end": 492,
       "loc": {
         "start": {
           "line": 14,
@@ -1214,9 +1214,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Constante que contiene el endpoint de desarrollo\r\n * @type {string}\r\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\r\n ",
-      "start": 509,
-      "end": 653,
+      "value": "*\n * Constante que contiene el endpoint de desarrollo\n * @type {string}\n * @example API_DEV = 'https://tinmarin.herokuapp.com/api/v1';\n ",
+      "start": 494,
+      "end": 634,
       "loc": {
         "start": {
           "line": 16,
@@ -1243,8 +1243,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 655,
-      "end": 661,
+      "start": 635,
+      "end": 641,
       "loc": {
         "start": {
           "line": 21,
@@ -1271,8 +1271,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 662,
-      "end": 667,
+      "start": 642,
+      "end": 647,
       "loc": {
         "start": {
           "line": 21,
@@ -1297,8 +1297,8 @@
         "binop": null
       },
       "value": "API_DEV",
-      "start": 668,
-      "end": 675,
+      "start": 648,
+      "end": 655,
       "loc": {
         "start": {
           "line": 21,
@@ -1324,8 +1324,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 676,
-      "end": 677,
+      "start": 656,
+      "end": 657,
       "loc": {
         "start": {
           "line": 21,
@@ -1351,8 +1351,8 @@
         "updateContext": null
       },
       "value": "https://tinmarin.herokuapp.com/api/v1",
-      "start": 678,
-      "end": 717,
+      "start": 658,
+      "end": 697,
       "loc": {
         "start": {
           "line": 21,
@@ -1377,8 +1377,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 717,
-      "end": 718,
+      "start": 697,
+      "end": 698,
       "loc": {
         "start": {
           "line": 21,
@@ -1403,8 +1403,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 720,
-      "end": 720,
+      "start": 699,
+      "end": 699,
       "loc": {
         "start": {
           "line": 22,
