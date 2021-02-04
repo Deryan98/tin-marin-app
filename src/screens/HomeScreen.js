@@ -29,7 +29,12 @@ import ConocenosMas from '../assets/ConocenosMas.jpg';
  * @param {prop} navigation - Contiene información básica de navegación
  * @see https://reactnavigation.org/docs/navigation-prop/
  * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla
- */
+ * @return {TouchableOpacity} Regresa un layout con el fin de dar la sensasion que se ha dado "tap" en la pantalla
+ * @property {TouchableOpacity} onPressIn Se decidio poner la musica ahi ya que no acepta el onPress no ejecuta las dos funciones.
+ * @property {TouchableOpacity} onPress propiedad la cual ejecuta la funcion de navegar con navigation. 
+ * @property {ImageBackground} imageStyle propiedad para cambiar los estilos especificos del background
+ * 
+ *  */
 const HomeScreen = ({ navigation }) => {
   return (
     <ScrollView>

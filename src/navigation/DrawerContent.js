@@ -6,6 +6,22 @@ import {
   playButtonPress,
 } from '../helpers/audio'
 import Colors from '../constants/Colors';
+import { Avatar } from 'react-native-elements';
+
+/**
+ * @param {props} navigation  Contiene información básica de navegación
+ * @return {DrawerContentScrollView} hace la funcion de poder hacer scroll si en dado caso hay mas opciones en el drawer
+ * @return {Drawer.Section} crea una seccion en donde podemos poner ya sea un item con texto o una imagen (lo que queramos)
+ * @return {Avatar.Image} retorna una imagen segun especificaciones que se le den en las propiedades del componente
+ * @property {Avatar.Image} source el path que se le da es con requite('ruta de la imagen a renderizar')
+ * @return {Drawer.Item} Regresa un texto en el drawer con el contenido que se le ponga en las propiedades
+ * @property {Drawer.Item} label aqui se setea el texto del Item
+ * @property {Drawer.Item} icon aqui se setea el icono el cual viene de la libreria react-native-paper
+ * 
+ *  si se quiere seguir añadiendo mas items solo se agrega dentro de la seccion de igual forma si se quiere agregar una imagen se agrega otra seccion
+ */
+
+
 const DrawerContent = (props) => {
   const { navigation } = props;
   return (
