@@ -31,7 +31,7 @@ LogBox.ignoreAllLogs();
  * @see https://reactnavigation.org/docs/navigation-prop/
  * @see https://reactjs.org/docs/hooks-effect.html
  * @see https://reactjs.org/docs/hooks-state.html
- * @seee https://developer.mozilla.org/en-US/docs/Web/API/AbortController
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortController
  * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortController/signal
  * @experimental La promesa getAllLinks presenta un fallo de múltiples llamadas asíncronas.
  * @return {ScrollView} Regresa una layout con scroll vertical, y muestra la maquetación de la pantalla.

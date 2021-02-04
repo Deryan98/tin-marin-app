@@ -10,6 +10,21 @@ import {
 } from 'react-native';
 import { coinButton } from '../helpers/audio';
 
+/**
+ * Tarjeta utilizada por la pantalla Covid-19, para mostrar las opciones en dicho apartado.
+ * @param {prop} navigation - Contiene información básica de navegación.
+ * @param {string} id - Contiene en una cadena de texto el id.
+ * @param {string} title - Contiene en una cadena de texto el titulo.
+ * @param {string} description - Se almacena en una cadena la descripción.
+ * @param {image} imageURL - Componente que muestra imagen en pantalla.
+ * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.
+ * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta.
+ * @param {string} screenName - Cadena que almacena el nombre de la pantalla.
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://reactnative.dev/docs/image
+ * @see https://reactnative.dev/docs/text
+ * @return {SafeAreaView} - Retorna un layout cuyos limites se encuentran en un area segura.
+ */
 const GenericCard = ({
   id,
   title,
@@ -50,6 +65,10 @@ const GenericCard = ({
 
 export default GenericCard;
 
+
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   card: {
     borderRadius: 15,

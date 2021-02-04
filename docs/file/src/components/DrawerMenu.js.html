@@ -38,7 +38,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-storeSugerence">storeSugerence</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllLinks">getAllLinks</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components">components</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard">BasicCard</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard2">BasicCard2</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Card">Card</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GenericCard">GenericCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DrawerMenu">DrawerMenu</a></span></span></li>
@@ -86,6 +85,11 @@
 import {StyleSheet} from &apos;react-native&apos;;
 import {Icon} from &apos;react-native-elements&apos;;
 
+/**
+ * Menu desplegable que se muestra a un costado, al presionar el boton respectivo en la pantalla principal.
+ * @param {*} props - Componentes a los que se les aplica personalizacion.
+ * @see https://reactnative.dev/docs/props 
+ */
 export const DrawerMenu = (props) =&gt; {
   return (
     &lt;Icon
@@ -99,6 +103,9 @@ export const DrawerMenu = (props) =&gt; {
   );
 };
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   containerStyle: {flexDirection: &apos;row&apos;, marginLeft: 10},
 });

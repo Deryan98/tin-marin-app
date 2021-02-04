@@ -38,7 +38,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-storeSugerence">storeSugerence</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllLinks">getAllLinks</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components">components</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard">BasicCard</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard2">BasicCard2</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Card">Card</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GenericCard">GenericCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DrawerMenu">DrawerMenu</a></span></span></li>
@@ -85,6 +84,17 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React from &apos;react&apos;;
 import { StyleSheet, Text, View, SafeAreaView } from &apos;react-native&apos;;
 
+/**
+ * Tarjeta utilizada para mostrar la informaci&#xF3;n de la pantalla Contacto.
+ * @param {string} charge - Cadena que almacena el cargo que tiene cada contacto del museo.
+ * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.
+ * @param {string} name - Cadena que almacena el nombre de los contactos.
+ * @param {string} email - Cadena que almacena el email de los contactos.
+ * @see https://reactnative.dev/docs/text
+ * @see https://reactnative.dev/docs/safeareaview
+ * @return {SafeAreaView} - Retorna un layout cuyos limites se encuentran en un area segura.
+ */
+
 const GenericCard = ({ charge, color, name, email }) =&gt; {
   return (
     &lt;SafeAreaView style={styles.card}&gt;
@@ -101,6 +111,9 @@ const GenericCard = ({ charge, color, name, email }) =&gt; {
 
 export default GenericCard;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   card: {
     // marginBottom: 40,

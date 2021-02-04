@@ -38,7 +38,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-storeSugerence">storeSugerence</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllLinks">getAllLinks</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components">components</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard">BasicCard</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard2">BasicCard2</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Card">Card</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GenericCard">GenericCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DrawerMenu">DrawerMenu</a></span></span></li>
@@ -94,6 +93,21 @@ import {
 } from &apos;react-native&apos;;
 import { coinButton } from &apos;../helpers/audio&apos;;
 
+/**
+ * Tarjeta utilizada por la pantalla Covid-19, para mostrar las opciones en dicho apartado.
+ * @param {prop} navigation - Contiene informaci&#xF3;n b&#xE1;sica de navegaci&#xF3;n.
+ * @param {string} id - Contiene en una cadena de texto el id.
+ * @param {string} title - Contiene en una cadena de texto el titulo.
+ * @param {string} description - Se almacena en una cadena la descripci&#xF3;n.
+ * @param {image} imageURL - Componente que muestra imagen en pantalla.
+ * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.
+ * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta.
+ * @param {string} screenName - Cadena que almacena el nombre de la pantalla.
+ * @see https://reactnavigation.org/docs/navigation-prop/
+ * @see https://reactnative.dev/docs/image
+ * @see https://reactnative.dev/docs/text
+ * @return {SafeAreaView} - Retorna un layout cuyos limites se encuentran en un area segura.
+ */
 const GenericCard = ({
   id,
   title,
@@ -134,6 +148,10 @@ const GenericCard = ({
 
 export default GenericCard;
 
+
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   card: {
     borderRadius: 15,

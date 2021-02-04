@@ -1,7 +1,7 @@
 {
-  "coverage": "53.26%",
+  "coverage": "68.47%",
   "expectCount": 92,
-  "actualCount": 49,
+  "actualCount": 63,
   "files": {
     "src/api/covid.js": {
       "expectCount": 1,
@@ -30,59 +30,38 @@
     },
     "src/components/BasicCard.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        39,
-        14
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/components/BasicCard2.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        39,
-        13
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/components/Card.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        38,
-        12
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/components/ContactCard.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        20,
-        4
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/components/DrawerMenu.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        5,
-        18
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/components/GenericCard.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        53,
-        13
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/components/KnoMoreCard.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        53,
-        13
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/components/Modal.js": {
       "expectCount": 2,

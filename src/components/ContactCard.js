@@ -1,6 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
+/**
+ * Tarjeta utilizada para mostrar la información de la pantalla Contacto.
+ * @param {string} charge - Cadena que almacena el cargo que tiene cada contacto del museo.
+ * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.
+ * @param {string} name - Cadena que almacena el nombre de los contactos.
+ * @param {string} email - Cadena que almacena el email de los contactos.
+ * @see https://reactnative.dev/docs/text
+ * @see https://reactnative.dev/docs/safeareaview
+ * @return {SafeAreaView} - Retorna un layout cuyos limites se encuentran en un area segura.
+ */
+
 const GenericCard = ({ charge, color, name, email }) => {
   return (
     <SafeAreaView style={styles.card}>
@@ -17,6 +28,9 @@ const GenericCard = ({ charge, color, name, email }) => {
 
 export default GenericCard;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   card: {
     // marginBottom: 40,

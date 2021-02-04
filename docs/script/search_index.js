@@ -12,12 +12,6 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "tinmarin/src/components/basiccard2.js~basiccard2",
-    "function/index.html#static-function-BasicCard2",
-    "<span>BasicCard2</span> <span class=\"search-result-import-path\">tinMarin/src/components/BasicCard2.js</span>",
-    "function"
-  ],
-  [
     "tinmarin/src/components/basiccard.js~basiccard",
     "function/index.html#static-function-BasicCard",
     "<span>BasicCard</span> <span class=\"search-result-import-path\">tinMarin/src/components/BasicCard.js</span>",

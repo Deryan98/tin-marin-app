@@ -38,7 +38,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-storeSugerence">storeSugerence</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllLinks">getAllLinks</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components">components</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard">BasicCard</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BasicCard2">BasicCard2</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Card">Card</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GenericCard">GenericCard</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DrawerMenu">DrawerMenu</a></span></span></li>
@@ -95,6 +94,19 @@ import {
 } from &apos;react-native&apos;;
 import { coinButton } from &apos;../helpers/audio&apos;;
 
+/**
+ * Tarjeta utilizada para mostrar informaci&#xF3;n, de la pantalla Sitios de Interes.
+ * @param {string} title - Almacena el titulo en una cadena de texto, que se muestra en pantalla. 
+ * @param {image} imageURL - Componente que muestra imagen en pantalla.
+ * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.
+ * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta.  
+ * @param {uri} url - Componente que almacena una direcci&#xF3;n web
+ * @see https://reactnative.dev/docs/image 
+ * @see https://reactnative.dev/docs/text
+ * @see https://reactnative.dev/docs/colors
+ * @return {SafeAreaView} Retorna un layout cuyos limites se encuentran en un area segura.
+ */
+
 const BasicCard = ({ title, imageURL, color, textBtn, url }) =&gt; {
   // console.log(`Width: ${Dimensions.get(&apos;window&apos;).width}`);
   // console.log(`Height: ${Dimensions.get(&apos;window&apos;).height}`);
@@ -120,6 +132,9 @@ const BasicCard = ({ title, imageURL, color, textBtn, url }) =&gt; {
 
 export default BasicCard;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   card: {
     borderRadius: 15,
