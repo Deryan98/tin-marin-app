@@ -65,7 +65,6 @@ const GenericCard = ({
 
 export default GenericCard;
 
-
 /**
  * @ignore
  */
