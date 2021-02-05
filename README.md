@@ -12,7 +12,7 @@ Tin Marín App es una aplicación móvil enfocada a todo público, pero mayormen
 
 - [Java Android](https://developer.android.com/)
 
--[Objective-C](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
+- [Objective-C](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
 
 ## Entorno de desarrollo:
 
