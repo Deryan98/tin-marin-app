@@ -1,8 +1,8 @@
-#Tin Marín App
+# Tin Marín App
 
 Tin Marín App es una aplicación móvil enfocada a todo público, pero mayormente centrados en niños.
 
-##Tecnologías
+## Tecnologías
 
 - [React Native](https://reactnative.dev/): Version 0.63.4
 
@@ -14,7 +14,7 @@ Tin Marín App es una aplicación móvil enfocada a todo público, pero mayormen
 
 -[Objective-C](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
 
-##Entorno de desarrollo:
+## Entorno de desarrollo:
 
 Dependiendo del dispositivo con el que desees trabajar para desarrollar en React Native, será la configuración que deberás realizar.
 
@@ -27,7 +27,7 @@ Un breve resumen de los pasos a realizar es:
 2. Configurar entornos de desarrollo:
    -Esto es un poco extenso, por lo que si deseas profundizar, puedes indagar en la documentación oficial de React Native: [Configuración de entorno](https://reactnative.dev/docs/environment-setup).
 
-##Instalando paquetes.
+## Instalando paquetes.
 
 El proyecto utiliza librerías de terceros de código abierto, que permiten evitar que reinventemos la rueda. Para encontrar todas estas dependencias, las puedes ubicar en la carpeta raíz del proyecto, en el archivo llamado "package.json".
 
@@ -37,7 +37,7 @@ Para instalar las librerías abre una consola que utilice el manejador de paquet
 
 Este proceso puede tardar, ya que va a descargar todas estas dependencias y las almacenará en la carpeta "node_modules" ubicada en la raíz del proyecto.
 
-##Levantando la aplicación.
+## Levantando la aplicación.
 
 Si lograste configurar bien tu entorno de desarrollo, no debeerías tener ningún problema hasta este punto. En una terminal digita el siguiente comando:
 
@@ -55,7 +55,7 @@ Sucederá lo siguiente:
 
 > Toma en cuenta que el comando utilizado es un acortado del comando oficial utilizado en la documentación con react native cli: `react-native run-android` o si no instalaste esta herramienta de forma global la puedes utilizar desde la carpet "node_modules" anteponiendo el comando npx: `npx react-native run-android`.
 
-##Documentación Manual Técnico.
+## Documentación Manual Técnico.
 
 Disponemos de un manual técnico automatizado. Utilizamos [ESDoc](https://esdoc.org/) para hacer las anotaciones que permiten generar la Wiki de forma rápida.
 
