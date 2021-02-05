@@ -2,6 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import Tin from '../assets/tin.png';
 
+/**
+ * Componente que muestra el contenido del modal.
+ * @param {string} curiousInfo - Dato curioso de la exhibición.
+ * @return {View} Retorna un componente que contiene maquetada la vista
+ */
 const Modal = ({ curiousInfo }) => {
   return (
     <View style={styles.content}>
@@ -13,6 +18,9 @@ const Modal = ({ curiousInfo }) => {
 
 export default Modal;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   content: {
     maxWidth: '90%',

@@ -10,6 +10,9 @@ import {
 } from 'react-native';
 import { coinButton } from '../helpers/audio'
 
+/**
+ * @ignore
+ */
 const BasicCard2 = ({title, imageURL,  color, textBtn, navigation,screenName}) => {
 
   
@@ -36,6 +39,9 @@ const BasicCard2 = ({title, imageURL,  color, textBtn, navigation,screenName}) =
 
 export default BasicCard2;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   card: {
     borderRadius: 15,

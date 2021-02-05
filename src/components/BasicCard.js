@@ -11,6 +11,19 @@ import {
 } from 'react-native';
 import { coinButton } from '../helpers/audio';
 
+/**
+ * Tarjeta utilizada para mostrar información, de la pantalla Sitios de Interes.
+ * @param {string} title - Almacena el titulo en una cadena de texto, que se muestra en pantalla. 
+ * @param {image} imageURL - Componente que muestra imagen en pantalla.
+ * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.
+ * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta.  
+ * @param {uri} url - Componente que almacena una dirección web
+ * @see https://reactnative.dev/docs/image 
+ * @see https://reactnative.dev/docs/text
+ * @see https://reactnative.dev/docs/colors
+ * @return {SafeAreaView} Retorna un layout cuyos limites se encuentran en un area segura.
+ */
+
 const BasicCard = ({ title, imageURL, color, textBtn, url }) => {
   // console.log(`Width: ${Dimensions.get('window').width}`);
   // console.log(`Height: ${Dimensions.get('window').height}`);
@@ -36,6 +49,9 @@ const BasicCard = ({ title, imageURL, color, textBtn, url }) => {
 
 export default BasicCard;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   card: {
     borderRadius: 15,

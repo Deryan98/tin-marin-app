@@ -9,6 +9,21 @@ import {
 } from 'react-native';
 import { coinButton } from '../helpers/audio'
 
+/**
+ * Tarjeta utilizada para mostrar la información de las pantallas: Información de Covid, Exhibiciones, Preguntas Frecuentes, Busqueda    
+ * @param {style} color - Cambia el color del fondo del titulo de nuestra tarjeta.
+ * @param {string} textBtn - Cadena de texto que almacena el nombre que tendra el boton de la tarjeta.
+ * @param {prop} navigation - Contiene información básica de navegación
+ * @property {function} exhibition - Método de acceso indirecto para acceder a parametros.
+ * @property {function} imageURL - Método de acceso
+ * @see https://reactnative.dev/docs/intro-react
+ * @see https://reactnative.dev/docs/text
+ * @see https://reactnavigation.org/docs/navigation-prop/  
+ * @see https://reactnative.dev/docs/safeareaview
+ * @return {SafeAreaView} Retorna un layout cuyos limites se encuentran en un area segura.
+ }}
+ */
+
 const Card = ({ exhibition, color, textBtn, navigation}) => {
   const {images, name, _id } = exhibition;
   const [imageURL] = images;
@@ -35,6 +50,9 @@ const Card = ({ exhibition, color, textBtn, navigation}) => {
 
 export default Card;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   card: {
     borderRadius: 15,

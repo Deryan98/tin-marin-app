@@ -17,6 +17,22 @@ import Search from '../screens/Search';
 import FAQScreen from '../screens/FAQScreen';
 import WebLinksScreen from '../screens/WebLinksScreen';
 import CovidInfo from '../screens/CovidInfo';
+/**
+ * @param {props} navigation  Contiene información básica de navegación
+ * @property {function} Stack se crea el el stack de pantallas aqui se iran anexando cada pantalla que se vaya añadiendo en el drawer
+ * @property {function} buttonLeft funcion para mostrar el boton de una flecha en la pantalla de buscar exhibicion
+ * @param {constant} screen constante que sirve para identificar que pantalla se le pasara a la funcion button left debido que el arrow icon no se renderiza en todos los lugares
+ * @return {IconButton} layout de la libreria native-paper el cual agrega un icono en la barra de navegacion
+ * @property {IconButton} icon aqui se setea el icono el cual ira en la propiedad del componente
+ * @property {IconButton} onPress aqui ejecutamos la funcion del navigation donde nos lleva a otras pantallas.
+ * @property {function} buttonRight funcion que ejecuta renderizar el boton de la barra de busqueda en la pantalla de exhibiciones
+ * @return {Stack.Navigator} aqui se pondran todas las screen que estan contempladas en la navegacion de nuestras pantallas
+ * @return {Stack.Screen} layout que retorna de forma individual cada pantalla 
+ * @property {Stack.Screen} name esta propiedad del Screen es como se llama y como la buscaremos al momento de buscarla con navigation.navigate("home") por ejemplo
+ * @property {Stack.Screen} component aqui ponemos el componente el cual se va a renderizar
+ * @property {Stack.Screen} options aqui ponemos las propiedades del componente que iran en la barra superior, ya sea botones, titulos entre otros.
+ */
+
 
 /**
  * Crea el StackNavigator
