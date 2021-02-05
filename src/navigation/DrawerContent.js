@@ -4,9 +4,8 @@ import { DrawerContentScrollView } from '@react-navigation/drawer';
 import { Drawer, Avatar } from 'react-native-paper';
 import {
   playButtonPress,
-} from '../helpers/audio'
+} from '../helpers/audio';
 import Colors from '../constants/Colors';
-import { Avatar } from 'react-native-elements';
 
 /**
  * @param {props} navigation  Contiene información básica de navegación
@@ -17,7 +16,6 @@ import { Avatar } from 'react-native-elements';
  * @return {Drawer.Item} Regresa un texto en el drawer con el contenido que se le ponga en las propiedades
  * @property {Drawer.Item} label aqui se setea el texto del Item
  * @property {Drawer.Item} icon aqui se setea el icono el cual viene de la libreria react-native-paper
- * 
  *  si se quiere seguir añadiendo mas items solo se agrega dentro de la seccion de igual forma si se quiere agregar una imagen se agrega otra seccion
  */
 
