@@ -1,6 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, TextInput } from 'react-native';
 
+/**
+ * Tarjeta utilizada por la Sugerencias, para mostrar las opciones en dicho apartado.
+ * @param {string} sugerenceType - Contiene una cadena de texto indicando el tipo de sugerencia (Mejora, Queja, Otro)
+ * @param {string} color - Contiene en una cadena de texto que indica el color de la caja de comentarios
+ * @param {string} comment - Contiene la sugerencia escrita por el usuario la primera vez que presiona el boton Enviar
+ * @param {string} onCommentChange - Contiene la sugerencia escrita por el usuario desde la segunda y las siguientes veces que es presionado el boton Enviar
+ * @param {function} GenericCard - Se encarga de crear la tarjeta utilizada para alojar la caja de sugerencias o comentarios
+ * @return {SafeAreaView} - Retorna un layout cuyos limites se encuentran en un area segura.
+ */
 const GenericCard = ({ sugerenceType, color, comment, onCommentChange }) => {
   const handleComment = (text) => {
     onCommentChange(text);
@@ -22,7 +31,6 @@ const GenericCard = ({ sugerenceType, color, comment, onCommentChange }) => {
           value={comment}
           onChangeText={(text) => {
             handleComment(text);
-            // console.log(text);
           }}
         />
       </View>
@@ -32,6 +40,9 @@ const GenericCard = ({ sugerenceType, color, comment, onCommentChange }) => {
 
 export default GenericCard;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   card: {
     marginBottom: 40,
