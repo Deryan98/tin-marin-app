@@ -88,8 +88,17 @@ import { createDrawerNavigator } from &apos;@react-navigation/drawer&apos;;
 import StackNavigation from &apos;./StackNavigation&apos;;
 import DrawerContent from &apos;./DrawerContent&apos;;
 
+/**
+ * Se encarga de crear el menu lateral izquierd, que se llama NavigationDrawer
+ */
 const Drawer = createDrawerNavigator();
 
+/**
+ * Este archivo crea e inicia el menu lateral izquierdo
+ * @property {function} MainNavigator - Este metodo se encarga de iniciar el NavigationDrawer, el cual recoge la informacion de las pantallas contenida en el StackNavigation
+ * @see https://reactnavigation.org/docs/drawer-based-navigation/
+ * @return {Drawer.Navigator} Retorna el objeto Drawer.Navigator el cual es el menu lateral izquierdo que se mostrara en pantalla
+ */
 export default MainNavigator = () =&gt; {
   return (
     &lt;Drawer.Navigator
@@ -100,42 +109,6 @@ export default MainNavigator = () =&gt; {
   );
 };
 
-// const styles = StyleSheet.create({
-//   drawerStyle: {
-//     backgroundColor: Colors.primaryColor,
-//     width: 240,
-//   },
-//   drawerIcon: {
-//     //backgroundColor: &apos;white&apos;,
-//   },
-//   drawerLabel: {fontWeight: &apos;bold&apos;},
-// });
-
-// const drawerContentOptions = {
-//   activeTintColor: Colors.activeDrawerItemTintColor,
-//   inactiveTintColor: Colors.inactiveDrawerItemTintColor,
-//   itemStyle: {marginVertical: 5},
-// };
-
-// const screenOptions = (drawerLabel, iconName, iconType) =&gt; {
-//   return {
-//     headerShown: true,
-//     headerTitle: drawerLabel,
-//     drawerLabel: ({focused, color}) =&gt; (
-//       &lt;Text style={{...styles.drawerLabel, color: color}}&gt;{drawerLabel}&lt;/Text&gt;
-//     ),
-//     drawerIcon: ({focused, color, size}) =&gt; (
-//       &lt;Icon
-//         name={iconName}
-//         type={iconType}
-//         color={color}
-//         size={size}
-//         style={styles.drawerIcon}
-//         solid={true}
-//       /&gt;
-//     ),
-//   };
-// };
 </code></pre>
 
 </div>

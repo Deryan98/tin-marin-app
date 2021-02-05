@@ -86,37 +86,91 @@
 
 Sound.setCategory(&apos;Ambient&apos;, true);
 
+/**
+ * Los metodos de este archivo se encargan de reproducir un sonido en especifico cada vez que se presiona un boton del MenuPrincipal
+ */
+
+
+ 
+/**
+ * Variable que hace referencia al boton &quot;Exhibiciones&quot;
+ */
 const buttonPress = new Sound(require(&apos;../audio/tuturu.mp3&apos;), error =&gt; console.log(error));
+/**
+ * Reproduce un sonido al presionar el boton de &quot;Exhibiciones&quot;
+ */
 export const playButtonPress = () =&gt; {
   buttonPress.play();
 }
 
+
+/**
+ * Variable que hace referencia al boton &quot;Recomendaciones Covid&quot;
+ */
 const heylisten = new Sound (require(&apos;../audio/heylisten.mp3&apos;), error=&gt; console.log(error));
+/**
+ * Reproduce un sonido al presionar el boton de &quot;Recomendaciones COVID&quot;
+ */
 export const heyListenButton = () =&gt;{
   heylisten.play();
 }
 
+
+/**
+ * Variable que hace referencia al boton &quot;Sitios de Interes&quot;
+ */
 const wow = new Sound (require(&apos;../audio/wow.mp3&apos;), error=&gt; console.log(error));
+/**
+ * Reproduce un sonido al presionar el boton de &quot;Sitios de Interes&quot;
+ */
 export const wowButton = () =&gt;{
   wow.play();
 }
 
+
+/**
+ * Variable que hace referencia al boton &quot;Sugerencias&quot;
+ */
 const msn = new Sound (require(&apos;../audio/msn.mp3&apos;), error=&gt; console.log(error));
+/**
+ * Reproduce un sonido al presionar el boton de &quot;Sugerencias&quot;
+ */
 export const msnButton = () =&gt;{
   msn.play();
 }
 
+
+/**
+ * Variable que hace referencia al boton &quot;Preguntas Frecuentes&quot;
+ */
 const catc = new Sound (require(&apos;../audio/catch.mp3&apos;), error=&gt; console.log(error));
+/**
+ * Reproduce un sonido al presionar el boton de &quot;Preguntas Frecuentes&quot;
+ */
 export const catcButton = () =&gt;{
   catc.play();
 }
 
+
+/**
+ * Variable que hace referencia a los botones &quot;Saber mas, conocela&quot;
+ */
 const coin = new Sound (require(&apos;../audio/coin.mp3&apos;), error=&gt; console.log(error));
+/**
+ * Reproduce un sonido al presionar de los botones &quot;Saber Mas&quot;, &quot;Conocela&quot;, que se encuentran en cada una de las diferentes pantallas
+ */
 export const coinButton = () =&gt;{
   coin.play();
 }
 
+
+/**
+ * Variable que hace referencia al boton &quot;Conocenos mas&quot;
+ */
 const ohh = new Sound (require(&apos;../audio/ohh.mp3&apos;), error=&gt; console.log(error));
+/**
+ * Reproduce un sonido al presionar de los botones &quot;Conocenos Mas&quot;
+ */
 export const ohhButton = () =&gt;{
   ohh.play();
 }

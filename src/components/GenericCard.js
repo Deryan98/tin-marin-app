@@ -50,6 +50,9 @@ const GenericCard = ({
 
 export default GenericCard;
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   card: {
     borderRadius: 15,

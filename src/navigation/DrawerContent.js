@@ -6,6 +6,14 @@ import {
   playButtonPress,
 } from '../helpers/audio'
 import Colors from '../constants/Colors';
+
+/**
+ * Archivo que crea los botones del menu lateral izquierdo, con sus respetivos nombre e iconos.
+ * @param {prop} props - Es un objeto del cual, en este caso se extrae la propiedad "navigation", que contendra la informacion de las pantallas que tiene la app
+ * @property {function} DrawerContent - Esta funcion se encarga de enviarle al DrawerNavigatod los iconos y titulos que tendran los botones del menu lateral izquierdo, tambien se encarga de indicar a que pantalla esta navegando al momento de presionar alguno de los botones
+ * @see https://reactnavigation.org/docs/drawer-navigator/
+ * @return {DrawerContentScrollView} Almacena todos los botones y se encarga de mostralos en pantalla.
+ */
 const DrawerContent = (props) => {
   const { navigation } = props;
   return (
@@ -68,6 +76,9 @@ const DrawerContent = (props) => {
   );
 };
 
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({
   image: {
     alignItems: 'center',

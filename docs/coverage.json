@@ -1,7 +1,7 @@
 {
-  "coverage": "53.26%",
+  "coverage": "76.08%",
   "expectCount": 92,
-  "actualCount": 49,
+  "actualCount": 70,
   "files": {
     "src/api/covid.js": {
       "expectCount": 1,
@@ -120,48 +120,23 @@
     },
     "src/helpers/audio.js": {
       "expectCount": 14,
-      "actualCount": 0,
-      "undocumentLines": [
-        5,
-        6,
-        10,
-        11,
-        15,
-        16,
-        20,
-        21,
-        25,
-        26,
-        30,
-        31,
-        35,
-        36
-      ]
+      "actualCount": 14,
+      "undocumentLines": []
     },
     "src/navigation/DrawerContent.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        71,
-        9
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/navigation/MainNavigator.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        7,
-        9
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "src/navigation/StackNavigation.js": {
       "expectCount": 3,
-      "actualCount": 0,
-      "undocumentLines": [
-        21,
-        22,
-        176
-      ]
+      "actualCount": 3,
+      "undocumentLines": []
     },
     "src/screens/ContactScreen.js": {
       "expectCount": 2,

@@ -102,7 +102,19 @@ import FAQScreen from &apos;../screens/FAQScreen&apos;;
 import WebLinksScreen from &apos;../screens/WebLinksScreen&apos;;
 import CovidInfo from &apos;../screens/CovidInfo&apos;;
 
-const Stack = createStackNavigator();
+/**
+ * Crea el StackNavigator
+*/
+ const Stack = createStackNavigator();
+
+/**
+ * Este archivo permite a la aplicacion identificar todas las pantallas con las que cuenta la app, para poder navegar entre las diferentes pantallas. Ademas tambien permite que se despliegue el menu lateral izquierdo y el boton de busqueda en la pantalla de exhibiciones.
+ * @param {prop} props - Es un objeto del cual, en este caso se extrae la propiedad &quot;navigation&quot;, que contendra la informacion de las pantallas que tiene la app
+ * @property {function} buttonLeft - Se utiliza para detectar el click en el boton &quot;buscar&quot;, encontrado en la pantalla de exhibiciones, para poder realizar una busqueda
+ * @property {function} buttonRight - Metodo que permite detectar el click en la parte superior izquierda de la pantalla, para desplegar el menu lateral izquierdo
+ * @see https://reactnavigation.org/docs/stack-navigator/
+ * @return {Stack.Navigator} Retorna el objeto Stack.Navigator que reconoce las pantallas que se agreguen con Stack.Screen
+ */
 export default function StackNavigation(props) {
   const { navigation } = props;
 
@@ -256,7 +268,9 @@ export default function StackNavigation(props) {
     &lt;/Stack.Navigator&gt;
   );
 }
-
+/**
+ * @ignore
+ */
 const styles = StyleSheet.create({});
 </code></pre>
 
