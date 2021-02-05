@@ -1,12 +1,16 @@
 import React from 'react';
-import MainNavigator from './src/navigation/MainNavigator';
+import MainNavigator from './navigation/MainNavigator';
 import { NavigationContainer } from '@react-navigation/native';
-import { StyleSheet } from 'react-native';
 import { ModalPortal } from 'react-native-modals';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 
 DefaultTheme.colors.text = '#FFF';
-
+/**
+ * Función principal que se encarga de levantar toda la aplicación.
+ * @return {Component} Nodo padre que contiene toda la applicación.
+ * @see https://callstack.github.io/react-native-paper/index.html
+ * @see https://reactnavigation.org/docs/getting-started/
+ */
 const App = () => {
   return (
     <PaperProvider theme={DefaultTheme}>
@@ -19,5 +23,3 @@ const App = () => {
 };
 
 export default App;
-
-// const styles = StyleSheet.create({});
