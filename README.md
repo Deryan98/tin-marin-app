@@ -42,7 +42,7 @@ Sucederá lo siguiente:
 
 1. Levantará una consola [Metro Bundler](https://reactnative.dev/docs/_getting-started-macos-ios#step-1-start-metro), que es el motor que traducirá los códigos javascript, a código nativo Android o iOS.
 
-2. Levantará un emulador virtual que previamente configuraste en Android Studio al configurar tu entorno de desarrollo. Si prefieres usar un dispositivo físico, visita el apartado [Run on Physical Device](https://reactnative.dev/docs/_getting-started-windows-android).
+2. Levantará un emulador virtual que previamente configuraste en Android Studio al configurar tu entorno de desarrollo. Si prefieres usar un dispositivo físico, visita el apartado [Run on Physical Device](https://reactnative.dev/docs/running-on-device).
 
 3. Instalará en el dispositivo Android la aplicación y dependerá totalmente de Metro Bundler. Esto significa que la aplicación está configurada para el entorno de desarrollo, y no para un entono de producción.
 
